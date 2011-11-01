@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-01 10:51+0100\n"
-"PO-Revision-Date: 2011-11-01 16:35+0100\n"
+"POT-Creation-Date: 2011-11-01 16:45+0100\n"
+"PO-Revision-Date: 2011-11-01 16:47+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "Fehler werden hier angezeigt."
 
 #: screens.php:93
 msgid "1. Input data"
-msgstr "1. Daten hinzufügen"
+msgstr "1. Daten hinfügen"
 
 #: screens.php:96
 msgid "2. Check data"
@@ -68,13 +68,13 @@ msgstr "Daten könntent nicht in Datenbank umgestellt werden."
 msgid "You can only transpose a table with two entries."
 msgstr "Nur Tabellen mit 2 Einträge umgestellt werden können."
 
-#: js/navigation.js.php:63
+#: js/navigation.js.php:59
 msgid "No data was input."
 msgstr "Kein Datei würde eingegeben."
 
 #: templates/check.php:108
 msgid "Check that your data was correctly understood."
-msgstr "Bitte prüfen Sie, dass Ihre Daten richtig verstanden werden."
+msgstr "Bitte prüfen Sie, dass Ihre Daten richtig verstanden wurden."
 
 #: templates/check.php:108
 msgid "Transpose data."
@@ -140,5 +140,5 @@ msgstr "Kreisdiagramm"
 
 #: templates/visualize.php:246
 msgid "Vertical axis title"
-msgstr "Titel der Hichachse"
+msgstr "Titel der Hochachse"
 
