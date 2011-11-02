@@ -4,7 +4,7 @@
  *  This file parses the values in the textarea and store them in a matrix format in the DB  *
  ********************************************************************************************/
 
-require_once "../config.php";
+require_once '../config.php';
 
 $data = $_POST['data'];
 
@@ -82,6 +82,8 @@ if ($vertical_header == 0 && $horizontal_header == 1){
 }
 
 $serialized_data = serialize($formatted_data);
+
+$user_id = $_SESSION["user_id"];
 
 //Stores the data in the DB
 $q = "INSERT INTO charts (user_id, chart_csv_data, date_create, horizontal_headers, vertical_headers) VALUES ('$user_id', '$serialized_data', '" . date('Y-m-d H:i:s') . "', $horizontal_header, $vertical_header)";

@@ -2,12 +2,25 @@
 
 require_once "config.php"; 
 
-//If the user's loading a visualization
-if (isset($_GET["c"]))
-	require_once "embed.php";
+if (isset($_GET["c"])){
+	//User is loading an embedded visualization
+	require_once "inc/embed.php";
 
-//If the user's here to build a visualization
-else
-	require_once "screens.php";
+}else if(isset($_SESSION["user_email"])){
+
+	//User is signed in, can build a datavis
+	
+	//Gets user_id
+	$user = new User();
+	$user_id = $user->getID();
+	$user_email = $_SESSION["user_email"];
+	$_SESSION["user_id"] = $user_id;
+
+	require_once "inc/screens.php";
+
+}else{
+	//Not signed in
+	require_once "inc/login.php";
+}
 
 ?>

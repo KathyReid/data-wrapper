@@ -88,8 +88,10 @@ function initInputs(){
 			if (jQuery(this).val() == ""){
 				jQuery(this).val(default_content);
 
-				//So that the graph renders
-				update_options();
+				if (chart_id !== undefined){
+					//So that the graph renders
+					update_options();
+				}
 			}
 		});
 	});

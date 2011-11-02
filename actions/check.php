@@ -27,7 +27,7 @@ if ($action == "next"){
 			$horizontal_headers = $row->horizontal_headers;
 			$vertical_headers = $row->vertical_headers;
 			
-	}
+		}
 
 		//success
 		$return_array["status"] = "200";

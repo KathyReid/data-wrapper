@@ -1,12 +1,10 @@
 <?php
 
+session_start();
 
 //Initializes GetText
 require_once "libraries/functions.lang.php";
 initLanguage();
-
-//removes error reporting
-error_reporting(0);
 
 //Fetches the converter from nums to text
 require_once "libraries/alpha.id.php";
@@ -14,13 +12,15 @@ require_once "libraries/alpha.id.php";
 //Function to transpose arrays
 require_once "libraries/transpose.php";
 
+//Indicates the name of the prod server
 $prod_domain = "windowonthemedia.com";
 
 if (strstr($_SERVER['SERVER_NAME'], $prod_domain)){		
 
 	// PROD ENVIRONMENT //
 
-	$user_id = "0";
+	//removes error reporting
+	error_reporting(0);
 
 	//Global const
 	define("BASE_DIR", "http://windowonthemedia.com/datastory/");
@@ -33,7 +33,6 @@ if (strstr($_SERVER['SERVER_NAME'], $prod_domain)){
 
 	// DEV ENVIRONMENT //
 
-	$user_id = "0";
 	error_reporting(E_ALL);
 	define("BASE_DIR", "http://localhost/Data-Story/");
 
@@ -44,6 +43,10 @@ if (strstr($_SERVER['SERVER_NAME'], $prod_domain)){
 	$password = "";
 }
 
+global $mysqli;
+
 $mysqli = new mysqli($hostname,$username,$password,$database);
 
+//Loads the user class
+require_once "class/user.class.php";
 ?>

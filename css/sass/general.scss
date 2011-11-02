@@ -81,6 +81,10 @@ $loader-h: 10%;
     left: 50% - $loader-w/2;
 }
 
+.clear{
+    clear:both;
+}
+
 /***************/
 /*    Header    /
 /***************/
@@ -128,6 +132,41 @@ $navbar-height: $row-h;
     top:0;
     left:0;
     height: $navbar-height;
+
+    #languages{
+        width: $col-w * 3;
+        float:right;
+        font-size: $font-size - .3em;
+        
+        .language{
+            float:right;
+            margin: $row-h/2 5px 0 0;
+            color: $color-off;
+            cursor: pointer;
+            &:hover { color: $color-off_text; }
+        }
+    }
+
+    #loggedin{
+        /* width: $col-w * 4; */
+        float:left;
+        margin: 0 0 0 $col-w * 1.4;
+        font-size: $font-size - .3em;
+
+        #loggedas{
+            float:right;
+            margin: $row-h/2 5px 0 0;
+            color: $color-off_text;
+        }
+
+        #logout{
+            margin: $row-h/2 5px 0 0;
+            float:right;
+            cursor: pointer;
+            color: $color-on;
+            &:hover { color: $color-off_text; }
+        }
+    }
 }
 
 /***************/
@@ -435,4 +474,52 @@ $customizator-margin-bottom: 5px;
         width: $col-w * 6;
         height: $row-h * 10;
     }
+}
+
+/*************/
+/*  Log in   */
+/*************/
+
+#login, #signup{
+    
+    width: $col-w * 3;
+    float:left;
+
+    .login{
+
+        @include inset_input(3px);
+        @include border-radius(8px);
+
+        float:left;
+        width: $col-w * 2.5;
+        margin: 5px 0;
+        color: $dark-color;
+        height: $font-size + .3;
+        padding: 2px 7px;
+        font-size: $font-size + .2;
+    }
+
+    #login_submit{
+        font-size: $font-size + .2;
+        margin: 10px;
+    }
+}
+
+#about{
+    width: $col-w * 3;
+    float:left;
+    font-size: $font-size + .1;
+
+    p{
+        margin:0 0 10px 0;
+    }
+
+    #show_signup{
+        font-size: $font-size + .3;
+        margin: 10px;
+    }
+}
+
+#signup{
+    display:none;
 }
