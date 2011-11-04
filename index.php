@@ -2,6 +2,8 @@
 
 require_once "config.php"; 
 
+echo setlocale(LC_ALL, '0');
+
 if (isset($_GET["c"])){
 	//User is loading an embedded visualization
 	require_once "inc/embed.php";

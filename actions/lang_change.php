@@ -9,6 +9,7 @@ require_once "../libraries/functions.lang.php";
 if (isset($_POST["lang"])){
 
 	$lang = $_POST["lang"];
+	$lang_long = $_POST["lang_long"];
 
 	//Detects the current locale
 	$current_locale =  setlocale(LC_ALL, '0');
@@ -24,7 +25,7 @@ if (isset($_POST["lang"])){
 			//sets the language
 			$newLocale = setLanguage($lang);
 			$return_array["status"] = "200";
-			$return_array["lang"] = _("$newLocale");
+			$return_array["lang"] = $lang_long;
 
 		}else{
 			$return_array["status"] = "603";

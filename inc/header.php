@@ -4,16 +4,17 @@ function initHeader(){
 	$(".language").click(function(){
 
 		lang = jQuery(this).attr("lang");
+		lang_long = jQuery(this).html();
 
-		$.post("actions/lang_change.php", { lang: lang }, function(data){
+		$.post("actions/lang_change.php", { lang: lang, lang_long: lang_long }, function(data){
 			if (data != ""){
 
      			data = jQuery.parseJSON(data);
 
      			if (data.status == 200){
 	     			
-	     			//for debug purposes only
-	     			error(data.lang)
+	     			//Displays the new language
+	     			error("<?php echo _("Language set to ") ?>" + data.lang)
 
 	     			//language has changed, reload page
 	     			location.reload();
