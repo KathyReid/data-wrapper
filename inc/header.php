@@ -22,6 +22,7 @@ function initHeader(){
 	     		}else if (data.status == 201){
 
 	     			//if the language is the same as the current language
+	     			error("<?php echo _("Language is the same as current language.") ?>")
 	     			return false;
 
 		     	}else{
