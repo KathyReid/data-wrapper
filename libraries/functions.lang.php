@@ -20,6 +20,8 @@
 	function setLanguage($lang, $domain = "messages", $baseFolder = "") {
 
 				$baseFolder = dirname(__FILE__)."/../locale";
+				
+				$_SESSION["lang"] = $lang;
 
                 $codeset = "UTF-8";
                 
@@ -50,6 +52,11 @@
 
                 if(isset($_GET["lang"]))
                      setLanguage($_GET["lang"]);
+
+                elseif( isset($_SESSION["lang"]) )
+                     setLanguage($_SESSION["lang"]);
+
+                else setLanguage("en_US");
 
             }
         }

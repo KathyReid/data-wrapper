@@ -4,7 +4,7 @@
  *  This file changes the language of the app following an AJAX request                      *
  ********************************************************************************************/
 
-require_once "../libraries/functions.lang.php";
+require_once "../config.php";
 
 if (isset($_POST["lang"])){
 
@@ -15,7 +15,7 @@ if (isset($_POST["lang"])){
 	$current_locale =  setlocale(LC_ALL, '0');
 	
 	//if the demanded language is different from the current one
-	if ($current_locale != $lang.".UTF-8"){
+	if (trim($current_locale) !== trim($lang.".UTF-8")){
 
 		$pattern = "/[a-z]_[A-Z]/";
 
@@ -26,11 +26,14 @@ if (isset($_POST["lang"])){
 			$newLocale = setLanguage($lang);
 			$return_array["status"] = "200";
 			$return_array["lang"] = $lang_long;
-
+		
+		//if the language doesn't match the regex
 		}else{
 			$return_array["status"] = "603";
 			$return_array["error"] = _("Unknown language code.");
 		}
+
+	//if the language wasn't changed
 	}else{
 		$return_array["status"] = "201";
 	}
