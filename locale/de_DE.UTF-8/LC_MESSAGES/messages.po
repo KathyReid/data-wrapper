@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-01 16:45+0100\n"
-"PO-Revision-Date: 2011-11-01 16:47+0100\n"
+"POT-Creation-Date: 2011-11-01 16:53+0100\n"
+"PO-Revision-Date: 2011-11-02 17:28+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -68,7 +68,7 @@ msgstr "Daten könntent nicht in Datenbank umgestellt werden."
 msgid "You can only transpose a table with two entries."
 msgstr "Nur Tabellen mit 2 Einträge umgestellt werden können."
 
-#: js/navigation.js.php:59
+#: js/navigation-js.php:59
 msgid "No data was input."
 msgstr "Kein Datei würde eingegeben."
 

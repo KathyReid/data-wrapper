@@ -74,7 +74,7 @@
 
         <!-- A div that serves for loading screens -->
         <div id="loader">
-            Loading...   
+            <img src="images/ajax-loader.gif" />   
         </div>
 
         <div id="container">

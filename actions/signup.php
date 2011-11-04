@@ -23,7 +23,7 @@ if (isset($_POST['email']) && isset($_POST['pwd'])){
 
 			//Creates a new user
 
-			$q_adduser = "INSERT INTO users (email, pwd) VALUES ('$email', '". md5($pwd) ."')";
+			$q_adduser = "INSERT INTO users (email, pwd, date_created) VALUES ('$email', '". md5($pwd) ."', '". date('Y-m-d H:i:s') ."')";
 
 			if ($result = $mysqli->query($q_adduser)) {
 

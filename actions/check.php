@@ -14,6 +14,8 @@ $action = $_POST['action'];
 if ($action == "next"){
 	$return_array["status"] = "200";
 	$return_array["chart_id"] = $chart_id;
+
+//Returns the data for the given chart
 }else{
 
 	$q = "SELECT chart_csv_data, horizontal_headers, vertical_headers FROM charts WHERE chart_id='$chart_id' LIMIT 1";

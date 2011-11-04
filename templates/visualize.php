@@ -11,7 +11,6 @@ var csv_data = {};
 var options = {
 	chart_lib: "Highcharts",
     chart: {
-        renderTo: 'chart',
         defaultSeriesType: 'column'
     },
     title: {
@@ -27,11 +26,7 @@ var options = {
             width:'150px'
         }
     },
-    plotOptions: {
-        column: {},
-        pie: {},
-        line: {}
-    },
+    plotOptions: {},
     series: []
 };
 
@@ -67,6 +62,9 @@ function js_enterScreen_visualize(){
 
 function update_options(){
 
+	//renders here
+	options.chart.renderTo = "chart";
+
 	//clears the data from the chart
 	options.series = [];
 	options.categories = new Array();
@@ -75,9 +73,11 @@ function update_options(){
 	options.chart.width = $("#chart").width();
 	options.chart.height = $("#chart").height();
 
+	//Sets the title and subtitle
 	options.title.text = $("#chart_title").val();
 	options.subtitle.text = $("#chart_subtitle").val();
 	
+	//Assigns a chart type according to the user's choice in the drop down menu
 	var chart_type = $("#chart_type").val();
 
 	//If the chose option is "visualization type"
@@ -96,8 +96,17 @@ function update_options(){
 
 		//Prepares Highcharts
 		options.chart.defaultSeriesType = chart_type;
-		options.plotOptions.column.pointPadding = 0.2;
-		options.plotOptions.column.borderWidth = 0;
+
+		//Sets the right options
+		options.plotOptions = {
+			chart_type : {
+				pointPadding: 0.2,
+				borderWidth: 0,
+				marker: {
+					enabled: true
+				}
+			}
+		};
 
 		//Axes
 		options.xAxis = {};
@@ -164,11 +173,23 @@ function update_options(){
 
 		//Prepares Highcharts
 		options.chart.defaultSeriesType = chart_type;
-		options.plotOptions.pie.allowPointSelect = true;
-		options.plotOptions.pie.cursor = "pointer";
-		options.plotOptions.pie.dataLabels = {};
-		options.plotOptions.pie.dataLabels.enabled = true;
-		options.plotOptions.pie.dataLabels.formatter = function(){return pieLabels(this); };
+
+		//Sets correct options
+		options.plotOptions = {
+			"pie" : {
+				allowPointSelect: true,
+				cursor: "pointer",
+				dataLabels: {
+					enabled: true,
+					formatter: function(){
+						return pieLabels(this);
+					}
+				},
+				markers: {
+					enabled: true
+				}
+			}
+		};
 
 		//Tooltip
 		options.tooltip.formatter = function(){return pieTooltip(this); };
