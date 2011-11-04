@@ -14,7 +14,7 @@
 	* @param	$lang		: string ; looks like "fr_FR" or "en_US" ...
 	* @param	$domain		: string ; typically the name of the language files
 	* @param	$baseFolder	: string ; under the document root ; it's the folder that contain sth like "fr_FR/LC_MESSAGES/*.[pm]o"
-	* @return	zilch, it just gets the job done
+	* @return	the new locale
 	*/
 
 	function setLanguage($lang, $domain = "messages", $baseFolder = "") {
@@ -29,11 +29,13 @@
 				putenv("LANG=$lang.$codeset");
                 putenv("LANGUAGE=$lang.$codeset");
 
-                setlocale(LC_ALL, "$lang.$codeset");
+                $newLocale = setlocale(LC_ALL, "$lang.$codeset");
 
                 bindtextdomain($domain, $baseFolder);
                 bind_textdomain_codeset($domain, $codeset);
 				textdomain($domain);
+
+				return $newLocale;
                 
 	}
 

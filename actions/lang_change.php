@@ -10,9 +10,10 @@ if (isset($_POST["lang"])){
 
 	$lang = $_POST["lang"];
 
-	//if the demanded language is different from the current one
+	//Detects the current locale
 	$current_locale =  setlocale(LC_ALL, '0');
 	
+	//if the demanded language is different from the current one
 	if ($current_locale != $lang."UTF-8"){
 
 		$pattern = "/[a-z]_[A-Z]/";
@@ -21,9 +22,9 @@ if (isset($_POST["lang"])){
 		if (preg_match($pattern, $lang)){
 
 			//sets the language
-			setLanguage($lang);
+			$newLocale = setLanguage($lang);
 			$return_array["status"] = "200";
-			$return_array["lang"] = _("$current_locale");
+			$return_array["lang"] = _("$newLocale");
 
 		}else{
 			$return_array["status"] = "603";
