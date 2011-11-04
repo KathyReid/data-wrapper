@@ -12,8 +12,11 @@ function initHeader(){
 
      			if (data.status == 200){
 	     			
+	     			//for debug purposes only
+	     			error(data.lang)
+
 	     			//language has changed, reload page
-	     			location.reload();
+	     			//location.reload();
 
 	     		}else if (data.status == 201){
 

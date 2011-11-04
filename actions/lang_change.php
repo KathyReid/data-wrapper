@@ -23,6 +23,7 @@ if (isset($_POST["lang"])){
 			//sets the language
 			setLanguage($lang);
 			$return_array["status"] = "200";
+			$return_array["lang"] = _("$current_locale");
 
 		}else{
 			$return_array["status"] = "603";
