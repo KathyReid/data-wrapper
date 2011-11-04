@@ -18,6 +18,12 @@
 	*/
 
 	function setLanguage($lang, $domain = "messages", $baseFolder = "") {
+				
+
+				//Starts session if it hasn't been started already
+				if (!isset ($_COOKIE[ini_get('session.name')])) {
+    				session_start();
+  				}
 
 				$baseFolder = dirname(__FILE__)."/../locale";
 				

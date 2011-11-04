@@ -15,7 +15,7 @@ if (isset($_POST["lang"])){
 	$current_locale =  setlocale(LC_ALL, '0');
 	
 	//if the demanded language is different from the current one
-	if ($current_locale != $lang."UTF-8"){
+	if ($current_locale != $lang.".UTF-8"){
 
 		$pattern = "/[a-z]_[A-Z]/";
 
