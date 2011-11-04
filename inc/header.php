@@ -16,7 +16,7 @@ function initHeader(){
 	     			error(data.lang)
 
 	     			//language has changed, reload page
-	     			//location.reload();
+	     			location.reload();
 
 	     		}else if (data.status == 201){
 
