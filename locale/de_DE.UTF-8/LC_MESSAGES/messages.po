@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-01 16:53+0100\n"
-"PO-Revision-Date: 2011-11-02 17:28+0100\n"
+"POT-Creation-Date: 2011-11-04 11:55+0100\n"
+"PO-Revision-Date: 2011-11-04 12:24+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,49 +16,42 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: embed.php:7
-#: screens.php:7
-msgid "Data Story"
-msgstr "Data Story, ein Projekt von ABZV"
-
-#: screens.php:78
-msgid "Errors are displayed here"
-msgstr "Fehler werden hier angezeigt."
-
-#: screens.php:93
-msgid "1. Input data"
-msgstr "1. Daten hinfügen"
-
-#: screens.php:96
-msgid "2. Check data"
-msgstr "2. Daten prüfen"
-
-#: screens.php:99
-msgid "3. Visualize"
-msgstr "3. Visualisierung"
-
-#: screens.php:102
-msgid "4. Publish"
-msgstr "4. Veröffentlichen"
-
-#: screens.php:109
-msgid "Next"
-msgstr "Nächste"
-
-#: screens.php:114
-msgid "Prev"
-msgstr "Zurück"
-
-#: actions/check.php:48
+#: actions/check.php:50
 #: actions/publish.php:45
 #: actions/transpose.php:54
 #: actions/visualize.php:44
 msgid "Could not fetch the data from the database."
 msgstr "Daten könnten nicht von Datenbank abgeholt werden."
 
-#: actions/input.php:101
+#: actions/input.php:103
 msgid "Could not store the data on the database."
 msgstr "Daten könnten nicht in Datenbank eingespeichert werden."
+
+#: actions/lang_change.php:29
+msgid "Unknown language code."
+msgstr "Sprache wurde nicht erkennt."
+
+#: actions/login.php:34
+msgid "User and password do not match."
+msgstr "Benutzer und Kennwort stimmen nicht überein."
+
+#: actions/login.php:40
+msgid "Could not check the user credentials in the DB."
+msgstr "Daten könnten nicht in Datenbank eingespeichert werden."
+
+#: actions/login.php:46
+#: actions/signup.php:57
+msgid "Not enough parameters were passed."
+msgstr "Zu wenig Parameters wurden gesendet."
+
+#: actions/signup.php:37
+#: actions/signup.php:51
+msgid "Could not add user in the DB."
+msgstr "Benutzer könnte nicht in die Datenbank aufgenommen werden."
+
+#: actions/signup.php:45
+msgid "A user already has this email address."
+msgstr "Diese E-Mail-Addresse wurde bereits von einem anderen Benutzer verwendet."
 
 #: actions/transpose.php:39
 msgid "Could not transpose the data in the database."
@@ -67,6 +60,110 @@ msgstr "Daten könntent nicht in Datenbank umgestellt werden."
 #: actions/transpose.php:48
 msgid "You can only transpose a table with two entries."
 msgstr "Nur Tabellen mit 2 Einträge umgestellt werden können."
+
+#: class/user.class.php:36
+msgid "Error while trying to retrieve user from database."
+msgstr "Datenbank Fehler beim Benutzersretrieval."
+
+#: inc/embed.php:7
+#: inc/login.php:7
+msgid "Data Story"
+msgstr "Data Story, ein Projekt von ABZV"
+
+#: inc/header.php:27
+msgid "Could not change language."
+msgstr "Sprache könnte nicht verändert."
+
+#: inc/header.php:50
+#: inc/logout.php:19
+msgid "Could not log out."
+msgstr "Ausloggen wurde nicht erfolgreich."
+
+#: inc/header.php:78
+msgid "Log out"
+msgstr "Ausloggen."
+
+#: inc/header.php:82
+#, php-format
+msgid "Welcome, %s!"
+msgstr "Wilkommen, %s!"
+
+#: inc/login.php:83
+#: inc/login.php:127
+#: inc/login.php:134
+#: inc/login.php:135
+msgid "Password"
+msgstr "Kennwort"
+
+#: inc/login.php:103
+msgid "Please agree to the Terms of Use."
+msgstr "Bitte akzeptieren Sie die Nutzungsbedingungen an."
+
+#: inc/login.php:106
+msgid "Passwords do not match."
+msgstr "Kennwörter stimmen nicht überein."
+
+#: inc/login.php:110
+msgid "Please enter a valid email address."
+msgstr "Bitten geben Sie eine gültige E-Mail-Addresse ein."
+
+#: inc/login.php:118
+msgid "Errors are displayed here"
+msgstr "Fehler werden hier angezeigt."
+
+#: inc/login.php:126
+#: inc/login.php:131
+msgid "E-mail"
+msgstr "E-Mail"
+
+#: inc/login.php:128
+msgid "Login"
+msgstr "Einloggen"
+
+#: inc/login.php:133
+msgid "Enter password twice"
+msgstr "Bitte geben Sie Ihr Kennwort zweimal ein."
+
+#: inc/login.php:137
+msgid "I agree to the Terms of Use"
+msgstr "Ich akzeptiere die Nutzungsbedingungen an."
+
+#: inc/login.php:138
+#: inc/login.php:143
+msgid "Sign up"
+msgstr "Anmeden"
+
+#: inc/login.php:141
+msgid "DataStory helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all."
+msgstr "DataStory hilft Journalisten beim Bau spannender Visualisierungen in nur wenigen Klicks. Benutzer ziehen Nutzen von den letzten, kräftigsten Javascript-Biblioteke und brauchen dafür keine Codingkenntnisse."
+
+#: inc/login.php:142
+msgid "The project is lead and maintained by ABZV."
+msgstr "Das Projekt wurde von ABZV geleitet und gewartet."
+
+#: inc/screens.php:89
+msgid "1. Input data"
+msgstr "1. Daten hinfügen"
+
+#: inc/screens.php:92
+msgid "2. Check data"
+msgstr "2. Daten prüfen"
+
+#: inc/screens.php:95
+msgid "3. Visualize"
+msgstr "3. Visualisierung"
+
+#: inc/screens.php:98
+msgid "4. Publish"
+msgstr "4. Veröffentlichen"
+
+#: inc/screens.php:105
+msgid "Next"
+msgstr "Nächste"
+
+#: inc/screens.php:110
+msgid "Prev"
+msgstr "Zurück"
 
 #: js/navigation-js.php:59
 msgid "No data was input."
@@ -108,37 +205,37 @@ msgstr "Einbettungsbreite"
 msgid "Embed height"
 msgstr "Einbettungshöhe"
 
-#: templates/visualize.php:18
-#: templates/visualize.php:232
+#: templates/visualize.php:17
+#: templates/visualize.php:253
 msgid "Title"
 msgstr "Titel"
 
-#: templates/visualize.php:21
-#: templates/visualize.php:235
+#: templates/visualize.php:20
+#: templates/visualize.php:256
 msgid "Subtitle"
 msgstr "Untertitel"
 
-#: templates/visualize.php:225
+#: templates/visualize.php:246
 msgid "Build your visualization."
 msgstr "Erstellen Sie Ihre Visualisierung"
 
-#: templates/visualize.php:239
+#: templates/visualize.php:260
 msgid "Visualization type"
 msgstr "Visualisierungsart"
 
-#: templates/visualize.php:240
+#: templates/visualize.php:261
 msgid "Bar chart"
 msgstr "Balkenplan"
 
-#: templates/visualize.php:241
+#: templates/visualize.php:262
 msgid "Line chart"
 msgstr "Liniendiagramm"
 
-#: templates/visualize.php:242
+#: templates/visualize.php:263
 msgid "Pie chart"
 msgstr "Kreisdiagramm"
 
-#: templates/visualize.php:246
+#: templates/visualize.php:267
 msgid "Vertical axis title"
 msgstr "Titel der Hochachse"
 
