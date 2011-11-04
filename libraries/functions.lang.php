@@ -18,16 +18,8 @@
 	*/
 
 	function setLanguage($lang, $domain = "messages", $baseFolder = "") {
-				
-
-				//Starts session if it hasn't been started already
-				if (!isset ($_COOKIE[ini_get('session.name')])) {
-    				session_start();
-  				}
 
 				$baseFolder = dirname(__FILE__)."/../locale";
-				
-				$_SESSION[LANG_SESSION_VAR] = $lang;
 
                 $codeset = "UTF-8";
                 
@@ -54,17 +46,10 @@
 	*/
         if(! function_exists("initLanguage") ) {
 
-            define('LANG_SESSION_VAR', 'language');
-
             function initLanguage() {
 
                 if(isset($_GET["lang"]))
                      setLanguage($_GET["lang"]);
-
-                elseif( isset($_SESSION[LANG_SESSION_VAR]) )
-                     setLanguage($_SESSION[LANG_SESSION_VAR]);
-
-                else setLanguage("en_US");
 
             }
         }
