@@ -8,6 +8,10 @@ var chart_text_id = "";
 
 function js_enterScreen_publish(){
 
+	//init the download CSV button
+	$("#export_csv").click(function(){
+		window.location.href = 'actions/export.php?c=' + chart_id;
+	});
 
 	$.post("actions/publish.php", { chart_id: chart_id, action: "current" },
    		function(data) {
@@ -43,8 +47,8 @@ function js_enterScreen_publish(){
 						options.chart.renderTo = "publish_chart";
 
 						//init the iframe customizators
-						$("#iframe_h").val($("#publish_chart").height());
-						$("#iframe_w").val($("#publish_chart").width());
+						$("#iframe_h").val($("#embed").height());
+						$("#iframe_w").val($("#embed").width());
 
 						render_chart();
 					}
@@ -73,8 +77,14 @@ function update_dimensions(){
 	//Makes the iframe embed code
 	var iframe_h = $("#iframe_h").val();
 	var iframe_w = $("#iframe_w").val();
+	var extra_h = $("#embed_extras").height();
 
-	$("#publish_chart").height(iframe_h);
+	//Sets the embed div size
+	$("#embed").height(iframe_h);
+	$("#embed").width(iframe_w);
+
+	//The chart size is as big as the embed div minus the size of the extra info.
+	$("#publish_chart").height(iframe_h - extra_h);
 	$("#publish_chart").width(iframe_w);
 
 	var iframe_code = "<iframe src='<?php echo BASE_DIR ?>"+"?c="+chart_text_id+"' height='"+ iframe_h +"' width='"+ iframe_w +"' frameborder='0' scrolling='no'></iframe>";
@@ -106,6 +116,18 @@ function update_dimensions(){
 	
 	<textarea id="iframe_code" readonly></textarea>
 
-	<div id="publish_chart" class="publish_chart"></div>
+	<div id="embed">
+		
+		<div id="publish_chart" class="publish_chart"></div>
 
+		<div id="embed_extras">
+			
+			<button id="export_csv" class="button">
+				<?php echo _("Export data") ?>
+			</button>
+
+			<p><?php echo _("Chart created using DataStory, a project by ABZV.") ?></p>
+
+		</div>
+	</div>
 </div>

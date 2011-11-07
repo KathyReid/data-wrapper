@@ -19,16 +19,25 @@ if ($action == "next"){
 	//Fetches the JSON data sent by the client and stores it in the DB
 	$data_json = json_decode($data);
 
+	//Gets the lib in use
 	$chart_library = $data_json->chart_lib;
 
+	//Specific ton HighCharts
 	$chart_type = "";
 	if ($chart_library == "Highcharts"){
+		
+		//Gets the chart type
 		$chart_type = $data_json->chart->defaultSeriesType;
+
+		//Gets the chart title
+		$chart_title = $data_json->title->text;
 	}
 
+	//Retrieves chart JS code for visualization
 	$chart_js_code = addslashes($data);
 
-	$q = "UPDATE charts SET chart_js_code = '$chart_js_code', chart_type='$chart_type', chart_library='$chart_library' WHERE chart_id='$chart_id'";
+	//Builds query
+	$q = "UPDATE charts SET chart_js_code = '$chart_js_code', chart_type='$chart_type', chart_library='$chart_library', chart_title='$chart_title' WHERE chart_id='$chart_id'";
 
 	if ($result = $mysqli->query($q)) {
 		

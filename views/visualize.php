@@ -19,6 +19,9 @@ var options = {
     subtitle: {
         text: "<?php echo _("Subtitle") ?>"
     },
+    credits: {
+    	enabled: false
+    },
     xAxis: null,
     yAxis: null,
     tooltip: {
