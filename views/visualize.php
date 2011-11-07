@@ -77,10 +77,6 @@ function update_options(){
 	options.series = [];
 	options.categories = new Array();
 
-	//Set the chart size. Otherwise it overflows from the div
-	options.chart.width = $("#chart").width();
-	options.chart.height = $("#chart").height();
-
 	//Sets the title and subtitle
 	options.title.text = $("#chart_title").val();
 	options.subtitle.text = $("#chart_subtitle").val();
@@ -205,10 +201,6 @@ function update_options(){
 
 	//updates the chart
 	render_chart(options, theme);
-
-	//Clear the width size options so that they are not passed to the DB later on
-	options.chart.width = null;
-	options.chart.height = null;
 
 	//stores the var options
 	$("#visualize_data").val(JSON.stringify(options));
