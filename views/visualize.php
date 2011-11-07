@@ -1,6 +1,7 @@
 <!-- This file holds all HTML/JS contents for the screen "5.VISUALIZE" -->
 
 <script src="highcharts/highcharts.js" type="text/javascript"></script>
+<script src="highcharts/themes/default.js" type="text/javascript"></script>
 <script src="js/onfinishinput.js" type="text/javascript"></script>
 <script src="js/json-serialization.js" type="text/javascript"></script>
 
@@ -29,7 +30,6 @@ var options = {
             width:'150px'
         }
     },
-    plotOptions: {},
     series: []
 };
 
@@ -100,17 +100,6 @@ function update_options(){
 		//Prepares Highcharts
 		options.chart.defaultSeriesType = chart_type;
 
-		//Sets the right options
-		options.plotOptions = {
-			chart_type : {
-				pointPadding: 0.2,
-				borderWidth: 0,
-				marker: {
-					enabled: true
-				}
-			}
-		};
-
 		//Axes
 		options.xAxis = {};
 		options.xAxis.categories = new Array();
@@ -176,23 +165,6 @@ function update_options(){
 
 		//Prepares Highcharts
 		options.chart.defaultSeriesType = chart_type;
-
-		//Sets correct options
-		options.plotOptions = {
-			"pie" : {
-				allowPointSelect: true,
-				cursor: "pointer",
-				dataLabels: {
-					enabled: true,
-					formatter: function(){
-						return pieLabels(this);
-					}
-				},
-				markers: {
-					enabled: true
-				}
-			}
-		};
 
 		//Tooltip
 		options.tooltip.formatter = function(){return pieTooltip(this); };

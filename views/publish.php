@@ -33,9 +33,7 @@ function js_enterScreen_publish(){
 
 	     				//Adds the functions for the visualisation
 	     				if (data.chart_type == "pie"){
-
-	     					//Labels
-	     					options.plotOptions.pie.dataLabels.formatter = function(){return pieLabels(this)};
+	     					
 	     					//Tooltip
 							options.tooltip.formatter = function(){return pieTooltip(this); };
 
