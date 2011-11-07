@@ -13,6 +13,7 @@ function showSlide(next, current){
     currentSlide = next;
 
     $("#"+current).hide("drop", 500, function(){
+        
 
         //changes the color of the breadcrumbs
         $("#crumbs_"+current).attr("class", "off");

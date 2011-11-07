@@ -37,7 +37,7 @@ function initHeader(){
 
 	$("#logout").click(function(){
 
-		$.post("inc/logout.php", { }, function(data){
+		$.post("actions/logout.php", { }, function(data){
 			
 			if (data != ""){
 

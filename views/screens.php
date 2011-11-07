@@ -43,8 +43,8 @@
 	     	//hides all screens on startup
 	     	$('.screen').hide();
 	        
-	       //Starts the slideshow 
-	       showSlide("input", "login");
+	        //Starts the slideshow 
+	        showSlide("input", "empty");
 	        
             //Init all inputs fields so they react properly onBlur
             initInputs();
@@ -115,11 +115,14 @@
         	<div id="screen_container">
 
         		<!-- Loads the different screens -->
-        		<?php require_once "templates/login.php"; ?>
-        		<?php require_once "templates/input.php"; ?>
-        		<?php require_once "templates/check.php"; ?>
-        		<?php require_once "templates/visualize.php"; ?>
-        		<?php require_once "templates/publish.php"; ?>
+
+                <!-- We need an empty screen for smooth transitions when user is landing -->
+        		<?php require_once "views/empty.php"; ?>
+        		<?php require_once "views/input.php"; ?>
+        		<?php require_once "views/check.php"; ?>
+        		<?php require_once "views/visualize.php"; ?>
+        		<?php require_once "views/publish.php"; ?>
+
         	</div>
         </div>
     </body>
