@@ -31,13 +31,16 @@ if ($action == "next"){
 
 		//Gets the chart title
 		$chart_title = $data_json->title->text;
+
+		//Gets the chart theme
+		$chart_theme = $data_json->chart->chart_theme;
 	}
 
 	//Retrieves chart JS code for visualization
 	$chart_js_code = addslashes($data);
 
 	//Builds query
-	$q = "UPDATE charts SET chart_js_code = '$chart_js_code', chart_type='$chart_type', chart_library='$chart_library', chart_title='$chart_title' WHERE chart_id='$chart_id'";
+	$q = "UPDATE charts SET chart_js_code = '$chart_js_code', chart_type='$chart_type', chart_theme='$chart_theme', chart_library='$chart_library', chart_title='$chart_title' WHERE chart_id='$chart_id'";
 
 	if ($result = $mysqli->query($q)) {
 		

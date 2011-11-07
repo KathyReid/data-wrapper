@@ -33,7 +33,7 @@
 		$chart_id = alphaID($chart_text_id, true);
 
 		//Looks for the chart in the DB
-		$q = "SELECT chart_library, chart_type, chart_js_code FROM charts WHERE chart_id='$chart_id' LIMIT 1";
+		$q = "SELECT chart_library, chart_type, chart_theme, chart_js_code FROM charts WHERE chart_id='$chart_id' LIMIT 1";
 
 		if ($result = $mysqli->query($q)) {
 			
@@ -42,6 +42,7 @@
 
 				$chart_library = $row->chart_library;
 				$chart_type = $row->chart_type;
+				$chart_theme = $row->chart_theme;
 				$chart_js_code = $row->chart_js_code;
 				
 			}
@@ -68,7 +69,11 @@
 							opt.tooltip.formatter = function(){return pieTooltip(this); };
 						<?php endif; ?>
 
-						var chart = new Highcharts.Chart(opt);
+						//gets the theme
+						var theme = "<?php echo $chart_theme ?>";
+	     				
+	     				render_chart(opt, theme);
+
 					});
 				</script>
 				<?php

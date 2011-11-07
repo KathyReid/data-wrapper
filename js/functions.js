@@ -95,3 +95,34 @@ function initInputs(){
 		});
 	});
 }
+
+function render_chart(options, theme){
+
+	if(typeof theme == 'string'){
+		//If a theme is specified
+		
+		$.getScript('highcharts/themes/' + theme + '.js', function(){
+			//Once the theme is loaded, renders chart
+			chart = new Highcharts.Chart(options, function (chart){
+
+				if (theme != "default"){
+					//Add logo to the chart
+
+					//gets chart width & height
+					var render_div = options.chart.renderTo;
+					var chart_w = $("#"+ render_div).width();
+					var chart_h = $("#"+ render_div).height();
+
+					//Renders the logo
+					chart.renderer.image('highcharts/themes/'+theme+'.gif', chart_w-120, chart_h-30, 101, 18)
+        			.add(); 
+        		}
+        	});
+		});
+
+	}else{
+		//If no theme is specified
+		chart = new Highcharts.Chart(options);
+	}
+
+}

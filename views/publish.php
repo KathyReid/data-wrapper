@@ -33,7 +33,7 @@ function js_enterScreen_publish(){
 
 	     				//Adds the functions for the visualisation
 	     				if (data.chart_type == "pie"){
-	     					
+
 	     					//Tooltip
 							options.tooltip.formatter = function(){return pieTooltip(this); };
 
@@ -48,7 +48,12 @@ function js_enterScreen_publish(){
 						$("#iframe_h").val($("#embed").height());
 						$("#iframe_w").val($("#embed").width());
 
-						render_chart();
+						//gets the theme
+	     				var theme = data.chart_theme;
+
+						//renders chart
+						render_chart(options, theme);
+
 					}
 
 					//Gets the chart ID
@@ -89,7 +94,8 @@ function update_dimensions(){
 
 	$("#iframe_code").val(iframe_code);
 
-	render_chart();
+	//renders chart
+	render_chart(options);
 
 }
 

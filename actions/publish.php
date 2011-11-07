@@ -10,7 +10,7 @@ $chart_id = $_POST['chart_id'];
 
 $action = $_POST['action'];
 
-$q = "SELECT chart_js_code, chart_type, chart_library FROM charts WHERE chart_id='$chart_id' LIMIT 1";
+$q = "SELECT chart_js_code, chart_type, chart_library, chart_theme FROM charts WHERE chart_id='$chart_id' LIMIT 1";
 
 if ($result = $mysqli->query($q)) {
 	
@@ -20,6 +20,7 @@ if ($result = $mysqli->query($q)) {
 		$chart_js_code = $row->chart_js_code;
 		$chart_library = $row->chart_library;
 		$chart_type = $row->chart_type;
+		$chart_theme = $row->chart_theme;
 		
 }
 
@@ -29,9 +30,10 @@ if ($result = $mysqli->query($q)) {
 	//returns the chart JS code in an array
 	$return_array["chart_js_code"] = json_decode($chart_js_code, true);
 
-	//returns the chart type & lib
+	//returns the chart type & lib & theme
 	$return_array["chart_type"] = $chart_type;
 	$return_array["chart_library"] = $chart_library;
+	$return_array["chart_theme"] = $chart_theme;
 
 	//returns the id of the chart
 	$return_array["chart_id"] = $chart_id;

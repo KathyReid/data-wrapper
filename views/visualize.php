@@ -1,7 +1,6 @@
 <!-- This file holds all HTML/JS contents for the screen "5.VISUALIZE" -->
 
 <script src="highcharts/highcharts.js" type="text/javascript"></script>
-<script src="highcharts/themes/default.js" type="text/javascript"></script>
 <script src="js/onfinishinput.js" type="text/javascript"></script>
 <script src="js/json-serialization.js" type="text/javascript"></script>
 
@@ -64,6 +63,12 @@ function js_enterScreen_visualize(){
 }
 
 function update_options(){
+
+	//Loads the appropriate theme
+	var theme = $("#chart_theme").val();
+
+	//Stores the theme
+	options.chart.chart_theme = theme;
 
 	//renders here
 	options.chart.renderTo = "chart";
@@ -199,7 +204,7 @@ function update_options(){
 	}
 
 	//updates the chart
-	render_chart();
+	render_chart(options, theme);
 
 	//Clear the width size options so that they are not passed to the DB later on
 	options.chart.width = null;
@@ -208,10 +213,6 @@ function update_options(){
 	//stores the var options
 	$("#visualize_data").val(JSON.stringify(options));
 
-}
-
-function render_chart(){
-	chart = new Highcharts.Chart(options);
 }
 
 </script>
@@ -240,6 +241,12 @@ function render_chart(){
 		</div>
 		<div class="chart_customizator column">
 			<input type="text" id="chart_yAxis" class="chart_builder yAxis" value="<?php echo _("Vertical axis title") ?>" onfinishinput="update_options()"/>
+		</div>
+		<div class="chart_customizator">
+			<select id="chart_theme" onchange="update_options()">
+				<option value="default" selected="selected"><?php echo _("Default theme") ?> </option>
+				<option value="lemonde"><?php echo _("LeMonde.fr theme") ?> </option>
+			</select>
 		</div>
 		
 	</div>
