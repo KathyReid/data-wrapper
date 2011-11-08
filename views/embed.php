@@ -33,7 +33,7 @@
 		$chart_id = alphaID($chart_text_id, true);
 
 		//Looks for the chart in the DB
-		$q = "SELECT chart_library, chart_type, chart_theme, chart_js_code, chart_lang FROM charts WHERE chart_id='$chart_id' LIMIT 1";
+		$q = "SELECT chart_library, chart_type, chart_theme, chart_js_code, chart_lang, additional_text, source, source_url FROM charts WHERE chart_id='$chart_id' LIMIT 1";
 
 		if ($result = $mysqli->query($q)) {
 			
@@ -45,6 +45,9 @@
 				$chart_theme = $row->chart_theme;
 				$chart_lang = $row->chart_lang;
 				$chart_js_code = $row->chart_js_code;
+				$chart_desc = $row->additional_text;
+				$chart_source = $row->source;
+				$chart_source_url = $row->source_url;
 				
 			}
 
@@ -69,7 +72,6 @@
 						<?php if ($chart_type == "column" || $chart_type == "line"): ?>
 							opt.tooltip.formatter = function(){return barTooltip(this); };
 						<?php elseif ($chart_type == "pie"): ?>
-		 					opt.plotOptions.pie.dataLabels.formatter = function(){return pieLabels(this)};
 							opt.tooltip.formatter = function(){return pieTooltip(this); };
 						<?php endif; ?>
 
@@ -81,7 +83,7 @@
 					});
 				</script>
 				<?php
-			}
+			}//endif Highcharts
 
 
 		}else{ //no data could be fetched in DB
@@ -94,6 +96,21 @@
 		</div>
 		<div id="embed_extras">
 			
+			<?php if ($chart_desc != ""): ?>
+				<p class="desc"><?php echo $chart_desc ?></p>
+			<?php endif; ?>
+
+			<?php if ($chart_source != ""): ?>
+				<p class="source">
+					<span id="source"><?php echo $chart_source ?></span>
+
+					<?php if ($chart_source_url != ""): ?>
+						<span id="source_url">(<a href="<?php echo $chart_source_url ?>" class="source_url"><?php echo _("Link") ?></a>)</span>
+					<?php endif; ?>
+				
+				</p>
+			<?php endif; ?>
+
 			<button id="export_csv" class="button">
 				<?php echo _("Export data") ?>
 			</button>

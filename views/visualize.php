@@ -77,28 +77,50 @@ function update_options(){
 	options.series = [];
 	options.categories = new Array();
 
-	/* Gets the texts */
+	/* Gets and sets the texts */
 
 	//title
 	var title = $("#chart_title").val();
+	options.title.text = title;
 
 	//subtitle
 	var subtitle = $("#chart_subtitle").val();
-	
-	//yAxis
-	var yAxis = $("#chart_yAxis").val();
-
-	/* Sets the texts */
-
-	//title
-	options.title.text = title;
-
-	//Subtitle
 	if (subtitle != "" && subtitle != "<?php echo _("Subtitle") ?>"){
 		options.subtitle.text = subtitle
 	} else {
 		options.subtitle.text = "";
 	}
+	
+	//yAxis
+	var yAxis = $("#chart_yAxis").val();
+
+	//source URL
+	var source_url = $("#chart_source_url").val();
+	if (source_url == "<?php echo _("Source URL") ?>"){
+		source_url = "";
+	}else if(source_url.substr(0,7) != "http://"){
+		source_url = "";
+		error("<?php echo _("Source URL must begin with 'http://'") ?>");
+	}else{
+		options.source_url = source_url;	
+	}
+
+	//source
+	var source = $("#chart_source").val();
+	if (source == "<?php echo _("Source") ?>"){
+		source = "";
+	}else{
+		options.source = source;	
+	}
+
+	//Description
+	var desc = $("#chart_desc").val();
+	if (desc == "<?php echo _("Chart description") ?>"){
+		desc = "";
+	}else{
+		options.desc = desc;	
+	}
+
 
 	//Assigns a chart type according to the user's choice in the drop down menu
 	var chart_type = $("#chart_type").val();
@@ -115,7 +137,7 @@ function update_options(){
 	if (chart_type == "column" || chart_type=="line"){
 
 		//Shows the attributes specific to column charts
-		$(".column").show();
+		$(".column").removeClass("inactive");
 
 		//Prepares Highcharts
 		options.chart.defaultSeriesType = chart_type;
@@ -181,7 +203,7 @@ function update_options(){
 		/***********************/
 		
 		//Shows/hides the attributes specific to pie charts
-		$(".column").hide();
+		$(".column").addClass("inactive");
 
 		//Prepares Highcharts
 		options.chart.defaultSeriesType = chart_type;
@@ -237,7 +259,7 @@ function update_options(){
 
 	<div id = "chart_customization">
 		<div class="chart_customizator">
-			<input type="text" id="chart_title" class="chart_builder title" value="<?php echo _("Title") ?>" onfinishinput="update_options()"/>
+			<input type="text" id="chart_title" class="chart_builder title" value="<?php echo _("Title (required)") ?>" onfinishinput="update_options()"/>
 		</div>
 		<div class="chart_customizator">
 			<input type="text" id="chart_subtitle" class="chart_builder subtitle" value="<?php echo _("Subtitle") ?>" onfinishinput="update_options()"/>
@@ -250,9 +272,7 @@ function update_options(){
 				<option value="pie"><?php echo _("Pie chart") ?> </option>
 			</select>
 		</div>
-		<div class="chart_customizator column">
-			<input type="text" id="chart_yAxis" class="chart_builder yAxis" value="<?php echo _("Vertical axis title") ?>" onfinishinput="update_options()"/>
-		</div>
+		
 		<div class="chart_customizator">
 			<select id="chart_theme" onchange="update_options()">
 				
@@ -260,6 +280,23 @@ function update_options(){
 
 			</select>
 		</div>
+
+		<div class="chart_customizator">
+			<input type="text" id="chart_yAxis" class="chart_builder yAxis column" value="<?php echo _("Vertical axis title (required)") ?>" onfinishinput="update_options()"/>
+		</div>
+
+		<div class="chart_customizator">
+			<input type="text" id="chart_source" class="chart_builder source" value="<?php echo _("Source") ?>" onfinishinput="update_options()"/>
+		</div>
+
+		<div class="chart_customizator">
+			<input type="text" id="chart_source_url" class="chart_builder source_url" value="<?php echo _("Source URL") ?>" onfinishinput="update_options()"/>
+		</div>
+
+		<div class="chart_customizator">
+			<input type="text" id="chart_desc" class="chart_builder desc" value="<?php echo _("Chart description") ?>" onfinishinput="update_options()"/>
+		</div>
+
 		
 	</div>
 	<div id="chart"></div>

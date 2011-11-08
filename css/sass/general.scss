@@ -412,6 +412,15 @@ $customizator-margin-bottom: 5px;
             width:$col-w * 2 - $table-padding * 2;
             padding:4px 0 0 4px;
         }
+
+        .desc{
+            width:$col-w * 4 - $table-padding * 4;
+        }
+
+        .inactive{
+            background-color:#111;
+            color:#333;
+        }
     }
 
     .chart_customizator{
@@ -429,7 +438,7 @@ $customizator-margin-bottom: 5px;
 
 $chart-h:300px;
 $chart-w:400px;
-$embed_extras-h: 30px;
+$embed_extras-h: 50px;
 
 #publish{
 
@@ -543,6 +552,7 @@ $embed_extras-h: 30px;
 
 #embed_extras{
     height: $embed_extras-h;
+    text-align:left;
     width: 100%;
     font-family: Arial, Helvetica, Sans-serif;
     font-size: $font-size - .3;
@@ -557,5 +567,18 @@ $embed_extras-h: 30px;
         font-size: $font-size - .2;
         float:right;
         margin: 0 10px;
+    }
+
+    .desc{
+        font-weight:bold;
+    }
+
+    #source{
+        font-style: italic;
+    }
+
+    .source_url{
+        color: #000;
+        &:hover { text-decoration:underline; }
     }
 }

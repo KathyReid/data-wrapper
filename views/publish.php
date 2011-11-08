@@ -40,6 +40,27 @@ function js_enterScreen_publish(){
 	     				//renders the chart based on data from the DB (not the client)
 	     				options = data.chart_js_code;
 
+	     				//Gets the extra info
+	     				var desc = data.chart_desc;
+	     				var source = data.chart_source;
+	     				var source_url = data.chart_source_url;
+
+	     				//Renders the description
+	     				if (desc != ""){
+	     					$(".desc").show().text(desc);
+	     				}
+
+	     				//Renders the source
+	     				if (source != ""){
+	     					$("#source").show().text("<?php echo _("Source") ?>: "+source);
+	     				}
+
+	     				//Renders the source url
+	     				if (source_url != ""){
+	     					$("#source_url").show();
+	     					$(".source_url").attr("href", source_url);
+	     				}
+
 	     				//Adds the functions for the visualisation
 	     				if (data.chart_type == "pie"){
 
@@ -135,6 +156,12 @@ function update_dimensions(){
 
 		<div id="embed_extras">
 			
+			<p class="desc"></p>
+			<p class="source">
+				<span id="source"></span>
+				<span id="source_url">(<a href="" class="source_url"><?php echo _("Link") ?></a>)</span>
+			</p>
+
 			<button id="export_csv" class="button">
 				<?php echo _("Export data") ?>
 			</button>
