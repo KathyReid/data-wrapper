@@ -1,11 +1,13 @@
 {
-	"themes": [
+	"themes": {
+        "default":
         {
             "name": "default",
             "desc": "Default theme",
             "image": null,
             "restricted": null
         },
+        "lemonde":
         {
             "name": "lemonde",
             "desc": "Le Monde theme",
@@ -16,5 +18,5 @@
             },
             "restricted": ["lemonde.fr"]
         }
-    ]
+    }
 }

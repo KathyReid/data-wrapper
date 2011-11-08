@@ -61,7 +61,7 @@ function js_enterScreen_publish(){
 	     				var theme = data.chart_theme;
 
 						//renders chart
-						render_chart(options, theme, );
+						render_chart(options, theme);
 
 					}
 

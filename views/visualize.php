@@ -203,7 +203,7 @@ function update_options(){
 	}
 
 	//updates the chart
-	render_chart(options, theme, theme_image_w, theme_image_h, theme_image_ext);
+	render_chart(options, theme);
 
 	//stores the var options
 	$("#visualize_data").val(JSON.stringify(options));

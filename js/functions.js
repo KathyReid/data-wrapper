@@ -96,37 +96,65 @@ function initInputs(){
 	});
 }
 
-function render_chart(opt, theme, image_w, image_h, image_ext){
+function render_chart(opt, theme){
 
 	//gets chart width & height
 	var render_div = opt.chart.renderTo;
 	var chart_w = $("#"+ render_div).width();
 	var chart_h = $("#"+ render_div).height();
+	var image_w = 0;
+	var image_h = 0;
+	var image_ext = '';
 
-	//Sets the correct dimensions for the chart
-	opt.chart.width = chart_w;
-	opt.chart.height = chart_h;
+	//gets the JSON to find the data for the current theme
+	$.getJSON("themes/config.json", function(data){
 
-	if(typeof theme == 'string'){
-		//If a theme is specified
-		
-		$.getScript('themes/js/' + theme + '.js', function(){
-			//Once the theme is loaded, renders chart
-			chart = new Highcharts.Chart(opt, function (chart){
+		//Checks that the theme exists
+		if (data.themes[theme] !== undefined){
+			
+			//Checks if the theme has an image
+			if(data.themes[theme].image != null){
 
-				if (image_w != 0){
-					//Add logo to the chart
+				image_w = data.themes[theme].image.width;
+				image_h = data.themes[theme].image.height;
+				image_ext = data.themes[theme].image.format;
 
-					//Renders the logo
-					chart.renderer.image('themes/images/'+theme+'.gif', chart_w-image_w-5, chart_h-image_h-5, image_w, image_h)
-        			.add(); 
-        		}
-        	});
-		});
+			}
+		}
+	
 
-	}else{
-		//If no theme is specified
-		chart = new Highcharts.Chart(opt);
-	}
+		//Sets the correct dimensions for the chart
+		opt.chart.width = chart_w;
+		opt.chart.height = chart_h;
+
+		if(typeof theme == 'string'){
+			//If a theme is specified
+			
+			$.getScript('themes/js/' + theme + '.js', function(){
+
+				//Once the theme is loaded, renders chart
+				chart = new Highcharts.Chart(opt, function (chart){
+
+					if (image_w != 0){
+						//Add logo to the chart
+
+						//Computes logo position (chart width minus image width minus margin)
+						logo_x = chart_w-image_w-(chart_w * .05);
+						logo_y = chart_h-image_h-(chart_h * .05);
+						
+						//Renders the logo
+						chart.renderer.image('themes/images/'+theme+'.'+image_ext, logo_x, logo_y, image_w, image_h)
+	        			.add(); 
+	        			
+	        		}
+	        	});
+			});
+
+		}else{
+			//If no theme is specified
+			chart = new Highcharts.Chart(opt);
+		}
+
+	});
 
 }
