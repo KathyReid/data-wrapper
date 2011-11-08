@@ -39,7 +39,41 @@
                 
 	}
 
+	/** Function getLocale
+	* @author	NKB <hi@nkb.fr>
+	* @desc		Rerturns current locale
+    * @param 	check: Checks if the returned locale is valid, sends back en_US if not
+    * @param 	trim: trims the UTF-8 after the locale
+	*/
 
+
+	function getLocale($check=true, $trim=true){
+
+		//Detects the current locale
+		$current_locale =  setlocale(LC_ALL, '0');
+
+		if ($check){
+			
+			$pattern = "/[a-z]_[A-Z]\.UTF-8/";
+
+			//Checks that the locale is correctly set (won't work on Windows systems)
+
+			if (!(preg_match($pattern, $current_locale))) //if the current locale is not correctly formatted
+				$returned_locale = "en_US.UTF-8";
+
+			else //correctly formatted
+				$returned_locale = $current_locale;
+
+		}else{ //check is false,returns row locale
+			$returned_locale = $current_locale;
+		}
+
+		if ($trim)
+			$returned_locale = substr($returned_locale, 0, 5);
+
+		return $returned_locale;
+
+	}
 
 	/** Function initLanguage
 	* @author	Pierre Romera, Team 22mars <pierre.romera@gmail.com>

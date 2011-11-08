@@ -12,7 +12,7 @@ if (isset($_POST["lang"])){
 	$lang_long = $_POST["lang_long"];
 
 	//Detects the current locale
-	$current_locale =  setlocale(LC_ALL, '0');
+	$current_locale =  getLocale(false, false);
 	
 	//if the demanded language is different from the current one
 	if (trim($current_locale) !== trim($lang.".UTF-8")){
