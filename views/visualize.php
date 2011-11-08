@@ -64,11 +64,8 @@ function js_enterScreen_visualize(){
 
 function update_options(){
 
-	//Gets the data about the chosen theme
+	//Gets the name of the chosen theme
 	var theme = $("#chart_theme").val();
-	var theme_image_w = $("#chart_theme option[value='"+ theme +"']").attr("image_w");
-	var theme_image_h = $("#chart_theme option[value='"+ theme +"']").attr("image_h");
-	var theme_image_ext = $("#chart_theme option[value='"+ theme +"']").attr("image_ext");
 
 	//Stores the theme
 	options.chart.chart_theme = theme;
@@ -80,10 +77,29 @@ function update_options(){
 	options.series = [];
 	options.categories = new Array();
 
-	//Sets the title and subtitle
-	options.title.text = $("#chart_title").val();
-	options.subtitle.text = $("#chart_subtitle").val();
+	/* Gets the texts */
+
+	//title
+	var title = $("#chart_title").val();
+
+	//subtitle
+	var subtitle = $("#chart_subtitle").val();
 	
+	//yAxis
+	var yAxis = $("#chart_yAxis").val();
+
+	/* Sets the texts */
+
+	//title
+	options.title.text = title;
+
+	//Subtitle
+	if (subtitle != "" && subtitle != "<?php echo _("Subtitle") ?>"){
+		options.subtitle.text = subtitle
+	} else {
+		options.subtitle.text = "";
+	}
+
 	//Assigns a chart type according to the user's choice in the drop down menu
 	var chart_type = $("#chart_type").val();
 
@@ -111,7 +127,7 @@ function update_options(){
 		options.yAxis.min = 0;
 		
 		//Y axis name
-		options.yAxis.title = {text: $("#chart_yAxis").val()};
+		options.yAxis.title = {text: yAxis};
 
 		//Tooltip
 		options.tooltip.formatter = function(){return barTooltip(this); };
