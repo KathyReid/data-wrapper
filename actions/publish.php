@@ -1,8 +1,13 @@
 <?php
 
-/*********************************************************************************************
- *  This file sends back the code for the visualization										 *
- ********************************************************************************************/
+
+/****
+/*
+/*   @desc: Sends back the code for the visualization
+/*   @author: NKB <hi@nkb.fr>
+/*
+/****/
+
 
 require_once "../config.php";
 

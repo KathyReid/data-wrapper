@@ -1,4 +1,13 @@
-<!-- This file holds all HTML/JS contents for the screen "6.PUBLISH" -->
+<?php
+
+/****
+/*
+/*   @desc: Holds all HTML/JS content for screen publish
+/*   @author: NKB <hi@nkb.fr>
+/*
+/****/
+
+?>
 
 
 <script src="js/stripslashes.js" type="text/javascript"></script>

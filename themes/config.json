@@ -1,0 +1,20 @@
+{
+	"themes": [
+        {
+            "name": "default",
+            "desc": "Default theme",
+            "image": null,
+            "restricted": null
+        },
+        {
+            "name": "lemonde",
+            "desc": "Le Monde theme",
+            "image": {
+                "width": 101,
+                "height": 18,
+                "format": "gif"
+            },
+            "restricted": ["lemonde.fr"]
+        }
+    ]
+}

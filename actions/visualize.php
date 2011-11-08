@@ -1,9 +1,12 @@
 <?php
 
-/*********************************************************************************************
- *  This file stores the code for the 														 *
- *  visualization in the DB (action=next)													 *
- ********************************************************************************************/
+/****
+/*
+/*   @desc: Stores the visualization code in the DB
+/*   @author: NKB <hi@nkb.fr>
+/*
+/****/
+
 
 require_once "../config.php";
 

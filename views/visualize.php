@@ -64,8 +64,11 @@ function js_enterScreen_visualize(){
 
 function update_options(){
 
-	//Loads the appropriate theme
+	//Gets the data about the chosen theme
 	var theme = $("#chart_theme").val();
+	var theme_image_w = $("#chart_theme option[value='"+ theme +"']").attr("image_w");
+	var theme_image_h = $("#chart_theme option[value='"+ theme +"']").attr("image_h");
+	var theme_image_ext = $("#chart_theme option[value='"+ theme +"']").attr("image_ext");
 
 	//Stores the theme
 	options.chart.chart_theme = theme;
@@ -200,7 +203,7 @@ function update_options(){
 	}
 
 	//updates the chart
-	render_chart(options, theme);
+	render_chart(options, theme, theme_image_w, theme_image_h, theme_image_ext);
 
 	//stores the var options
 	$("#visualize_data").val(JSON.stringify(options));
@@ -236,8 +239,9 @@ function update_options(){
 		</div>
 		<div class="chart_customizator">
 			<select id="chart_theme" onchange="update_options()">
-				<option value="default" selected="selected"><?php echo _("Default theme") ?> </option>
-				<option value="lemonde"><?php echo _("LeMonde.fr theme") ?> </option>
+				
+				<?php require_once "views/style.chooser.php" ?>
+
 			</select>
 		</div>
 		

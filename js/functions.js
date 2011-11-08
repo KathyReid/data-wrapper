@@ -96,7 +96,7 @@ function initInputs(){
 	});
 }
 
-function render_chart(opt, theme){
+function render_chart(opt, theme, image_w, image_h, image_ext){
 
 	//gets chart width & height
 	var render_div = opt.chart.renderTo;
@@ -110,15 +110,15 @@ function render_chart(opt, theme){
 	if(typeof theme == 'string'){
 		//If a theme is specified
 		
-		$.getScript('highcharts/themes/' + theme + '.js', function(){
+		$.getScript('themes/js/' + theme + '.js', function(){
 			//Once the theme is loaded, renders chart
 			chart = new Highcharts.Chart(opt, function (chart){
 
-				if (theme != "default"){
+				if (image_w != 0){
 					//Add logo to the chart
 
 					//Renders the logo
-					chart.renderer.image('highcharts/themes/'+theme+'.gif', chart_w-120, chart_h-30, 101, 18)
+					chart.renderer.image('themes/images/'+theme+'.gif', chart_w-image_w-5, chart_h-image_h-5, image_w, image_h)
         			.add(); 
         		}
         	});
