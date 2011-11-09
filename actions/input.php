@@ -43,10 +43,12 @@ foreach ($rows as $key_row=>$row){
 				$cell = str_replace(",", ".", $cell);
 
 			//detects if there are headers on the top row. 	
-			if ($key_row == 0 && $key_col>0){
+			if ($key_row == 0){
 				if (!(is_numeric($cell)))
 					$top_headers++;
-			}else if ($key_col == 0){
+			}
+
+			if ($key_col == 0){
 				//detects if there are headers on the first column
 				if (!(is_numeric($cell)))
 					$vert_headers++;

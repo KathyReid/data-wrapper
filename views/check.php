@@ -93,8 +93,14 @@ function js_enterScreen_check(){
 }
 
 function transpose(chart_id){
+    
+    loader_show();
+
 	$.post("actions/transpose.php", { chart_id: chart_id },
    		function(data) {
+
+            loader_hide();
+
    			if (data != ""){
 
      			data = jQuery.parseJSON(data);
@@ -113,8 +119,14 @@ function transpose(chart_id){
 }
 
 function make_header(chart_id){
+
+    loader_show();
+
     $.post("actions/make_header.php", { chart_id: chart_id },
         function(data) {
+
+            loader_hide();
+
             if (data != ""){
 
                 data = jQuery.parseJSON(data);

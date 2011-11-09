@@ -17,7 +17,8 @@ function error(msg){
 
     $('#error').html(msg);
     $('#error').show();
-    $('#error').effect("bounce", {
+    $('#error')
+    	.effect("bounce", {
         times:3
     }, 300);
 
