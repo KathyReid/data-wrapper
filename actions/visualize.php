@@ -58,7 +58,7 @@ if ($action == "next"){
 	$chart_js_code = addslashes($data);
 
 	//Gets the current language
-	$chart_lang = getLocale();
+	$chart_lang = getLocale(false);
 
 	//Builds query
 	$q = "UPDATE charts SET chart_js_code = '$chart_js_code', chart_type='$chart_type', chart_theme='$chart_theme', chart_library='$chart_library', chart_title='$chart_title', chart_lang='$chart_lang' $q_details WHERE chart_id='$chart_id'";
