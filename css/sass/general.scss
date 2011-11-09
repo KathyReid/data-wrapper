@@ -187,9 +187,16 @@ $navbar-height: $row-h;
     color:$color-off_text;
 
     @include box-shadow($background-color 0px 0px 10px);
+
+    a{
+        text-decoration:none;
+        color: $color-off_text;
+        &:hover { text-decoration:underline; }
+    }
 }
 
 #screen_container{
+    min-height:$row-h*10;
     position: relative;
     top: 0;
     left: 0;
@@ -520,7 +527,7 @@ $embed_extras-h: 50px;
         font-size: $font-size + .2;
     }
 
-    #login_submit{
+    #login_submit, #signup_submit{
         font-size: $font-size + .2;
         margin: 10px;
     }
@@ -543,6 +550,42 @@ $embed_extras-h: 50px;
 
 #signup{
     display:none;
+}
+
+/************************************/
+/*              Popups              */
+/************************************/
+
+.popup{
+    padding: 20px;
+    margin: 0;
+    background-color:$dark-color;
+    height: 100%;
+    width:$col-w*6;
+    text-align: left;
+    font-family: Arial, Helvetica, Sans-serif;
+    color:scale-lightness($color-off_text, -20);
+    font-size: $font-size - .1;
+
+}
+
+/************************************/
+/*              Footer              */
+/************************************/
+
+#footer{
+    padding: 20px;
+    height:50px;
+    margin-top:-50px; 
+    margin: 0;
+    text-transform:uppercase;
+    color:scale-lightness($color-off_text, -20);
+    font-size: $font-size - .3;
+
+    .separator{
+        color:$color-off_text;
+    }
+
 }
 
 /************************************/

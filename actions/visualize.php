@@ -38,15 +38,21 @@ if ($action == "next"){
 		//Gets the chart theme
 		$chart_theme = $data_json->chart->chart_theme;
 	}
+	
+	//this string will store the additional info about the chart, if any, that need to be stored
+	$q_details = "";
 
 	//Gets the chart description
-	$chart_desc = $data_json->desc;
+	if (isset($data_json->desc))
+		$q_details .= ", additional_text = '". $data_json->desc. "'";
 
 	//Gets the chart source
-	$chart_source = $data_json->source;
+	if (isset($data_json->source))
+		$q_details .= ", source = '". $data_json->source. "'";
 
 	//Gets the chart source_url
-	$chart_source_url = $data_json->source_url;
+	if (isset($data_json->source_url))
+		$q_details .= ", source_url = '". $data_json->source_url. "'";
 
 	//Retrieves chart JS code for visualization
 	$chart_js_code = addslashes($data);
@@ -55,7 +61,7 @@ if ($action == "next"){
 	$chart_lang = getLocale();
 
 	//Builds query
-	$q = "UPDATE charts SET chart_js_code = '$chart_js_code', chart_type='$chart_type', chart_theme='$chart_theme', chart_library='$chart_library', chart_title='$chart_title', chart_lang='$chart_lang', additional_text = '$chart_desc', source = '$chart_source', source_url = '$chart_source_url' WHERE chart_id='$chart_id'";
+	$q = "UPDATE charts SET chart_js_code = '$chart_js_code', chart_type='$chart_type', chart_theme='$chart_theme', chart_library='$chart_library', chart_title='$chart_title', chart_lang='$chart_lang' $q_details WHERE chart_id='$chart_id'";
 
 	if ($result = $mysqli->query($q)) {
 		

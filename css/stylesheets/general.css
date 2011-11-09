@@ -166,9 +166,19 @@ body {
   -o-box-shadow: black 0px 0px 10px;
   box-shadow: black 0px 0px 10px;
 }
+/* line 191, ../sass/general.scss */
+#container a {
+  text-decoration: none;
+  color: white;
+}
+/* line 194, ../sass/general.scss */
+#container a:hover {
+  text-decoration: underline;
+}
 
-/* line 192, ../sass/general.scss */
+/* line 198, ../sass/general.scss */
 #screen_container {
+  min-height: 300px;
   position: relative;
   top: 0;
   left: 0;
@@ -179,7 +189,7 @@ body {
 /***************/
 /*   Buttons   */
 /***************/
-/* line 207, ../sass/general.scss */
+/* line 214, ../sass/general.scss */
 .button {
   color: black;
   cursor: pointer;
@@ -200,13 +210,13 @@ body {
   text-shadow: rgba(255, 255, 255, 0.2) 1px 1px 0, rgba(255, 255, 255, 0.2) 1px 1px 0, rgba(255, 255, 255, 0.2) 1px 1px 0;
 }
 
-/* line 221, ../sass/general.scss */
+/* line 228, ../sass/general.scss */
 .nav {
   font-size: 1.2em;
   width: 90px;
 }
 
-/* line 226, ../sass/general.scss */
+/* line 233, ../sass/general.scss */
 #buttons {
   position: absolute;
   top: 390px;
@@ -214,19 +224,19 @@ body {
   z-index: 2;
 }
 
-/* line 233, ../sass/general.scss */
+/* line 240, ../sass/general.scss */
 #button_next, #button_prev {
   cursor: pointer;
   width: 100px;
   text-align: center;
 }
 
-/* line 239, ../sass/general.scss */
+/* line 246, ../sass/general.scss */
 #button_next {
   float: right;
 }
 
-/* line 243, ../sass/general.scss */
+/* line 250, ../sass/general.scss */
 #button_prev {
   float: left;
 }
@@ -234,13 +244,13 @@ body {
 /***************/
 /* Breadcrumbs */
 /***************/
-/* line 266, ../sass/general.scss */
+/* line 273, ../sass/general.scss */
 #breadcrumbs {
   height: 30px;
   width: 800px;
   text-align: center;
 }
-/* line 272, ../sass/general.scss */
+/* line 279, ../sass/general.scss */
 #breadcrumbs .on {
   background-color: #3496ae;
   color: black;
@@ -260,7 +270,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 278, ../sass/general.scss */
+/* line 285, ../sass/general.scss */
 #breadcrumbs .off {
   background-color: #606060;
   color: white;
@@ -284,7 +294,7 @@ body {
 /***************/
 /* Error box   */
 /***************/
-/* line 288, ../sass/general.scss */
+/* line 295, ../sass/general.scss */
 #error {
   display: none;
   color: #000;
@@ -320,16 +330,16 @@ body {
 /****************/
 /* Input screen */
 /****************/
-/* line 321, ../sass/general.scss */
+/* line 328, ../sass/general.scss */
 #input {
   position: relative;
   z-index: 3;
 }
-/* line 326, ../sass/general.scss */
+/* line 333, ../sass/general.scss */
 #input #explainer {
   font-size: 1.2em;
 }
-/* line 329, ../sass/general.scss */
+/* line 336, ../sass/general.scss */
 #input #input_data {
   width: 580px;
   color: white;
@@ -346,33 +356,33 @@ body {
 /****************/
 /* Check screen */
 /****************/
-/* line 345, ../sass/general.scss */
+/* line 352, ../sass/general.scss */
 #check #explainer {
   font-size: 1.2em;
 }
-/* line 349, ../sass/general.scss */
+/* line 356, ../sass/general.scss */
 #check table {
   width: 580px;
   padding: 10px;
   font-size: 0.8em;
 }
-/* line 355, ../sass/general.scss */
+/* line 362, ../sass/general.scss */
 #check td {
   background-color: #232323;
   text-align: center;
   width: 100px;
 }
-/* line 361, ../sass/general.scss */
+/* line 368, ../sass/general.scss */
 #check .header_cell {
   font-weight: bold;
   background-color: #3496ae;
 }
-/* line 366, ../sass/general.scss */
+/* line 373, ../sass/general.scss */
 #check .empty_cell {
   background-color: black;
 }
 
-/* line 371, ../sass/general.scss */
+/* line 378, ../sass/general.scss */
 .transpose {
   font-size: 0.8em;
   margin-left: 1em;
@@ -381,7 +391,7 @@ body {
 /********************/
 /* Visualize screen */
 /********************/
-/* line 384, ../sass/general.scss */
+/* line 391, ../sass/general.scss */
 #visualize #chart {
   width: 400px;
   height: 300px;
@@ -389,17 +399,17 @@ body {
   padding: 0;
   overflow: hidden;
 }
-/* line 392, ../sass/general.scss */
+/* line 399, ../sass/general.scss */
 #visualize #explainer {
   font-size: 1.2em;
 }
-/* line 396, ../sass/general.scss */
+/* line 403, ../sass/general.scss */
 #visualize #chart_customization {
   width: 600px;
   height: 90px;
   padding: 0;
 }
-/* line 402, ../sass/general.scss */
+/* line 409, ../sass/general.scss */
 #visualize #chart_customization input, #visualize #chart_customization select {
   width: 160px;
   font-size: 1em;
@@ -412,25 +422,25 @@ body {
   border: none;
   height: 25px;
 }
-/* line 408, ../sass/general.scss */
+/* line 415, ../sass/general.scss */
 #visualize #chart_customization input {
   padding: 0 10px;
 }
-/* line 411, ../sass/general.scss */
+/* line 418, ../sass/general.scss */
 #visualize #chart_customization select {
   width: 180px;
   padding: 4px 0 0 4px;
 }
-/* line 416, ../sass/general.scss */
+/* line 423, ../sass/general.scss */
 #visualize #chart_customization .desc {
   width: 360px;
 }
-/* line 420, ../sass/general.scss */
+/* line 427, ../sass/general.scss */
 #visualize #chart_customization .inactive {
   background-color: #111;
   color: #333;
 }
-/* line 426, ../sass/general.scss */
+/* line 433, ../sass/general.scss */
 #visualize .chart_customizator {
   width: 200px;
   height: 30px;
@@ -442,15 +452,15 @@ body {
 /********************/
 /*  Publish screen  */
 /********************/
-/* line 445, ../sass/general.scss */
+/* line 452, ../sass/general.scss */
 #publish #explainer {
   font-size: 1.2em;
 }
-/* line 449, ../sass/general.scss */
+/* line 456, ../sass/general.scss */
 #publish p {
   margin: 8px 0 2px 0;
 }
-/* line 453, ../sass/general.scss */
+/* line 460, ../sass/general.scss */
 #publish #direct_link_url {
   width: 400px;
   margin: 0 100px;
@@ -465,7 +475,7 @@ body {
   border: none;
   margin-bottom: 5px;
 }
-/* line 462, ../sass/general.scss */
+/* line 469, ../sass/general.scss */
 #publish #iframe_code {
   position: relative;
   z-index: 3;
@@ -482,12 +492,12 @@ body {
   border: none;
   margin-bottom: 5px;
 }
-/* line 473, ../sass/general.scss */
+/* line 480, ../sass/general.scss */
 #publish .embed_customization {
   font-size: 0.9em;
   margin-bottom: 5px;
 }
-/* line 478, ../sass/general.scss */
+/* line 485, ../sass/general.scss */
 #publish .embed_customizator {
   position: relative;
   z-index: 3;
@@ -500,14 +510,14 @@ body {
   box-shadow: inset 0 0 1px 0.5px black;
   border: none;
 }
-/* line 485, ../sass/general.scss */
+/* line 492, ../sass/general.scss */
 #publish #embed {
   height: 350px;
   width: 400px;
   margin: 0 auto;
   background-color: #fff;
 }
-/* line 492, ../sass/general.scss */
+/* line 499, ../sass/general.scss */
 #publish #embed #publish_chart {
   height: 300px;
   width: 400px;
@@ -516,12 +526,12 @@ body {
 /*************/
 /*  Log in   */
 /*************/
-/* line 504, ../sass/general.scss */
+/* line 511, ../sass/general.scss */
 #login, #signup {
   width: 300px;
   float: left;
 }
-/* line 509, ../sass/general.scss */
+/* line 516, ../sass/general.scss */
 #login .login, #signup .login {
   color: white;
   background-color: #606060;
@@ -544,38 +554,72 @@ body {
   padding: 2px 7px;
   font-size: 1.2em;
 }
-/* line 523, ../sass/general.scss */
-#login #login_submit, #signup #login_submit {
+/* line 530, ../sass/general.scss */
+#login #login_submit, #login #signup_submit, #signup #login_submit, #signup #signup_submit {
   font-size: 1.2em;
   margin: 10px;
 }
 
-/* line 529, ../sass/general.scss */
+/* line 536, ../sass/general.scss */
 #about {
   width: 300px;
   float: left;
   font-size: 1.1em;
 }
-/* line 534, ../sass/general.scss */
+/* line 541, ../sass/general.scss */
 #about p {
   margin: 0 0 10px 0;
 }
-/* line 538, ../sass/general.scss */
+/* line 545, ../sass/general.scss */
 #about #show_signup {
   font-size: 1.3em;
   margin: 10px;
 }
 
-/* line 544, ../sass/general.scss */
+/* line 551, ../sass/general.scss */
 #signup {
   display: none;
+}
+
+/************************************/
+/*              Popups              */
+/************************************/
+/* line 559, ../sass/general.scss */
+.popup {
+  padding: 20px;
+  margin: 0;
+  background-color: #232323;
+  height: 100%;
+  width: 600px;
+  text-align: left;
+  font-family: Arial, Helvetica, Sans-serif;
+  color: #cccccc;
+  font-size: 0.9em;
+}
+
+/************************************/
+/*              Footer              */
+/************************************/
+/* line 576, ../sass/general.scss */
+#footer {
+  padding: 20px;
+  height: 50px;
+  margin-top: -50px;
+  margin: 0;
+  text-transform: uppercase;
+  color: #cccccc;
+  font-size: 0.7em;
+}
+/* line 585, ../sass/general.scss */
+#footer .separator {
+  color: white;
 }
 
 /************************************/
 /*              Embed               */
 /************************************/
 /* Also visible on 'publish' screen */
-/* line 553, ../sass/general.scss */
+/* line 596, ../sass/general.scss */
 #embed_extras {
   height: 50px;
   text-align: left;
@@ -585,29 +629,29 @@ body {
   color: #000;
   padding: 0 5px;
 }
-/* line 562, ../sass/general.scss */
+/* line 605, ../sass/general.scss */
 #embed_extras p {
   margin: 0 5px;
 }
-/* line 566, ../sass/general.scss */
+/* line 609, ../sass/general.scss */
 #embed_extras #export_csv {
   font-size: 0.8em;
   float: right;
   margin: 0 10px;
 }
-/* line 572, ../sass/general.scss */
+/* line 615, ../sass/general.scss */
 #embed_extras .desc {
   font-weight: bold;
 }
-/* line 576, ../sass/general.scss */
+/* line 619, ../sass/general.scss */
 #embed_extras #source {
   font-style: italic;
 }
-/* line 580, ../sass/general.scss */
+/* line 623, ../sass/general.scss */
 #embed_extras .source_url {
   color: #000;
 }
-/* line 582, ../sass/general.scss */
+/* line 625, ../sass/general.scss */
 #embed_extras .source_url:hover {
   text-decoration: underline;
 }

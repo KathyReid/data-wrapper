@@ -15,6 +15,10 @@
         <!-- JQueryUI library -->
         <script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>       
         
+        <!-- Fancybox assets -->
+        <script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
         <!-- The JS function that help navigate the app -->
         <script src="js/navigation-js.php" type="text/javascript"></script> 
         
@@ -124,6 +128,11 @@
         		<?php require_once "views/publish.php"; ?>
 
         	</div>
+
+            <!-- Start Footer -->
+            <?php require_once "views/footer.php"; ?>
+            <!-- End Footer -->
+
         </div>
     </body>
 </html>

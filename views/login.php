@@ -15,6 +15,10 @@
         <!-- JQueryUI library -->
         <script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>       
         
+        <!-- Fancybox assets -->
+        <script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
         <!-- The JS function that help navigate the app -->
         <script src="js/navigation-js.php" type="text/javascript"></script> 
         
@@ -35,6 +39,11 @@
 
             //Init the buttons in the header
             initHeader();
+
+            //Loads the fancybox
+            $("a.fancybox").fancybox({
+                'hideOnContentClick': true
+            });
 
             //init the error box
             $('#error').click(function() {
@@ -122,27 +131,48 @@
             <!-- End header -->
 
         	<div id="screen_container">
+
                 <div id="login">
+            
                     <input class="login" id="email" value="<?php echo _("E-mail") ?>">
                     <input class="login" id="pwd" type="password" value="<?php echo _("Password") ?>">
                     <button id="login_submit" class="button"><?php echo _("Login") ?></button>
+            
                 </div>
+
+
                 <div id="signup">
+
                     <input class="login" id="email_signup" value="<?php echo _("E-mail") ?>">
+                    
                     <div class="clear"></div>
-                    <?php echo _("Enter password twice") ?>
+                    
+                    <small><?php echo _("Enter password twice") ?></small>
                     <input class="login" id="pwd1" type="password" value="<?php echo _("Password") ?>">
                     <input class="login" id="pwd2" type="password" value="<?php echo _("Password") ?>">
+                    
                     <div class="clear"></div>
-                    <?php echo _("I agree to the Terms of Use") ?><input type="checkbox" id="tos" value="agree">
+                    
+                    <small><a href="#terms_of_use" class="fancybox"><?php echo _("I agree to the Terms of Use") ?></a></small><input type="checkbox" id="tos" value="agree">
+                    
+                    <div class="clear"></div>
+
                     <button id="signup_submit" class="button"><?php echo _("Sign up") ?></button>
                 </div>
+
+
                 <div id="about">
                     <p><?php echo _("DataStory helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all.") ?></p>
                     <p><?php echo _("The project is lead and maintained by ABZV.") ?></p>
                     <button id="show_signup" class="button"><?php echo _("Sign up") ?></button>
                 </div>
+
         	</div>
+
+            <!-- Start Footer -->
+            <?php require_once "views/footer.php"; ?>
+            <!-- End Footer -->
+
         </div>
     </body>
 </html>
