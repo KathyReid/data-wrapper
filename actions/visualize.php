@@ -70,6 +70,8 @@ if ($action == "next"){
 
 		//returns the id of the chart
 		$return_array["chart_id"] = $chart_id;
+
+		$return_array["error_details"] = $chart_lang;
 			
 	}else{
 
