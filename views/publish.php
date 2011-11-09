@@ -59,6 +59,8 @@ function js_enterScreen_publish(){
 	     				if (source_url != ""){
 	     					$("#source_url").show();
 	     					$(".source_url").attr("href", source_url);
+	     				}else{
+	     					$("#source_url").hide();
 	     				}
 
 	     				//Adds the functions for the visualisation

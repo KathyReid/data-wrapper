@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: DS\n"
+"Project-Id-Version: ds\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-09 18:59+0100\n"
-"PO-Revision-Date: 2011-11-09 19:27+0100\n"
+"POT-Creation-Date: 2011-11-09 19:32+0100\n"
+"PO-Revision-Date: 2011-11-09 19:43+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
-"X-Poedit-Basepath: C:/wamp/www/Data-Story\n"
-"X-Poedit-Language: German\n"
-"X-Poedit-Country: GERMANY\n"
+"X-Poedit-Basepath: C:\\wamp\\www\\Data-Story\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
@@ -22,110 +22,110 @@ msgstr ""
 #: actions/transpose.php:54
 #: actions/visualize.php:77
 msgid "Could not fetch the data from the database."
-msgstr "Daten könnten nicht von Datenbank abgeholt werden."
+msgstr "Impossible de récupérer les données dans la base."
 
 #: actions/export.php:72
 msgid "This page cannot be accessed."
-msgstr "Die Seite könnte nicht angezeigt werden."
+msgstr "La page ne peut pas être affichée."
 
 #: actions/input.php:105
 msgid "Could not store the data on the database."
-msgstr "Daten könnten nicht in Datenbank eingespeichert werden."
+msgstr "Les données n'ont pas pu être enregistrées dans la base."
 
 #: actions/lang_change.php:33
 msgid "Unknown language code."
-msgstr "Sprache wurde nicht erkennt."
+msgstr "Code langue inconnu."
 
 #: actions/login.php:34
 msgid "User and password do not match."
-msgstr "Benutzer und Kennwort stimmen nicht überein."
+msgstr "Mot de passe ou nom d'utilisateur incorrect."
 
 #: actions/login.php:40
 msgid "Could not check the user credentials in the DB."
-msgstr "Daten könnten nicht in Datenbank eingespeichert werden."
+msgstr "Impossible de valider l'utilisateur dans la base."
 
 #: actions/login.php:46
 #: actions/signup.php:57
 msgid "Not enough parameters were passed."
-msgstr "Zu wenig Parameters wurden gesendet."
+msgstr "Trop peu de paramètres ont été passés"
 
 #: actions/logout.php:19
 msgid "Could not log out."
-msgstr "Ausloggen wurde nicht erfolgreich."
+msgstr "Impossible de quitter."
 
 #: actions/make_header.php:23
 msgid "Could not add a header row."
-msgstr "Die Koftzeile könnte nicht hingefügt werden."
+msgstr "Impossible d'ajouter un en-tête."
 
 #: actions/signup.php:37
 #: actions/signup.php:51
 msgid "Could not add user in the DB."
-msgstr "Benutzer könnte nicht in die Datenbank aufgenommen werden."
+msgstr "Impossible d'ajouter un utilisateur à la base."
 
 #: actions/signup.php:45
 msgid "A user already has this email address."
-msgstr "Diese E-Mail-Addresse wurde bereits von einem anderen Benutzer verwendet."
+msgstr "Un utilisateur possède déjà cette adresse e-mail."
 
 #: actions/transpose.php:39
 msgid "Could not transpose the data in the database."
-msgstr "Daten könntent nicht in Datenbank umgestellt werden."
+msgstr "Impossible de transposer les données dans la base."
 
 #: actions/transpose.php:48
 msgid "You can only transpose a table with two entries."
-msgstr "Nur Tabellen mit 2 Einträge umgestellt werden können."
+msgstr "Seules les tables à double entrée peuvent être transposées."
 
 #: class/user.class.php:36
 msgid "Error while trying to retrieve user from database."
-msgstr "Datenbank Fehler beim Benutzersretrieval."
+msgstr "Erreur lors de la récupération de l'utilisateur dans la base."
 
 #: js/navigation-js.php:60
 msgid "No data was input."
-msgstr "Kein Datei würde eingegeben."
+msgstr "Aucune donnée."
 
 #: views/check.php:151
 msgid "Check that your data was correctly understood."
-msgstr "Bitte prüfen Sie, dass Ihre Daten richtig verstanden wurden."
+msgstr "Vérifiez que les données ont été correctement comprises."
 
 #: views/check.php:154
 msgid "Edit the data"
-msgstr "Daten bearbeiten"
+msgstr "Editer les données"
 
 #: views/check.php:158
 msgid "Transpose data"
-msgstr "Daten umstellen"
+msgstr "Transposer les données"
 
 #: views/check.php:162
 msgid "Make first row a header row"
-msgstr "Erste Zeile als Kopfzeile setzen"
+msgstr "Transformer la première ligne en en-tête"
 
 #: views/contents.php:4
 msgid "Terms of use"
-msgstr "Benutzungsbedigungen"
+msgstr "Conditions d'utilisation"
 
 #: views/contents.php:6
 msgid "Fair usage policy"
-msgstr "Fair use Verfahren"
+msgstr "Utilisation appropriée du service"
 
 #: views/contents.php:7
 msgid "Be nice. You are authorized to use the service to produce visualizations that will be published on the web. You understand that you may not share your account nor indulge in any unlawful activity."
-msgstr "Sei nett. Sie sind berechtigt, den Service zu nutzen, um Visualisierungen, die im Web veröffentlicht werden, zu produzieren. Sie verstehen, dass Sie nicht Ihre Benutzerdaten mitteilen können, und dass der Service nicht um Leitung gesetzwidriger Aktivitäten benutzen kann."
+msgstr "Soyez gentil. Vous êtes autorisé à utiliser le service pour produire des visualisations qui seront publiées sur le Web. Vous comprenez que vous ne pouvez pas partager votre compte, ni ne vous livrer à une activité illégale."
 
 #: views/contents.php:8
 msgid "Limited responsibility"
-msgstr "Beschränkter Haftung"
+msgstr "Limitation de garantie"
 
 #: views/contents.php:9
 msgid "This service is provided as is. DataStory will certainly not be held accountable if your data is damaged by a server failure or any other cause."
-msgstr "Dieser Dienst wird bereitgestellt wie es ist. DataStory wird sicherlich nicht zur Rechenschaft gezogen werden, wenn Ihre Daten von einem Server-Ausfall oder eine andere Ursache beschädigt ist."
+msgstr "Ce service est fourni tel quel. DataStory ne sera certainement pas être tenu responsable si vos données sont endommagées par une défaillance du serveur ou de toute autre cause."
 
 #: views/contents.php:14
 #: views/footer.php:5
 msgid "Legal imprint"
-msgstr "Impressum"
+msgstr "Mentions légales"
 
 #: views/contents.php:16
 msgid "Publisher"
-msgstr "Verleger"
+msgstr "Editeur"
 
 #: views/contents.php:17
 #: views/contents.php:19
@@ -134,217 +134,215 @@ msgstr "."
 
 #: views/contents.php:18
 msgid "Host"
-msgstr "Host"
+msgstr "Hébergeur"
 
 #: views/embed.php:7
 #: views/login.php:7
 #: views/screens.php:7
 msgid "Data Story"
-msgstr "Data Story, ein Projekt von ABZV"
+msgstr "DataStory"
 
 #: views/embed.php:108
 #: views/publish.php:164
 msgid "Link"
-msgstr "Link"
+msgstr "Lien"
 
 #: views/embed.php:115
 #: views/publish.php:168
 msgid "Export data"
-msgstr "Daten runterladen"
+msgstr "Exporter les données"
 
 #: views/embed.php:118
 #: views/publish.php:171
 msgid "Chart created using DataStory, a project by ABZV."
-msgstr "Dies Chart wurde mit DataStory hergestellt."
+msgstr "Visualisation créée avec DataStory, un projet de ABZV."
 
 #: views/embed.php:124
 msgid "Page cannot be displayed."
-msgstr "Die Seite könnte nicht angezeigt werden."
+msgstr "La page n'a pas pu être affichée."
 
 #: views/footer.php:3
 msgid "Terms of Use"
-msgstr "Nutzungsbedingungen"
+msgstr "Conditions d'utilisation"
 
 #: views/header.php:17
 msgid "Language set to "
-msgstr "Sprache is jetzt"
+msgstr "Langue changée pour"
 
 #: views/header.php:25
 msgid "Language is the same as current language."
-msgstr "Sprache wurde nicht verändert"
+msgstr "La langue choisie est déjà activée."
 
 #: views/header.php:32
 msgid "Could not change language."
-msgstr "Sprache könnte nicht verändert."
+msgstr "Impossible de changer la langue."
 
 #: views/header.php:83
 msgid "Log out"
-msgstr "Ausloggen."
+msgstr "Déconnexion"
 
 #: views/header.php:87
 #, php-format
 msgid "Welcome, %s!"
-msgstr "Wilkommen, %s!"
+msgstr "Bienvenue, %s!"
 
 #: views/input.php:6
 msgid "Paste data here"
-msgstr "Daten hier einfügen"
+msgstr "Copier les données ici"
 
 #: views/login.php:92
 #: views/login.php:138
 #: views/login.php:151
 #: views/login.php:152
 msgid "Password"
-msgstr "Kennwort"
+msgstr "Mot de passe"
 
 #: views/login.php:112
 msgid "Please agree to the Terms of Use."
-msgstr "Bitte akzeptieren Sie die Nutzungsbedingungen an."
+msgstr "Merci d'approuver les conditions d'utilisation"
 
 #: views/login.php:115
 msgid "Passwords do not match."
-msgstr "Kennwörter stimmen nicht überein."
+msgstr "Les mots de passe ne sont pas identiques"
 
 #: views/login.php:119
 msgid "Please enter a valid email address."
-msgstr "Bitten geben Sie eine gültige E-Mail-Addresse ein."
+msgstr "Merci d'indiquer une adresse valide"
 
 #: views/login.php:127
 #: views/screens.php:85
 msgid "Errors are displayed here"
-msgstr "Fehler werden hier angezeigt."
+msgstr "Les erreurs s'affichent ici"
 
 #: views/login.php:137
 #: views/login.php:146
 msgid "E-mail"
-msgstr "E-Mail"
+msgstr "Courriel"
 
 #: views/login.php:139
 msgid "Login"
-msgstr "Einloggen"
+msgstr "Connexion"
 
 #: views/login.php:150
 msgid "Enter password twice"
-msgstr "Bitte geben Sie Ihr Kennwort zweimal ein."
+msgstr "Entrez votre mot de passe deux fois"
 
 #: views/login.php:156
 msgid "I agree to the Terms of Use"
-msgstr "Ich akzeptiere die Nutzungsbedingungen an."
+msgstr "J'approuve les conditions d'utilisation"
 
 #: views/login.php:160
 #: views/login.php:167
 msgid "Sign up"
-msgstr "Anmeden"
+msgstr "S'inscrire"
 
 #: views/login.php:165
 msgid "DataStory helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all."
-msgstr "DataStory hilft Journalisten beim Bau spannender Visualisierungen in nur wenigen Klicks. Benutzer ziehen Nutzen von den letzten, kräftigsten Javascript-Biblioteke und brauchen dafür keine Codingkenntnisse."
+msgstr "DataStory aide les journalistes à construire des visualisations convaincantes en seulement quelques clics. DataStory donne à chacun le pouvoir des toutes dernières bibliothèques JavaScript, sans nécessiter aucune compétence informatique."
 
 #: views/login.php:166
 msgid "The project is lead and maintained by ABZV."
-msgstr "Das Projekt wurde von ABZV geleitet und gewartet."
+msgstr "Le projet est mené et maintenu par ABZV."
 
 #: views/publish.php:55
 #: views/visualize.php:110
 #: views/visualize.php:289
 msgid "Source"
-msgstr "Quelle"
+msgstr "Source"
 
 #: views/publish.php:137
 msgid "Publish and embed!"
-msgstr "Veröffentlichen und embedden"
+msgstr "Publier et intégrer sur le web!"
 
 #: views/publish.php:139
 msgid "Direct access URL"
-msgstr "Link zu diesem Chart"
+msgstr "Accès direct"
 
 #: views/publish.php:142
 msgid "Embed code"
-msgstr "Einbettungscode"
+msgstr "Code d'embed"
 
 #: views/publish.php:145
 msgid "Embed width"
-msgstr "Einbettungsbreite"
+msgstr "Largeur"
 
 #: views/publish.php:147
 msgid "Embed height"
-msgstr "Einbettungshöhe"
+msgstr "Hauteur"
 
 #: views/screens.php:93
 msgid "1. Input data"
-msgstr "1. Daten hinfügen"
+msgstr "1. Entrer les données"
 
 #: views/screens.php:96
 msgid "2. Check data"
-msgstr "2. Daten prüfen"
+msgstr "2. Vérifier"
 
 #: views/screens.php:99
 msgid "3. Visualize"
-msgstr "3. Visualisierung"
+msgstr "Visualiser"
 
 #: views/screens.php:102
 msgid "4. Publish"
-msgstr "4. Veröffentlichen"
+msgstr "Publier"
 
 #: views/screens.php:109
 msgid "Next"
-msgstr "Nächste"
+msgstr "Suivant"
 
 #: views/screens.php:114
 msgid "Prev"
-msgstr "Zurück"
+msgstr "Précédent"
 
 #: views/visualize.php:17
 msgid "Title"
-msgstr "Titel"
+msgstr "Titre"
 
 #: views/visualize.php:20
 #: views/visualize.php:88
 #: views/visualize.php:265
 msgid "Subtitle"
-msgstr "Untertitel"
+msgstr "Sous-titre"
 
 #: views/visualize.php:99
 #: views/visualize.php:293
 msgid "Source URL"
-msgstr "URL der Quelle"
+msgstr "URL de la source"
 
 #: views/visualize.php:103
 msgid "Source URL must begin with 'http://'"
-msgstr "URL der Quelle sollte mit 'http://' beginnen"
+msgstr "L'URL de la source doit commencer par 'http://'"
 
 #: views/visualize.php:118
 #: views/visualize.php:297
 msgid "Chart description"
-msgstr "Beschreibung des Charts"
+msgstr "Description du graph"
 
 #: views/visualize.php:255
 msgid "Build your visualization."
-msgstr "Erstellen Sie Ihre Visualisierung"
+msgstr "Construisez votre visualisation"
 
 #: views/visualize.php:262
 msgid "Title (required)"
-msgstr "Titel (erforderlich)"
+msgstr "Titre (requis)"
 
 #: views/visualize.php:269
 msgid "Visualization type"
-msgstr "Visualisierungsart"
+msgstr "Type de visualisation"
 
 #: views/visualize.php:270
 msgid "Bar chart"
-msgstr "Balkenplan"
+msgstr "Histogramme"
 
 #: views/visualize.php:271
 msgid "Line chart"
-msgstr "Liniendiagramm"
+msgstr "Courbes"
 
 #: views/visualize.php:272
 msgid "Pie chart"
-msgstr "Kreisdiagramm"
+msgstr "Camembert"
 
 #: views/visualize.php:285
 msgid "Vertical axis title (required)"
-msgstr "Titel der Hochachse (erforderlich)"
+msgstr "Titre de l'axe vertical (requis)"
 
-#~ msgid "Welcome to DataStory"
-#~ msgstr "Wilkommen!"

@@ -17,6 +17,17 @@
                 "format": "gif"
             },
             "restricted": ["lemonde.fr"]
+        },
+        "paidcontent":
+        {
+            "name": "paidcontent",
+            "desc": "PaidContent theme",
+            "image": {
+                "width": 100,
+                "height": 27,
+                "format": "gif"
+            },
+            "restricted": ["paidcontent.org", "robertandrews.co.uk"]
         }
     }
 }

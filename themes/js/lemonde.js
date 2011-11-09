@@ -27,7 +27,8 @@ Highcharts.theme = {
 		}
 	},
 	xAxis: {
-		gridLineWidth: 1,
+		gridLineWidth: 0,
+		minorTickInterval: null,
 		lineColor: '#900',
 		tickColor: '#900',
 		labels: {
@@ -45,6 +46,14 @@ Highcharts.theme = {
 
 			}				
 		}
+	},
+	tooltip:{
+		style: {
+			color: '#333',
+			fontWeight: 'normal',
+			fontSize: '12px',
+			fontFamily: 'Arial, Helvetica, sans-serif'
+		}	
 	},
 	yAxis: {
 		minorTickInterval: null,

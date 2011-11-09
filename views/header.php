@@ -71,6 +71,7 @@ function initHeader(){
 
 		<div id="languages">
 			<div class="language" lang="en_US">english</div>
+			<div class="language" lang="fr_FR">français</div>
 			<div class="language" lang="de_DE">deutsch</div>
 		</div>
 
