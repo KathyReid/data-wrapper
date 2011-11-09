@@ -350,10 +350,26 @@ $table-padding: 10px;
 
 #check{
     #explainer{
+
         @include explainer;
+
+        #sub_explainer{
+            
+            font-size: $font-size - .2;
+
+            p{
+                margin: 5px 10px;
+            }
+
+            .transpose{
+                font-size: $font-size - .2;
+                width: $col-w * 2;
+            }
+        }
     }
 
     table{
+        margin-top: 10px;
         width:$col-w * 6 - $table-padding * 2;
         padding:$table-padding;
         font-size: $font-size - .2;
@@ -373,11 +389,6 @@ $table-padding: 10px;
     .empty_cell{
         background-color:$background-color;
     }
-}
-
-.transpose{
-        font-size: $font-size - .2;
-        margin-left: 1em;
 }
 
 /********************/

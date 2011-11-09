@@ -33,8 +33,13 @@ function js_enterScreen_check(){
      					var count_cols = 0;
 
     					$.each(this, function() {
-    						
+
     						var current_cell = String(this);
+
+                            //After 8 cols, stops displaying data
+                            if (count_cols>8){
+                                current_cell = "..."
+                            }
 
     						var td_class = "";
 
@@ -51,6 +56,12 @@ function js_enterScreen_check(){
     						tablehtml += current_cell;
     						
     						tablehtml += '</td>';
+
+
+                            //Stops after 8 cols
+                            if (count_cols>8){
+                                return false;
+                            }
 
     						count_cols++;
     						
@@ -101,11 +112,45 @@ function transpose(chart_id){
      	});
 }
 
+function make_header(chart_id){
+    $.post("actions/make_header.php", { chart_id: chart_id },
+        function(data) {
+            if (data != ""){
+
+                data = jQuery.parseJSON(data);
+
+                if (data.status == 200){
+
+                    js_enterScreen_check();
+
+                }else{
+                    error(data.error);
+                }
+            }else{
+                error();
+            }
+        });
+}
+
 </script>
 
 <div class="screen" id="check">
 
-	<div id="explainer"><?php echo _("Check that your data was correctly understood.") ?><button id="transpose" class="button transpose" onclick="transpose(chart_id)"><?php echo _("Transpose data.") ?></button></div>
+	<div id="explainer"><?php echo _("Check that your data was correctly understood.") ?>
+        <div id="sub_explainer">
+            <p>
+                <?php echo _("Edit the data") ?>:
+            </p>
+           
+            <p>
+                <button id="transpose" class="button transpose" onclick="transpose(chart_id)"><?php echo _("Transpose data") ?></button>
+            </p>
+            
+            <p>
+                <button id="make_header" class="button transpose" onclick="make_header(chart_id)"><?php echo _("Make first row a header row") ?></button>
+            </p>
+        </div>
+    </div>
 
 	<div id="data_check">
 

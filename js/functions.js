@@ -76,6 +76,10 @@ function loader_hide(){
 	$("#black_veil").fadeOut("fast");
 }
 
+/***************************************************************************************/
+/* Initializes the input fields so they behave properly onfocus and onblur             */
+/***************************************************************************************/
+
 function initInputs(){
 	$(document).find("input").each(function(){
 		var default_content = jQuery(this).val();
@@ -95,6 +99,11 @@ function initInputs(){
 		});
 	});
 }
+
+
+/*********************************/
+/* Renders the chart             */
+/*********************************/
 
 function render_chart(opt, theme){
 
@@ -141,7 +150,7 @@ function render_chart(opt, theme){
 						//Computes logo position (chart width minus image width minus margin)
 						logo_x = chart_w-image_w-(chart_w * .05);
 						logo_y = chart_h-image_h-(chart_h * .05);
-						
+
 						//Renders the logo
 						chart.renderer.image('themes/images/'+theme+'.'+image_ext, logo_x, logo_y, image_w, image_h)
 	        			.add(); 
