@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Ven 04 Novembre 2011 à 11:25
+-- Généré le : Mer 09 Novembre 2011 à 18:44
 -- Version du serveur: 5.1.36
 -- Version de PHP: 5.3.0
 
@@ -37,11 +37,14 @@ CREATE TABLE IF NOT EXISTS `charts` (
   `date_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `date_deleted` datetime NOT NULL,
   `chart_library` varchar(20) NOT NULL,
+  `chart_theme` varchar(30) NOT NULL DEFAULT 'default',
   `chart_type` varchar(20) NOT NULL,
+  `chart_title` varchar(255) NOT NULL,
   `horizontal_headers` tinyint(1) NOT NULL DEFAULT '0',
   `vertical_headers` tinyint(1) NOT NULL DEFAULT '0',
   `source` varchar(255) NOT NULL,
   `source_url` varchar(255) NOT NULL,
+  `chart_lang` varchar(10) NOT NULL DEFAULT 'en_US',
   PRIMARY KEY (`chart_id`),
   KEY `user_id` (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
