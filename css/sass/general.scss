@@ -439,8 +439,9 @@ $customizator-margin-bottom: 5px;
         }
 
         .inactive{
-            background-color:#111;
-            color:#333;
+            background-color:$dark-color;
+            color:$color-on_text;
+            border:$shadow-color;
         }
     }
 

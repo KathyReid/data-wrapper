@@ -4,6 +4,11 @@
         {
             "name": "Highcharts",
             "dependancies": "highcharts/highcharts.js"
+        },
+        "responsive":
+        {
+            "name": "Responsive",
+            "dependancies": "responsive/responsive.js"
         }
     },
     "visualizations":{
@@ -23,8 +28,14 @@
             "name": "pie",
             "desc": "Pie chart",
             "library": "highcharts",
-            "vis_code": "pie.js",
-            "inactive": ["chart_yAxis"]
+            "vis_code": "pie.js"
+        },
+        "responsive_table":{
+            "name": "responsive_table",
+            "desc": "Responsive data table",
+            "library": "responsive",
+            "vis_code": "responsive.js",
+            "render_code": "responsive.js"
         }
 
     }

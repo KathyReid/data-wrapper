@@ -4,7 +4,7 @@
 
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-        <title><?php echo _("Data Story") ?></title>
+        <title><?php echo _("A chart created by Data Story") ?></title>
 
         <!-- General styles -->
         <link rel="stylesheet" type="text/css" href="css/stylesheets/general.css" />
@@ -54,9 +54,21 @@
 			//Sets the appropriate language
 			setLanguage($chart_lang);
 
-			if ($chart_library == "highcharts"){
+			 /* Adds the JS files for the vis libs */
+
+			//Fetches the JSON that holds the data about the visualisations
+			$file_vis = file_get_contents('visualizations/config.json');
+
+			//Convert file into JSON
+			$json_vis=json_decode($file_vis);
+
+			//Loop through the themes in the JSON
+			foreach($json_vis->librairies as $librairy){
+
+				//Adds the lib
+				echo '<script src="visualizations/'. $librairy->dependancies .'" type="text/javascript"></script>';
+			}
 				?>
-				<script src="visualizations/highcharts/highcharts.js" type="text/javascript"></script>
 				<script src="js/functions.js" type="text/javascript"></script>
 				<script type="text/javascript">
 					$(document).ready(function(){
@@ -87,8 +99,6 @@
 					});
 				</script>
 				<?php
-			}//endif Highcharts
-
 
 		}else{ //no data could be fetched in DB
 

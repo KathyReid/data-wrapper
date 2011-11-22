@@ -427,10 +427,11 @@ body {
 }
 /* line 441, ../sass/general.scss */
 #visualize #chart_customization .inactive {
-  background-color: #111;
-  color: #333;
+  background-color: #f2f2f2;
+  color: white;
+  border: #7f7f7f;
 }
-/* line 447, ../sass/general.scss */
+/* line 448, ../sass/general.scss */
 #visualize .chart_customizator {
   width: 225px;
   height: 30px;
@@ -442,15 +443,15 @@ body {
 /********************/
 /*  Publish screen  */
 /********************/
-/* line 466, ../sass/general.scss */
+/* line 467, ../sass/general.scss */
 #publish #explainer {
   font-size: 1.2em;
 }
-/* line 470, ../sass/general.scss */
+/* line 471, ../sass/general.scss */
 #publish p {
   margin: 8px 0 2px 0;
 }
-/* line 474, ../sass/general.scss */
+/* line 475, ../sass/general.scss */
 #publish #direct_link_url {
   width: 450px;
   margin: 0 112.5px;
@@ -465,7 +466,7 @@ body {
   border: 1px solid #7f7f7f;
   margin-bottom: 5px;
 }
-/* line 483, ../sass/general.scss */
+/* line 484, ../sass/general.scss */
 #publish #iframe_code {
   position: relative;
   z-index: 3;
@@ -482,12 +483,12 @@ body {
   border: 1px solid #7f7f7f;
   margin-bottom: 5px;
 }
-/* line 494, ../sass/general.scss */
+/* line 495, ../sass/general.scss */
 #publish .embed_customization {
   font-size: 0.9em;
   margin-bottom: 5px;
 }
-/* line 499, ../sass/general.scss */
+/* line 500, ../sass/general.scss */
 #publish .embed_customizator {
   position: relative;
   z-index: 3;
@@ -500,7 +501,7 @@ body {
   box-shadow: inset 0 0 1px 0.5px "#999";
   border: 1px solid #7f7f7f;
 }
-/* line 506, ../sass/general.scss */
+/* line 507, ../sass/general.scss */
 #publish #embed {
   margin: 0 auto;
   background-color: #fff;
@@ -509,12 +510,12 @@ body {
 /*************/
 /*  Log in   */
 /*************/
-/* line 518, ../sass/general.scss */
+/* line 519, ../sass/general.scss */
 #login, #signup {
   width: 337.5px;
   float: left;
 }
-/* line 523, ../sass/general.scss */
+/* line 524, ../sass/general.scss */
 #login .login, #signup .login {
   color: #555555;
   background-color: #f2f2f2;
@@ -537,7 +538,7 @@ body {
   padding: 2px 7px;
 }
 
-/* line 538, ../sass/general.scss */
+/* line 539, ../sass/general.scss */
 #login_submit, #signup_submit, #show_signup {
   font-size: 0.9em;
   line-height: 1.7em;
@@ -545,7 +546,7 @@ body {
   margin: 10px;
 }
 
-/* line 545, ../sass/general.scss */
+/* line 546, ../sass/general.scss */
 #about {
   width: 332.5px;
   float: left;
@@ -561,13 +562,13 @@ body {
   -khtml-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 553, ../sass/general.scss */
+/* line 554, ../sass/general.scss */
 #about p {
   margin: 0 0 10px 0;
   padding: 15px;
 }
 
-/* line 559, ../sass/general.scss */
+/* line 560, ../sass/general.scss */
 #signup {
   display: none;
 }
@@ -575,7 +576,7 @@ body {
 /************************************/
 /*              Popups              */
 /************************************/
-/* line 567, ../sass/general.scss */
+/* line 568, ../sass/general.scss */
 .popup {
   padding: 20px;
   margin: 0;
@@ -591,7 +592,7 @@ body {
 /************************************/
 /*              Footer              */
 /************************************/
-/* line 584, ../sass/general.scss */
+/* line 585, ../sass/general.scss */
 #footer {
   padding: 20px;
   height: 50px;
@@ -601,7 +602,7 @@ body {
   color: #444444;
   font-size: 0.7em;
 }
-/* line 593, ../sass/general.scss */
+/* line 594, ../sass/general.scss */
 #footer .separator {
   color: #555555;
 }
@@ -610,7 +611,7 @@ body {
 /*              Embed               */
 /************************************/
 /* Also visible on 'publish' screen */
-/* line 604, ../sass/general.scss */
+/* line 605, ../sass/general.scss */
 #embed_extras {
   height: 50px;
   text-align: left;
@@ -620,29 +621,29 @@ body {
   color: #000;
   padding: 0 5px;
 }
-/* line 613, ../sass/general.scss */
+/* line 614, ../sass/general.scss */
 #embed_extras p {
   margin: 0 5px;
 }
-/* line 617, ../sass/general.scss */
+/* line 618, ../sass/general.scss */
 #embed_extras #export_csv {
   font-size: 0.8em;
   float: right;
   margin: 0 10px;
 }
-/* line 623, ../sass/general.scss */
+/* line 624, ../sass/general.scss */
 #embed_extras .desc {
   font-weight: bold;
 }
-/* line 627, ../sass/general.scss */
+/* line 628, ../sass/general.scss */
 #embed_extras #source {
   font-style: italic;
 }
-/* line 631, ../sass/general.scss */
+/* line 632, ../sass/general.scss */
 #embed_extras .source_url {
   color: #000;
 }
-/* line 633, ../sass/general.scss */
+/* line 634, ../sass/general.scss */
 #embed_extras .source_url:hover {
   text-decoration: underline;
 }
