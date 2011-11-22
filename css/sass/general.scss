@@ -11,15 +11,18 @@ $error-color : #ff8;
 
 $color-on : #3496AE;
 $color-off : #606060;
-$color-on_text : #000;
-$color-off_text : #fff;
+$color-on_text : #fff;
+$color-off_text : #555;
+$black: #000;
 
 $font-size : 1em;
 
-$background-color:#000;
-$dark-color:#232323;
+$background-color:#fff;
+$shadow-color:#7f7f7f;
+$dark-color:#f2f2f2;
+$border-color:#e5e5e5;
 
-$container-width:800px;
+$container-width:900px;
 $grid-cols: 8;
 $row-h: 30px;
 $col-w: $container-width / $grid-cols;
@@ -35,11 +38,18 @@ $col-w: $container-width / $grid-cols;
     font-size: $font-size + .2;
 }
 
+@mixin title_font{
+    font-size: $font-size + .2;
+    font-family: Georgia, Serif;
+    color:$color-off_text;
+
+}
+
 @mixin inset_input($shadow-length){
     color:$color-off_text;
-    background-color:$color-off;
-    @include single-box-shadow($background-color, 0, 0, $shadow-length, $shadow-length/2, true);
-    border: none;
+    background-color:$dark-color;
+    @include single-box-shadow("#999", 0, 0, $shadow-length, $shadow-length/2, true);
+    border: 1px solid $shadow-color;
 }
 
 /***************/
@@ -89,7 +99,7 @@ $loader-h: 10%;
 /*    Header    /
 /***************/
 
-$header-height : $row-h * 3;
+$header-height : $row-h * 4;
 $logo-w: $row-h * 2;
 $navbar-height: $row-h;
 
@@ -104,34 +114,23 @@ $navbar-height: $row-h;
 #logo{
     position:absolute;
     z-index:2;
-    top:0;
-    left:$container-width/20;
-    width:$logo-w * 1.3;
-    height:$logo-w;
-    background-color:$color-on;
-    @include border-bottom-radius(8px);    
-}
-
-#logo_text{
-    text-align:center;
-    padding-top: $logo-w - 20;
-    padding-bottom: 0;
-
-    .data{
-        color:$color-on_text;
-    }
-    .story{
-        color:$color-off_text;   
-    }
+    margin-left:$col-w/2;
+    margin-top:$navbar-height;
+    color: #282828;
+    font-size:$font-size + .7;
+    font-weight:bold;
+    cursor: pointer;
+    &:hover { color: $color-off_text; }
 }
 
 #navbar{
     width: $container-width;
-    background-color:$dark-color;
+    background-color:$background-color;
     position:absolute;
-    top:0;
+    top:$navbar-height*2;
     left:0;
     height: $navbar-height;
+    border-bottom:$border-color 1px solid;
 
     #languages{
         width: $col-w * 3;
@@ -143,7 +142,7 @@ $navbar-height: $row-h;
             margin: $row-h/2 5px 0 0;
             color: $color-off;
             cursor: pointer;
-            &:hover { color: $color-off_text; }
+            &:hover { color: $black; }
         }
     }
 
@@ -186,7 +185,7 @@ $navbar-height: $row-h;
     background-color:$background-color;
     color:$color-off_text;
 
-    @include box-shadow($background-color 0px 0px 10px);
+    @include box-shadow($shadow-color 0px 0px 10px);
 
     a{
         text-decoration:none;
@@ -209,18 +208,22 @@ $navbar-height: $row-h;
 /*   Buttons   */
 /***************/
 
-$button-color: $color-off_text;
+$button-color-top: #fff;
+$button-color-bottom: #ccc;
 
 .button{
     
-    color:$color-on_text;
     cursor:pointer;
         
-    background: $button-color;
-    @include background-image(linear-gradient($button-color, scale-lightness($button-color, -40))); 
-    @include border-radius(8px);
+    background: $button-color-top;
+    @include background-image(linear-gradient($button-color-top, $button-color-bottom)); 
+    @include border-radius(2px);
     
-    border: 1px solid $color-off;
+    border-color: #E3E3E3 #DBDBDB #DBDBDB #E3E3E3;
+    border-right: 1px solid #DBDBDB;
+    border-style: solid;
+    border-width: 1px;
+    color: #444444;
 
     @include text-shadow(rgba(white, 0.2) 1px 1px 0, rgba(white, 0.2) 1px 1px 0, rgba(white, 0.2) 1px 1px 0);
 }
@@ -400,9 +403,9 @@ $customizator-margin-bottom: 5px;
 #visualize{
 
     #chart{
-        width: $col-w *4;
+        width: $col-w *6;
         height: $row-h * 10;
-        margin: $row-h $col-w;
+        margin: $row-h 0;
         padding: 0;
         overflow:hidden;
     }
@@ -502,15 +505,8 @@ $embed_extras-h: 50px;
 
     #embed{
 
-        height: $chart-h + $embed_extras-h;
-        width: $chart-w;
         margin: 0 auto;
         background-color: #fff;
-
-            #publish_chart{
-                height: $chart-h;
-                width: $chart-w;
-            }
 
     }
 }
@@ -527,35 +523,36 @@ $embed_extras-h: 50px;
     .login{
 
         @include inset_input(3px);
-        @include border-radius(8px);
+        @include border-radius(2px);
 
         float:left;
         width: $col-w * 2.5;
         margin: 5px 0;
-        color: $dark-color;
+        font-size: $font-size;
         height: $font-size + .3;
         padding: 2px 7px;
-        font-size: $font-size + .2;
-    }
 
-    #login_submit, #signup_submit{
-        font-size: $font-size + .2;
-        margin: 10px;
     }
 }
 
+#login_submit, #signup_submit, #show_signup{
+        font-size: $font-size - .1;
+        line-height: $font-size + .7;
+        font-weight: bold;
+        margin: 10px;
+    }
+
 #about{
-    width: $col-w * 3;
+    width: $col-w * 3 - 5px;
     float:left;
-    font-size: $font-size + .1;
+    background-color:$dark-color;
+    border: 1px solid $border-color;
+    @include title_font;
+    @include border-radius(8px);
 
     p{
         margin:0 0 10px 0;
-    }
-
-    #show_signup{
-        font-size: $font-size + .3;
-        margin: 10px;
+        padding: 15px;
     }
 }
 

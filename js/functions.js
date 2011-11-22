@@ -143,21 +143,24 @@ function render_chart(opt, theme){
 			$.getScript('themes/js/' + theme + '.js', function(){
 
 				//Once the theme is loaded, renders chart
-				chart = new Highcharts.Chart(opt, function (chart){
+				if (opt.chart.chart_lib == "highcharts"){
 
-					if (image_w != 0){
-						//Add logo to the chart
+					chart = new Highcharts.Chart(opt, function (chart){
 
-						//Computes logo position (chart width minus image width minus margin)
-						logo_x = chart_w-image_w-(chart_w * .05);
-						logo_y = chart_h-image_h-(chart_h * .05);
+						if (image_w != 0){
+							//Add logo to the chart
 
-						//Renders the logo
-						chart.renderer.image('themes/images/'+theme+'.'+image_ext, logo_x, logo_y, image_w, image_h)
-	        			.add(); 
-	        			
-	        		}
-	        	});
+							//Computes logo position (chart width minus image width minus margin)
+							logo_x = chart_w-image_w-(chart_w * .05);
+							logo_y = chart_h-image_h-(chart_h * .05);
+
+							//Renders the logo
+							chart.renderer.image('themes/images/'+theme+'.'+image_ext, logo_x, logo_y, image_w, image_h)
+		        			.add(); 
+		        			
+		        		}
+		        	});
+	        	}
 			});
 
 		}else{

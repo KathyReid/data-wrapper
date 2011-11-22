@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ds\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-09 19:32+0100\n"
-"PO-Revision-Date: 2011-11-09 19:43+0100\n"
+"PO-Revision-Date: 2011-11-09 20:04+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -272,7 +272,7 @@ msgstr "Hauteur"
 
 #: views/screens.php:93
 msgid "1. Input data"
-msgstr "1. Entrer les données"
+msgstr "1. Saisir les données"
 
 #: views/screens.php:96
 msgid "2. Check data"
@@ -280,19 +280,19 @@ msgstr "2. Vérifier"
 
 #: views/screens.php:99
 msgid "3. Visualize"
-msgstr "Visualiser"
+msgstr "3. Visualiser"
 
 #: views/screens.php:102
 msgid "4. Publish"
-msgstr "Publier"
+msgstr "4. Publier"
 
 #: views/screens.php:109
 msgid "Next"
-msgstr "Suivant"
+msgstr "Suiv."
 
 #: views/screens.php:114
 msgid "Prev"
-msgstr "Précédent"
+msgstr "Préc."
 
 #: views/visualize.php:17
 msgid "Title"

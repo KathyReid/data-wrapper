@@ -23,6 +23,7 @@ function js_enterScreen_publish(){
 	});
 
 	$.post("actions/publish.php", { chart_id: chart_id, action: "current" },
+
    		function(data) {
 
    			loader_hide();
@@ -32,64 +33,10 @@ function js_enterScreen_publish(){
      			data = jQuery.parseJSON(data);
 
      			if (data.status == 200){
-     				
-     				if (data.chart_library == "Highcharts"){
-	     				//empties the previous options
-	     				options = {};
-
-	     				//renders the chart based on data from the DB (not the client)
-	     				options = data.chart_js_code;
-
-	     				//Gets the extra info
-	     				var desc = data.chart_desc;
-	     				var source = data.chart_source;
-	     				var source_url = data.chart_source_url;
-
-	     				//Renders the description
-	     				if (desc != ""){
-	     					$(".desc").show().text(desc);
-	     				}
-
-	     				//Renders the source
-	     				if (source != ""){
-	     					$("#source").show().text("<?php echo _("Source") ?>: "+source);
-	     				}
-
-	     				//Renders the source url
-	     				if (source_url != ""){
-	     					$("#source_url").show();
-	     					$(".source_url").attr("href", source_url);
-	     				}else{
-	     					$("#source_url").hide();
-	     				}
-
-	     				//Adds the functions for the visualisation
-	     				if (data.chart_type == "pie"){
-
-	     					//Tooltip
-							options.tooltip.formatter = function(){return pieTooltip(this); };
-
-	     				}else if (data.chart_type == "column" || data.chart_type == "line"){
-	     					//Tooltip
-							options.tooltip.formatter = function(){return barTooltip(this); };
-	     				}
-						
-						options.chart.renderTo = "publish_chart";
-
-						//init the iframe customizators
-						$("#iframe_h").val($("#embed").height());
-						$("#iframe_w").val($("#embed").width());
-
-						//gets the theme
-	     				var theme = data.chart_theme;
-
-						//renders chart
-						render_chart(options, theme);
-
-					}
 
 					//Gets the chart ID
 					chart_text_id = data.chart_text_id;
+
 					update_dimensions();
 
      			}else{
@@ -105,8 +52,10 @@ function js_enterScreen_publish(){
 
 function update_dimensions(){
 
-	//provides the URL
+	//Gets the URL
 	var direct_link_url = "<?php echo BASE_DIR ?>"+"?c="+chart_text_id;
+
+	//Displays the direct link URL
 	$("#direct_link_url").html(direct_link_url);
 
 	//Makes the iframe embed code
@@ -118,16 +67,26 @@ function update_dimensions(){
 	$("#embed").height(iframe_h);
 	$("#embed").width(iframe_w);
 
+	//Generates iframe code
+	var iframe_code = '<iframe src="<?php echo BASE_DIR ?>?c=' + chart_text_id + '" frameborder="0" scrolling="no" width="' + iframe_w + '" height="' + iframe_h + '" id="iframe"></iframe>';
+
+	//appends the iframe
+	$("#embed").html(iframe_code);
+
 	//The chart size is as big as the embed div minus the size of the extra info.
 	$("#publish_chart").height(iframe_h - extra_h);
 	$("#publish_chart").width(iframe_w);
 
-	var iframe_code = "<iframe src='<?php echo BASE_DIR ?>"+"?c="+chart_text_id+"' height='"+ iframe_h +"' width='"+ iframe_w +"' frameborder='0' scrolling='no'></iframe>";
+	var iframe_code = "<iframe src='" + direct_link_url + "' height='"+ iframe_h +"' width='"+ iframe_w +"' frameborder='0' scrolling='no'></iframe>";
 
+	//Displays the iframe embed code
 	$("#iframe_code").val(iframe_code);
 
-	//renders chart
-	render_chart(options);
+
+	//Updates the actual iframe dimensions
+	$("#iframe").attr("height", iframe_h);
+	$("#iframe").attr("width", iframe_w);
+
 
 }
 
@@ -151,25 +110,8 @@ function update_dimensions(){
 
 	
 	<textarea id="iframe_code" readonly></textarea>
-
+	
 	<div id="embed">
-		
-		<div id="publish_chart" class="publish_chart"></div>
-
-		<div id="embed_extras">
-			
-			<p class="desc"></p>
-			<p class="source">
-				<span id="source"></span>
-				<span id="source_url">(<a href="" class="source_url"><?php echo _("Link") ?></a>)</span>
-			</p>
-
-			<button id="export_csv" class="button">
-				<?php echo _("Export data") ?>
-			</button>
-
-			<p><?php echo _("Chart created using DataStory, a project by ABZV.") ?></p>
-
-		</div>
 	</div>
+	
 </div>

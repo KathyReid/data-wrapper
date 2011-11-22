@@ -1,0 +1,31 @@
+{
+	"librairies": {
+        "highcharts":
+        {
+            "name": "Highcharts",
+            "dependancies": "highcharts/highcharts.js"
+        }
+    },
+    "visualizations":{
+        "column":{
+            "name": "column",
+            "desc": "Bar chart",
+            "library": "highcharts",
+            "vis_code": "column.js"
+        },
+        "line":{
+            "name": "line",
+            "desc": "Line chart",
+            "library": "highcharts",
+            "vis_code": "column.js"
+        },
+        "pie":{
+            "name": "pie",
+            "desc": "Pie chart",
+            "library": "highcharts",
+            "vis_code": "pie.js",
+            "inactive": ["chart_yAxis"]
+        }
+
+    }
+}

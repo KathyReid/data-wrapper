@@ -23,21 +23,19 @@ if ($action == "next"){
 	$data_json = json_decode($data);
 
 	//Gets the lib in use
-	$chart_library = $data_json->chart_lib;
+	$chart_library = $data_json->chart->chart_lib;
 
 	//Specific ton HighCharts
 	$chart_type = "";
-	if ($chart_library == "Highcharts"){
 		
-		//Gets the chart type
-		$chart_type = $data_json->chart->defaultSeriesType;
+	//Gets the chart type
+	$chart_type = $data_json->chart->defaultSeriesType;
 
-		//Gets the chart title
-		$chart_title = $data_json->title->text;
+	//Gets the chart title
+	$chart_title = $data_json->title->text;
 
-		//Gets the chart theme
-		$chart_theme = $data_json->chart->chart_theme;
-	}
+	//Gets the chart theme
+	$chart_theme = $data_json->chart->chart_theme;
 	
 	//this string will store the additional info about the chart, if any, that need to be stored
 	$q_details = "";

@@ -54,9 +54,9 @@
 			//Sets the appropriate language
 			setLanguage($chart_lang);
 
-			if ($chart_library == "Highcharts"){
+			if ($chart_library == "highcharts"){
 				?>
-				<script src="highcharts/highcharts.js" type="text/javascript"></script>
+				<script src="visualizations/highcharts/highcharts.js" type="text/javascript"></script>
 				<script src="js/functions.js" type="text/javascript"></script>
 				<script type="text/javascript">
 					$(document).ready(function(){
@@ -74,6 +74,10 @@
 						<?php elseif ($chart_type == "pie"): ?>
 							opt.tooltip.formatter = function(){return pieTooltip(this); };
 						<?php endif; ?>
+
+						//Sets the chart's height
+						var chart_h = $("html").height() - $("#embed_extras").height();
+						$("#chart").height(chart_h);
 
 						//gets the theme
 						var theme = "<?php echo $chart_theme ?>";

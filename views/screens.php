@@ -4,7 +4,7 @@
 
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-        <title><?php echo _("Data Story") ?></title>
+        <title><?php echo _("DataWrapper, a project by DataStory") ?></title>
 
         <!-- General styles -->
         <link rel="stylesheet" type="text/css" href="css/stylesheets/general.css" />

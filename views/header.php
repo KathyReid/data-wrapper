@@ -63,7 +63,7 @@ function initHeader(){
 <div id="header">
 	<div id="logo">
 		<div id="logo_text">
-	        <span class="data">Data</span><span class="story">Story</span>
+	        <span class="data">Data</span><span class="story">Wrapper</span>
 	    </div>
 	</div>
 
