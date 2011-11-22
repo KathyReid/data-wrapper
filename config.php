@@ -26,7 +26,7 @@ if (strstr($_SERVER['SERVER_NAME'], $prod_domain)){
 	define("BASE_DIR", "http://datawrapper.cloudcontrolled.com");
 
 	//Fetches passwords
-	require_once('passwords.php');
+	require_once('actions/passwords.php');
 	
 
 }else{
