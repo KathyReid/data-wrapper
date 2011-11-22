@@ -193,7 +193,7 @@ function update_options(){
 		</div>
 		<div class="chart_customizator">
 			<select id="chart_type" onchange="update_options()">
-				<option value="none" selected="selected"><?php echo _("Visualization type") ?> </option>
+				<option value="none"><?php echo _("Visualization type") ?> </option>
 
 				<?php
 					/* Displays the possible visualizations based on the config JSON */
@@ -201,12 +201,14 @@ function update_options(){
 					//Loop through the visualizations in the JSON
 					foreach($json_vis->visualizations as $visualization){
 
+						//Adds an exception: The bar chart is selected by default
+						if ($visualization->name == "column")
+							$selected = ' selected="selected"';
+						else
+							$selected = "";
+
 						//Adds the option
-						echo '<option 
-							value="'. $visualization->name .'" 
-							library="'. $visualization->library .'" 
-							vis_code="'. $visualization->vis_code .'" 
-							>'. $visualization->desc .'</option>';
+						echo '<option value="'. $visualization->name .'" library="'. $visualization->library .'" vis_code="'. $visualization->vis_code .'" '. $selected .'>'. $visualization->desc .'</option>';
 					}
 				?>
 

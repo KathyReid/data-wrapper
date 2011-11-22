@@ -160,6 +160,8 @@ function render_chart(opt, theme){
 		        			
 		        		}
 		        	});
+	        	}else if (opt.chart.chart_lib == "responsive"){
+	        		responsive_render(render_div, opt, theme);
 	        	}
 			});
 
