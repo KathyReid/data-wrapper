@@ -13,7 +13,7 @@ require_once "libraries/alpha.id.php";
 require_once "libraries/transpose.php";
 
 //Indicates the name of the prod server
-$prod_domain = "windowonthemedia.com";
+$prod_domain = "cloudcontrolled.com";
 
 if (strstr($_SERVER['SERVER_NAME'], $prod_domain)){		
 
@@ -23,7 +23,7 @@ if (strstr($_SERVER['SERVER_NAME'], $prod_domain)){
 	error_reporting(0);
 
 	//Global const
-	define("BASE_DIR", "http://windowonthemedia.com/datastory/");
+	define("BASE_DIR", "http://datawrapper.cloudcontrolled.com");
 
 	//Fetches passwords
 	require_once('passwords.php');
