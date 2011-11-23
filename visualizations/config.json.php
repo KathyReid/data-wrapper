@@ -1,7 +1,7 @@
 
 <?php
 
-$file_content = '{
+$file_vis = '{
 	"librairies": {
         "highcharts":
         {

@@ -5,7 +5,7 @@
   /* Adds the JS files for the vis libs */
 
 //Fetches the JSON that holds the data about the visualisations
-$file_vis = file_get_contents('visualizations/config.json');
+require_once('visualizations/config.json.php');
 
 //Convert file into JSON
 $json_vis=json_decode($file_vis);
