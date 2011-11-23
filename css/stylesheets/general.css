@@ -547,6 +547,16 @@ body {
 }
 
 /* line 546, ../sass/general.scss */
+#show_signup {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c1e4ed), color-stop(100%, #3496ae));
+  background-image: -webkit-linear-gradient(#c1e4ed, #3496ae);
+  background-image: -moz-linear-gradient(#c1e4ed, #3496ae);
+  background-image: -o-linear-gradient(#c1e4ed, #3496ae);
+  background-image: -ms-linear-gradient(#c1e4ed, #3496ae);
+  background-image: linear-gradient(#c1e4ed, #3496ae);
+}
+
+/* line 550, ../sass/general.scss */
 #about {
   width: 332.5px;
   float: left;
@@ -562,13 +572,13 @@ body {
   -khtml-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 554, ../sass/general.scss */
+/* line 558, ../sass/general.scss */
 #about p {
   margin: 0 0 10px 0;
   padding: 15px;
 }
 
-/* line 560, ../sass/general.scss */
+/* line 564, ../sass/general.scss */
 #signup {
   display: none;
 }
@@ -576,7 +586,7 @@ body {
 /************************************/
 /*              Popups              */
 /************************************/
-/* line 568, ../sass/general.scss */
+/* line 572, ../sass/general.scss */
 .popup {
   padding: 20px;
   margin: 0;
@@ -592,7 +602,7 @@ body {
 /************************************/
 /*              Footer              */
 /************************************/
-/* line 585, ../sass/general.scss */
+/* line 589, ../sass/general.scss */
 #footer {
   padding: 20px;
   height: 50px;
@@ -602,7 +612,7 @@ body {
   color: #444444;
   font-size: 0.7em;
 }
-/* line 594, ../sass/general.scss */
+/* line 598, ../sass/general.scss */
 #footer .separator {
   color: #555555;
 }
@@ -611,7 +621,7 @@ body {
 /*              Embed               */
 /************************************/
 /* Also visible on 'publish' screen */
-/* line 605, ../sass/general.scss */
+/* line 609, ../sass/general.scss */
 #embed_extras {
   height: 50px;
   text-align: left;
@@ -621,29 +631,29 @@ body {
   color: #000;
   padding: 0 5px;
 }
-/* line 614, ../sass/general.scss */
+/* line 618, ../sass/general.scss */
 #embed_extras p {
   margin: 0 5px;
 }
-/* line 618, ../sass/general.scss */
+/* line 622, ../sass/general.scss */
 #embed_extras #export_csv {
   font-size: 0.8em;
   float: right;
   margin: 0 10px;
 }
-/* line 624, ../sass/general.scss */
+/* line 628, ../sass/general.scss */
 #embed_extras .desc {
   font-weight: bold;
 }
-/* line 628, ../sass/general.scss */
+/* line 632, ../sass/general.scss */
 #embed_extras #source {
   font-style: italic;
 }
-/* line 632, ../sass/general.scss */
+/* line 636, ../sass/general.scss */
 #embed_extras .source_url {
   color: #000;
 }
-/* line 634, ../sass/general.scss */
+/* line 638, ../sass/general.scss */
 #embed_extras .source_url:hover {
   text-decoration: underline;
 }

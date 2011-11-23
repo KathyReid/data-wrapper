@@ -543,6 +543,10 @@ $embed_extras-h: 50px;
         margin: 10px;
     }
 
+#show_signup{
+    @include background-image(linear-gradient(lighten($color-on, 40%), $color-on)); 
+}
+
 #about{
     width: $col-w * 3 - 5px;
     float:left;
