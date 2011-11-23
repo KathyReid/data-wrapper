@@ -96,14 +96,14 @@ function stream_render(render_div, opt, theme){
         .style("fill", color_array[cnt_layer])
         .attr("width", "10")
         .attr("height", "10")
-        .attr("transform", "translate(5, " + String(50+15*cnt_layer) + ")scale(1,1)");
+        .attr("transform", "translate(40, " + String(50+15*cnt_layer) + ")scale(1,1)");
 
     //Adds the text
     var legend_text = vis.append("svg:text")
           .style("font", Highcharts.theme.xAxis.labels.style.font)
           .style("fill", Highcharts.theme.xAxis.labels.style.color)
           .attr("dy", ".71em")
-          .attr("transform", "translate(20, " + String(50+15*cnt_layer) + ")scale(1,1)")
+          .attr("transform", "translate(55, " + String(50+15*cnt_layer) + ")scale(1,1)")
           .text(2000);
     legend_text.text(layer_title);
 

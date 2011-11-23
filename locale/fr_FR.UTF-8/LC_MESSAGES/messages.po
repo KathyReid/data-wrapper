@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ds\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-09 19:32+0100\n"
-"PO-Revision-Date: 2011-11-09 20:04+0100\n"
+"POT-Creation-Date: 2011-11-23 14:59+0100\n"
+"PO-Revision-Date: 2011-11-23 15:08+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: actions/export.php:64
 #: actions/publish.php:58
 #: actions/transpose.php:54
-#: actions/visualize.php:77
+#: actions/visualize.php:75
 msgid "Could not fetch the data from the database."
 msgstr "Impossible de récupérer les données dans la base."
 
@@ -82,6 +82,14 @@ msgstr "Erreur lors de la récupération de l'utilisateur dans la base."
 msgid "No data was input."
 msgstr "Aucune donnée."
 
+#: phpMyAdmin/pmd_relation_new.php:68
+msgid "General relation features"
+msgstr ""
+
+#: phpMyAdmin/pmd_relation_new.php:68
+msgid "Disabled"
+msgstr ""
+
 #: views/check.php:151
 msgid "Check that your data was correctly understood."
 msgstr "Vérifiez que les données ont été correctement comprises."
@@ -137,27 +145,22 @@ msgid "Host"
 msgstr "Hébergeur"
 
 #: views/embed.php:7
-#: views/login.php:7
-#: views/screens.php:7
-msgid "Data Story"
-msgstr "DataStory"
+msgid "A chart created by Data Story"
+msgstr "Visualisation réalisée avec DataStory"
 
-#: views/embed.php:108
-#: views/publish.php:164
+#: views/embed.php:122
 msgid "Link"
 msgstr "Lien"
 
-#: views/embed.php:115
-#: views/publish.php:168
+#: views/embed.php:129
 msgid "Export data"
 msgstr "Exporter les données"
 
-#: views/embed.php:118
-#: views/publish.php:171
+#: views/embed.php:132
 msgid "Chart created using DataStory, a project by ABZV."
 msgstr "Visualisation créée avec DataStory, un projet de ABZV."
 
-#: views/embed.php:124
+#: views/embed.php:138
 msgid "Page cannot be displayed."
 msgstr "La page n'a pas pu être affichée."
 
@@ -177,11 +180,11 @@ msgstr "La langue choisie est déjà activée."
 msgid "Could not change language."
 msgstr "Impossible de changer la langue."
 
-#: views/header.php:83
+#: views/header.php:84
 msgid "Log out"
 msgstr "Déconnexion"
 
-#: views/header.php:87
+#: views/header.php:88
 #, php-format
 msgid "Welcome, %s!"
 msgstr "Bienvenue, %s!"
@@ -189,6 +192,11 @@ msgstr "Bienvenue, %s!"
 #: views/input.php:6
 msgid "Paste data here"
 msgstr "Copier les données ici"
+
+#: views/login.php:7
+#: views/screens.php:7
+msgid "DataWrapper, a project by DataStory"
+msgstr "DataWrapper, un projet de DataStory"
 
 #: views/login.php:92
 #: views/login.php:138
@@ -244,29 +252,23 @@ msgstr "DataStory aide les journalistes à construire des visualisations convain
 msgid "The project is lead and maintained by ABZV."
 msgstr "Le projet est mené et maintenu par ABZV."
 
-#: views/publish.php:55
-#: views/visualize.php:110
-#: views/visualize.php:289
-msgid "Source"
-msgstr "Source"
-
-#: views/publish.php:137
+#: views/publish.php:96
 msgid "Publish and embed!"
 msgstr "Publier et intégrer sur le web!"
 
-#: views/publish.php:139
+#: views/publish.php:98
 msgid "Direct access URL"
 msgstr "Accès direct"
 
-#: views/publish.php:142
+#: views/publish.php:101
 msgid "Embed code"
 msgstr "Code d'embed"
 
-#: views/publish.php:145
+#: views/publish.php:104
 msgid "Embed width"
 msgstr "Largeur"
 
-#: views/publish.php:147
+#: views/publish.php:106
 msgid "Embed height"
 msgstr "Hauteur"
 
@@ -294,55 +296,88 @@ msgstr "Suiv."
 msgid "Prev"
 msgstr "Préc."
 
-#: views/visualize.php:17
+#: views/visualize.php:38
+#: views/visualize_legacy.php:17
 msgid "Title"
 msgstr "Titre"
 
-#: views/visualize.php:20
-#: views/visualize.php:88
-#: views/visualize.php:265
+#: views/visualize.php:41
+#: views/visualize.php:109
+#: views/visualize.php:192
+#: views/visualize_legacy.php:20
+#: views/visualize_legacy.php:88
+#: views/visualize_legacy.php:265
 msgid "Subtitle"
 msgstr "Sous-titre"
 
-#: views/visualize.php:99
-#: views/visualize.php:293
+#: views/visualize.php:120
+#: views/visualize.php:235
+#: views/visualize_legacy.php:99
+#: views/visualize_legacy.php:293
 msgid "Source URL"
 msgstr "URL de la source"
 
-#: views/visualize.php:103
+#: views/visualize.php:124
+#: views/visualize_legacy.php:103
 msgid "Source URL must begin with 'http://'"
 msgstr "L'URL de la source doit commencer par 'http://'"
 
-#: views/visualize.php:118
-#: views/visualize.php:297
+#: views/visualize.php:131
+#: views/visualize.php:231
+#: views/visualize_legacy.php:110
+#: views/visualize_legacy.php:289
+msgid "Source"
+msgstr "Source"
+
+#: views/visualize.php:139
+#: views/visualize.php:239
+#: views/visualize_legacy.php:118
+#: views/visualize_legacy.php:297
 msgid "Chart description"
 msgstr "Description du graph"
 
-#: views/visualize.php:255
+#: views/visualize.php:182
+#: views/visualize_legacy.php:255
 msgid "Build your visualization."
 msgstr "Construisez votre visualisation"
 
-#: views/visualize.php:262
+#: views/visualize.php:189
+#: views/visualize_legacy.php:262
 msgid "Title (required)"
 msgstr "Titre (requis)"
 
-#: views/visualize.php:269
+#: views/visualize.php:196
+#: views/visualize_legacy.php:269
 msgid "Visualization type"
 msgstr "Type de visualisation"
 
-#: views/visualize.php:270
-msgid "Bar chart"
-msgstr "Histogramme"
-
-#: views/visualize.php:271
-msgid "Line chart"
-msgstr "Courbes"
-
-#: views/visualize.php:272
-msgid "Pie chart"
-msgstr "Camembert"
-
-#: views/visualize.php:285
+#: views/visualize.php:227
+#: views/visualize_legacy.php:285
 msgid "Vertical axis title (required)"
 msgstr "Titre de l'axe vertical (requis)"
 
+#: views/visualize_legacy.php:270
+#: visualizations/config.json.php:30
+msgid "Bar chart"
+msgstr "Histogramme"
+
+#: views/visualize_legacy.php:271
+#: visualizations/config.json.php:36
+msgid "Line chart"
+msgstr "Courbes"
+
+#: views/visualize_legacy.php:272
+#: visualizations/config.json.php:42
+msgid "Pie chart"
+msgstr "Camembert"
+
+#: visualizations/config.json.php:48
+msgid "Responsive table"
+msgstr "Tableau adaptable"
+
+#: visualizations/config.json.php:54
+msgid "Streamgraph"
+msgstr "Graph de flux"
+
+#~ msgid "Data Story"
+#~ msgstr "DataStory"
