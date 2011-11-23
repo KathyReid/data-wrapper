@@ -9,6 +9,16 @@
         {
             "name": "Responsive",
             "dependancies": "responsive/responsive.js"
+        },
+        "d3":
+        {
+            "name": "D3.js",
+            "dependancies": "d3/d3.js"
+        },
+        "d3.layout":
+        {
+            "name": "D3.layout.js",
+            "dependancies": "d3/d3.layout.js"
         }
     },
     "visualizations":{
@@ -34,8 +44,13 @@
             "name": "responsive_table",
             "desc": "Responsive data table",
             "library": "responsive",
-            "vis_code": "responsive.js",
-            "render_code": "responsive.js"
+            "vis_code": "responsive.js"
+        },
+        "stream":{
+            "name": "stream",
+            "desc": "Stream graph",
+            "library": "d3",
+            "vis_code": "stream.js"
         }
 
     }

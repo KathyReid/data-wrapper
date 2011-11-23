@@ -161,7 +161,17 @@ function render_chart(opt, theme){
 		        		}
 		        	});
 	        	}else if (opt.chart.chart_lib == "responsive"){
+	        		
 	        		responsive_render(render_div, opt, theme);
+
+	        	}else if (opt.chart.chart_lib == "d3"){
+
+	        		if (opt.chart.defaultSeriesType == "stream"){
+	        			$.getScript('visualizations/d3/vis.stream.js', function(){
+	        				stream_render(render_div, opt, theme);
+	        			});
+	        		}
+
 	        	}
 			});
 
