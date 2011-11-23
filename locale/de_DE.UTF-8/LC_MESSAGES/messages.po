@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-09 18:59+0100\n"
-"PO-Revision-Date: 2011-11-09 19:27+0100\n"
+"POT-Creation-Date: 2011-11-23 15:09+0100\n"
+"PO-Revision-Date: 2011-11-23 15:10+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: actions/export.php:64
 #: actions/publish.php:58
 #: actions/transpose.php:54
-#: actions/visualize.php:77
+#: actions/visualize.php:75
 msgid "Could not fetch the data from the database."
 msgstr "Daten könnten nicht von Datenbank abgeholt werden."
 
@@ -82,6 +82,14 @@ msgstr "Datenbank Fehler beim Benutzersretrieval."
 msgid "No data was input."
 msgstr "Kein Datei würde eingegeben."
 
+#: phpMyAdmin/pmd_relation_new.php:68
+msgid "General relation features"
+msgstr ""
+
+#: phpMyAdmin/pmd_relation_new.php:68
+msgid "Disabled"
+msgstr ""
+
 #: views/check.php:151
 msgid "Check that your data was correctly understood."
 msgstr "Bitte prüfen Sie, dass Ihre Daten richtig verstanden wurden."
@@ -137,27 +145,22 @@ msgid "Host"
 msgstr "Host"
 
 #: views/embed.php:7
-#: views/login.php:7
-#: views/screens.php:7
-msgid "Data Story"
-msgstr "Data Story, ein Projekt von ABZV"
+msgid "A chart created by Data Story"
+msgstr "Visualisierung von DataStory kreirt"
 
-#: views/embed.php:108
-#: views/publish.php:164
+#: views/embed.php:122
 msgid "Link"
 msgstr "Link"
 
-#: views/embed.php:115
-#: views/publish.php:168
+#: views/embed.php:129
 msgid "Export data"
 msgstr "Daten runterladen"
 
-#: views/embed.php:118
-#: views/publish.php:171
+#: views/embed.php:132
 msgid "Chart created using DataStory, a project by ABZV."
 msgstr "Dies Chart wurde mit DataStory hergestellt."
 
-#: views/embed.php:124
+#: views/embed.php:138
 msgid "Page cannot be displayed."
 msgstr "Die Seite könnte nicht angezeigt werden."
 
@@ -177,11 +180,11 @@ msgstr "Sprache wurde nicht verändert"
 msgid "Could not change language."
 msgstr "Sprache könnte nicht verändert."
 
-#: views/header.php:83
+#: views/header.php:84
 msgid "Log out"
 msgstr "Ausloggen."
 
-#: views/header.php:87
+#: views/header.php:88
 #, php-format
 msgid "Welcome, %s!"
 msgstr "Wilkommen, %s!"
@@ -189,6 +192,11 @@ msgstr "Wilkommen, %s!"
 #: views/input.php:6
 msgid "Paste data here"
 msgstr "Daten hier einfügen"
+
+#: views/login.php:7
+#: views/screens.php:7
+msgid "DataWrapper, a project by DataStory"
+msgstr "DataWrapper ist ein Projekt von DataStory"
 
 #: views/login.php:92
 #: views/login.php:138
@@ -244,29 +252,23 @@ msgstr "DataStory hilft Journalisten beim Bau spannender Visualisierungen in nur
 msgid "The project is lead and maintained by ABZV."
 msgstr "Das Projekt wurde von ABZV geleitet und gewartet."
 
-#: views/publish.php:55
-#: views/visualize.php:110
-#: views/visualize.php:289
-msgid "Source"
-msgstr "Quelle"
-
-#: views/publish.php:137
+#: views/publish.php:96
 msgid "Publish and embed!"
 msgstr "Veröffentlichen und embedden"
 
-#: views/publish.php:139
+#: views/publish.php:98
 msgid "Direct access URL"
 msgstr "Link zu diesem Chart"
 
-#: views/publish.php:142
+#: views/publish.php:101
 msgid "Embed code"
 msgstr "Einbettungscode"
 
-#: views/publish.php:145
+#: views/publish.php:104
 msgid "Embed width"
 msgstr "Einbettungsbreite"
 
-#: views/publish.php:147
+#: views/publish.php:106
 msgid "Embed height"
 msgstr "Einbettungshöhe"
 
@@ -294,57 +296,91 @@ msgstr "Nächste"
 msgid "Prev"
 msgstr "Zurück"
 
-#: views/visualize.php:17
+#: views/visualize.php:38
+#: views/visualize_legacy.php:17
 msgid "Title"
 msgstr "Titel"
 
-#: views/visualize.php:20
-#: views/visualize.php:88
-#: views/visualize.php:265
+#: views/visualize.php:41
+#: views/visualize.php:109
+#: views/visualize.php:192
+#: views/visualize_legacy.php:20
+#: views/visualize_legacy.php:88
+#: views/visualize_legacy.php:265
 msgid "Subtitle"
 msgstr "Untertitel"
 
-#: views/visualize.php:99
-#: views/visualize.php:293
+#: views/visualize.php:120
+#: views/visualize.php:235
+#: views/visualize_legacy.php:99
+#: views/visualize_legacy.php:293
 msgid "Source URL"
 msgstr "URL der Quelle"
 
-#: views/visualize.php:103
+#: views/visualize.php:124
+#: views/visualize_legacy.php:103
 msgid "Source URL must begin with 'http://'"
 msgstr "URL der Quelle sollte mit 'http://' beginnen"
 
-#: views/visualize.php:118
-#: views/visualize.php:297
+#: views/visualize.php:131
+#: views/visualize.php:231
+#: views/visualize_legacy.php:110
+#: views/visualize_legacy.php:289
+msgid "Source"
+msgstr "Quelle"
+
+#: views/visualize.php:139
+#: views/visualize.php:239
+#: views/visualize_legacy.php:118
+#: views/visualize_legacy.php:297
 msgid "Chart description"
 msgstr "Beschreibung des Charts"
 
-#: views/visualize.php:255
+#: views/visualize.php:182
+#: views/visualize_legacy.php:255
 msgid "Build your visualization."
 msgstr "Erstellen Sie Ihre Visualisierung"
 
-#: views/visualize.php:262
+#: views/visualize.php:189
+#: views/visualize_legacy.php:262
 msgid "Title (required)"
 msgstr "Titel (erforderlich)"
 
-#: views/visualize.php:269
+#: views/visualize.php:196
+#: views/visualize_legacy.php:269
 msgid "Visualization type"
 msgstr "Visualisierungsart"
 
-#: views/visualize.php:270
+#: views/visualize.php:227
+#: views/visualize_legacy.php:285
+msgid "Vertical axis title (required)"
+msgstr "Titel der Hochachse (erforderlich)"
+
+#: views/visualize_legacy.php:270
+#: visualizations/config.json.php:30
 msgid "Bar chart"
 msgstr "Balkenplan"
 
-#: views/visualize.php:271
+#: views/visualize_legacy.php:271
+#: visualizations/config.json.php:36
 msgid "Line chart"
 msgstr "Liniendiagramm"
 
-#: views/visualize.php:272
+#: views/visualize_legacy.php:272
+#: visualizations/config.json.php:42
 msgid "Pie chart"
 msgstr "Kreisdiagramm"
 
-#: views/visualize.php:285
-msgid "Vertical axis title (required)"
-msgstr "Titel der Hochachse (erforderlich)"
+#: visualizations/config.json.php:48
+msgid "Responsive table"
+msgstr "Reaktionsfähiges Tabelle"
+
+#: visualizations/config.json.php:54
+msgid "Streamgraph"
+msgstr "Stromgraph"
+
+#~ msgid "Data Story"
+#~ msgstr "Data Story, ein Projekt von ABZV"
 
 #~ msgid "Welcome to DataStory"
 #~ msgstr "Wilkommen!"
