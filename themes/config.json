@@ -10,7 +10,7 @@
         "lemonde":
         {
             "name": "lemonde",
-            "desc": "Le Monde theme",
+            "desc": "Le Monde",
             "image": {
                 "width": 101,
                 "height": 18,
@@ -18,10 +18,21 @@
             },
             "restricted": ["lemonde.fr"]
         },
+        "datapublica":
+        {
+            "name": "datapublica",
+            "desc": "Data-Publica",
+            "image": {
+                "width": 100,
+                "height": 25,
+                "format": "png"
+            },
+            "restricted": ["data-publica.com", "nkb.fr"]
+        },
         "paidcontent":
         {
             "name": "paidcontent",
-            "desc": "PaidContent theme",
+            "desc": "PaidContent",
             "image": {
                 "width": 100,
                 "height": 27,
