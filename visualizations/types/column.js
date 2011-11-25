@@ -8,7 +8,6 @@ options.chart.defaultSeriesType = chart_type;
 options.xAxis = {};
 options.xAxis.categories = new Array();
 options.yAxis= {};
-options.yAxis.min = 0;
 
 //Y axis name
 options.yAxis.title = {text: yAxis};

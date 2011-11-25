@@ -42,11 +42,11 @@ if ($action == "next"){
 
 	//Gets the chart description
 	if (isset($data_json->desc))
-		$q_details .= ", additional_text = '". $data_json->desc. "'";
+		$q_details .= ", additional_text = '". addslashes($data_json->desc). "'";
 
 	//Gets the chart source
 	if (isset($data_json->source))
-		$q_details .= ", source = '". $data_json->source. "'";
+		$q_details .= ", source = '". addslashes($data_json->source). "'";
 
 	//Gets the chart source_url
 	if (isset($data_json->source_url))
@@ -59,7 +59,7 @@ if ($action == "next"){
 	$chart_lang = getLocale(false);
 
 	//Builds query
-	$q = "UPDATE charts SET chart_js_code = '$chart_js_code', chart_type='$chart_type', chart_theme='$chart_theme', chart_library='$chart_library', chart_title='$chart_title', chart_lang='$chart_lang' $q_details WHERE chart_id='$chart_id'";
+	$q = "UPDATE charts SET chart_js_code = '$chart_js_code', chart_type='$chart_type', chart_theme='$chart_theme', chart_library='$chart_library', chart_title='".addslashes($chart_title)."', chart_lang='$chart_lang' $q_details WHERE chart_id='$chart_id'";
 
 	if ($result = $mysqli->query($q)) {
 		

@@ -83,7 +83,7 @@ if ($vertical_header == 0 && $horizontal_header == 1){
 
 }
 
-$serialized_data = serialize($formatted_data);
+$serialized_data = addslashes(serialize($formatted_data));
 
 $user_id = $_SESSION["user_id"];
 
