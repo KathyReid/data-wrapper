@@ -22,6 +22,10 @@ function error(msg){
         times:3
     }, 300);
 
+    setTimeout(function() {
+        $("#error").fadeOut(100)
+    }, 5000);
+
 }
 
 
