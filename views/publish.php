@@ -50,7 +50,21 @@ function js_enterScreen_publish(){
    		});
 }
 
-function update_dimensions(){
+var ratio_init = 6/4;
+var ratio = ratio_init;
+
+function compute_ratio(){
+
+	//stores the aspect ratio
+	if ($("#keep_proportions").is(':checked')){
+		ratio =  parseFloat($("#iframe_w").val()) / parseFloat($("#iframe_h").val());
+	}else{
+		ratio = ratio_init;
+	}
+
+}
+
+function update_dimensions(changed_dimension){
 
 	//Gets the URL
 	var direct_link_url = "<?php echo BASE_DIR ?>"+"?c="+chart_text_id;
@@ -62,6 +76,28 @@ function update_dimensions(){
 	var iframe_h = $("#iframe_h").val();
 	var iframe_w = $("#iframe_w").val();
 	var extra_h = $("#embed_extras").height();
+
+	//If dimensions are constrained, recomputes the other dimension
+	if ($("#keep_proportions").is(':checked')){
+		
+		//recomputes height
+		if (changed_dimension == "width"){
+			
+			iframe_h = Math.round(iframe_w * (1/ratio));
+
+			//displays the new value to the user
+			$("#iframe_h").val(iframe_h);
+		}
+
+		//recomputes width
+		else if (changed_dimension == "height"){
+			
+			iframe_w = Math.round(iframe_h * ratio);
+
+			//displays the new value to the user
+			$("#iframe_w").val(iframe_w);
+		}
+	}
 
 	//Sets the embed div size
 	$("#embed").height(iframe_h);
@@ -102,9 +138,11 @@ function update_dimensions(){
 
 	<br><span class="embed_customization">
 		<?php echo _("Embed width") ?>
-		<input type="text" id="iframe_w" class="embed_customizator" value="400" onfinishinput="update_dimensions()"/>
+		<input type="text" id="iframe_w" class="embed_customizator" value="600" onfinishinput="update_dimensions('width')"/>
 		<?php echo _("Embed height") ?>
-		<input type="text" id="iframe_h" class="embed_customizator" value="300" onfinishinput="update_dimensions()"/>
+		<input type="text" id="iframe_h" class="embed_customizator" value="400" onfinishinput="update_dimensions('height')"/>
+		<?php echo _("Keep proportions") ?>
+		<input type="checkbox" id="keep_proportions" value="on" checked="yes" onClick="compute_ratio()"/>
 		</span>
 	</p>
 
