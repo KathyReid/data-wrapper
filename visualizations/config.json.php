@@ -6,17 +6,34 @@ $file_vis = '{
         "highcharts":
         {
             "name": "Highcharts",
-            "dependancies": "highcharts/highcharts.js"
+            "dependancies": "highcharts/highcharts.js",
+            "compatibility": {
+                "IE": "6.0+",
+                "FF": "2.0+",
+                "Chrome": "1.0+",
+                "Safari": "4.0+" 
+            }
         },
         "responsive":
         {
             "name": "Responsive",
-            "dependancies": "responsive/responsive.js"
+            "dependancies": "responsive/responsive.js",
+            "compatibility": {
+                "IE": "9.0+",
+                "FF": "3.0+",
+                "Chrome": "2.0+"
+            }
         },
         "d3":
         {
             "name": "D3.js",
-            "dependancies": "d3/d3.js"
+            "dependancies": "d3/d3.js",
+            "compatibility": {
+                "IE": "9.0+",
+                "FF": "3.0+",
+                "Chrome": "2.0+",
+                "Safari": "4.0+" 
+            }
         },
         "d3.layout":
         {
@@ -41,7 +58,10 @@ $file_vis = '{
             "name": "pie",
             "desc": "'. _("Pie chart").'",
             "library": "highcharts",
-            "vis_code": "pie.js"
+            "vis_code": "pie.js",
+            "resources":{
+                "'. _("Understanding Pie Charts").'": "http://eagereyes.org/techniques/pie-charts"
+            }
         },
         "responsive_table":{
             "name": "responsive_table",

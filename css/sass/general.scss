@@ -445,6 +445,42 @@ $customizator-margin-bottom: 5px;
         }
     }
 
+    #chart_info{
+        position:absolute;
+        top:$row-h*2 - 4;
+        left:$col-w*7 - 10;
+        
+        width:25px;
+        height:21px;
+
+        background-image:url('../../images/question_mark.png');
+
+        cursor:pointer;
+    }
+
+    #chart_desc_box{
+        position:absolute;
+        top:$row-h*3 - 3;
+        left:$col-w*5;
+        z-index:2;
+        
+        font-size:$font-size - .25;
+        
+        width: $col-w * 2 ;
+        border:$shadow-color 1px solid;
+        background: $background-color;
+        @include border-radius(2px);
+        @include box-shadow($shadow-color 0px 0px 5px);
+        padding:5px;
+
+        display:none;
+
+        img{
+            width:15px;
+            height:15px;
+        }
+    }
+
     .chart_customizator{
         width: $col-w * 2 ;
         height: $row-h;
