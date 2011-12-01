@@ -53,7 +53,7 @@ function js_enterScreen_check(){
 
     						tablehtml += '<td'+ td_class +'>';
 
-    						tablehtml += current_cell;
+    						tablehtml += stripslashes(current_cell);
     						
     						tablehtml += '</td>';
 

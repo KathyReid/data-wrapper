@@ -24,7 +24,7 @@ var count_rows = 0;
 
 $.each(csv_data, function() {
 	//New row
-	var point_name = this[0];
+	var point_name = stripslashes(this[0]);
 	var point_value = parseFloat(this[1]);
 
 	//Checks that the (name, value) pair is correct
