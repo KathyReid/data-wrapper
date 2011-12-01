@@ -87,7 +87,9 @@ function js_enterScreen_visualize(){
 	$('#chart_info').click(function() {
 
 		//otherwise, data doesn't show properly if user hasn't changed the default graph type
-		update_options();
+		if ($("#chart_desc_box").html()==""){
+			update_options();
+		}
 
    		//displays the div
 		$("#chart_desc_box").show();

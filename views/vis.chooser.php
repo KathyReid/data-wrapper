@@ -83,6 +83,4 @@ foreach($json_vis->visualizations as $visualization){
 	</select>
 </div>
 <div id="chart_info"></div>
-<div id="chart_desc_box" style="display=none">
-	<?php echo _("This is where the chart description is displayed") ?>
-</div>
+<div id="chart_desc_box" style="display=none"></div>
