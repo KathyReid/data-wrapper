@@ -81,7 +81,35 @@ function js_enterScreen_visualize(){
      		}
 
    		});
+
+   	//init the chart info button
+	
+	$('#chart_info').click(function() {
+
+		//otherwise, data doesn't show properly if user hasn't changed the default graph type
+		update_options();
+
+   		//displays the div
+		$("#chart_desc_box").show();
+	
+	});	
+
+	var mouse_in_chart_desc_box = false;
+
+	//Watches if the mouse inside the div
+	$('#chart_desc_box').hover(function(){ 
+        mouse_in_chart_desc_box=true; 
+    }, function(){ 
+        mouse_in_chart_desc_box=false; 
+    });
+
+   	//init the description box's close
+   	$("body").mouseup(function(){ 
+        if(! mouse_in_chart_desc_box) $('#chart_desc_box').hide();
+    });
+
 }
+
 
 function update_options(){
 
@@ -142,6 +170,11 @@ function update_options(){
 		options.desc = desc;	
 	}
 
+	//retrieves the html code of the vis chosen
+	var chart_desc = $("#chart_type option[value="+ chart_type +"]").attr("html_code");
+
+	//shoves the code in the div
+	$("#chart_desc_box").html(chart_desc);
 
 	//Assigns a chart type according to the user's choice in the drop down menu
 	chart_type = $("#chart_type").val();
@@ -191,29 +224,10 @@ function update_options(){
 		<div class="chart_customizator">
 			<input type="text" id="chart_subtitle" class="chart_builder subtitle" value="<?php echo _("Subtitle") ?>" onfinishinput="update_options()"/>
 		</div>
-		<div class="chart_customizator">
-			<select id="chart_type" onchange="update_options()">
-				<option value="none"><?php echo _("Visualization type") ?> </option>
+		
 
-				<?php
-					/* Displays the possible visualizations based on the config JSON */
-					
-					//Loop through the visualizations in the JSON
-					foreach($json_vis->visualizations as $visualization){
+		<?php require_once "views/vis.chooser.php" ?>
 
-						//Adds an exception: The bar chart is selected by default
-						if ($visualization->name == "column")
-							$selected = ' selected="selected"';
-						else
-							$selected = "";
-
-						//Adds the option
-						echo '<option value="'. $visualization->name .'" library="'. $visualization->library .'" vis_code="'. $visualization->vis_code .'" '. $selected .'>'. $visualization->desc .'</option>';
-					}
-				?>
-
-			</select>
-		</div>
 		
 		<div class="chart_customizator">
 			<select id="chart_theme" onchange="update_options()">
