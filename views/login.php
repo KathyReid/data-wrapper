@@ -135,6 +135,14 @@
 
         	<div id="screen_container">
 
+                
+                <div id="about">
+                    <button id="show_signup" class="button"><?php echo _("Sign up") ?></button>
+                    <p><?php echo _("DataWrapper helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all.") ?></p>
+                    <p><?php echo _("The project is lead and maintained by ABZV.") ?></p>
+                </div>
+
+
                 <div id="login">
             
                     <input class="login" id="email" value="<?php echo _("E-mail") ?>">
@@ -143,6 +151,7 @@
             
                 </div>
 
+                
 
                 <div id="signup">
 
@@ -161,13 +170,6 @@
                     <div class="clear"></div>
 
                     <button id="signup_submit" class="button"><?php echo _("Sign up") ?></button>
-                </div>
-
-
-                <div id="about">
-                    <p><?php echo _("DataStory helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all.") ?></p>
-                    <p><?php echo _("The project is lead and maintained by ABZV.") ?></p>
-                    <button id="show_signup" class="button"><?php echo _("Sign up") ?></button>
                 </div>
 
         	</div>
