@@ -6,14 +6,7 @@
 Highcharts.theme = {
 	colors: ['#A41717', '#5B5B5B', '#9A2020', '#737373', '#8E2B2B', '#8B8B8B', '#803838', '#5B5B5B', '#793F3F', '#737373', '#714747', '#8B8B8B', '#655252', '#A41717', '#5B5B5B', '#9A2020', '#737373', '#8E2B2B', '#8B8B8B', '#803838', '#5B5B5B', '#793F3F', '#737373', '#714747', '#8B8B8B', '#655252'],
 	chart: {
-		backgroundColor: {
-			linearGradient: [0, 0, 500, 500],
-			stops: [
-				[0, 'rgb(255, 255, 255)'],
-				[1, 'rgb(240, 240, 255)']
-			]
-		}
-		,
+		backgroundColor: '#fff',
 		plotBackgroundColor: 'rgba(255, 255, 255, .9)',
 		plotShadow: false,
 		plotBorderWidth: 0
@@ -34,7 +27,8 @@ Highcharts.theme = {
 		}
 	},
 	xAxis: {
-		gridLineWidth: 1,
+		gridLineWidth: 0,
+		gridLineColor: '#ddd',
 		lineColor: '#000',
 		tickColor: '#000',
 		labels: {
@@ -54,8 +48,9 @@ Highcharts.theme = {
 		}
 	},
 	yAxis: {
-		minorTickInterval: 'auto',
 		lineColor: '#000',
+		gridLineWidth: 1,
+		gridLineColor: '#ddd',
 		lineWidth: 1,
 		tickWidth: 1,
 		tickColor: '#000',
