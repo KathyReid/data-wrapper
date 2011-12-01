@@ -25,7 +25,7 @@ $.each(csv_data, function() {
 
 		$.each(this, function() {
 
-			if (count_cols>0) options.xAxis.categories.push(String(this));
+			if (count_cols>0) options.xAxis.categories.push(String(stripslashes(this)));
 
 			count_cols++;
 
@@ -41,7 +41,7 @@ $.each(csv_data, function() {
 			if (count_cols == 0){
 				//if this is the first cell, adds series
 				
-				options.series.push({name: String(this), data: new Array});
+				options.series.push({name: String(stripslashes(this)), data: new Array});
 
 			}else{
 				//else, populates the series	
