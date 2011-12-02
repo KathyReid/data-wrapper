@@ -6,7 +6,7 @@ $file_vis = '{
         "highcharts":
         {
             "name": "Highcharts",
-            "dependancies": "highcharts/highcharts.js",
+            "dependancies": ["highcharts/highcharts.js"],
             "compatibility": {
                 "IE": "6.0+",
                 "FF": "2.0+",
@@ -17,7 +17,7 @@ $file_vis = '{
         "responsive":
         {
             "name": "Responsive",
-            "dependancies": "responsive/responsive.js",
+            "dependancies": ["responsive/responsive.js"],
             "compatibility": {
                 "IE": "9.0+",
                 "FF": "3.0+",
@@ -27,18 +27,13 @@ $file_vis = '{
         "d3":
         {
             "name": "D3.js",
-            "dependancies": "d3/d3.js",
+            "dependancies": ["d3/d3.js", "d3/d3.layout.js"],
             "compatibility": {
                 "IE": "9.0+",
                 "FF": "3.0+",
                 "Chrome": "2.0+",
                 "Safari": "4.0+" 
             }
-        },
-        "d3.layout":
-        {
-            "name": "D3.layout.js",
-            "dependancies": "d3/d3.layout.js"
         }
     },
     "visualizations":{

@@ -10,11 +10,16 @@ require_once('visualizations/config.json.php');
 //Convert file into JSON
 $json_vis=json_decode($file_vis);
 
-//Loop through the themes in the JSON
+//Loop through the libs  in the JSON
 foreach($json_vis->librairies as $librairy){
 
-	//Adds the lib
-	echo '<script src="visualizations/'. $librairy->dependancies .'" type="text/javascript"></script>';
+	//Loop throught the dependancies array
+	foreach($librairy->dependancies as $dependancy){
+
+		//Adds the lib
+		echo '<script src="visualizations/'. $dependancy .'" type="text/javascript"></script>';
+
+	}
 }
 
 ?>
