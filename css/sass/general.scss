@@ -603,6 +603,17 @@ $embed_extras-h: 50px;
     display:none;
 }
 
+#verify{
+    width: 100%;
+    display:none;
+    padding:15px;
+    margin-right:20px;
+    background-color:scale-lightness($color-on, 80);
+    border: 1px solid $border-color;
+    @include border-radius(8px);
+    font-size: $font-size - .2;
+}
+
 /************************************/
 /*              Popups              */
 /************************************/
