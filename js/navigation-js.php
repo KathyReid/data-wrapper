@@ -30,9 +30,11 @@ function showSlide(next, current){
         }
 
         if (slideOrder[currentSlide][1]){
-            $("#button_next").show();
+            $("#next").show();
+            $("#new_chart").hide();
         }else{
-            $("#button_next").hide();
+            $("#next").hide();
+            $("#new_chart").show();
         }
 
         $('#'+next).show("drop", 500, function(){
