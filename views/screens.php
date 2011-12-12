@@ -47,6 +47,9 @@
 	    /* END global vars init */
 
 	     $(document).ready(function() {
+            //Shows loader
+            loader_show();
+
 	     	//hides all screens on startup
 	     	$('.screen').hide();
 	        
@@ -68,12 +71,23 @@
                 showPrev();
             });
 
+            //Tells the new chart what to do
+            $('#new_chart').click(function(){
+                location.reload();
+            });
+
             //init the error box
             $('#error').click(function() {
                 $(this).hide();
             });		
 
 	     });
+
+        jQuery(window).load(function(){
+            //hides loader when page is fully loaded
+            loader_hide();   
+        });
+
 	    </script>
 
         <!-- A div that serves for popups and loading screens -->
@@ -111,6 +125,10 @@
             		<button id="next" class="button nav">
             			<?php echo _("Next") ?>&nbsp;&rsaquo;
             		</button>
+
+                    <button id="new_chart" class="button nav">
+                        <?php echo _("New") ?>&nbsp;&rsaquo;
+                    </button>
             	</div>
             	<div id="button_prev">
             		<button id="prev" class="button nav">
