@@ -623,10 +623,27 @@ body {
   display: none;
 }
 
+/* line 606, ../sass/general.scss */
+#verify {
+  width: 100%;
+  display: none;
+  padding: 15px;
+  margin-right: 20px;
+  background-color: #d3ecf2;
+  border: 1px solid #e5e5e5;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  font-size: 0.8em;
+}
+
 /************************************/
 /*              Popups              */
 /************************************/
-/* line 610, ../sass/general.scss */
+/* line 621, ../sass/general.scss */
 .popup {
   padding: 20px;
   margin: 0;
@@ -642,7 +659,7 @@ body {
 /************************************/
 /*              Footer              */
 /************************************/
-/* line 627, ../sass/general.scss */
+/* line 638, ../sass/general.scss */
 #footer {
   padding: 20px;
   height: 50px;
@@ -652,7 +669,7 @@ body {
   color: #444444;
   font-size: 0.7em;
 }
-/* line 636, ../sass/general.scss */
+/* line 647, ../sass/general.scss */
 #footer .separator {
   color: #555555;
 }
@@ -661,7 +678,7 @@ body {
 /*              Embed               */
 /************************************/
 /* Also visible on 'publish' screen */
-/* line 647, ../sass/general.scss */
+/* line 658, ../sass/general.scss */
 #embed_extras {
   height: 50px;
   text-align: left;
@@ -671,29 +688,29 @@ body {
   color: #000;
   padding: 0 5px;
 }
-/* line 656, ../sass/general.scss */
+/* line 667, ../sass/general.scss */
 #embed_extras p {
   margin: 0 5px;
 }
-/* line 660, ../sass/general.scss */
+/* line 671, ../sass/general.scss */
 #embed_extras #export_csv {
   font-size: 0.8em;
   float: right;
   margin: 0 10px;
 }
-/* line 666, ../sass/general.scss */
+/* line 677, ../sass/general.scss */
 #embed_extras .desc {
   font-weight: bold;
 }
-/* line 670, ../sass/general.scss */
+/* line 681, ../sass/general.scss */
 #embed_extras #source {
   font-style: italic;
 }
-/* line 674, ../sass/general.scss */
+/* line 685, ../sass/general.scss */
 #embed_extras .source_url {
   color: #000;
 }
-/* line 676, ../sass/general.scss */
+/* line 687, ../sass/general.scss */
 #embed_extras .source_url:hover {
   text-decoration: underline;
 }

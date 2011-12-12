@@ -101,8 +101,9 @@
                                     data = jQuery.parseJSON(data);
                                     if (data.status == 200){
                                         
-                                        //User is signed up and logged in, the page reloads with a valid SESSION[user_id]
-                                        location.reload();
+                                        //User just signed up, needs to validate the e-mail address
+                                        $("#verify").show()
+                                                    .html("<?php echo _("Thanks for signing up! You just need to verify your e-mail address.") ?>");
 
                                     }else{
                                         error(data.error);
@@ -170,6 +171,7 @@
                     <div class="clear"></div>
 
                     <button id="signup_submit" class="button"><?php echo _("Sign up") ?></button>
+                    <div id="verify"></div>
                 </div>
 
         	</div>

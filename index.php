@@ -6,6 +6,11 @@ if (isset($_GET["c"])){
 	//User is loading an embedded visualization
 	require_once "views/embed.php";
 
+}
+elseif (isset($_GET["verify"])){
+	//User is verifying her email address
+	require_once "actions/verify.php";
+
 }else if(isset($_SESSION["user_email"])){
 
 	//User is signed in, can build a datavis

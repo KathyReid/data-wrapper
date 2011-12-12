@@ -124,3 +124,13 @@ function alphaID($in, $to_num = false, $pad_up = false, $passKey = null)
  
   return $out;
 }
+
+function genRandomString() {
+    $length = 20;
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyz';
+    $string = '';    
+    for ($p = 0; $p < $length; $p++) {
+        $string .= $characters[mt_rand(0, strlen($characters))];
+    }
+    return $string;
+}

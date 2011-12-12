@@ -13,7 +13,7 @@ if (isset($_POST['email']) && isset($_POST['pwd'])){
 	$pwd = $_POST['pwd'];
 
 	//Checks that the e-mail and password match
-	$q = "SELECT * FROM users WHERE email = '$email' AND pwd = '". md5($pwd) ."' LIMIT 1";
+	$q = "SELECT * FROM users WHERE email = '$email' AND pwd = '". md5($pwd) ."' AND activated=1 LIMIT 1";
 
 	if ($result = $mysqli->query($q)) {
 
@@ -31,7 +31,7 @@ if (isset($_POST['email']) && isset($_POST['pwd'])){
 		}else{
 
 			$return_array["status"] = "604";
-			$return_array["error"] = _("User and password do not match.");
+			$return_array["error"] = _("User and password do not match or user not activated.");
 		}
 
 	}else{
