@@ -39,34 +39,34 @@ $file_vis = '{
     "visualizations":{
         "column":{
             "name": "column",
-            "desc": "'.  _("Bar chart").'",
+            "desc": "'.  _('Bar chart').'",
             "library": "highcharts",
             "vis_code": "column.js"
         },
         "line":{
             "name": "line",
-            "desc": "'. _("Line chart").'",
+            "desc": "'. _('Line chart').'",
             "library": "highcharts",
             "vis_code": "column.js"
         },
         "pie":{
             "name": "pie",
-            "desc": "'. _("Pie chart").'",
+            "desc": "'. _('Pie chart').'",
             "library": "highcharts",
             "vis_code": "pie.js",
             "resources":{
-                "'. _("Understanding Pie Charts").'": "http://eagereyes.org/techniques/pie-charts"
+                "'. _('Understanding Pie Charts').'": "http://eagereyes.org/techniques/pie-charts"
             }
         },
         "responsive_table":{
             "name": "responsive_table",
-            "desc": "'.  _("Responsive table").'",
+            "desc": "'.  _('Responsive table').'",
             "library": "responsive",
             "vis_code": "responsive.js"
         },
         "stream":{
             "name": "stream",
-            "desc": "'. _("Streamgraph").'",
+            "desc": "'. _('Streamgraph').'",
             "library": "d3",
             "vis_code": "stream.js"
         }
