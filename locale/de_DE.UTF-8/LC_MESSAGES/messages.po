@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-23 15:09+0100\n"
-"PO-Revision-Date: 2011-11-23 15:10+0100\n"
+"POT-Creation-Date: 2011-12-15 14:21+0100\n"
+"PO-Revision-Date: 2011-12-15 14:26+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -37,15 +37,15 @@ msgid "Unknown language code."
 msgstr "Sprache wurde nicht erkennt."
 
 #: actions/login.php:34
-msgid "User and password do not match."
-msgstr "Benutzer und Kennwort stimmen nicht überein."
+msgid "User and password do not match or user not activated."
+msgstr "Benutzer und Kennwort stimmen nicht überein, oder Nutzer ist nicht aktiviert."
 
 #: actions/login.php:40
 msgid "Could not check the user credentials in the DB."
 msgstr "Daten könnten nicht in Datenbank eingespeichert werden."
 
 #: actions/login.php:46
-#: actions/signup.php:57
+#: actions/signup.php:91
 msgid "Not enough parameters were passed."
 msgstr "Zu wenig Parameters wurden gesendet."
 
@@ -57,12 +57,36 @@ msgstr "Ausloggen wurde nicht erfolgreich."
 msgid "Could not add a header row."
 msgstr "Die Koftzeile könnte nicht hingefügt werden."
 
-#: actions/signup.php:37
-#: actions/signup.php:51
+#: actions/signup.php:40
+msgid "Please verify your e-mail address"
+msgstr "Bitten prüfen Sie Ihre E-Mail-Addresse."
+
+#: actions/signup.php:42
+msgid "Dear DataWrapper user,"
+msgstr "Sehr geehrter DataWrapper NutzerIn,"
+
+#: actions/signup.php:44
+msgid "Please click on the link below to verify your e-mail address:"
+msgstr "Bitten folgen Sie den Link um Ihre E-Mail Addresse zu prüfen:"
+
+#: actions/signup.php:48
+msgid "Thanks!"
+msgstr "Danke!"
+
+#: actions/signup.php:50
+msgid "The DataWrapper team"
+msgstr "Das DataWrapper Team"
+
+#: actions/signup.php:63
+msgid "Could not send verification e-mail."
+msgstr "Das E-Mail könnte nicht versandt werden."
+
+#: actions/signup.php:71
+#: actions/signup.php:85
 msgid "Could not add user in the DB."
 msgstr "Benutzer könnte nicht in die Datenbank aufgenommen werden."
 
-#: actions/signup.php:45
+#: actions/signup.php:79
 msgid "A user already has this email address."
 msgstr "Diese E-Mail-Addresse wurde bereits von einem anderen Benutzer verwendet."
 
@@ -74,11 +98,16 @@ msgstr "Daten könntent nicht in Datenbank umgestellt werden."
 msgid "You can only transpose a table with two entries."
 msgstr "Nur Tabellen mit 2 Einträge umgestellt werden können."
 
+#: actions/verify.php:28
+#: actions/verify.php:33
+msgid "Could not verify e-mail address."
+msgstr "Die E-Mail-Addresse könnte nicht geprüft werden."
+
 #: class/user.class.php:36
 msgid "Error while trying to retrieve user from database."
 msgstr "Datenbank Fehler beim Benutzersretrieval."
 
-#: js/navigation-js.php:60
+#: js/navigation-js.php:62
 msgid "No data was input."
 msgstr "Kein Datei würde eingegeben."
 
@@ -148,19 +177,19 @@ msgstr "Host"
 msgid "A chart created by Data Story"
 msgstr "Visualisierung von DataStory kreirt"
 
-#: views/embed.php:122
+#: views/embed.php:129
 msgid "Link"
 msgstr "Link"
 
-#: views/embed.php:129
+#: views/embed.php:136
 msgid "Export data"
 msgstr "Daten runterladen"
 
-#: views/embed.php:132
+#: views/embed.php:139
 msgid "Chart created using DataStory, a project by ABZV."
 msgstr "Dies Chart wurde mit DataStory hergestellt."
 
-#: views/embed.php:138
+#: views/embed.php:145
 msgid "Page cannot be displayed."
 msgstr "Die Seite könnte nicht angezeigt werden."
 
@@ -198,184 +227,209 @@ msgstr "Daten hier einfügen"
 msgid "DataWrapper, a project by DataStory"
 msgstr "DataWrapper ist ein Projekt von DataStory"
 
-#: views/login.php:92
-#: views/login.php:138
-#: views/login.php:151
-#: views/login.php:152
+#: views/login.php:95
+#: views/login.php:150
+#: views/login.php:164
+#: views/login.php:165
 msgid "Password"
 msgstr "Kennwort"
 
-#: views/login.php:112
+#: views/login.php:106
+msgid "Thanks for signing up! You just need to verify your e-mail address."
+msgstr "Vielen Dank für Ihre Anmeldung! Bitte checken Sie jetzt Ihre Mailbox um Ihre E-Mail Addresse zu verifizieren."
+
+#: views/login.php:116
 msgid "Please agree to the Terms of Use."
 msgstr "Bitte akzeptieren Sie die Nutzungsbedingungen an."
 
-#: views/login.php:115
+#: views/login.php:119
 msgid "Passwords do not match."
 msgstr "Kennwörter stimmen nicht überein."
 
-#: views/login.php:119
+#: views/login.php:123
 msgid "Please enter a valid email address."
 msgstr "Bitten geben Sie eine gültige E-Mail-Addresse ein."
 
-#: views/login.php:127
-#: views/screens.php:85
+#: views/login.php:131
+#: views/screens.php:102
 msgid "Errors are displayed here"
 msgstr "Fehler werden hier angezeigt."
 
-#: views/login.php:137
-#: views/login.php:146
-msgid "E-mail"
-msgstr "E-Mail"
-
-#: views/login.php:139
-msgid "Login"
-msgstr "Einloggen"
-
-#: views/login.php:150
-msgid "Enter password twice"
-msgstr "Bitte geben Sie Ihr Kennwort zweimal ein."
-
-#: views/login.php:156
-msgid "I agree to the Terms of Use"
-msgstr "Ich akzeptiere die Nutzungsbedingungen an."
-
-#: views/login.php:160
-#: views/login.php:167
+#: views/login.php:141
+#: views/login.php:173
 msgid "Sign up"
 msgstr "Anmeden"
 
-#: views/login.php:165
-msgid "DataStory helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all."
+#: views/login.php:142
+#, fuzzy
+msgid "DataWrapper helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all."
 msgstr "DataStory hilft Journalisten beim Bau spannender Visualisierungen in nur wenigen Klicks. Benutzer ziehen Nutzen von den letzten, kräftigsten Javascript-Biblioteke und brauchen dafür keine Codingkenntnisse."
 
-#: views/login.php:166
+#: views/login.php:143
 msgid "The project is lead and maintained by ABZV."
 msgstr "Das Projekt wurde von ABZV geleitet und gewartet."
 
-#: views/publish.php:96
+#: views/login.php:149
+#: views/login.php:159
+msgid "E-mail"
+msgstr "E-Mail"
+
+#: views/login.php:151
+msgid "Login"
+msgstr "Einloggen"
+
+#: views/login.php:163
+msgid "Enter password twice"
+msgstr "Bitte geben Sie Ihr Kennwort zweimal ein."
+
+#: views/login.php:169
+msgid "I agree to the Terms of Use"
+msgstr "Ich akzeptiere die Nutzungsbedingungen an."
+
+#: views/publish.php:132
 msgid "Publish and embed!"
 msgstr "Veröffentlichen und embedden"
 
-#: views/publish.php:98
+#: views/publish.php:134
 msgid "Direct access URL"
 msgstr "Link zu diesem Chart"
 
-#: views/publish.php:101
+#: views/publish.php:137
 msgid "Embed code"
 msgstr "Einbettungscode"
 
-#: views/publish.php:104
+#: views/publish.php:140
 msgid "Embed width"
 msgstr "Einbettungsbreite"
 
-#: views/publish.php:106
+#: views/publish.php:142
 msgid "Embed height"
 msgstr "Einbettungshöhe"
 
-#: views/screens.php:93
+#: views/publish.php:144
+msgid "Keep proportions"
+msgstr ""
+
+#: views/screens.php:110
 msgid "1. Input data"
 msgstr "1. Daten hinfügen"
 
-#: views/screens.php:96
+#: views/screens.php:113
 msgid "2. Check data"
 msgstr "2. Daten prüfen"
 
-#: views/screens.php:99
+#: views/screens.php:116
 msgid "3. Visualize"
 msgstr "3. Visualisierung"
 
-#: views/screens.php:102
+#: views/screens.php:119
 msgid "4. Publish"
 msgstr "4. Veröffentlichen"
 
-#: views/screens.php:109
+#: views/screens.php:126
 msgid "Next"
 msgstr "Nächste"
 
-#: views/screens.php:114
+#: views/screens.php:130
+msgid "New"
+msgstr "Neu"
+
+#: views/screens.php:135
 msgid "Prev"
 msgstr "Zurück"
 
-#: views/visualize.php:38
+#: views/vis.chooser.php:30
+msgid "Useful resources"
+msgstr "Links zur Visualisierung"
+
+#: views/vis.chooser.php:41
+msgid "Browser support"
+msgstr ""
+
+#: views/vis.chooser.php:64
+#: views/visualize_legacy.php:269
+msgid "Visualization type"
+msgstr "Visualisierungsart"
+
+#: views/visualize.php:43
 #: views/visualize_legacy.php:17
 msgid "Title"
 msgstr "Titel"
 
-#: views/visualize.php:41
-#: views/visualize.php:109
-#: views/visualize.php:192
+#: views/visualize.php:46
+#: views/visualize.php:144
+#: views/visualize.php:232
 #: views/visualize_legacy.php:20
 #: views/visualize_legacy.php:88
 #: views/visualize_legacy.php:265
 msgid "Subtitle"
 msgstr "Untertitel"
 
-#: views/visualize.php:120
-#: views/visualize.php:235
+#: views/visualize.php:155
+#: views/visualize.php:256
 #: views/visualize_legacy.php:99
 #: views/visualize_legacy.php:293
 msgid "Source URL"
 msgstr "URL der Quelle"
 
-#: views/visualize.php:124
+#: views/visualize.php:159
 #: views/visualize_legacy.php:103
 msgid "Source URL must begin with 'http://'"
 msgstr "URL der Quelle sollte mit 'http://' beginnen"
 
-#: views/visualize.php:131
-#: views/visualize.php:231
+#: views/visualize.php:166
+#: views/visualize.php:252
 #: views/visualize_legacy.php:110
 #: views/visualize_legacy.php:289
 msgid "Source"
 msgstr "Quelle"
 
-#: views/visualize.php:139
-#: views/visualize.php:239
+#: views/visualize.php:174
+#: views/visualize.php:260
 #: views/visualize_legacy.php:118
 #: views/visualize_legacy.php:297
 msgid "Chart description"
 msgstr "Beschreibung des Charts"
 
-#: views/visualize.php:182
+#: views/visualize.php:222
 #: views/visualize_legacy.php:255
 msgid "Build your visualization."
 msgstr "Erstellen Sie Ihre Visualisierung"
 
-#: views/visualize.php:189
+#: views/visualize.php:229
 #: views/visualize_legacy.php:262
 msgid "Title (required)"
 msgstr "Titel (erforderlich)"
 
-#: views/visualize.php:196
-#: views/visualize_legacy.php:269
-msgid "Visualization type"
-msgstr "Visualisierungsart"
-
-#: views/visualize.php:227
+#: views/visualize.php:248
 #: views/visualize_legacy.php:285
 msgid "Vertical axis title (required)"
 msgstr "Titel der Hochachse (erforderlich)"
 
 #: views/visualize_legacy.php:270
-#: visualizations/config.json.php:30
+#: visualizations/config.json.php:42
 msgid "Bar chart"
 msgstr "Balkenplan"
 
 #: views/visualize_legacy.php:271
-#: visualizations/config.json.php:36
+#: visualizations/config.json.php:48
 msgid "Line chart"
 msgstr "Liniendiagramm"
 
 #: views/visualize_legacy.php:272
-#: visualizations/config.json.php:42
+#: visualizations/config.json.php:54
 msgid "Pie chart"
 msgstr "Kreisdiagramm"
 
-#: visualizations/config.json.php:48
+#: visualizations/config.json.php:58
+msgid "Understanding Pie Charts"
+msgstr "Kreisdiagramm verstehen (Englisch)"
+
+#: visualizations/config.json.php:63
 msgid "Responsive table"
 msgstr "Reaktionsfähiges Tabelle"
 
-#: visualizations/config.json.php:54
+#: visualizations/config.json.php:69
 msgid "Streamgraph"
 msgstr "Stromgraph"
 
