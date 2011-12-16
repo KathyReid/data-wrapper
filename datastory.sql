@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Mer 09 Novembre 2011 à 18:44
+-- Généré le : Ven 16 Décembre 2011 à 15:05
 -- Version du serveur: 5.1.36
 -- Version de PHP: 5.3.0
 
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `charts` (
   `chart_lang` varchar(10) NOT NULL DEFAULT 'en_US',
   PRIMARY KEY (`chart_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=265 ;
 
 -- --------------------------------------------------------
 
@@ -62,8 +62,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `date_created` datetime DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `date_deleted` datetime DEFAULT NULL,
+  `activated` tinyint(1) NOT NULL DEFAULT '0',
+  `token` varchar(50) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+
+--
+-- Contenu de la table `users`
+--
+
+INSERT INTO `users` (`user_id`, `email`, `pwd`, `date_created`, `date_modified`, `date_deleted`, `activated`, `token`) VALUES
+(1, 'hi@nkb.fr', '0cc175b9c0f1b6a831c399e269772661', '2011-11-14 13:49:55', '2011-11-14 13:49:55', NULL, 1, '0');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
