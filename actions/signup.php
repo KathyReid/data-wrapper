@@ -37,7 +37,7 @@ if (isset($_POST['email']) && isset($_POST['pwd'])){
 
 				$to      = $email;
 
-				$subject = '[DataWrapper]'. _("Please verify your e-mail address");
+				$subject = '[DataWrapper] '. _("Please verify your e-mail address");
 				
 				$message = _("Dear DataWrapper user,");
 				$message .= "\r\n\r\n";
@@ -51,6 +51,7 @@ if (isset($_POST['email']) && isset($_POST['pwd'])){
 
 				$headers = 'From: noreply@datastory.de' . "\r\n" .
 				    'Reply-To: noreply@datastory.de' . "\r\n" .
+				    'Content-type: text/html; charset=utf-8' . "\r\n" .
 				    'X-Mailer: PHP/' . phpversion();
 
 				//Sends email
