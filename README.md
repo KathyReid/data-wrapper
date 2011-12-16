@@ -7,6 +7,20 @@ It draws inspiration from ManyEyes and GoogleCharts but remains entirely open-so
 
 Any developper can add a visualization type, using (or not) a JavaScript library like D3 or Raphael, and a specific theme.
 
+Install
+---------------------
+
+To install DataWrapper on your server, download all files from GitHub or do a 'git pull'. Create the appropriate tables in your database using the .sql dump. Then create a file with your database passwords to be stored in /actions/passwords.php under the form
+
+	<?php
+		$hostname = "hostname";
+		$database = "database_name";
+		$username = "user_name";
+		$password = "password";
+	?>
+
+Then modify the production domain name in /config.php ('$prod_domain') if you do not host your application on CloudControl.
+
 To-Do
 ---------------------
 
