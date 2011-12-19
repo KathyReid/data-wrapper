@@ -62,6 +62,11 @@
             //Init the buttons in the header
             initHeader();
 
+            //Loads the fancybox
+            $("a.fancybox").fancybox({
+                'hideOnContentClick': true
+            });
+            
 	        //Tells the next prev buttons what to do
 	        $('#next').click(function(){
                 dispatchNext(currentSlide);
