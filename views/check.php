@@ -1,5 +1,5 @@
 
-<!-- This file holds all HTML/JS contents for the screen "4.CHECK" -->
+<!-- This file holds all HTML/JS contents for the screen "2.CHECK" -->
 
 <script type="text/javascript">
 

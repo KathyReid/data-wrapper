@@ -71,6 +71,23 @@ if ($top_headers > (count($formatted_data[0])/2))
 if ($vert_headers >= (count($formatted_data)/2))
 	$vertical_header = 1;
 
+if (!$horizontal_header){
+	//if the top row contains numerical data between 1900 and 2100 in successive order, then it's a header
+	$count_years = 0;
+	$prev_year = 0;
+
+	foreach ($formatted_data[0] as $year){
+		
+		if ($prev_year == ($year - 1) && ($year > 1900) && ($year < 2100))
+			$count_years++;
+
+		$prev_year = $year;
+	}
+
+	if ($count_years > (count($formatted_data[0])/2))
+		$horizontal_header = 1;
+}
+
 //Empties the top left cell if there are vertical and horizontal headers
 if ($vertical_header && $horizontal_header)
 	$formatted_data[0][0] = "";

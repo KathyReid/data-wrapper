@@ -3,7 +3,8 @@
  */
 
 var slideOrder = new Array();
-slideOrder["input"] = new Array(null, "check");
+slideOrder["empty"] = new Array(null, "input");
+slideOrder["input"] = new Array("empty", "check");
 slideOrder["check"] = new Array("input", "visualize");
 slideOrder["visualize"] = new Array("check", "publish");
 slideOrder["publish"] = new Array("visualize", null);
@@ -23,7 +24,7 @@ function showSlide(next, current){
         window.location.hash = currentSlide;
 
         //Removes or add the prev next buttons if need be
-        if (slideOrder[currentSlide][0]){
+        if (slideOrder[currentSlide][0] && slideOrder[currentSlide][0] != "empty"){
             $("#button_prev").show();
         }else{
             $("#button_prev").hide();

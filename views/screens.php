@@ -40,7 +40,8 @@
 	    /********************/
 
 	    //Keeps track of the screen we're at
-	    var currentSlide;
+	    var currentSlide = "empty";
+
 	    //Keeps track of the chart that's being worked on
 	    var chart_id;
 
@@ -54,7 +55,7 @@
 	     	$('.screen').hide();
 	        
 	        //Starts the slideshow 
-	        showSlide("input", "empty");
+	        showNext();
 	        
             //Init all inputs fields so they react properly onBlur
             initInputs();
@@ -66,7 +67,7 @@
             $("a.fancybox").fancybox({
                 'hideOnContentClick': true
             });
-            
+
 	        //Tells the next prev buttons what to do
 	        $('#next').click(function(){
                 dispatchNext(currentSlide);

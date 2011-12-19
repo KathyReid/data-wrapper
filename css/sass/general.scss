@@ -344,6 +344,11 @@ $textarea-padding: 10px;
     }
 }
 
+//Tutorial
+#tutorial_fill{
+    cursor:pointer;
+    &:hover { color:$color-off; }
+}
 
 /****************/
 /* Check screen */
