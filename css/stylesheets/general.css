@@ -104,9 +104,8 @@ body {
 }
 /* line 149, ../sass/general.scss */
 #navbar #loggedin {
-  /* width: $col-w * 4; */
   float: left;
-  margin: 0 0 0 157.5px;
+  margin: 0 0 0 56.25px;
   font-size: 0.7em;
 }
 /* line 155, ../sass/general.scss */

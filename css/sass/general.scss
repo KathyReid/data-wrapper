@@ -147,9 +147,9 @@ $navbar-height: $row-h;
     }
 
     #loggedin{
-        /* width: $col-w * 4; */
+        
         float:left;
-        margin: 0 0 0 $col-w * 1.4;
+        margin: 0 0 0 $col-w/2;
         font-size: $font-size - .3em;
 
         #loggedas{
