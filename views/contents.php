@@ -18,8 +18,8 @@
 		<p><?php echo _("ABZV • Bildungswerk der Zeitungen, 2011") ?></p>
 		<h2><?php echo _("Host") ?></h2>
 		<p><?php echo _("CloudControl • Helmholtz-Str. 2-9, D-10587 Berlin") ?></p>
-		<h2><?php echo _("Credits") ?>
-		<p><?php echo _("Idea/Concept:") ?> Mirko Lorenz, <?php echo _("Development:") ?>: Nicolas Kayser-Bril, 2011</p>
+		<h2><?php echo _("Credits") ?></h2>
+		<p><?php echo _("Idea/Concept") ?>: Mirko Lorenz, <?php echo _("Development") ?>: Nicolas Kayser-Bril, 2011</p>
 	</div>
 
 	<div id="about_datawrapper" class="popup">
