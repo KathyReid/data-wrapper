@@ -20,7 +20,7 @@ if (strstr($_SERVER['SERVER_NAME'], $prod_domain)){
 	// PROD ENVIRONMENT //
 
 	//removes error reporting
-	error_reporting(E_ALL);
+	error_reporting(0);
 
 	//Global const
 	define("BASE_DIR", "http://datawrapper.cloudcontrolled.com");
