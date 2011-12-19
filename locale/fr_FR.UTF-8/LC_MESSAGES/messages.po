@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ds\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-12-19 15:14+0100\n"
-"PO-Revision-Date: 2011-12-19 15:15+0100\n"
+"PO-Revision-Date: 2011-12-19 15:22+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -332,11 +332,11 @@ msgstr "Copier les données ici"
 
 #: views/input.php:29
 msgid "Try DataWrapper with some sample data"
-msgstr "DataWrapper mit Probedaten probieren"
+msgstr "Essayer DataWrapper avec des données à titre d'exemple."
 
 #: views/input.php:30
 msgid "Sample data: unemployment among the population age 25 and over in 6 European metropolis. Source: Eurostat."
-msgstr "Probedaten: Arbeitslosenquote bei Erwerbstätigen über 25. Quelle: Eurostat."
+msgstr "Données: Taux de chômage des plus de 25 ans dans 6 métropoles européennes. Source: Eurostat"
 
 #: views/login.php:7
 #: views/screens.php:7
