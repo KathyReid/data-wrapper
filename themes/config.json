@@ -39,6 +39,17 @@
                 "format": "gif"
             },
             "restricted": ["paidcontent.org", "robertandrews.co.uk"]
+        },
+        "guardian":
+        {
+            "name": "guardian",
+            "desc": "Guardian.co.uk",
+            "image": {
+                "width": 100,
+                "height": 17,
+                "format": "png"
+            },
+            "restricted": ["guardian.co.uk", "nkb.fr"]
         }
     }
 }
