@@ -25,6 +25,7 @@ To-Do
 ---------------------
 
 * Remove the hardcoded elements to visualization building
+* Improve the responsive table option (auto-resize the iframe)
 * Let users modify a previously created chart
 * Use an Analytics solution to track a chart's performance
 * Add a fallback solution for less compatible JS libs
