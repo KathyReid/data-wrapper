@@ -61,7 +61,6 @@ foreach ($rows as $key_row=>$row){
 			$formatted_data[$row_num][$key_col] = trim($cell);
 		}
 	}
-
 }
 
 //If more than 50% of the rows are not numeric, there are horizontal headers

@@ -10,10 +10,10 @@
 require_once 'config.php';
 
 //Fetches the JSON that holds the data about the visualisations
-require_once('visualizations/config.json.php');
+require_once 'visualizations/config.json.php';
 
 //Convert file into JSON
-$json_vis=json_decode($file_vis);
+$json_vis = json_decode($file_vis);
 
 /* Prepares the HTML that will describe each vis */
 
