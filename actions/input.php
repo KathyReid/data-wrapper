@@ -22,13 +22,17 @@ $top_headers = 0;
 $horizontal_header = 0;
 $vert_headers = 0;
 $vertical_header = 0;
+$row_num = -1;
 
 foreach ($rows as $key_row=>$row){
 	
 	//If the row isn't just one empty cell
 	if (count($row)>1 || $row!=""){
 
-		$formatted_data[$key_row] = array();
+		//new row in the formatted_data array
+		$row_num++;
+
+		$formatted_data[$row_num] = array();
 
 		//Parses the columns in an array
 		$row_array = explode("\t", $row);
@@ -54,14 +58,14 @@ foreach ($rows as $key_row=>$row){
 					$vert_headers++;
 			}
 
-			$formatted_data[$key_row][$key_col] = trim($cell);
+			$formatted_data[$row_num][$key_col] = trim($cell);
 		}
 	}
 
 }
 
 //If more than 50% of the rows are not numeric, there are horizontal headers
-if ($top_headers >= (count($formatted_data[0])/2))
+if ($top_headers > (count($formatted_data[0])/2))
 	$horizontal_header = 1;
 
 //If more than 50% of the cells on the first col are not numeric, there are vertical headers
