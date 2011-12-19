@@ -1,8 +1,11 @@
 <?php
 
-/*************************************************************************************************
- *  This file fetches a chart in the DB and transposes its CSV 								     *
- *************************************************************************************************/
+/****
+/*
+/*   @desc: Sets the first line of the data as header row
+/*   @author: NKB <hi@nkb.fr>
+/*
+/****/
 
 require_once "../config.php";
 

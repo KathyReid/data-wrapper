@@ -1,8 +1,11 @@
 <?php
 
-/*********************************************************************************************
- *  This file parses the values in the textarea and store them in a matrix format in the DB  *
- ********************************************************************************************/
+/****
+/*
+/*   @desc: Parses the value in the textarea and stores them in the DB
+/*   @author: NKB <hi@nkb.fr>
+/*
+/****/
 
 require_once '../config.php';
 

@@ -1,8 +1,11 @@
 <?php
 
-/*************************************************************************************************
- *  This file fetches the current values of the chart in the DB and presents them to the client  *
- *************************************************************************************************/
+/****
+/*
+/*   @desc: Gets the data from the DB and sends it back to the client
+/*   @author: NKB <hi@nkb.fr>
+/*
+/****/
 
 require_once "../config.php";
 

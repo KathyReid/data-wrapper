@@ -1,8 +1,11 @@
 <?php
 
-/*********************************************************************************************
- *  This file changes the language of the app following an AJAX request                      *
- ********************************************************************************************/
+/****
+/*
+/*   @desc: Changes the locale
+/*   @author: NKB <hi@nkb.fr>
+/*
+/****/
 
 require_once "../config.php";
 

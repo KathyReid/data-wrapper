@@ -1,8 +1,11 @@
 <?php
 
-/*********************************************************************************************
- *  This file checks for existing users in the DB. Returns true if user exist 				 *
- ********************************************************************************************/
+/****
+/*
+/*   @desc: Checks if the user exists and if the password matches
+/*   @author: NKB <hi@nkb.fr>
+/*
+/****/
 
 require_once "../config.php";
 

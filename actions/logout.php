@@ -1,8 +1,11 @@
 <?php
 
-/*********************************************
- *  This file logs out the user 			 *
- *********************************************/
+/****
+/*
+/*   @desc: Logs out the user
+/*   @author: NKB <hi@nkb.fr>
+/*
+/****/
 
 require_once "../config.php";
 
