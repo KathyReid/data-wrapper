@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ds\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-19 14:21+0100\n"
-"PO-Revision-Date: 2011-12-19 14:23+0100\n"
+"POT-Creation-Date: 2011-12-19 15:14+0100\n"
+"PO-Revision-Date: 2011-12-19 15:15+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "Impossible de récupérer les données dans la base."
 msgid "This page cannot be accessed."
 msgstr "La page ne peut pas être affichée."
 
-#: actions/input.php:108
+#: actions/input.php:125
 msgid "Could not store the data on the database."
 msgstr "Les données n'ont pas pu être enregistrées dans la base."
 
@@ -107,7 +107,7 @@ msgstr "Impossible de valider votre adresse e-mail"
 msgid "Error while trying to retrieve user from database."
 msgstr "Erreur lors de la récupération de l'utilisateur dans la base."
 
-#: js/navigation-js.php:62
+#: js/navigation-js.php:63
 msgid "No data was input."
 msgstr "Aucune donnée."
 
@@ -326,9 +326,17 @@ msgstr "Déconnexion"
 msgid "Welcome, %s!"
 msgstr "Bienvenue, %s!"
 
-#: views/input.php:6
+#: views/input.php:24
 msgid "Paste data here"
 msgstr "Copier les données ici"
+
+#: views/input.php:29
+msgid "Try DataWrapper with some sample data"
+msgstr "DataWrapper mit Probedaten probieren"
+
+#: views/input.php:30
+msgid "Sample data: unemployment among the population age 25 and over in 6 European metropolis. Source: Eurostat."
+msgstr "Probedaten: Arbeitslosenquote bei Erwerbstätigen über 25. Quelle: Eurostat."
 
 #: views/login.php:7
 #: views/screens.php:7
@@ -359,7 +367,7 @@ msgid "Please enter a valid email address."
 msgstr "Merci d'indiquer une adresse valide"
 
 #: views/login.php:131
-#: views/screens.php:107
+#: views/screens.php:108
 msgid "Errors are displayed here"
 msgstr "Les erreurs s'affichent ici"
 
@@ -418,31 +426,31 @@ msgstr "Hauteur"
 msgid "Keep proportions"
 msgstr "Conserver les proportions"
 
-#: views/screens.php:115
+#: views/screens.php:116
 msgid "1. Input data"
 msgstr "1. Saisir les données"
 
-#: views/screens.php:118
+#: views/screens.php:119
 msgid "2. Check data"
 msgstr "2. Vérifier"
 
-#: views/screens.php:121
+#: views/screens.php:122
 msgid "3. Visualize"
 msgstr "3. Visualiser"
 
-#: views/screens.php:124
+#: views/screens.php:125
 msgid "4. Publish"
 msgstr "4. Publier"
 
-#: views/screens.php:131
+#: views/screens.php:132
 msgid "Next"
 msgstr "Suiv."
 
-#: views/screens.php:135
+#: views/screens.php:136
 msgid "New"
 msgstr "Recommencer"
 
-#: views/screens.php:140
+#: views/screens.php:141
 msgid "Prev"
 msgstr "Préc."
 
