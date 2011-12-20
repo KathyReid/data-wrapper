@@ -74,6 +74,52 @@
                 });
             }); 
 
+            //init the back button
+            $(".close_signup").click(function(){
+                $("#login").show();
+                $("#show_signup").show();
+                $("#reminder").hide();
+                $("#signup").hide();
+
+            });
+
+            //init the password reminder screen
+            $("#password_forgotten").click(function(){
+                $("#login").hide();
+                $("#reminder").show();
+            });
+
+            //init the reminder button that'll call the mail sender
+            $("#reminder_submit").click(function(){
+
+                var email = $('#email_reminder').val();
+
+                if(test_email(email)) {
+                    $.post('actions/pwd_reminder.php', {email: email}, function(data){
+                        if (data != ""){
+                            data = jQuery.parseJSON(data);
+                            if (data.status == 200){
+                                
+                                //Reminder e-mail sent, needs to choose a new pwd
+                                $("#reset_confirmation").show()
+                                            .html("<?php echo _("An e-mail has been sent. Please check your mailbox and follow instructions to reset your password.") ?>");
+
+                            }else{
+                                error(data.error);
+                            }
+                        }else{
+                            error();
+                        }
+                    });
+
+                }else{
+                    
+                    error("<?php echo _("Please enter a valid email address.") ?>");
+
+                }
+
+            });
+
             //init the show Sign up
             $('#show_signup').click(function() {
                 $("#login").hide();
@@ -88,9 +134,7 @@
                 var pwd2 = $('#pwd2').val();
                 var tos = $(":checked").val();
 
-                var emailReg = new RegExp(/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/);
-
-                if(emailReg.test(email)) {
+                if(test_email(email)) {
                     
                     if (pwd1 == pwd2 && pwd1 != "<?php echo _("Password") ?>"){
 
@@ -124,6 +168,59 @@
 
                 }
             }); 
+
+            /* This section appears only if a password change was requested */
+
+            <?php if (isset($_GET["new_pwd"])):?>
+            
+            //hides the normal login box
+            $("#login").hide();
+
+            //init the change pwd button that'll call the action
+            $("#pwd_change_submit").click(function(){
+
+                var email = "<?php echo $_GET["email"] ?>";
+                var token = "<?php echo $_GET["new_pwd"] ?>";
+
+                var reset_pwd1 = $('#reset_pwd1').val();
+                var reset_pwd2 = $('#reset_pwd2').val();
+                
+                if (reset_pwd1 == reset_pwd1 && reset_pwd1 != "<?php echo _("Password") ?>"){
+
+                    $.post('actions/pwd_change.php', {email: email, token: token, pwd:reset_pwd1}, function(data){
+                        if (data != ""){
+                            data = jQuery.parseJSON(data);
+                            if (data.status == 200){
+                                
+                                //Reminder e-mail sent, needs to choose a new pwd
+                                $("#pwd_change_confirmation").show()
+                                            .html("<?php echo _("Password changed. You can now login.") ?>");
+
+                            }else{
+                                error(data.error);
+                            }
+                        }else{
+                            error();
+                        }
+                    });
+
+                }else{
+                        error("<?php echo _("Passwords do not match.") ?>");
+                }
+
+            });
+
+            //init the confirmation message, so that it closes onlick
+                $("#pwd_change_confirmation").click(function(){
+                    $("#login").show();
+                    $("#show_signup").show();
+                    $("#new_pwd").hide();
+
+                });
+            <?php endif; ?>
+
+            /* End password change request */
+
 	     });
 	    </script>
 
@@ -148,6 +245,7 @@
             
                     <input class="login" id="email" value="<?php echo _("E-mail") ?>">
                     <input class="login" id="pwd" type="password" value="<?php echo _("Password") ?>">
+                    <div id="password_forgotten"><?php echo _("Password forgotten?") ?></div>
                     <button id="login_submit" class="button"><?php echo _("Login") ?></button>
             
                 </div>
@@ -155,6 +253,7 @@
                 
 
                 <div id="signup">
+                    <div class="close_signup">[back]</div>
 
                     <input class="login" id="email_signup" value="<?php echo _("E-mail") ?>">
                     
@@ -173,6 +272,40 @@
                     <button id="signup_submit" class="button"><?php echo _("Sign up") ?></button>
                     <div id="verify"></div>
                 </div>
+
+                <div id="reminder">
+                    <div class="close_signup">[back]</div>
+                    <p><?php echo _("Enter your e-mail address to reset your password.") ?></p>
+                    <div class="clear"></div>
+                    <input class="login" id="email_reminder" value="<?php echo _("E-mail") ?>">
+                    
+                    <div class="clear"></div>
+
+                    <button id="reminder_submit" class="button"><?php echo _("Reset password") ?></button>
+                    <div id="reset_confirmation"></div>
+                </div>
+
+                <!-- This section appears only if a password change was requested -->
+
+                <?php if (isset($_GET["new_pwd"])):?>
+                    
+                    <div id="new_pwd">
+                    
+                    <div class="clear"></div>
+                    
+                    <small><?php echo _("Enter your new password twice") ?></small>
+                    <input class="login" id="reset_pwd1" type="password" value="<?php echo _("Password") ?>">
+                    <input class="login" id="reset_pwd1" type="password" value="<?php echo _("Password") ?>">
+                    
+                    <div class="clear"></div>
+
+                    <button id="pwd_change_submit" class="button"><?php echo _("Change password") ?></button>
+                    <div id="pwd_change_confirmation"></div>
+
+                </div>
+                <?php endif; ?>
+
+                <!-- End password change request -->
 
         	</div>
 

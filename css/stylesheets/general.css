@@ -557,12 +557,12 @@ body {
 /*  Log in   */
 /*************/
 /* line 560, ../sass/general.scss */
-#login, #signup {
+#login, #signup, #reminder, #new_pwd {
   width: 317.5px;
   float: left;
 }
 /* line 565, ../sass/general.scss */
-#login .login, #signup .login {
+#login .login, #signup .login, #reminder .login, #new_pwd .login {
   color: #555555;
   background-color: #f2f2f2;
   -moz-box-shadow: inset 0 0 3px 1.5px "#999";
@@ -583,16 +583,28 @@ body {
   height: 1.3em;
   padding: 2px 7px;
 }
+/* line 579, ../sass/general.scss */
+#login #password_forgotten, #signup #password_forgotten, #reminder #password_forgotten, #new_pwd #password_forgotten {
+  font-size: 0.7em;
+  width: 100%;
+  text-align: right;
+  color: #3496ae;
+  cursor: pointer;
+}
+/* line 585, ../sass/general.scss */
+#login #password_forgotten:hover, #signup #password_forgotten:hover, #reminder #password_forgotten:hover, #new_pwd #password_forgotten:hover {
+  text-decoration: underline;
+}
 
-/* line 580, ../sass/general.scss */
-#login_submit, #signup_submit, #show_signup {
+/* line 590, ../sass/general.scss */
+#login_submit, #signup_submit, #show_signup, #reminder_submit, #pwd_change_submit {
   font-size: 0.9em;
   line-height: 1.7em;
   font-weight: bold;
   margin: 10px;
 }
 
-/* line 587, ../sass/general.scss */
+/* line 597, ../sass/general.scss */
 #show_signup {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c1e4ed), color-stop(100%, #3496ae));
   background-image: -webkit-linear-gradient(#c1e4ed, #3496ae);
@@ -602,7 +614,7 @@ body {
   background-image: linear-gradient(#c1e4ed, #3496ae);
 }
 
-/* line 591, ../sass/general.scss */
+/* line 601, ../sass/general.scss */
 #about {
   width: 332.5px;
   float: left;
@@ -620,19 +632,32 @@ body {
   -khtml-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 601, ../sass/general.scss */
+/* line 611, ../sass/general.scss */
 #about p {
   margin: 0 0 0 0;
   padding: 15px;
 }
 
-/* line 607, ../sass/general.scss */
-#signup {
+/* line 617, ../sass/general.scss */
+.close_signup {
+  font-size: 0.6em;
+  width: 100%;
+  text-align: right;
+  color: #7f7f7f;
+  cursor: pointer;
+}
+/* line 623, ../sass/general.scss */
+.close_signup:hover {
+  text-decoration: underline;
+}
+
+/* line 626, ../sass/general.scss */
+#signup, #reminder {
   display: none;
 }
 
-/* line 611, ../sass/general.scss */
-#verify {
+/* line 630, ../sass/general.scss */
+#verify, #reset_confirmation, #pwd_change_confirmation {
   width: 100%;
   display: none;
   padding: 15px;
@@ -651,7 +676,7 @@ body {
 /************************************/
 /*              Popups              */
 /************************************/
-/* line 626, ../sass/general.scss */
+/* line 645, ../sass/general.scss */
 .popup {
   padding: 20px;
   margin: 0;
@@ -667,7 +692,7 @@ body {
 /************************************/
 /*              Footer              */
 /************************************/
-/* line 643, ../sass/general.scss */
+/* line 662, ../sass/general.scss */
 #footer {
   padding: 20px;
   height: 50px;
@@ -677,7 +702,7 @@ body {
   color: #444444;
   font-size: 0.7em;
 }
-/* line 652, ../sass/general.scss */
+/* line 671, ../sass/general.scss */
 #footer .separator {
   color: #555555;
 }
@@ -686,7 +711,7 @@ body {
 /*              Embed               */
 /************************************/
 /* Also visible on 'publish' screen */
-/* line 663, ../sass/general.scss */
+/* line 682, ../sass/general.scss */
 #embed_extras {
   height: 50px;
   text-align: left;
@@ -696,29 +721,29 @@ body {
   color: #000;
   padding: 0 5px;
 }
-/* line 672, ../sass/general.scss */
+/* line 691, ../sass/general.scss */
 #embed_extras p {
   margin: 0 5px;
 }
-/* line 676, ../sass/general.scss */
+/* line 695, ../sass/general.scss */
 #embed_extras #export_csv {
   font-size: 0.8em;
   float: right;
   margin: 0 10px;
 }
-/* line 682, ../sass/general.scss */
+/* line 701, ../sass/general.scss */
 #embed_extras .desc {
   font-weight: bold;
 }
-/* line 686, ../sass/general.scss */
+/* line 705, ../sass/general.scss */
 #embed_extras #source {
   font-style: italic;
 }
-/* line 690, ../sass/general.scss */
+/* line 709, ../sass/general.scss */
 #embed_extras .source_url {
   color: #000;
 }
-/* line 692, ../sass/general.scss */
+/* line 711, ../sass/general.scss */
 #embed_extras .source_url:hover {
   text-decoration: underline;
 }

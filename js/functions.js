@@ -216,3 +216,17 @@ function stripslashes (str) {
         }
     });
 }
+
+/*
+* Checks if a string is a valide email address
+*/
+
+function test_email(email){
+	var emailReg = new RegExp(/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/);
+
+    if(emailReg.test(email)) {
+    	return true;
+    }else{
+    	return false;
+    }
+}

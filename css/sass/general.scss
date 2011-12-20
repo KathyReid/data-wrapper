@@ -557,7 +557,7 @@ $embed_extras-h: 50px;
 /*  Log in   */
 /*************/
 
-#login, #signup{
+#login, #signup, #reminder, #new_pwd{
     
     width: $col-w * 3 - 20;
     float:left;
@@ -575,9 +575,19 @@ $embed_extras-h: 50px;
         padding: 2px 7px;
 
     }
+
+    #password_forgotten{
+        font-size:$font-size - .3;
+        width:100%;
+        text-align:right;
+        color:$color-on;
+        cursor:pointer;
+        &:hover { text-decoration:underline; }
+
+    }
 }
 
-#login_submit, #signup_submit, #show_signup{
+#login_submit, #signup_submit, #show_signup, #reminder_submit, #pwd_change_submit{
         font-size: $font-size - .1;
         line-height: $font-size + .7;
         font-weight: bold;
@@ -604,11 +614,20 @@ $embed_extras-h: 50px;
     }
 }
 
-#signup{
+.close_signup{
+    font-size: $font-size - .4;
+    width:100%;
+    text-align:right;
+    color:$shadow-color;
+    cursor:pointer;
+    &:hover { text-decoration:underline; }
+}
+
+#signup, #reminder{
     display:none;
 }
 
-#verify{
+#verify, #reset_confirmation, #pwd_change_confirmation{
     width: 100%;
     display:none;
     padding:15px;
