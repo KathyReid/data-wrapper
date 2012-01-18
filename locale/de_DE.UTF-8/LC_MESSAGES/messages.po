@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-18 22:18+0100\n"
-"PO-Revision-Date: 2012-01-18 22:27+0100\n"
+"POT-Creation-Date: 2012-01-18 22:57+0100\n"
+"PO-Revision-Date: 2012-01-18 22:59+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -456,8 +456,8 @@ msgid "Passwords do not match."
 msgstr "Kennwörter stimmen nicht überein."
 
 #: views/login.php:200
-msgid "Password changed. You can now <a href='BASE_DIR'>login</a>."
-msgstr "Kennwort geändert. Sie können sich jetzt <a href='BASE_DIR'>anmelden</a>."
+msgid "Password changed. You can now login."
+msgstr "Kennwort geändert. Sie können sich jetzt anmelden."
 
 #: views/login.php:231
 msgid "Errors are displayed here"

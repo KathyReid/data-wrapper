@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ds\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-18 22:07+0100\n"
-"PO-Revision-Date: 2012-01-18 22:17+0100\n"
+"POT-Creation-Date: 2012-01-18 22:56+0100\n"
+"PO-Revision-Date: 2012-01-18 22:56+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -456,8 +456,8 @@ msgid "Passwords do not match."
 msgstr "Les mots de passe ne sont pas identiques"
 
 #: views/login.php:200
-msgid "Password changed. You can now <a href='BASE_DIR'>login</a>."
-msgstr "Mot de passe changé. Vous pouvez maintenant vous <a href='BASE_DIR'>connecter</a>."
+msgid "Password changed. You can now login."
+msgstr "Mot de passe changé. Vous pouvez maintenant vous connecter."
 
 #: views/login.php:231
 msgid "Errors are displayed here"
@@ -666,6 +666,10 @@ msgstr "Tableau adaptable"
 #: visualizations/config.json.php:69
 msgid "Streamgraph"
 msgstr "Graph de flux"
+
+#, fuzzy
+#~ msgid "login"
+#~ msgstr "Connexion"
 
 #~ msgid "No data was input."
 #~ msgstr "Aucune donnée."

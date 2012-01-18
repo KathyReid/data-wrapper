@@ -197,7 +197,7 @@
                                 
                                 //Reminder e-mail sent, needs to choose a new pwd
                                 $("#pwd_change_confirmation").show()
-                                            .html("<?php echo _("Password changed. You can now <a href='BASE_DIR'>login</a>.") ?>");
+                                            .html("<a href='<?php echo BASE_DIR ?>'><?php echo _("Password changed. You can now login.") ?></a>");
 
                             }else{
                                 error(data.error);
