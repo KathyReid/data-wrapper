@@ -298,7 +298,7 @@
                     
                     <small><?php echo _("Enter your new password twice") ?></small>
                     <input class="login" id="reset_pwd1" type="password" value="<?php echo _("Password") ?>">
-                    <input class="login" id="reset_pwd1" type="password" value="<?php echo _("Password") ?>">
+                    <input class="login" id="reset_pwd2" type="password" value="<?php echo _("Password") ?>">
                     
                     <div class="clear"></div>
 
