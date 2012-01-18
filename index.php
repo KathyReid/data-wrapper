@@ -16,12 +16,21 @@ elseif (isset($_GET["verify"])){
 	//User is signed in, can build a datavis
 	
 	//Gets user_id
-	$user = new User();
+	$user = new User($mysqli);
 	$user_id = $user->getID();
 	$user_email = $_SESSION["user_email"];
 	$_SESSION["user_id"] = $user_id;
 
-	require_once "views/screens.php";
+	if (isset($_GET["vis_list"])){
+	
+		//User is verifying her email address
+		require_once "views/vis_list.php";
+	
+	}else{
+
+		//new vis
+		require_once "views/screens.php";
+	}
 
 }else{
 	//Not signed in

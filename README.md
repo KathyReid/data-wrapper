@@ -29,6 +29,7 @@ To-Do
 * Let users modify a previously created chart
 * Use an Analytics solution to track a chart's performance
 * Add a fallback solution for less compatible JS libs
+* Use gettext in JS
 
 Themes
 ---------------------

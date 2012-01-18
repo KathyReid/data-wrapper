@@ -35,6 +35,13 @@ function initHeader(){
 
 	});
 
+	$("#logo_text").click(function(){
+		
+		//goes back home
+		location.replace("<?php echo BASE_DIR ?>");
+		
+	});
+
 	$("#logout").click(function(){
 
 		$.post("actions/logout.php", { }, function(data){
@@ -46,7 +53,7 @@ function initHeader(){
      			if (data.status == 200){
 	     			
 	     			//User is no longer logged in, reload page to go to login screen
-	     			location.reload();
+	     			location.replace("<?php echo BASE_DIR ?>");
 
 	     		}else{
 	     			error(data.error);	
@@ -65,6 +72,13 @@ function initHeader(){
 		<div id="logo_text">
 	        <span class="data">Data</span><span class="story">Wrapper</span>
 	    </div>
+	    
+	    <div id="abzv">
+		    <div id="abzv_foreword"><?php echo _("A project by") ?></div>
+		    <a href="http://www.abzv.de/" target="_blank">
+		    	<div id="abzv_logo"></div>
+		    </a>
+	    </div>
 	</div>
 
 	<div id="navbar">
@@ -80,6 +94,11 @@ function initHeader(){
 		?>
 
 		<div id="loggedin">
+
+			<div id="my_vis">
+				<a href="<?php echo BASE_DIR ?>?vis_list=true"><?php echo _("my data");  ?></a>
+			</div>
+			
 			<div id="logout">
 				<?php echo _("Log out"); ?>
 			</div>

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ds\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-19 15:14+0100\n"
-"PO-Revision-Date: 2011-12-19 15:22+0100\n"
+"POT-Creation-Date: 2012-01-18 22:07+0100\n"
+"PO-Revision-Date: 2012-01-18 22:17+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,66 +16,100 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: actions/check.php:50
-#: actions/export.php:64
+#: actions/check.php:53
+#: actions/export.php:67
 #: actions/publish.php:58
-#: actions/transpose.php:54
-#: actions/visualize.php:75
+#: actions/transpose.php:57
 msgid "Could not fetch the data from the database."
 msgstr "Impossible de récupérer les données dans la base."
 
-#: actions/export.php:72
+#: actions/export.php:75
 msgid "This page cannot be accessed."
 msgstr "La page ne peut pas être affichée."
 
-#: actions/input.php:125
+#: actions/input.php:128
 msgid "Could not store the data on the database."
 msgstr "Les données n'ont pas pu être enregistrées dans la base."
 
-#: actions/lang_change.php:33
+#: actions/lang_change.php:36
 msgid "Unknown language code."
 msgstr "Code langue inconnu."
 
-#: actions/login.php:34
-msgid "User and password do not match or user not activated."
-msgstr "Utilisateur et mot de passe incompatibles ou utilisateur non-encore activé."
+#: actions/list_vis.php:21
+msgid "Not logged in, could not fetch the list of visualizations."
+msgstr "Non logué, impossible de récupérer les visualisations."
 
-#: actions/login.php:40
-msgid "Could not check the user credentials in the DB."
-msgstr "Impossible de valider l'utilisateur dans la base."
-
-#: actions/login.php:46
+#: actions/login.php:24
+#: actions/pwd_change.php:57
+#: actions/pwd_reminder.php:93
 #: actions/signup.php:92
 msgid "Not enough parameters were passed."
 msgstr "Trop peu de paramètres ont été passés"
 
-#: actions/logout.php:19
+#: actions/logout.php:22
 msgid "Could not log out."
 msgstr "Impossible de quitter."
 
-#: actions/make_header.php:23
+#: actions/make_header.php:26
 msgid "Could not add a header row."
 msgstr "Impossible d'ajouter un en-tête."
+
+#: actions/pwd_change.php:37
+#: actions/pwd_change.php:50
+msgid "Could not change password in the DB."
+msgstr "Impossible de changer le mot de passe dans la base."
+
+#: actions/pwd_change.php:45
+msgid "No request for new password from this email address."
+msgstr "Aucune demande de changement de mot de passe pour cet utilisateur."
+
+#: actions/pwd_reminder.php:39
+msgid "Password change requested"
+msgstr "Changement de mot de passe demandé"
+
+#: actions/pwd_reminder.php:41
+#: actions/signup.php:42
+msgid "Dear DataWrapper user,"
+msgstr "Cher utilisateur de DataWrapper,"
+
+#: actions/pwd_reminder.php:43
+msgid "Please click on the link below to change your password:"
+msgstr "Merci de cliquer sur le lien ci-dessous pour changer votre mot de passe:"
+
+#: actions/pwd_reminder.php:47
+msgid "Do ignore this message if you did not request a password change from DataWrapper."
+msgstr "Merci d'ignorer ce message si vous n'avez pas demandé de changement de mot de passe."
+
+#: actions/pwd_reminder.php:49
+#: actions/signup.php:48
+msgid "Thanks!"
+msgstr "Merci!"
+
+#: actions/pwd_reminder.php:51
+#: actions/signup.php:50
+msgid "The DataWrapper team"
+msgstr "L'équipe DataWrapper"
+
+#: actions/pwd_reminder.php:65
+msgid "Could not send password change e-mail."
+msgstr "Impossible d'envoyer le courriel de changemeent de mot de passe."
+
+#: actions/pwd_reminder.php:73
+#: actions/pwd_reminder.php:87
+msgid "Could not send password change email."
+msgstr "Impossible d'envoyer le courriel de changement."
+
+#: actions/pwd_reminder.php:81
+msgid "No user found with this email address."
+msgstr "Aucun utilisateur ne possède cette adresse e-mail"
 
 #: actions/signup.php:40
 msgid "Please verify your e-mail address"
 msgstr "Merci de valider votre adresse e-mail"
 
-#: actions/signup.php:42
-msgid "Dear DataWrapper user,"
-msgstr "Cher utilisateur de DataWrapper,"
-
 #: actions/signup.php:44
 msgid "Please click on the link below to verify your e-mail address:"
 msgstr "Merci de cliquer sur le lien ci-dessous pour valider votre adresse e-mail:"
-
-#: actions/signup.php:48
-msgid "Thanks!"
-msgstr "Merci!"
-
-#: actions/signup.php:50
-msgid "The DataWrapper team"
-msgstr "L'équipe DataWrapper"
 
 #: actions/signup.php:64
 msgid "Could not send verification e-mail."
@@ -90,11 +124,11 @@ msgstr "Impossible d'ajouter un utilisateur à la base."
 msgid "A user already has this email address."
 msgstr "Un utilisateur possède déjà cette adresse e-mail."
 
-#: actions/transpose.php:39
+#: actions/transpose.php:42
 msgid "Could not transpose the data in the database."
 msgstr "Impossible de transposer les données dans la base."
 
-#: actions/transpose.php:48
+#: actions/transpose.php:51
 msgid "You can only transpose a table with two entries."
 msgstr "Seules les tables à double entrée peuvent être transposées."
 
@@ -103,13 +137,41 @@ msgstr "Seules les tables à double entrée peuvent être transposées."
 msgid "Could not verify e-mail address."
 msgstr "Impossible de valider votre adresse e-mail"
 
-#: class/user.class.php:36
+#: class/user.class.php:43
 msgid "Error while trying to retrieve user from database."
 msgstr "Erreur lors de la récupération de l'utilisateur dans la base."
 
-#: js/navigation-js.php:63
-msgid "No data was input."
-msgstr "Aucune donnée."
+#: class/user.class.php:77
+msgid "Last modified on"
+msgstr "Modifié le"
+
+#: class/user.class.php:79
+msgid "Chart type: "
+msgstr "Type de visualisation: "
+
+#: class/user.class.php:81
+msgid "Visualization URL: "
+msgstr "URL de la visualisation:"
+
+#: class/user.class.php:90
+msgid "No visualization was found"
+msgstr "Aucune visualisation trouvée"
+
+#: class/user.class.php:96
+msgid "Error while trying to retrieve list from database."
+msgstr "Erreur lors de la récupération de la liste dans la base."
+
+#: class/user.class.php:100
+msgid "User not logged in."
+msgstr "Utilisateur non logué"
+
+#: class/user.class.php:130
+msgid "User and password do not match or user not activated."
+msgstr "Utilisateur et mot de passe incompatibles ou utilisateur non-encore activé."
+
+#: class/user.class.php:136
+msgid "Could not check the user credentials in the DB."
+msgstr "Impossible de valider l'utilisateur dans la base."
 
 #: phpMyAdmin/pmd_relation_new.php:68
 msgid "General relation features"
@@ -164,7 +226,7 @@ msgid "DataWrapper will not use your private data in any way not necessary for t
 msgstr ""
 
 #: views/contents.php:15
-#: views/footer.php:7
+#: views/footer.php:9
 msgid "Legal imprint"
 msgstr "Mentions légales"
 
@@ -190,14 +252,13 @@ msgstr ""
 
 #: views/contents.php:22
 msgid "Idea/Concept"
-msgstr ""
+msgstr "Idée/Concept"
 
 #: views/contents.php:22
 msgid "Development"
-msgstr ""
+msgstr "Développement"
 
 #: views/contents.php:27
-#: views/footer.php:3
 msgid "About"
 msgstr "A propos"
 
@@ -243,39 +304,39 @@ msgstr ""
 
 #: views/contents.php:45
 msgid "The CSS is accessible, meaning that in one day you can make sure that the charts generated with DataWrapper have your logo, your visual styles and colours."
-msgstr ""
+msgstr "Les CSS sont modifiables, si bien que vous pouvez personnaliser DataWrapper avec votre logo, vos styles et vos couleurs."
 
 #: views/contents.php:47
 msgid "A short tutorial on how to use DataWrapper is here."
-msgstr ""
+msgstr "Retrouvez un tutorial sur DataWrapper ici."
 
 #: views/contents.php:49
 msgid "Background"
-msgstr ""
+msgstr "Présentation"
 
 #: views/contents.php:51
 msgid "DataWrapper was developed for ABZV, a journalism training organization affiliated to BDVZ (German Association of Newspaper Publishers). It is part of our efforts to develop a comprehensive curriculum for data-driven journalism."
-msgstr ""
+msgstr "DataWrapper a été développé pour ABZV, une organisation de formation des journalistes affiliée à BDVZ (Association des éditeurs de presse allemands). Le projet fait partie de leurs efforts pour bâtir un programme de formation complet pour les journalistes."
 
 #: views/contents.php:53
 msgid "Features"
-msgstr ""
+msgstr "Fonctionnalités"
 
 #: views/contents.php:55
 msgid "Use of this tool is free."
-msgstr ""
+msgstr "L'utilisation de cet outil est gratuit."
 
 #: views/contents.php:57
 msgid "DataWrapper 0.1 is a non-commercial, open source software, licensed under the MIT License."
-msgstr ""
+msgstr "DataWrapper beta est un projet non-commercial, open-source et sous licence MIT."
 
 #: views/contents.php:59
 msgid "DataWrapper uses HTML5 Javascript libraries, namely Highcharts and D3.js, with more to come."
-msgstr ""
+msgstr "DataWrapper utilise des librairies Javascript et HTML5, comme HighCharts et D3.js, avec d'autres dans les tuyaux!"
 
 #: views/contents.php:61
 msgid "DataWrapper can be forked on GitHub and installed on your own server."
-msgstr ""
+msgstr "DataWrapper peut être forké sur GitHub et installé sur votre propre serveur."
 
 #: views/embed.php:7
 msgid "A chart created by Data Story"
@@ -290,20 +351,32 @@ msgid "Export data"
 msgstr "Exporter les données"
 
 #: views/embed.php:139
-msgid "Chart created using DataStory, a project by ABZV."
-msgstr "Visualisation créée avec DataStory, un projet de ABZV."
+msgid "Chart created using"
+msgstr "Chart créée avec"
+
+#: views/embed.php:139
+msgid "a project by"
+msgstr "un projet de"
 
 #: views/embed.php:145
 msgid "Page cannot be displayed."
 msgstr "La page n'a pas pu être affichée."
 
+#: views/footer.php:3
+msgid "About Datawrapper"
+msgstr "A propos de DataWrapper"
+
 #: views/footer.php:5
+msgid "About ABZV"
+msgstr "A propos de ABZV"
+
+#: views/footer.php:7
 msgid "Terms of Use"
 msgstr "Conditions d'utilisation"
 
-#: views/footer.php:9
+#: views/footer.php:11
 msgid "Fork me on GitHub!"
-msgstr ""
+msgstr "Forkez moi sur GitHub!"
 
 #: views/header.php:17
 msgid "Language set to "
@@ -317,11 +390,19 @@ msgstr "La langue choisie est déjà activée."
 msgid "Could not change language."
 msgstr "Impossible de changer la langue."
 
-#: views/header.php:84
+#: views/header.php:77
+msgid "A project by"
+msgstr "Un projet de "
+
+#: views/header.php:99
+msgid "my data"
+msgstr "mes charts"
+
+#: views/header.php:103
 msgid "Log out"
 msgstr "Déconnexion"
 
-#: views/header.php:88
+#: views/header.php:107
 #, php-format
 msgid "Welcome, %s!"
 msgstr "Bienvenue, %s!"
@@ -339,68 +420,101 @@ msgid "Sample data: unemployment among the population age 25 and over in 6 Europ
 msgstr "Données: Taux de chômage des plus de 25 ans dans 6 métropoles européennes. Source: Eurostat"
 
 #: views/login.php:7
-#: views/screens.php:7
 msgid "DataWrapper, a project by DataStory"
 msgstr "DataWrapper, un projet de DataStory"
 
-#: views/login.php:95
-#: views/login.php:150
-#: views/login.php:164
-#: views/login.php:165
-msgid "Password"
-msgstr "Mot de passe"
+#: views/login.php:108
+msgid "An e-mail has been sent. Please check your mailbox and follow instructions to reset your password."
+msgstr "Un courriel a été envoyé. Merci de vérifier votre messagerie pour mettre à jour votre mot de passe."
 
-#: views/login.php:106
-msgid "Thanks for signing up! You just need to verify your e-mail address."
-msgstr "Merci de vous être inscrit! Veuillez maintenant valider votre adresse e-mail."
-
-#: views/login.php:116
-msgid "Please agree to the Terms of Use."
-msgstr "Merci d'approuver les conditions d'utilisation"
-
-#: views/login.php:119
-msgid "Passwords do not match."
-msgstr "Les mots de passe ne sont pas identiques"
-
-#: views/login.php:123
+#: views/login.php:120
+#: views/login.php:170
 msgid "Please enter a valid email address."
 msgstr "Merci d'indiquer une adresse valide"
 
-#: views/login.php:131
-#: views/screens.php:108
+#: views/login.php:142
+#: views/login.php:191
+#: views/login.php:250
+#: views/login.php:266
+#: views/login.php:267
+#: views/login.php:300
+#: views/login.php:301
+msgid "Password"
+msgstr "Mot de passe"
+
+#: views/login.php:153
+msgid "Thanks for signing up! You just need to verify your e-mail address (be sure to check your spam filter). If you receive no confirmatory e-mail, please alert us at contact@datawrapper.de"
+msgstr "Merci de vous être inscrit! Veuillez valider votre adresse e-mail (la confirmation a pu être saisie par le filtre à spam). Si vous ne recevez pas de mail de confirmation, veuillez nous alerter à l'adresse contact@datawrapper.de"
+
+#: views/login.php:163
+msgid "Please agree to the Terms of Use."
+msgstr "Merci d'approuver les conditions d'utilisation"
+
+#: views/login.php:166
+#: views/login.php:211
+msgid "Passwords do not match."
+msgstr "Les mots de passe ne sont pas identiques"
+
+#: views/login.php:200
+msgid "Password changed. You can now <a href='BASE_DIR'>login</a>."
+msgstr "Mot de passe changé. Vous pouvez maintenant vous <a href='BASE_DIR'>connecter</a>."
+
+#: views/login.php:231
 msgid "Errors are displayed here"
 msgstr "Les erreurs s'affichent ici"
 
-#: views/login.php:141
-#: views/login.php:173
+#: views/login.php:241
+#: views/login.php:275
 msgid "Sign up"
 msgstr "S'inscrire"
 
-#: views/login.php:142
+#: views/login.php:242
 #, fuzzy
 msgid "DataWrapper helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all."
 msgstr "DataStory aide les journalistes à construire des visualisations convaincantes en seulement quelques clics. DataStory donne à chacun le pouvoir des toutes dernières bibliothèques JavaScript, sans nécessiter aucune compétence informatique."
 
-#: views/login.php:143
+#: views/login.php:243
 msgid "The project is lead and maintained by ABZV."
 msgstr "Le projet est mené et maintenu par ABZV."
 
-#: views/login.php:149
-#: views/login.php:159
+#: views/login.php:249
+#: views/login.php:261
+#: views/login.php:283
 msgid "E-mail"
 msgstr "Courriel"
 
-#: views/login.php:151
+#: views/login.php:251
+msgid "Password forgotten?"
+msgstr "Mot de passe oublié?"
+
+#: views/login.php:252
 msgid "Login"
 msgstr "Connexion"
 
-#: views/login.php:163
+#: views/login.php:265
 msgid "Enter password twice"
 msgstr "Entrez votre mot de passe deux fois"
 
-#: views/login.php:169
+#: views/login.php:271
 msgid "I agree to the Terms of Use"
 msgstr "J'approuve les conditions d'utilisation"
+
+#: views/login.php:281
+msgid "Enter your e-mail address to reset your password."
+msgstr "Indiquez votre adresse e-mail pour changer votre mot de passe."
+
+#: views/login.php:287
+msgid "Reset password"
+msgstr "Changer de mot de passe"
+
+#: views/login.php:299
+#, fuzzy
+msgid "Enter your new password twice"
+msgstr "Entrez votre mot de passe deux fois"
+
+#: views/login.php:305
+msgid "Change password"
+msgstr "Changez de mot de passe"
 
 #: views/publish.php:132
 msgid "Publish and embed!"
@@ -426,31 +540,31 @@ msgstr "Hauteur"
 msgid "Keep proportions"
 msgstr "Conserver les proportions"
 
-#: views/screens.php:116
+#: views/screens.php:177
 msgid "1. Input data"
 msgstr "1. Saisir les données"
 
-#: views/screens.php:119
+#: views/screens.php:180
 msgid "2. Check data"
 msgstr "2. Vérifier"
 
-#: views/screens.php:122
+#: views/screens.php:183
 msgid "3. Visualize"
 msgstr "3. Visualiser"
 
-#: views/screens.php:125
+#: views/screens.php:186
 msgid "4. Publish"
 msgstr "4. Publier"
 
-#: views/screens.php:132
+#: views/screens.php:193
 msgid "Next"
 msgstr "Suiv."
 
-#: views/screens.php:136
+#: views/screens.php:197
 msgid "New"
 msgstr "Recommencer"
 
-#: views/screens.php:141
+#: views/screens.php:202
 msgid "Prev"
 msgstr "Préc."
 
@@ -467,57 +581,57 @@ msgstr "Navigateurs compatibles"
 msgid "Visualization type"
 msgstr "Type de visualisation"
 
-#: views/visualize.php:43
+#: views/visualize.php:37
 #: views/visualize_legacy.php:17
 msgid "Title"
 msgstr "Titre"
 
-#: views/visualize.php:46
-#: views/visualize.php:144
-#: views/visualize.php:232
+#: views/visualize.php:40
+#: views/visualize.php:138
+#: views/visualize.php:226
 #: views/visualize_legacy.php:20
 #: views/visualize_legacy.php:88
 #: views/visualize_legacy.php:265
 msgid "Subtitle"
 msgstr "Sous-titre"
 
-#: views/visualize.php:155
-#: views/visualize.php:256
+#: views/visualize.php:149
+#: views/visualize.php:250
 #: views/visualize_legacy.php:99
 #: views/visualize_legacy.php:293
 msgid "Source URL"
 msgstr "URL de la source"
 
-#: views/visualize.php:159
+#: views/visualize.php:153
 #: views/visualize_legacy.php:103
 msgid "Source URL must begin with 'http://'"
 msgstr "L'URL de la source doit commencer par 'http://'"
 
-#: views/visualize.php:166
-#: views/visualize.php:252
+#: views/visualize.php:160
+#: views/visualize.php:246
 #: views/visualize_legacy.php:110
 #: views/visualize_legacy.php:289
 msgid "Source"
 msgstr "Source"
 
-#: views/visualize.php:174
-#: views/visualize.php:260
+#: views/visualize.php:168
+#: views/visualize.php:254
 #: views/visualize_legacy.php:118
 #: views/visualize_legacy.php:297
 msgid "Chart description"
 msgstr "Description du graph"
 
-#: views/visualize.php:222
+#: views/visualize.php:216
 #: views/visualize_legacy.php:255
 msgid "Build your visualization."
 msgstr "Construisez votre visualisation"
 
-#: views/visualize.php:229
+#: views/visualize.php:223
 #: views/visualize_legacy.php:262
 msgid "Title (required)"
 msgstr "Titre (requis)"
 
-#: views/visualize.php:248
+#: views/visualize.php:242
 #: views/visualize_legacy.php:285
 msgid "Vertical axis title (required)"
 msgstr "Titre de l'axe vertical (requis)"
@@ -537,6 +651,10 @@ msgstr "Courbes"
 msgid "Pie chart"
 msgstr "Camembert"
 
+#: views/vis_list.php:105
+msgid "Your visualizations"
+msgstr "Vos visualisations"
+
 #: visualizations/config.json.php:58
 msgid "Understanding Pie Charts"
 msgstr "Comprendre les camemberts (anglais)"
@@ -548,6 +666,17 @@ msgstr "Tableau adaptable"
 #: visualizations/config.json.php:69
 msgid "Streamgraph"
 msgstr "Graph de flux"
+
+#~ msgid "No data was input."
+#~ msgstr "Aucune donnée."
+
+#~ msgid "Chart created using DataStory, a project by ABZV."
+#~ msgstr "Visualisation créée avec DataStory, un projet de ABZV."
+
+#~ msgid "Thanks for signing up! You just need to verify your e-mail address."
+#~ msgstr ""
+#~ "Merci de vous être inscrit! Veuillez maintenant valider votre adresse e-"
+#~ "mail."
 
 #~ msgid ""
 #~ "Be nice. You are authorized to use the service to produce visualizations "

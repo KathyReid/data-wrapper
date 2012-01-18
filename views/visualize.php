@@ -29,13 +29,7 @@ foreach($json_vis->librairies as $librairy){
 
 <script type="text/javascript">
 
-var csv_data = {};
-
-var chart_type;
-
-var yAxis;
-
-var options = {
+options = {
     chart: {
         defaultSeriesType: 'column'
     },

@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 
         <!-- The JS function that help navigate the app -->
-        <script src="js/navigation-js.php" type="text/javascript"></script> 
+        <script src="js/navigation.js" type="text/javascript"></script> 
         
         <!-- More general functions for the app -->
         <script src="js/functions.js" type="text/javascript"></script> 
@@ -45,18 +45,78 @@
 	    //Keeps track of the chart that's being worked on
 	    var chart_id;
 
+        var csv_data = {};
+
+        var chart_type;
+
+        var yAxis;
+
+        var options;
+
 	    /* END global vars init */
 
 	     $(document).ready(function() {
             //Shows loader
             loader_show();
 
-	     	//hides all screens on startup
-	     	$('.screen').hide();
-	        
-	        //Starts the slideshow 
-	        showNext();
-	        
+            //hides all screens on startup
+            $('.screen').hide();
+
+            <?php if (isset($_POST["options"])):?>
+                //This section appears only if user comes from the vis_list page
+                
+                //sets the globals options, data and chart_id according to what has been transmitted
+                options = <?php echo stripslashes($_POST["options"]) ?>;
+                chart_id = <?php echo $_POST["chart_id"] ?>;
+                csv_data = <?php echo json_encode(unserialize(stripslashes($_POST["csv_data"]))) ?>;
+                tsv_data = "<?php echo str_replace(array('@@TAB@@', '@@BREAK@@'), array('\t', '\n'), $_POST["tsv_data"]); ?>";
+
+                //Populates the first field (1. INPUT)
+                $("#input_data").val(tsv_data);
+
+                //Makes sure screen 2. CHECK looks good too
+                js_enterScreen_check();
+
+                //populates the descriptive fields
+
+                //title
+                if (options.title.text){ $("#chart_title").val(options.title.text); }
+
+                //subtitle
+                if (options.subtitle.text){ $("#chart_subtitle").val(options.subtitle.text); }
+                
+                //yAxis
+                if (options.yAxis.title.text){ $("#chart_yAxis").val(options.yAxis.title.text); }
+
+                //source URL
+                if (options.source_url){ $("#chart_source_url").val(options.source_url); }
+
+                //source
+                if (options.source){ $("#chart_source").val(options.source); }
+
+                //description
+                if (options.desc){ $("#chart_desc").val(options.desc); }
+
+                //chart type
+                $("#chart_type").val(options.chart.defaultSeriesType);
+
+                //theme
+                $("#chart_theme").val(options.chart.chart_theme);
+
+                //renders chart
+                render_chart(options, "default");
+
+                //sends the user directly to the 3. Visualize screen
+                showSlide("visualize", "empty");
+
+                //End of the section from vis_list
+            <?php else:?>
+    	        
+    	        //Starts the slideshow 
+    	        showNext();
+
+	        <?php endif; ?>
+
             //Init all inputs fields so they react properly onBlur
             initInputs();
 
@@ -77,15 +137,16 @@
                 showPrev();
             });
 
-            //Tells the new chart what to do
+            //Tells the new chart button what to do
             $('#new_chart').click(function(){
-                location.reload();
+                //goes back home
+                location.replace("<?php echo BASE_DIR ?>");
             });
 
             //init the error box
             $('#error').click(function() {
                 $(this).hide();
-            });		
+            });
 
 	     });
 

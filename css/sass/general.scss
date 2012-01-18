@@ -95,78 +95,7 @@ $loader-h: 10%;
     clear:both;
 }
 
-/***************/
-/*    Header    /
-/***************/
 
-$header-height : $row-h * 4;
-$logo-w: $row-h * 2;
-$navbar-height: $row-h;
-
-#header{
-    width: $container-width;
-    position:relative;
-    top:0;
-    left:0;
-    height: $header-height;
-}
-
-#logo{
-    position:absolute;
-    z-index:2;
-    margin-left:$col-w/2;
-    margin-top:$navbar-height;
-    color: #282828;
-    font-size:$font-size + .7;
-    font-weight:bold;
-    cursor: pointer;
-    &:hover { color: $color-off_text; }
-}
-
-#navbar{
-    width: $container-width;
-    background-color:$background-color;
-    position:absolute;
-    top:$navbar-height*2;
-    left:0;
-    height: $navbar-height;
-    border-bottom:$border-color 1px solid;
-
-    #languages{
-        width: $col-w * 3;
-        float:right;
-        font-size: $font-size - .3em;
-        
-        .language{
-            float:right;
-            margin: $row-h/2 5px 0 0;
-            color: $color-off;
-            cursor: pointer;
-            &:hover { color: $black; }
-        }
-    }
-
-    #loggedin{
-        
-        float:left;
-        margin: 0 0 0 $col-w/2;
-        font-size: $font-size - .3em;
-
-        #loggedas{
-            float:right;
-            margin: $row-h/2 5px 0 0;
-            color: $color-off_text;
-        }
-
-        #logout{
-            margin: $row-h/2 5px 0 0;
-            float:right;
-            cursor: pointer;
-            color: $color-on;
-            &:hover { color: $color-off_text; }
-        }
-    }
-}
 
 /***************/
 /*   Container  /
@@ -203,6 +132,115 @@ $navbar-height: $row-h;
     overflow: hidden;
 }
 
+/***************/
+/*    Header    /
+/***************/
+
+$header-height : $row-h * 4;
+$logo-w: $row-h * 2;
+$navbar-height: $row-h;
+
+#header{
+    width: $container-width;
+    position:relative;
+    top:0;
+    left:0;
+    height: $header-height;
+}
+
+#logo{
+    position:absolute;
+    z-index:2;
+    width:$col-w*3;
+    margin-left:$col-w/2;
+    margin-top:$navbar-height;
+    
+    #logo_text{
+        color: #282828;
+        float:left;
+        font-size:$font-size + .7;
+        font-weight:bold;
+        cursor: pointer;
+        &:hover { color: $color-off_text; }
+    }
+    #abzv{
+        float:left;
+        margin-left:$col-w/5;
+
+        #abzv_foreword{
+            font-size:$font-size - .5;
+            color: $color-on;
+            font-weight:normal;
+        }
+
+        #abzv_logo{
+            margin-top:-7px;
+            width:106px;
+            height:46px;
+            background-image:url('../../images/abzv_large.png');
+        }
+    }
+}
+
+#navbar{
+    width: $container-width;
+    background-color:$background-color;
+    position:absolute;
+    top:$navbar-height*2;
+    left:0;
+    height: $navbar-height;
+    border-bottom:$border-color 1px solid;
+
+    #languages{
+        width: $col-w * 3;
+        float:right;
+        font-size: $font-size - .3em;
+        
+        .language{
+            float:right;
+            margin: $row-h/2 5px 0 0;
+            color: $color-off;
+            cursor: pointer;
+            &:hover { color: $black; }
+        }
+    }
+
+    #loggedin{
+        
+        float:left;
+        margin: 0 0 0 $col-w/2;
+        font-size: $font-size - .3em;
+
+        #my_vis{
+            margin: $row-h/2 5px 0 0;
+            float:right;
+        }
+
+        #my_vis a{
+            cursor: pointer;
+            color: $color-on_text;
+            text-decoration:none;
+            background-color: $color-on;
+            @include border-radius(2px);
+            padding: 0 3px;
+            &:hover { color: $color-on; background-color: $color-on_text; }
+        }
+
+        #loggedas{
+            float:right;
+            margin: $row-h/2 5px 0 0;
+            color: $color-off_text;
+        }
+
+        #logout{
+            margin: $row-h/2 5px 0 0;
+            float:right;
+            cursor: pointer;
+            color: $color-on;
+            &:hover { color: $color-off_text; }
+        }
+    }
+}
 
 /***************/
 /*   Buttons   */
@@ -551,91 +589,6 @@ $embed_extras-h: 50px;
         background-color: #fff;
 
     }
-}
-
-/*************/
-/*  Log in   */
-/*************/
-
-#login, #signup, #reminder, #new_pwd{
-    
-    width: $col-w * 3 - 20;
-    float:left;
-
-    .login{
-
-        @include inset_input(3px);
-        @include border-radius(2px);
-
-        float:left;
-        width: $col-w * 2.5;
-        margin: 5px 0;
-        font-size: $font-size;
-        height: $font-size + .3;
-        padding: 2px 7px;
-
-    }
-
-    #password_forgotten{
-        font-size:$font-size - .3;
-        width:100%;
-        text-align:right;
-        color:$color-on;
-        cursor:pointer;
-        &:hover { text-decoration:underline; }
-
-    }
-}
-
-#login_submit, #signup_submit, #show_signup, #reminder_submit, #pwd_change_submit{
-        font-size: $font-size - .1;
-        line-height: $font-size + .7;
-        font-weight: bold;
-        margin: 10px;
-    }
-
-#show_signup{
-    @include background-image(linear-gradient(lighten($color-on, 40%), $color-on)); 
-}
-
-#about{
-    width: $col-w * 3 - 5px;
-    float:left;
-    padding-top:15px;
-    margin-right:20px;
-    background-color:$dark-color;
-    border: 1px solid $border-color;
-    @include title_font;
-    @include border-radius(8px);
-
-    p{
-        margin:0 0 0 0;
-        padding: 15px;
-    }
-}
-
-.close_signup{
-    font-size: $font-size - .4;
-    width:100%;
-    text-align:right;
-    color:$shadow-color;
-    cursor:pointer;
-    &:hover { text-decoration:underline; }
-}
-
-#signup, #reminder{
-    display:none;
-}
-
-#verify, #reset_confirmation, #pwd_change_confirmation{
-    width: 100%;
-    display:none;
-    padding:15px;
-    margin-right:20px;
-    background-color:scale-lightness($color-on, 80);
-    border: 1px solid $border-color;
-    @include border-radius(8px);
-    font-size: $font-size - .2;
 }
 
 /************************************/

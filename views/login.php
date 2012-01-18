@@ -9,6 +9,9 @@
         <!-- General styles -->
         <link rel="stylesheet" type="text/css" href="css/stylesheets/general.css" />
 
+        <!-- Specific styles -->
+        <link rel="stylesheet" type="text/css" href="css/stylesheets/login.css" />
+
         <!-- JQuery library -->
         <script src="js/jquery-1.6.4.js" type="text/javascript"></script>
 
@@ -20,7 +23,7 @@
         <link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 
         <!-- The JS function that help navigate the app -->
-        <script src="js/navigation-js.php" type="text/javascript"></script> 
+        <script src="js/navigation.js" type="text/javascript"></script> 
         
         <!-- More general functions for the app -->
         <script src="js/functions.js" type="text/javascript"></script> 
@@ -147,7 +150,7 @@
                                         
                                         //User just signed up, needs to validate the e-mail address
                                         $("#verify").show()
-                                                    .html("<?php echo _("Thanks for signing up! You just need to verify your e-mail address.") ?>");
+                                                    .html("<?php echo _("Thanks for signing up! You just need to verify your e-mail address (be sure to check your spam filter). If you receive no confirmatory e-mail, please alert us at contact@datawrapper.de") ?>");
 
                                     }else{
                                         error(data.error);
@@ -185,7 +188,7 @@
                 var reset_pwd1 = $('#reset_pwd1').val();
                 var reset_pwd2 = $('#reset_pwd2').val();
                 
-                if (reset_pwd1 == reset_pwd1 && reset_pwd1 != "<?php echo _("Password") ?>"){
+                if (reset_pwd1 == reset_pwd2 && reset_pwd1 != "<?php echo _("Password") ?>"){
 
                     $.post('actions/pwd_change.php', {email: email, token: token, pwd:reset_pwd1}, function(data){
                         if (data != ""){
@@ -194,7 +197,7 @@
                                 
                                 //Reminder e-mail sent, needs to choose a new pwd
                                 $("#pwd_change_confirmation").show()
-                                            .html("<?php echo _("Password changed. You can now login.") ?>");
+                                            .html("<?php echo _("Password changed. You can now <a href='BASE_DIR'>login</a>.") ?>");
 
                             }else{
                                 error(data.error);

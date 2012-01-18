@@ -15,41 +15,15 @@ if (isset($_POST['email']) && isset($_POST['pwd'])){
 	$email = $_POST['email'];
 	$pwd = $_POST['pwd'];
 
-	//Checks that the e-mail and password match
-	$q = "SELECT * FROM users WHERE email = '$email' AND pwd = '". md5($pwd) ."' AND activated=1 LIMIT 1";
-
-	if ($result = $mysqli->query($q)) {
-
-		$num_rows = $result->num_rows;
-
-		if ($num_rows == 1){
-
-			//Sets the user_email and returns success
-			if ($_SESSION["user_email"] = $email){
-
-				$return_array["status"] = "200";
-
-			}
-
-		}else{
-
-			$return_array["status"] = "604";
-			$return_array["error"] = _("User and password do not match or user not activated.");
-		}
-
-	}else{
-
-			$return_array["status"] = "600";
-			$return_array["error"] = _("Could not check the user credentials in the DB.");
-			$return_array["error_details"] = $mysqli->error;
-	}
+	$user = new User($mysqli);
+	$return_array = $user->connect($email, $pwd);
+		
 }else{
 
 	$return_array["status"] = "603";
 	$return_array["error"] = _("Not enough parameters were passed.");
 
 }
-
 
 echo json_encode($return_array);
 ?>
