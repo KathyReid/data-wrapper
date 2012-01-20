@@ -239,7 +239,10 @@
                 
                 <div id="about">
                     <button id="show_signup" class="button"><?php echo _("Sign up") ?></button>
-                    <p><?php echo _("DataWrapper helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all.") ?></p>
+                    <p><?php echo _("DataWrapper helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all.") ?>
+                    </p>
+                    <p><?php echo _("Just give it a try ") ?><a href="#quickstart" class="fancybox"><?php echo _("or read our quick tutorial.") ?></a>
+                    </p>
                     <p><?php echo _("The project is lead and maintained by ABZV.") ?></p>
                 </div>
 

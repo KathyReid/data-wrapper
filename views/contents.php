@@ -132,6 +132,7 @@
 		</ol>
 
 		<?php
+		if (isset($user)):
 			//shows only if user hasn't deactivated quickstart 
 			if ($user->show_quickstart()):
 		?>
@@ -142,8 +143,10 @@
 		<?php
 			//ends if user hasn't deactivated quickstart
 			endif;
+			//end if no user is set
+		endif;
 		?>
-		
+
 	</div>
 
 	

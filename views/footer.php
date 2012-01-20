@@ -8,11 +8,8 @@
 	<span class=".separator"> • </span>
 	<a href="#impressum" class="fancybox"><?php echo _("Legal imprint") ?></a>
 	<span class=".separator"> • </span>
-	
-	<?php if (isset($user)): ?>
-		<a href="#quickstart" class="fancybox"><?php echo _("Quickstart") ?></a>
-		<span class=".separator"> • </span>
-	<?php endif; ?>
+	<a href="#quickstart" class="fancybox"><?php echo _("Quickstart") ?></a>
+	<span class=".separator"> • </span>
 	
 	<a href="https://github.com/n-kb/datawrapper" target="_blank"><?php echo _("Fork me on GitHub!") ?></a>
 	<?php

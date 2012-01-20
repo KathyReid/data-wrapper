@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-20 13:48+0100\n"
-"PO-Revision-Date: 2012-01-20 14:46+0100\n"
+"POT-Creation-Date: 2012-01-20 17:31+0100\n"
+"PO-Revision-Date: 2012-01-20 17:33+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -208,223 +208,223 @@ msgstr "Daten umstellen"
 msgid "Make first row a header row"
 msgstr "Erste Zeile als Kopfzeile setzen"
 
-#: views/contents.php:4
+#: views/contents.php:5
+msgid "About"
+msgstr "Über"
+
+#: views/contents.php:6
+msgid "What is DataWrapper?"
+msgstr "Was ist DataWrapper?"
+
+#: views/contents.php:8
+msgid "In short: This is a little tool for journalists. It reduces the time to create and embed a simple chart from hours to seconds."
+msgstr "Kurzfassung: Dieses Werkzeug ist für Journalisten bestimmt. Es reduziert die Zeit, um einfache Datenvisualisierungen zu erstellen und in einer beliebigen Webseite einzubetten von Stunden auf Sekunden.  "
+
+#: views/contents.php:10
+msgid "Motivation"
+msgstr ""
+
+#: views/contents.php:11
+msgid "There are many uses of data in journalism. The first step though is to use data more and often as a basis for reporting. Doing this has become easier, because of the large amounts of data becoming available, thanks to the OpenData movement and other initiatives."
+msgstr "Es gibt viele Spielarten des Datenjournalismus. Der erste Schritt besteht darin, Daten und Zahlen als Basis eines Beitrags zu nutzen  - nicht nur als schmückendes Beiwerk. Daten zu finden ist einfacher geworden, weil immer größere Bestände im Netz veröffentlich werden, dank der Open Data Bewegung und anderen Initiativen.  "
+
+#: views/contents.php:13
+msgid "But there are bottlenecks."
+msgstr "Aber es gibt auch Barrieren. "
+
+#: views/contents.php:15
+msgid "One is that creating even a simple visual chart and embedding it into a story is still too complex and time consuming. Yes, there are extensive other offerings, like IBM ManyEyes or the growing Google Chart API. They are great. But they have downsides, if used by journalists. For example you often have to store your trials data in public, can't get it out again. Plus, control over the look and feel of your charts is limited or complex to change if you are not a coder."
+msgstr "Eine besteht darin, dass die Erstellung einer einfachen Visualisierung, die sich in eine Online-Seite einbetten lässt, immer noch recht komplex und zeitaufwändig ist. Richtig, es gibt mittlerweile viele Plattformen, die diesen Prozess vereinfachen, wie zum Beispiel IBM Many Eyes oder auch die wachsende Google Chart API. Das sind Fortschritte. Doch die bisher verfügbaren Anwendungen in diesem Bereich haben auch Nachteile, vor allem bei der Nutzung durch Journalisten. Zum Beispiel muss man oft die eigenen Daten auf der fremden Plattform speichern und selbst erste Versuche werden schon veröffentlicht. Oft ist es auch schwer, die Daten später wieder zu löschen oder zu extrahieren. Ein weiterer Nachteil ist, dass die Kontrolle über das Design, Logos und andere Gestaltungselemente beschränkt sind - oder Änderungen schlicht zu kompliziert sind, wenn man kein Programmierer ist.  "
+
+#: views/contents.php:17
+msgid "Create simple, embeddable charts in seconds, not hours"
+msgstr "Einfache Visualisierungen mit Einbett-Code in Sekunden, nicht Stunden "
+
+#: views/contents.php:18
+msgid "This is what DataWrapper does: This little tool reduces the time needed to create a correct chart and embed it into any CMS from hours to seconds."
+msgstr "DataWrapper ist eine Alternative: Dieses Werkzeug reduziert die Zeit, die man für die Erstellung und Publikation einer Visualisierung in jedem beliebigen Content Management System benötig von Stunden auf Sekunden.  "
+
+#: views/contents.php:20
+msgid "Furthermore, DataWrapper is not a honey-trap. The data you work with or store is yours and yours alone. Trials are not openly published."
+msgstr "Außerdem ist DataWrapper keine \"Honigfalle\". Die Daten, die hier eingegeben werden gehören allein dem Nutzer und ihm allein. Erste Versuche und Experimente werden nicht veröffentlicht.  "
+
+#: views/contents.php:22
+msgid "On top of that, we encourage news organizations to fork DataWrapper via Github and install it on one of your own servers."
+msgstr "Ein weiteres Plus: DataWrapper ist eine Open Source Anwendung. Jedes Medienunternehmen oder Blog kann die Anwendung über Github herunter laden und auf einem eigenen Server installieren.  "
+
+#: views/contents.php:23
+msgid "The CSS is accessible, meaning that in one day you can make sure that the charts generated with DataWrapper have your logo, your visual styles and colours."
+msgstr "Der CSS-Code kann verändert werden, so dass die visuelle Darstellung dem jeweiligen Erscheinungsbild einer Zeitung (Farbe, Schrift, Logo) exakt entspricht. Das muss man dann nur einmal machen, nicht jedesmal.  "
+
+#: views/contents.php:25
+msgid "A short tutorial on how to use DataWrapper is here."
+msgstr "Eine kurze Anleitung, wie man DataWrapper nutzen kann, findet sich hier.  "
+
+#: views/contents.php:27
+msgid "Background"
+msgstr "Hintergrund "
+
+#: views/contents.php:29
+msgid "DataWrapper was developed for ABZV, a journalism training organization affiliated to BDVZ (German Association of Newspaper Publishers). It is part of our efforts to develop a comprehensive curriculum for data-driven journalism."
+msgstr "DataWrapper ist ein Projekt der ABZV (Bildungswerk der Zeitungen) und ein Angebot zur Aus- und Weiterbildung von Journalisten. Dieses Werkzeug ist Teil eines größeren Projekts, dass den Aufbau einer strukturierten Weiterbildung im Bereich Datenjournalismus zum Ziel hat. "
+
+#: views/contents.php:31
+msgid "Features"
+msgstr "DataWrapper Funktionen "
+
+#: views/contents.php:33
+msgid "Use of this tool is free."
+msgstr "Die Nutzung dieses Werkzeugs ist kostenfrei. "
+
+#: views/contents.php:35
+msgid "DataWrapper 0.1 is a non-commercial, open source software, licensed under the MIT License."
+msgstr "DataWrapper Version 0.1 ist eine nicht-kommerzielle Open Source Software, lizensiert unter der MIT Licence.  "
+
+#: views/contents.php:37
+msgid "DataWrapper uses HTML5 Javascript libraries, namely Highcharts and D3.js, with more to come."
+msgstr "DataWrapper nutzt HTML5 Libraries, speziell Highcharts und D3.js, ein schrittweiser Ausbau ist geplant. Programmierer, die uns dabei unterstützen wollen, sind herzlich willkommen.  "
+
+#: views/contents.php:39
+msgid "DataWrapper can be forked on GitHub and installed on your own server."
+msgstr "DataWrapper kann über GitHub heruntergeladen werden und auf einem eigenen Server installiert werden.  "
+
+#: views/contents.php:45
 msgid "Terms of use"
 msgstr "Benutzungsbedigungen"
 
-#: views/contents.php:5
+#: views/contents.php:46
 msgid "Fair usage policy"
 msgstr "Fair use Verfahren"
 
-#: views/contents.php:6
+#: views/contents.php:47
 msgid "DataWrapper is licensed to visualize data that comes from public, legal sources or your own research. Should we detect uses that might violate rights of organizations or single persons we reserve the right to block an account, notify the owner and ask them to stop using DataWrapper."
 msgstr "DataWrapper kann kostenfrei für die Visualisierung von Daten genutzt werden, die aus öffentlichen und freien Quellen stammen oder die eigene Recherche. Sollten wir Verstöße gegen diese Vorgaben feststellen, die die Rechte von Organisationen oder einzelnen Personen verletzen, behalten wir uns das Recht vor einen Accout zu sperren und werden den jeweiligen Nutzer auffordern, DataWrapper nicht mehr einzusetzen.  "
 
-#: views/contents.php:7
+#: views/contents.php:48
 msgid "Limited responsibility"
 msgstr "Beschränkter Haftung"
 
-#: views/contents.php:8
+#: views/contents.php:49
 msgid "This service is provided as is. DataStory will certainly not be held accountable if your data is damaged by a server failure or any other cause."
 msgstr "Dieses Serviceangebot wird ohne weitere Garantie angeboten. Die Betreiber von DataWrapper übernehmen keine Haftung sollten Daten durch einen Serverausfall verloren gehen - dies gilt auch für sonstige Ausfälle oder eine eventuelle Beendigung des Services. Wenn Sie absichern wollen, dass ihre Visualisierungen dauerhaft verfügbar sind, sollten Sie die Download-Version und eine eigene Serverinstallation nutzen.  "
 
-#: views/contents.php:9
+#: views/contents.php:50
 msgid "Privacy"
 msgstr "Schutz der Privatsphäre/Datenschutz "
 
-#: views/contents.php:10
+#: views/contents.php:51
 msgid "DataWrapper will not use your private data in any way not necessary for the provision of the Service. However, you have the right to ask for the modification or removal of any personal data in accordance with the laws of Germany."
 msgstr "DataWrapper und die ABZV werden in keinem Fall irgendwelche privaten Daten oder Nutzerinformationen mit Dritten teilen. Rechte, die sich aus den Vorgaben des Datenschutzes ergeben bleiben davon unberührt. DataWrapper unterliegt deutschem Recht. Sollten Sie wegen veröffentlichter Daten eine Beschwerde einreichen wollen, wenden Sie sich bitte an folgende E-Mail Adresse: info@abzv.de "
 
-#: views/contents.php:15
+#: views/contents.php:56
 #: views/footer.php:9
 msgid "Legal imprint"
 msgstr "Impressum"
 
-#: views/contents.php:17
+#: views/contents.php:58
 msgid "Publisher"
 msgstr "Verleger"
 
-#: views/contents.php:18
+#: views/contents.php:59
 msgid "ABZV • Bildungswerk der Zeitungen, 2011"
 msgstr ""
 
-#: views/contents.php:19
+#: views/contents.php:60
 msgid "The Academy of Vocational Education of the German Newspaper Publishers Association (ABZV) is a training center for German newspapers. Founded in 1989, it supports the efforts of its members and organizes its own seminars."
-msgstr "Die Akademie Berufliche Bildung der deutschen Zeitungsverlage (ABZV) ist ein eingetragener, gemeinnütziger Verein. Wir sind eine Institution zur berufsbegleitenden, überbetrieblichen Aus- und Weiterbildung von Print-Journalistinnen und Print-Journalisten,vertreten durch den Vorstand Dietmar Wolff (Vorsitzender), Hendrik Wüst (stv. Vorsitzender), Dirk Glock."
+msgstr "Die Akademie Berufliche Bildung der deutschen Zeitungsverlage (ABZV) ist ein eingetragener, gemeinnütziger Verein. Wir sind eine Institution zur berufsbegleitenden, überbetrieblichen Aus- und Weiterbildung von Print-Journalistinnen und Print-Journalisten,vertreten durch den Vorstand \vDietmar Wolff (Vorsitzender), Hendrik Wüst (stv. Vorsitzender), Dirk Glock."
 
-#: views/contents.php:21
+#: views/contents.php:62
 msgid "Address: In der Wehrhecke 1, 53125, Bonn Germany"
 msgstr " In der Wehrhecke 1, 53125, Bonn."
 
-#: views/contents.php:23
+#: views/contents.php:64
 msgid "Tel : 0228 - 20 77 66 22 Fax: 0228 - 20 77 66 23 E-Mail: info@abzv.de"
 msgstr ""
 
-#: views/contents.php:25
+#: views/contents.php:66
 msgid "Registered in the Vereinsregister in Bonn under:  20 VR 7689"
 msgstr "Eingetragen in das Vereinsregister beim Amtsgericht Bonn unter der Nummer:  20 VR 7689"
 
-#: views/contents.php:27
+#: views/contents.php:68
 msgid "In charge of content: Beate Füth (same address)."
 msgstr "Verantwortlich für den Inhalt: Beate Füth (Anschrift wie oben) "
 
-#: views/contents.php:28
+#: views/contents.php:69
 msgid "Host"
 msgstr "Host"
 
-#: views/contents.php:29
+#: views/contents.php:70
 msgid "CloudControl • Helmholtz-Str. 2-9, D-10587 Berlin"
 msgstr ""
 
-#: views/contents.php:30
+#: views/contents.php:71
 msgid "Credits"
 msgstr ""
 
-#: views/contents.php:31
+#: views/contents.php:72
 msgid "Idea/Concept"
 msgstr "Idee und Konzept"
 
-#: views/contents.php:31
+#: views/contents.php:72
 msgid "Development"
 msgstr "Programmierung"
 
-#: views/contents.php:67
-#: views/footer.php:13
+#: views/contents.php:108
+#: views/footer.php:11
 msgid "Quickstart"
 msgstr "Schnellstart "
 
-#: views/contents.php:69
+#: views/contents.php:110
 msgid "Using DataWrapper is simple"
 msgstr "DataWrapper ist einfach"
 
-#: views/contents.php:76
-msgid "Do not show again on start-up."
-msgstr "Nicht mehr anzeigen."
-
-#: views/contents.php:77
-msgid "This quick tutorial will not be shown again."
-msgstr "Der Schnellstart wird nicht mehr angezeigt werden."
-
-#: views/contents.php:84
+#: views/contents.php:113
 msgid "Search for a dataset - can be an Excel chart, a Google Table or even a table in any webpage. Make sure that the data has no copyright restrictions for further use. "
 msgstr "Suchen Sie nach einer Datentabelle - in Excel, einer Google Tabelle oder sogar einer Tabelle auf einer Webseite. Stellen Sie sicher, dass die Daten keinen Nutzungsrbeschränkungen unterliegen.  "
 
-#: views/contents.php:85
+#: views/contents.php:114
 msgid "Copy the table "
 msgstr "Kopieren Sie die Tabelle (Rechtklick mit der Maus oder der jeweils gültige Befehl) "
 
-#: views/contents.php:87
+#: views/contents.php:116
 msgid "Go to DataWrapper and drop the content into the first screen"
 msgstr "Gehen Sie zum DataWrapper und fügen Sie die Tabelle einfach in das erste Feld ein. Dadurch wird die Tabelle zugleich bereinigt (Separatoren, Punkte, Kommata).  "
 
-#: views/contents.php:89
+#: views/contents.php:118
 msgid "This will normalize the data."
 msgstr "Dadurch wird die Tabelle zugleich bereinigt (Separatoren, Punkte, Kommata).   "
 
-#: views/contents.php:92
+#: views/contents.php:121
 msgid " Click next and check your data."
 msgstr "Klicken Sie auf \"Next\""
 
-#: views/contents.php:94
+#: views/contents.php:123
 msgid "If it looks very funny, you might have to go back and copy it again.  "
 msgstr "Hier sehen Sie, wie die Visualisierung aussieht, sie können zwischen verschiedenen Darstellungen wechseln. Wenn das Ergebnis seltsam oder unverständlich aussieht, überprüfen Sie noch einmal die Ausgangsdaten - nicht jede Visualisierung lässt sich mit jedem Datensatz sinnvoll anlegen.  "
 
-#: views/contents.php:97
+#: views/contents.php:126
 msgid "Click next and you see the options for visualization"
 msgstr "Wählen Sie die jeweils beste Visualisierungsform"
 
-#: views/contents.php:99
+#: views/contents.php:128
 msgid "For this beta release we have limited the options to five. More to come and if you are a coder/designer contact us if you can help here."
 msgstr "Zum Start von DataWrapper haben wir auf fünf Formen beschränkt. Wir wollen das Angebot ausbauen, wenn Sie Design oder Programmierkenntnisse haben und dabei helfen wollen - bitte melden.  "
 
-#: views/contents.php:101
+#: views/contents.php:130
 msgid "Still on this screen you have options to add a description, a link to the source, etc."
 msgstr "Sie können jetzt oben eine Überschrift, eine Beschreibung sowie Links und Quellenhinweise hinzufügen.  "
 
-#: views/contents.php:102
+#: views/contents.php:131
 msgid "Click next, check the visualization, copy the embed code and off you go.  "
 msgstr "Klicken Sie ein letztes Mal - fertig. Jetzt den Einbettungs-Code kopieren, das war's es schon.  "
 
-#: views/contents.php:108
-msgid "About"
-msgstr "Über"
-
-#: views/contents.php:109
-msgid "What is DataWrapper?"
-msgstr "Was ist DataWrapper?"
-
-#: views/contents.php:111
-msgid "In short: This is a little tool for journalists. It reduces the time to create and embed a simple chart from hours to seconds."
-msgstr "Kurzfassung: Dieses Werkzeug ist für Journalisten bestimmt. Es reduziert die Zeit, um einfache Datenvisualisierungen zu erstellen und in einer beliebigen Webseite einzubetten von Stunden auf Sekunden.  "
-
-#: views/contents.php:113
-msgid "Motivation"
-msgstr ""
-
-#: views/contents.php:114
-msgid "There are many uses of data in journalism. The first step though is to use data more and often as a basis for reporting. Doing this has become easier, because of the large amounts of data becoming available, thanks to the OpenData movement and other initiatives."
-msgstr "Es gibt viele Spielarten des Datenjournalismus. Der erste Schritt besteht darin, Daten und Zahlen als Basis eines Beitrags zu nutzen  - nicht nur als schmückendes Beiwerk. Daten zu finden ist einfacher geworden, weil immer größere Bestände im Netz veröffentlich werden, dank der Open Data Bewegung und anderen Initiativen.  "
-
-#: views/contents.php:116
-msgid "But there are bottlenecks."
-msgstr "Aber es gibt auch Barrieren. "
-
-#: views/contents.php:118
-msgid "One is that creating even a simple visual chart and embedding it into a story is still too complex and time consuming. Yes, there are extensive other offerings, like IBM ManyEyes or the growing Google Chart API. They are great. But they have downsides, if used by journalists. For example you often have to store your trials data in public, can't get it out again. Plus, control over the look and feel of your charts is limited or complex to change if you are not a coder."
-msgstr "Eine besteht darin, dass die Erstellung einer einfachen Visualisierung, die sich in eine Online-Seite einbetten lässt, immer noch recht komplex und zeitaufwändig ist. Richtig, es gibt mittlerweile viele Plattformen, die diesen Prozess vereinfachen, wie zum Beispiel IBM Many Eyes oder auch die wachsende Google Chart API. Das sind Fortschritte. Doch die bisher verfügbaren Anwendungen in diesem Bereich haben auch Nachteile, vor allem bei der Nutzung durch Journalisten. Zum Beispiel muss man oft die eigenen Daten auf der fremden Plattform speichern und selbst erste Versuche werden schon veröffentlicht. Oft ist es auch schwer, die Daten später wieder zu löschen oder zu extrahieren. Ein weiterer Nachteil ist, dass die Kontrolle über das Design, Logos und andere Gestaltungselemente beschränkt sind - oder Änderungen schlicht zu kompliziert sind, wenn man kein Programmierer ist.  "
-
-#: views/contents.php:120
-msgid "Create simple, embeddable charts in seconds, not hours"
-msgstr "Einfache Visualisierungen mit Einbett-Code in Sekunden, nicht Stunden "
-
-#: views/contents.php:121
-msgid "This is what DataWrapper does: This little tool reduces the time needed to create a correct chart and embed it into any CMS from hours to seconds."
-msgstr "DataWrapper ist eine Alternative: Dieses Werkzeug reduziert die Zeit, die man für die Erstellung und Publikation einer Visualisierung in jedem beliebigen Content Management System benötig von Stunden auf Sekunden.  "
-
-#: views/contents.php:123
-msgid "Furthermore, DataWrapper is not a honey-trap. The data you work with or store is yours and yours alone. Trials are not openly published."
-msgstr "Außerdem ist DataWrapper keine \"Honigfalle\". Die Daten, die hier eingegeben werden gehören allein dem Nutzer und ihm allein. Erste Versuche und Experimente werden nicht veröffentlicht.  "
-
-#: views/contents.php:125
-msgid "On top of that, we encourage news organizations to fork DataWrapper via Github and install it on one of your own servers."
-msgstr "Ein weiteres Plus: DataWrapper ist eine Open Source Anwendung. Jedes Medienunternehmen oder Blog kann die Anwendung über Github herunter laden und auf einem eigenen Server installieren.  "
-
-#: views/contents.php:126
-msgid "The CSS is accessible, meaning that in one day you can make sure that the charts generated with DataWrapper have your logo, your visual styles and colours."
-msgstr "Der CSS-Code kann verändert werden, so dass die visuelle Darstellung dem jeweiligen Erscheinungsbild einer Zeitung (Farbe, Schrift, Logo) exakt entspricht. Das muss man dann nur einmal machen, nicht jedesmal.  "
-
-#: views/contents.php:128
-msgid "A short tutorial on how to use DataWrapper is here."
-msgstr "Eine kurze Anleitung, wie man DataWrapper nutzen kann, findet sich hier.  "
-
-#: views/contents.php:130
-msgid "Background"
-msgstr "Hintergrund "
-
-#: views/contents.php:132
-msgid "DataWrapper was developed for ABZV, a journalism training organization affiliated to BDVZ (German Association of Newspaper Publishers). It is part of our efforts to develop a comprehensive curriculum for data-driven journalism."
-msgstr "DataWrapper ist ein Projekt der ABZV (Bildungswerk der Zeitungen) und ein Angebot zur Aus- und Weiterbildung von Journalisten. Dieses Werkzeug ist Teil eines größeren Projekts, dass den Aufbau einer strukturierten Weiterbildung im Bereich Datenjournalismus zum Ziel hat. "
-
-#: views/contents.php:134
-msgid "Features"
-msgstr "DataWrapper Funktionen "
-
-#: views/contents.php:136
-msgid "Use of this tool is free."
-msgstr "Die Nutzung dieses Werkzeugs ist kostenfrei. "
-
-#: views/contents.php:138
-msgid "DataWrapper 0.1 is a non-commercial, open source software, licensed under the MIT License."
-msgstr "DataWrapper Version 0.1 ist eine nicht-kommerzielle Open Source Software, lizensiert unter der MIT Licence.  "
-
 #: views/contents.php:140
-msgid "DataWrapper uses HTML5 Javascript libraries, namely Highcharts and D3.js, with more to come."
-msgstr "DataWrapper nutzt HTML5 Libraries, speziell Highcharts und D3.js, ein schrittweiser Ausbau ist geplant. Programmierer, die uns dabei unterstützen wollen, sind herzlich willkommen.  "
+msgid "Do not show again on start-up."
+msgstr "Nicht mehr anzeigen."
 
-#: views/contents.php:142
-msgid "DataWrapper can be forked on GitHub and installed on your own server."
-msgstr "DataWrapper kann über GitHub heruntergeladen werden und auf einem eigenen Server installiert werden.  "
+#: views/contents.php:141
+msgid "This quick tutorial will not be shown again."
+msgstr "Der Schnellstart wird nicht mehr angezeigt werden."
 
 #: views/embed.php:7
 msgid "A chart created by Data Story"
@@ -462,7 +462,7 @@ msgstr "ABZV"
 msgid "Terms of Use"
 msgstr "Nutzungsbedingungen"
 
-#: views/footer.php:17
+#: views/footer.php:14
 msgid "Fork me on GitHub!"
 msgstr ""
 
@@ -524,11 +524,11 @@ msgstr "Bitten geben Sie eine gültige E-Mail-Addresse ein."
 
 #: views/login.php:142
 #: views/login.php:191
-#: views/login.php:250
-#: views/login.php:266
-#: views/login.php:267
-#: views/login.php:300
-#: views/login.php:301
+#: views/login.php:253
+#: views/login.php:269
+#: views/login.php:270
+#: views/login.php:303
+#: views/login.php:304
 msgid "Password"
 msgstr "Kennwort"
 
@@ -556,53 +556,61 @@ msgid "Errors are displayed here"
 msgstr "Fehler werden hier angezeigt."
 
 #: views/login.php:241
-#: views/login.php:275
+#: views/login.php:278
 msgid "Sign up"
-msgstr "Anmeden"
+msgstr "Registrieren"
 
 #: views/login.php:242
 msgid "DataWrapper helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all."
 msgstr "Der DataWrapper unterstützt Journalisten bei der Erstellung von Visualisierungen mit wenigen Klicks. Die Anwendung nutzt neue, leistungsfähige JavaScript Libraries, durch dieses Werkzeug braucht man dazu aber keinerlei Programmierkenntnisse. "
 
-#: views/login.php:243
-msgid "The project is lead and maintained by ABZV."
-msgstr "Das Projekt wurde von ABZV geleitet und gewartet."
+#: views/login.php:244
+msgid "Just give it a try "
+msgstr "Einfach ausprobieren "
 
-#: views/login.php:249
-#: views/login.php:261
-#: views/login.php:283
+#: views/login.php:244
+msgid "or read our quick tutorial."
+msgstr "oder unsere kurze Anleitung lesen."
+
+#: views/login.php:246
+msgid "The project is lead and maintained by ABZV."
+msgstr "Ein Projekt der ABZV."
+
+#: views/login.php:252
+#: views/login.php:264
+#: views/login.php:286
 msgid "E-mail"
 msgstr "E-Mail"
 
-#: views/login.php:251
+#: views/login.php:254
 msgid "Password forgotten?"
 msgstr "Passwort vergessen?"
 
-#: views/login.php:252
+#: views/login.php:255
 msgid "Login"
 msgstr "Einloggen"
 
-#: views/login.php:265
+#: views/login.php:268
 msgid "Enter password twice"
 msgstr "Bitte geben Sie Ihr Kennwort zweimal ein."
 
-#: views/login.php:271
+#: views/login.php:274
 msgid "I agree to the Terms of Use"
 msgstr "Ich akzeptiere die Nutzungsbedingungen an."
 
-#: views/login.php:281
+#: views/login.php:284
 msgid "Enter your e-mail address to reset your password."
 msgstr "Geben Sie Ihre E-Mail-Adresse, Ihr Passwort zurückzusetzen."
 
-#: views/login.php:287
+#: views/login.php:290
 msgid "Reset password"
 msgstr "Passwort zurücksetzen"
 
-#: views/login.php:299
+#: views/login.php:302
 msgid "Enter your new password twice"
 msgstr "Bitte geben Sie Ihr neues Kennwort zweimal ein."
 
-#: views/login.php:305
+#: views/login.php:308
 msgid "Change password"
 msgstr "Kennwort ändern"
 
