@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: DS\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-20 17:31+0100\n"
-"PO-Revision-Date: 2012-01-20 17:33+0100\n"
+"PO-Revision-Date: 2012-01-20 17:39+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -562,7 +562,7 @@ msgstr "Registrieren"
 
 #: views/login.php:242
 msgid "DataWrapper helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all."
-msgstr "Der DataWrapper unterstützt Journalisten bei der Erstellung von Visualisierungen mit wenigen Klicks. Die Anwendung nutzt neue, leistungsfähige JavaScript Libraries, durch dieses Werkzeug braucht man dazu aber keinerlei Programmierkenntnisse. "
+msgstr "DataWrapper unterstützt Journalisten bei der Erstellung einer Visualisierung. Mit wenigen Klicks können Daten in einen Chart verwandelt werden und danach überall eingebettet werden."
 
 #: views/login.php:244
 msgid "Just give it a try "
