@@ -14,7 +14,7 @@
 		<span class=".separator"> • </span>
 	<?php endif; ?>
 	
-	<a href="https://github.com/n-kb/Data-Story" target="_blank"><?php echo _("Fork me on GitHub!") ?></a>
+	<a href="https://github.com/n-kb/datawrapper" target="_blank"><?php echo _("Fork me on GitHub!") ?></a>
 	<?php
 
 	//Loads the divs that will appear in the fancybox
