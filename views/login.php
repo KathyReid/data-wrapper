@@ -48,7 +48,7 @@
 
             //Loads the fancybox
             $("a.fancybox").fancybox({
-                'hideOnContentClick': true
+                'hideOnContentClick': false
             });
 
             //init the error box
