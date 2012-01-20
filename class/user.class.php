@@ -45,6 +45,30 @@ class User {
 		}
 	}
 
+	function show_quickstart(){
+
+		if (isset($_SESSION["user_id"])){
+
+			$user_id = $_SESSION["user_id"];
+
+			$q = "SELECT quickstart_show FROM users WHERE user_id = '$user_id' LIMIT 1";
+
+			if ($result =  $this->db->query($q)) {
+				
+				while ($row = $result->fetch_object()) {
+
+					$quickstart_show = $row->quickstart_show;
+				}
+
+				return $quickstart_show;
+				
+			}else{
+				//Error with DB
+				 return json_encode( Array("status" => 600, "message" => _("Error while trying to retrieve show_quickstart from DB.") ) );
+			}
+		}
+	}
+
 	function list_vis(){
 
 		if (isset($_SESSION["user_email"])){

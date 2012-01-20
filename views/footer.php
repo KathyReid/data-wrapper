@@ -8,6 +8,8 @@
 	<span class=".separator"> • </span>
 	<a href="#impressum" class="fancybox"><?php echo _("Legal imprint") ?></a>
 	<span class=".separator"> • </span>
+	<a href="#quickstart" class="fancybox"><?php echo _("Quickstart") ?></a>
+	<span class=".separator"> • </span>
 	<a href="https://github.com/n-kb/Data-Story" target="_blank"><?php echo _("Fork me on GitHub!") ?></a>
 	<?php
 

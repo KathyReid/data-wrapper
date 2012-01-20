@@ -22,6 +22,78 @@
 		<p><?php echo _("Idea/Concept") ?>: Mirko Lorenz, <?php echo _("Development") ?>: Nicolas Kayser-Bril, 2011</p>
 	</div>
 
+	<div id="quickstart" class="popup">
+		<script type="text/javascript">
+			function quickstart_noshow(){
+				var checked = $("input[@id='quickstart_noshow_box']:checked").length;
+				if (checked){
+					$.post("actions/quickstart_noshow.php", { checked: checked },
+   						function(data) {
+   							if (data != ""){
+
+				     			data = jQuery.parseJSON(data);
+
+				     			if (data.status == 200){
+				     				
+				     				//changes the text on the page
+				     				$("#quickstart_noshow_text1").hide();
+				     				$("#quickstart_noshow_text2").show();
+
+				     			}else{
+				     				error(data.error);
+				     			}
+
+				     		}else{
+				     			error();
+				     		}
+	   					}
+	   				);
+            
+				}else{
+					return null;
+				}
+			}
+		</script>
+
+		<h1><?php echo _("Quickstart") ?></h1>
+
+		<h2><?php echo _("Using DataWrapper is simple") ?></h2>
+		
+		<?php
+			//shows only if user hasn't deactivated quickstart 
+			if ($user->show_quickstart()):
+		?>
+		<div id="quickstart_noshow">
+			<span id="quickstart_noshow_text1"><input type="checkbox" id="quickstart_noshow_box" onclick="quickstart_noshow()"><?php echo _("Do not show again on start-up.") ?></span>
+			<span id="quickstart_noshow_text2" style="display:none;"><?php echo _("This quick tutorial will not be shown again.") ?></span>
+		</div>
+		<?php
+			//ends if user hasn't deactivated quickstart
+			endif;
+		?>
+		<ol>
+			<li><?php echo _("Search for a dataset - can be an Excel chart, a Google Table or even a table in any webpage. Make sure that the data has no copyright restrictions for further use. ") ?></li>
+			<li><?php echo _("Copy the table ") ?></li>
+			<li>
+				<?php echo _("Go to DataWrapper and drop the content into the first screen") ?>
+				<br>
+				<?php echo _("This will normalize the data.") ?>
+			</li>
+			<li>
+				<?php echo _(" Click next and check your data.") ?>
+				<br>
+				<?php echo _("If it looks very funny, you might have to go back and copy it again.  ") ?>
+			</li>
+			<li>
+				<?php echo _("Click next and you see the options for visualization") ?>
+				<br>
+				<?php echo _("For this beta release we have limited the options to five. More to come and if you are a coder/designer contact us if you can help here.") ?>
+			</li>
+			<li><?php echo _("Still on this screen you have options to add a description, a link to the source, etc.") ?></li>
+			<li><?php echo _("Click next, check the visualization, copy the embed code and off you go.  ") ?></li>
+		</ol>
+	</div>
+
 	<div id="about_datawrapper" class="popup">
 		
 		<h1><?php echo _("About") ?></h1>

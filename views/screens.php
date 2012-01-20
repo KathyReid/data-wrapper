@@ -57,7 +57,7 @@
 
 	     $(document).ready(function() {
             //Shows loader
-            loader_show();
+            //loader_show();
 
             //hides all screens on startup
             $('.screen').hide();
@@ -123,11 +123,6 @@
             //Init the buttons in the header
             initHeader();
 
-            //Loads the fancybox
-            $("a.fancybox").fancybox({
-                'hideOnContentClick': true
-            });
-
 	        //Tells the next prev buttons what to do
 	        $('#next').click(function(){
                 dispatchNext(currentSlide);
@@ -147,6 +142,34 @@
             $('#error').click(function() {
                 $(this).hide();
             });
+
+            <?php
+                //shows only if user hasn't deactivated quickstart 
+                if ($user->show_quickstart()):
+            ?>
+                $('body').append("<a id='hidden_link' style='display:none'></a>");
+
+                //Loads the quickstart div
+                $("#hidden_link").fancybox({href:"#quickstart", 'hideOnContentClick': false})
+                                .trigger('click');
+                
+                $("a.fancybox").fancybox({
+                    'hideOnContentClick': false
+                });
+            
+            <?php
+            //if user has deactivated quickstart, just loads the fancybox
+            else:
+            ?>
+                //Loads the fancybox
+                $("a.fancybox").fancybox({
+                    'hideOnContentClick': false
+                });
+
+            <?php
+            //ends if user hasn't deactivated quickstart
+            endif;
+            ?>
 
 	     });
 
