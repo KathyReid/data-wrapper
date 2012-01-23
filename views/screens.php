@@ -216,11 +216,11 @@
             			<?php echo _("Next") ?>&nbsp;&rsaquo;
             		</button>
 
-                    <button id="new_chart" class="button nav">
+                    <button id="new_chart" class="button nav" style="display:none">
                         <?php echo _("New") ?>&nbsp;&rsaquo;
                     </button>
             	</div>
-            	<div id="button_prev">
+            	<div id="button_prev" style="display:none">
             		<button id="prev" class="button nav">
             			&lsaquo;&nbsp;<?php echo _("Prev") ?>
             		</button>

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-20 17:31+0100\n"
-"PO-Revision-Date: 2012-01-20 17:39+0100\n"
+"POT-Creation-Date: 2012-01-23 22:02+0100\n"
+"PO-Revision-Date: 2012-01-23 22:08+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -376,53 +376,49 @@ msgstr "Schnellstart "
 
 #: views/contents.php:110
 msgid "Using DataWrapper is simple"
-msgstr "DataWrapper ist einfach"
+msgstr "DataWrapper: Mit wenigen Klicks zur Visualisierung"
 
 #: views/contents.php:113
 msgid "Search for a dataset - can be an Excel chart, a Google Table or even a table in any webpage. Make sure that the data has no copyright restrictions for further use. "
-msgstr "Suchen Sie nach einer Datentabelle - in Excel, einer Google Tabelle oder sogar einer Tabelle auf einer Webseite. Stellen Sie sicher, dass die Daten keinen Nutzungsrbeschränkungen unterliegen.  "
+msgstr "Suchen Sie nach einer Datentabelle - in Excel, einer Google Tabelle oder sogar einer Tabelle auf einer Webseite. Stellen Sie sicher, dass die Daten keinen Nutzungsbeschränkungen unterliegen."
 
-#: views/contents.php:114
+#: views/contents.php:115
 msgid "Copy the table "
-msgstr "Kopieren Sie die Tabelle (Rechtklick mit der Maus oder der jeweils gültige Befehl) "
-
-#: views/contents.php:116
-msgid "Go to DataWrapper and drop the content into the first screen"
-msgstr "Gehen Sie zum DataWrapper und fügen Sie die Tabelle einfach in das erste Feld ein. Dadurch wird die Tabelle zugleich bereinigt (Separatoren, Punkte, Kommata).  "
+msgstr "Kopieren Sie die Tabelle (Rechtsklick mit der Maus oder der jeweils gültige Befehl). Tipp: Wenn es Spaltennamen gibt, kopieren Sie diese mit."
 
 #: views/contents.php:118
-msgid "This will normalize the data."
-msgstr "Dadurch wird die Tabelle zugleich bereinigt (Separatoren, Punkte, Kommata).   "
+msgid "Go to DataWrapper and drop the content into the first screen"
+msgstr "Gehen Sie zum DataWrapper und fügen Sie die Tabelle einfach in das erste Feld ein. Dadurch wird die Tabelle zugleich bereinigt (Separatoren, Punkte, Kommata)."
 
 #: views/contents.php:121
-msgid " Click next and check your data."
-msgstr "Klicken Sie auf \"Next\""
+msgid "Click next and check your data."
+msgstr "Wurden die Daten richtig erkannt? Hier sehen Sie, ob die Daten korrekt erkannt wurden. Wenn das Ergebnis unverständlich aussieht, überprüfen oder bearbeiten Sie noch die Ausgangsdaten in einem Tabellenprogramm - nicht jede Visualisierung lässt sich mit jedem Datensatz sinnvoll anlegen."
 
-#: views/contents.php:123
-msgid "If it looks very funny, you might have to go back and copy it again.  "
-msgstr "Hier sehen Sie, wie die Visualisierung aussieht, sie können zwischen verschiedenen Darstellungen wechseln. Wenn das Ergebnis seltsam oder unverständlich aussieht, überprüfen Sie noch einmal die Ausgangsdaten - nicht jede Visualisierung lässt sich mit jedem Datensatz sinnvoll anlegen.  "
-
-#: views/contents.php:126
+#: views/contents.php:124
 msgid "Click next and you see the options for visualization"
-msgstr "Wählen Sie die jeweils beste Visualisierungsform"
+msgstr "Welche Visualisierung eignet sich hier?Zum Beta-Start von DataWrapper haben wir uns auf fünf Varianten beschränkt. Wir wollen das Angebot ausbauen, wenn Sie Design oder Programmierkenntnisse haben und dabei helfen wollen - bitte melden."
 
-#: views/contents.php:128
-msgid "For this beta release we have limited the options to five. More to come and if you are a coder/designer contact us if you can help here."
-msgstr "Zum Start von DataWrapper haben wir auf fünf Formen beschränkt. Wir wollen das Angebot ausbauen, wenn Sie Design oder Programmierkenntnisse haben und dabei helfen wollen - bitte melden.  "
+#: views/contents.php:127
+msgid "Still on this screen you have options to add a description, a link to the source, etc."
+msgstr "Sie können jetzt oben eine Überschrift, eine Beschreibung sowie Links und Quellenhinweise hinzufügen."
 
 #: views/contents.php:130
-msgid "Still on this screen you have options to add a description, a link to the source, etc."
-msgstr "Sie können jetzt oben eine Überschrift, eine Beschreibung sowie Links und Quellenhinweise hinzufügen.  "
-
-#: views/contents.php:131
 msgid "Click next, check the visualization, copy the embed code and off you go.  "
-msgstr "Klicken Sie ein letztes Mal - fertig. Jetzt den Einbettungs-Code kopieren, das war's es schon.  "
+msgstr "Klicken Sie ein letztes Mal - fertig. Jetzt den Einbettungs-Code kopieren und in ein Publikationssystem einbetten. Fertig. "
 
-#: views/contents.php:140
+#: views/contents.php:134
+msgid "DataWrapper has some other interesting functions, which you can experience in out tutorial."
+msgstr "DataWrapper hat einige interessante Zusatzfunktionen (z.B. Generierung eines Bildgrafik, Option zum Download der Daten). Mehr erfahren Sie unserem Tutorial."
+
+#: views/contents.php:136
+msgid "On to the tutorial "
+msgstr "Weiter zum Tutorial"
+
+#: views/contents.php:144
 msgid "Do not show again on start-up."
 msgstr "Nicht mehr anzeigen."
 
-#: views/contents.php:141
+#: views/contents.php:145
 msgid "This quick tutorial will not be shown again."
 msgstr "Der Schnellstart wird nicht mehr angezeigt werden."
 
@@ -444,7 +440,7 @@ msgstr "Chart erstellt mit"
 
 #: views/embed.php:139
 msgid "a project by"
-msgstr "ein Projekt von"
+msgstr "ein Projekt der"
 
 #: views/embed.php:145
 msgid "Page cannot be displayed."
@@ -480,7 +476,7 @@ msgstr "Sprache könnte nicht verändert."
 
 #: views/header.php:77
 msgid "A project by"
-msgstr "Ein Projekt von"
+msgstr "Ein Projekt der"
 
 #: views/header.php:99
 msgid "my data"
@@ -737,17 +733,17 @@ msgstr "Titel der Hochachse (erforderlich)"
 #: views/visualize_legacy.php:270
 #: visualizations/config.json.php:42
 msgid "Bar chart"
-msgstr "Balkenplan"
+msgstr "Balken"
 
 #: views/visualize_legacy.php:271
 #: visualizations/config.json.php:48
 msgid "Line chart"
-msgstr "Liniendiagramm"
+msgstr "Linien"
 
 #: views/visualize_legacy.php:272
 #: visualizations/config.json.php:54
 msgid "Pie chart"
-msgstr "Kreisdiagramm"
+msgstr "Torte"
 
 #: views/vis_list.php:105
 msgid "Your visualizations"
@@ -755,15 +751,37 @@ msgstr "Ihre Visualisierung"
 
 #: visualizations/config.json.php:58
 msgid "Understanding Pie Charts"
-msgstr "Kreisdiagramm verstehen (Englisch)"
+msgstr "Torte verstehen (Englisch)"
 
 #: visualizations/config.json.php:63
 msgid "Responsive table"
-msgstr "Reaktionsfähiges Tabelle"
+msgstr "Tabelle, variabel"
 
 #: visualizations/config.json.php:69
 msgid "Streamgraph"
-msgstr "Stromgraph"
+msgstr "Streamgraph"
+
+#~ msgid "This will normalize the data."
+#~ msgstr ""
+#~ "Dadurch wird die Tabelle zugleich bereinigt (Separatoren, Punkte, "
+#~ "Kommata).   "
+
+#~ msgid ""
+#~ "If it looks very funny, you might have to go back and copy it again.  "
+#~ msgstr ""
+#~ "Hier sehen Sie, wie die Visualisierung aussieht, sie können zwischen "
+#~ "verschiedenen Darstellungen wechseln. Wenn das Ergebnis seltsam oder "
+#~ "unverständlich aussieht, überprüfen Sie noch einmal die Ausgangsdaten - "
+#~ "nicht jede Visualisierung lässt sich mit jedem Datensatz sinnvoll "
+#~ "anlegen.  "
+
+#~ msgid ""
+#~ "For this beta release we have limited the options to five. More to come "
+#~ "and if you are a coder/designer contact us if you can help here."
+#~ msgstr ""
+#~ "Zum Start von DataWrapper haben wir auf fünf Formen beschränkt. Wir "
+#~ "wollen das Angebot ausbauen, wenn Sie Design oder Programmierkenntnisse "
+#~ "haben und dabei helfen wollen - bitte melden.  "
 
 #~ msgid "About ABZV"
 #~ msgstr "Über ABZV"

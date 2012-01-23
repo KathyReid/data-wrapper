@@ -383,8 +383,8 @@ $textarea-padding: 10px;
     }
 }
 
-//Tutorial
-#tutorial_fill{
+//Sample data
+#sample_data_fill{
     cursor:pointer;
     &:hover { color:$color-off; }
 }
@@ -677,4 +677,49 @@ $embed_extras-h: 50px;
         color: #000;
         &:hover { text-decoration:underline; }
     }
+}
+
+
+/**** Tutorial ****/
+
+.button_tutorial{
+        margin-left: $col-w * 3;
+        cursor:pointer;
+        
+        background: $button-color-top;
+        @include background-image(linear-gradient($button-color-top, $button-color-bottom)); 
+        @include border-radius(2px);
+        
+        border-color: #E3E3E3 #DBDBDB #DBDBDB #E3E3E3;
+        border-right: 1px solid #DBDBDB;
+        border-style: solid;
+        border-width: 1px;
+        color: #444444;
+
+        @include text-shadow(rgba(white, 0.2) 1px 1px 0, rgba(white, 0.2) 1px 1px 0, rgba(white, 0.2) 1px 1px 0);
+    }
+
+#tutorial{
+
+    min-height:$row-h*15;
+
+    h1{
+        font-size:$font-size + .5;
+    }
+
+    a{
+        text-decoration:none;
+        color: $color-off_text;
+        &:hover { text-decoration:underline; }
+    
+    }
+
+    img{
+        @include box-shadow($shadow-color 0px 0px 10px);
+        margin-left:$col-w/2;
+    }
+}
+
+.tutorial_class{
+    display:none;
 }

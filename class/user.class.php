@@ -77,7 +77,7 @@ class User {
 
 			$list_vis = array();
 
-			$q = "SELECT chart_id, chart_title, chart_type, date_modified, chart_js_code, chart_csv_data FROM charts WHERE user_id = '$user_id' AND chart_title != ''";
+			$q = "SELECT chart_id, chart_title, chart_type, date_modified, chart_js_code, chart_csv_data FROM charts WHERE user_id = '$user_id' AND chart_title != '' ORDER BY date_modified DESC";
 
 			if ($result =  $this->db->query($q)) {
 				

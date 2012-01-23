@@ -72,6 +72,91 @@
 		<p><?php echo _("Idea/Concept") ?>: Mirko Lorenz, <?php echo _("Development") ?>: Nicolas Kayser-Bril, 2011</p>
 	</div>
 
+
+	<div id="tutorial" class="popup">
+		
+		<script type="text/javascript">
+			
+			function tutorial_next(tutorial_id){
+
+				$("#"+(tutorial_id)).hide();
+
+				$("#"+(tutorial_id+1)).show();
+			
+			}
+
+		</script>
+
+		<h1><?php echo _("Tutorial: How to get good charts out of DataWrapper") ?></h1>
+
+		<div id="1" class="tutorial_class" style="display:block">
+			<p><?php echo _("Yes, no one reads the manual, but this one is really short. Here we show you how to get the most out of DataWrapper - what data to look for and how to format it to get a correct, good looking chart. Our tool can help you, but if you feed it the wrong data it will fail.") ?></p>
+			
+			<h2><?php echo _("Why only five types of charts?") ?></h2>
+
+			<p><?php echo _("We had to start somewhere and we had to stop somewhere. In the future we would like to add more chart types, to this end we are looking for developers/designers. There is no pay, but you get a credit. Contact us at ") ?><a href="mailto:info@datastory.de">info@datastory.de</a></p>
+			<button class="button_tutorial" onClick="tutorial_next(1)"><?php echo _("On to part 1. Lines") ?> &raquo;</button>
+		</div>
+
+		<div id="2" class="tutorial_class">
+
+			<h2><?php echo _("Line chart") ?></h2>
+			
+			<p><?php echo _("This is easy. You can visualize one or multiple lines. In order to graph them properly here is the best way to prepare your table or spreadsheet.") ?></p>
+			
+			<p><?php echo _("Your data for a single line should like this:") ?></p>
+				<img src="images/tutorial/line.png" />
+
+			<p><a href="https://docs.google.com/spreadsheet/ccc?key=0Ainrk2-JqCiydGpUbkxFM1VObDM4cjZmQ3FjeTQ5OVE&hl=en_US#gid=0"><?php echo _("Sample data for a single line chart.") ?></a></p>
+			<button class="button_tutorial" onClick="tutorial_next(2)"><?php echo _("On to part 2. Bar charts") ?> &raquo;</button>
+		</div>
+		<div id="3" class="tutorial_class">
+
+			<h2><?php echo _("Bar chart") ?></h2>
+			
+			<p><?php echo _("If you have data describing a certain value say month by month or if you want to compare the revenue of company A with the revenue from company B, a bar chart is the way to go.") ?></p>
+
+			<p><?php echo _("Your data for a bar chart should like this:") ?></p>
+				<img src="images/tutorial/bar.png" />
+
+			<p><a href="https://docs.google.com/spreadsheet/ccc?key=0Ainrk2-JqCiydEliVjQ1QjhCQWJZVEpEU0EtejE4ZGc&hl=en_US#gid=0"><?php echo _("Sample dataset for a bar chart.") ?></a></p>
+			<button class="button_tutorial" onClick="tutorial_next(3)"><?php echo _("On to part 3. Pie chart") ?> &raquo;</button>
+		</div>
+		<div id="4" class="tutorial_class">
+
+			<h2><?php echo _("Pie chart") ?></h2>
+			
+			<p><?php echo _("Everybody knows it and this is why it's popular. But pie charts can be misused easily and then they distort the message. Some people in data visualization hate them (or the people doing stupid stuff with them). Use a pie chart if you have data that can be compared proportionally - say, to show how after an election 100 per cent of the vote are spread to the various political parties. Do not use a pie chart if there are to many labels. Often a bar chart is better than a pie chart to show the relation and trend.") ?><a href="http://en.wikipedia.org/wiki/Pie_chart"><?php echo _(" Read more about pie charts.") ?></a></p>
+
+			<p><?php echo _("By the way: In a correct pie chart the biggest pie should start at twelve o'clock. And just forget about the shadows and 3D effects of desktop programs. This will get you into a shitstorm.") ?></p>
+
+			<p><?php echo _("Your data for a pie chart should like this:") ?></p>
+				<img src="images/tutorial/pie.png" />
+
+			<p><a href="https://docs.google.com/spreadsheet/ccc?key=0Ainrk2-JqCiydEliVjQ1QjhCQWJZVEpEU0EtejE4ZGc&hl=en_US#gid=0"><?php echo _("Sample dataset for a bar chart.") ?></a></p>
+			<button class="button_tutorial" onClick="tutorial_next(4)"><?php echo _("On to part 4. Streamgraph") ?> &raquo;</button>
+		</div>
+		<div id="5" class="tutorial_class">
+
+			<h2><?php echo _("Streamgraph") ?></h2>
+			
+			<p><?php echo _("This is our fancy graph. You can use this form to show the pattern of a lot of data over long periods of time. Some people love these, some hate them (because what the chart really says is sometimes a mystery).") ?><a href="http://www.leebyron.com/else/streamgraph/"><?php echo _(" Here is a long paper for all of you who want to learn more.") ?></a></p>
+
+			<p><?php echo _("A streamgraph will effectively draw lines and fill the space between these. This is good to display how music preferences have changed over time or how certain topics have been cited more or less often.") ?></p>
+
+			<p><?php echo _("Your data for a streamgraph should like this:") ?></p>
+				<img src="images/tutorial/streamgraph.png" />
+
+			<p><a href="https://docs.google.com/spreadsheet/ccc?key=0Ainrk2-JqCiydEliVjQ1QjhCQWJZVEpEU0EtejE4ZGc&hl=en_US#gid=0"><?php echo _("Sample dataset for a streamgraph.") ?></a></p>
+			<p><?php echo _("If you have better examples, better datasets or just want to vent off, contact us via") ?> <a href="mailto:info@datastory.de">info@datastory.de</a></p>
+
+			<button class="button_tutorial" onClick="$.fancybox.close();"><?php echo _("Let's go!") ?></button>
+		</div>
+	</div>
+
+
+
+
 	<div id="quickstart" class="popup">
 		<script type="text/javascript">
 			function quickstart_noshow(){
@@ -110,26 +195,32 @@
 		<h2><?php echo _("Using DataWrapper is simple") ?></h2>
 		
 		<ol>
-			<li><?php echo _("Search for a dataset - can be an Excel chart, a Google Table or even a table in any webpage. Make sure that the data has no copyright restrictions for further use. ") ?></li>
-			<li><?php echo _("Copy the table ") ?></li>
-			<li>
+			<li><!-- 1 -->
+				<?php echo _("Search for a dataset - can be an Excel chart, a Google Table or even a table in any webpage. Make sure that the data has no copyright restrictions for further use. ") ?>
+			</li>
+			<li><!-- 2 -->
+				<?php echo _("Copy the table ") ?>
+			</li>
+			<li><!-- 3 -->
 				<?php echo _("Go to DataWrapper and drop the content into the first screen") ?>
-				<br>
-				<?php echo _("This will normalize the data.") ?>
 			</li>
-			<li>
-				<?php echo _(" Click next and check your data.") ?>
-				<br>
-				<?php echo _("If it looks very funny, you might have to go back and copy it again.  ") ?>
+			<li><!-- 4 -->
+				<?php echo _("Click next and check your data.") ?>
 			</li>
-			<li>
+			<li><!-- 5 -->
 				<?php echo _("Click next and you see the options for visualization") ?>
-				<br>
-				<?php echo _("For this beta release we have limited the options to five. More to come and if you are a coder/designer contact us if you can help here.") ?>
 			</li>
-			<li><?php echo _("Still on this screen you have options to add a description, a link to the source, etc.") ?></li>
-			<li><?php echo _("Click next, check the visualization, copy the embed code and off you go.  ") ?></li>
+			<li><!-- 6 -->
+				<?php echo _("Still on this screen you have options to add a description, a link to the source, etc.") ?>
+			</li>
+			<li><!-- 7 -->
+				<?php echo _("Click next, check the visualization, copy the embed code and off you go.  ") ?>
+			</li>
 		</ol>
+		<p>
+			<?php echo _("DataWrapper has some other interesting functions, which you can experience in out tutorial.") ?>
+		</p>
+		<button class="button_tutorial" onClick="$.fancybox({href:'#tutorial', 'hideOnContentClick': false});"><?php echo _("On to the tutorial ") ?>&raquo;</button>
 
 		<?php
 		if (isset($user)):
@@ -148,6 +239,5 @@
 		?>
 
 	</div>
-
 	
 </div>
