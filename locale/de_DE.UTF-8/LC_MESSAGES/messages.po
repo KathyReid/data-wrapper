@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: DS\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-23 22:02+0100\n"
-"PO-Revision-Date: 2012-01-23 22:08+0100\n"
+"PO-Revision-Date: 2012-01-24 21:26+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -507,7 +507,7 @@ msgstr "Probedaten: Arbeitslosenquote bei Erwerbstätigen über 25 in 6 Europäi
 #: views/screens.php:7
 #: views/vis_list.php:7
 msgid "DataWrapper, a project by DataStory"
-msgstr "DataWrapper ist ein Projekt von DataStory"
+msgstr "DataWrapper ist ein Projekt der ABZV"
 
 #: views/login.php:108
 msgid "An e-mail has been sent. Please check your mailbox and follow instructions to reset your password."
