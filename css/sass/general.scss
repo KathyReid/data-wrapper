@@ -153,34 +153,11 @@ $navbar-height: $row-h;
     z-index:2;
     width:$col-w*3;
     margin-left:$col-w/2;
-    margin-top:$navbar-height;
-    
-    #logo_text{
-        color: #282828;
-        float:left;
-        font-size:$font-size + .7;
-        font-weight:bold;
-        cursor: pointer;
-        &:hover { color: $color-off_text; }
-    }
-    #abzv{
-        float:left;
-        margin-top:-15px;
-        margin-left:$col-w/5;
-
-        #abzv_foreword{
-            font-size:$font-size - .5;
-            color: $color-on;
-            font-weight:normal;
-        }
-
-        #abzv_logo{
-            margin-top:-7px;
-            width:106px;
-            height:46px;
-            background-image:url('../../images/abzv_large.png');
-        }
-    }
+    margin-top:0;
+    background-image:url('../../images/logo_header.png');
+    width:404px;
+    height:75px;
+    cursor: pointer;
 }
 
 #navbar{

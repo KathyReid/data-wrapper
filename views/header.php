@@ -35,7 +35,7 @@ function initHeader(){
 
 	});
 
-	$("#logo_text").click(function(){
+	$("#logo").click(function(){
 		
 		//goes back home
 		location.replace("<?php echo BASE_DIR ?>");
@@ -69,16 +69,6 @@ function initHeader(){
 
 <div id="header">
 	<div id="logo">
-		<div id="logo_text">
-	        <span class="data">Data</span><span class="story">Wrapper</span>
-	    </div>
-	    
-	    <div id="abzv">
-		    <div id="abzv_foreword"><?php echo _("A project by") ?></div>
-		    <a href="http://www.abzv.de/" target="_blank">
-		    	<div id="abzv_logo"></div>
-		    </a>
-	    </div>
 	</div>
 
 	<div id="navbar">
