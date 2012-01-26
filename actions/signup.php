@@ -8,8 +8,13 @@
 /****/
 
 require_once "../config.php";
+require_once "../libraries/ses.php";
 
 if (isset($_POST['email']) && isset($_POST['pwd'])){
+
+
+	//declares AWS SES object
+	$ses = new SimpleEmailService($aws_access_key, $aws_secret);
 
 	//Gets data that was sent over POST
 	$email = $_POST['email'];
@@ -37,25 +42,28 @@ if (isset($_POST['email']) && isset($_POST['pwd'])){
 
 				$to      = $email;
 
+				$from_address = "debug@datawrapper.de";
+
 				$subject = '[DataWrapper] '. _("Please verify your e-mail address");
 				
 				$message = _("Dear DataWrapper user,");
 				$message .= "\r\n\r\n";
-				$message .=	_("Please click on the link below to verify your e-mail address:");
+				$message .=	_("Please click on the link below to verify your e-mail address: ");
 				$message .= "\r\n\r\n";
-				$message .=	"<a href='$confirm_link'>$confirm_link</a>";
+				$message .=	"$confirm_link";
 				$message .= "\r\n\r\n";
 				$message .= _("Thanks!");
 				$message .= "\r\n\r\n";
 				$message .= _("The DataWrapper team");
 
-				$headers = 'From: noreply@datastory.de' . "\r\n" .
-				    'Reply-To: noreply@datastory.de' . "\r\n" .
-				    'Content-type: text/html; charset=utf-8' . "\r\n" .
-				    'X-Mailer: PHP/' . phpversion();
+				$m = new SimpleEmailServiceMessage();
+				$m->addTo($to);
+				$m->setFrom($from_address);
+				$m->setSubject($subject);
+				$m->setMessageFromString($message);
 
 				//Sends email
-				if (mail($to, $subject, $message, $headers))
+				if ($ses->sendEmail($m))
 					$return_array["status"] = "200";
 
 				else{

@@ -15,6 +15,9 @@ require_once "libraries/transpose.php";
 //Indicates the name of the prod server
 $prod_domain = "cloudcontrolled.com";
 
+//Fetches passwords
+require_once('actions/passwords.php');
+
 if (strstr($_SERVER['SERVER_NAME'], $prod_domain)){		
 
 	// PROD ENVIRONMENT //
@@ -24,9 +27,6 @@ if (strstr($_SERVER['SERVER_NAME'], $prod_domain)){
 
 	//Global const
 	define("BASE_DIR", "http://datawrapper.cloudcontrolled.com");
-
-	//Fetches passwords
-	require_once('actions/passwords.php');
 	
 
 }else{

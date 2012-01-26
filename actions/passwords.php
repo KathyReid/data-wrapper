@@ -3,4 +3,7 @@
 	$database = "depjrkhynun";
 	$username = "depjrkhynun";
 	$password = "ubMCeQSHp6Eu4Ge";
+
+	$aws_access_key = "1JFWSJFZN75V3AY4MAR2";
+	$aws_secret = "a45aj1jGNJIwkrmI6nLy4mcvCIDNMlpnFSqPwg7W";
 ?>

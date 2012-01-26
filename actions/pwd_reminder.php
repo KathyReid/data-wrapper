@@ -8,8 +8,12 @@
 /****/
 
 require_once "../config.php";
+require_once "../libraries/ses.php";
 
 if (isset($_POST['email'])){
+
+	//declares AWS SES object
+	$ses = new SimpleEmailService($aws_access_key, $aws_secret);
 
 	//Gets data that was sent over POST
 	$email = $_POST['email'];
@@ -36,13 +40,15 @@ if (isset($_POST['email'])){
 
 				$to      = $email;
 
+				$from_address = "debug@datawrapper.de";
+
 				$subject = '[DataWrapper] '. _("Password change requested");
 				
 				$message = _("Dear DataWrapper user,");
 				$message .= "\r\n\r\n";
-				$message .=	_("Please click on the link below to change your password:");
+				$message .=	_("Please click on the link below to change your password: ");
 				$message .= "\r\n\r\n";
-				$message .=	"<a href='$confirm_link'>$confirm_link</a>";
+				$message .=	"$confirm_link";
 				$message .= "\r\n\r\n";
 				$message .= _("Do ignore this message if you did not request a password change from DataWrapper.");
 				$message .= "\r\n\r\n";
@@ -50,13 +56,15 @@ if (isset($_POST['email'])){
 				$message .= "\r\n\r\n";
 				$message .= _("The DataWrapper team");
 
-				$headers = 'From: noreply@datastory.de' . "\r\n" .
-				    'Reply-To: noreply@datastory.de' . "\r\n" .
-				    'Content-type: text/html; charset=utf-8' . "\r\n" .
-				    'X-Mailer: PHP/' . phpversion();
+				$m = new SimpleEmailServiceMessage();
+				$m->addTo($to);
+				$m->setFrom($from_address);
+				$m->setSubject($subject);
+				$m->setMessageFromString($message);
+
 
 				//Sends email
-				if (mail($to, $subject, $message, $headers))
+				if ($ses->sendEmail($m))
 					$return_array["status"] = "200";
 
 				else{
