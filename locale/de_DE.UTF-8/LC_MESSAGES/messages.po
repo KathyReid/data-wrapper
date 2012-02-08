@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: DS\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-02-08 19:40+0100\n"
-"PO-Revision-Date: 2012-02-08 19:42+0100\n"
+"PO-Revision-Date: 2012-02-08 19:55+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -314,7 +314,7 @@ msgstr ""
 
 #: views/contents.php:54
 msgid "Datawrapper uses modern Javascript, HTML5 Libraries like Highcharts oder D3.JS. We want to provide an access to these powerful options. This is a step towards the future as the web prepares for a switch to new visualization options in the near future. So far, especially on news websites, some fancy features where not used in order to not loose any users who still have incompatible (read: very old) browsers. But developers are about to change their mind. The message to users is: Get a decent browser. Downloading and installing a modern, HTML5 capable browser takes a few minutes and opens the door to many, many future options."
-msgstr "Datawrapper nutzt moderne HTML5 Libraries wie Highcharts (LINK) oder D3.JS (LINK) und macht sie leichter nutzbar. Das ist ein Schritt Richtung Zukunft. Denn im Web findet derzeit ein Umdenken statt: Bisher wurde überall große Rücksicht auf Nutzer mit Browsern genommen, die bestimmte Formate nicht richtig darstellen. Angesichts der vielen Möglichkeiten, die sich mit HTML5 und dem <canvas> Tag bieten, lässt sich aber auch anders argumentieren: Leute, holt euch einen modernen Browser, das dauert 10 Minuten und bietet viele, viele Möglichkeiten. "
+msgstr "Datawrapper nutzt moderne HTML5 Libraries wie Highcharts oder D3.JS und macht sie leichter nutzbar. Das ist ein Schritt Richtung Zukunft. Denn im Web findet derzeit ein Umdenken statt: Bisher wurde überall große Rücksicht auf Nutzer mit Browsern genommen, die bestimmte Formate nicht richtig darstellen. Angesichts der vielen Möglichkeiten, die sich mit HTML5 und dem canvas Tag bieten, lässt sich aber auch anders argumentieren: Leute, holt euch einen modernen Browser, das dauert 10 Minuten und bietet viele, viele Möglichkeiten. "
 
 #: views/contents.php:56
 msgid "Visualize fast, very fast"
@@ -860,7 +860,7 @@ msgstr "4. Veröffentlichen"
 
 #: views/screens.php:213
 msgid "Next"
-msgstr "Nächste"
+msgstr "Next"
 
 #: views/screens.php:217
 msgid "New"
@@ -868,7 +868,7 @@ msgstr "Neu"
 
 #: views/screens.php:222
 msgid "Prev"
-msgstr "Zurück"
+msgstr "Prev"
 
 #: views/vis.chooser.php:30
 msgid "Useful resources"
