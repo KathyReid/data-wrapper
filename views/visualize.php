@@ -242,16 +242,16 @@ function update_options(){
 			<input type="text" id="chart_yAxis" class="chart_builder yAxis column" value="<?php echo _("Vertical axis title (required)") ?>" onfinishinput="update_options()"/>
 		</div>
 
-		<div class="chart_customizator">
-			<input type="text" id="chart_source" class="chart_builder source" value="<?php echo _("Source") ?>" onfinishinput="update_options()"/>
+		<div class="chart_customizator" style="margin-right:0">
+			<input type="text" id="chart_source" class="chart_builder source" value="<?php echo _("Source") ?>" onfinishinput="update_options()" />
 		</div>
 
 		<div class="chart_customizator">
 			<input type="text" id="chart_source_url" class="chart_builder source_url" value="<?php echo _("Source URL") ?>" onfinishinput="update_options()"/>
 		</div>
 
-		<div class="chart_customizator">
-			<input type="text" id="chart_desc" class="chart_builder desc" value="<?php echo _("Chart description") ?>" onfinishinput="update_options()"/>
+		<div class="chart_customizator" style="margin-right:0">
+			<input type="text" id="chart_desc" class="chart_builder desc" value="<?php echo _("Chart description") ?>" onfinishinput="update_options()" />
 		</div>
 
 		

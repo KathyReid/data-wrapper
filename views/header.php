@@ -72,11 +72,22 @@ function initHeader(){
 	</div>
 
 	<div id="navbar">
-
+		
 		<div id="languages">
-			<div class="language" lang="en_US">english</div>
-			<div class="language" lang="fr_FR">français</div>
 			<div class="language" lang="de_DE">deutsch</div>
+			<span class=".separator"> • </span>
+			<div class="language" lang="en_US">english</div>
+			<span class=".separator"> • </span>
+			<div class="language" lang="fr_FR">français</div>
+			
+		</div>
+
+		<div id="promo">
+			<a href="#quickstart" class="fancybox"><?php echo _("Quickstart") ?></a>
+			<span class=".separator"> • </span>
+			<a href="#tutorial" class="fancybox"><?php echo _("Tutorial") ?></a>
+			<span class=".separator"> • </span>
+			<a href="https://github.com/n-kb/datawrapper" target="_blank"><?php echo _("Fork me on GitHub!") ?></a>
 		</div>
 
 		<?php 

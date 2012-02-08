@@ -9,9 +9,6 @@
         <!-- General styles -->
         <link rel="stylesheet" type="text/css" href="css/stylesheets/general.css" />
 
-        <!-- Specific styles -->
-        <link rel="stylesheet" type="text/css" href="css/stylesheets/login.css" />
-
         <!-- JQuery library -->
         <script src="js/jquery-1.6.4.js" type="text/javascript"></script>
 
@@ -236,23 +233,36 @@
 
         	<div id="screen_container">
 
-                
+                <h1 class="login_title"><?php echo _("Open Source Data Visualization") ?></h1>
                 <div id="about">
-                    <button id="show_signup" class="button"><?php echo _("Sign up") ?></button>
-                    <p><?php echo _("DataWrapper helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all.") ?>
-                    </p>
-                    <p><?php echo _("Just give it a try ") ?><a href="#quickstart" class="fancybox"><?php echo _("or read our quick tutorial.") ?></a>
-                    </p>
-                    <p><?php echo _("The project is lead and maintained by ABZV.") ?></p>
+                    <div class="beta_logo">Beta</div>
+                    <h2><?php echo _("This is an tool to let journalists work with data every day.") ?></h2>
+                    
+                    <p><?php echo _("Main features:") ?></p>
+                    <ul>
+                        <li><?php echo _("Create and embed charts in minutes") ?></li>
+                        <li><?php echo _("Open Source: Download and install on your server") ?></li>
+                        <li><?php echo _("CSS: Change the design, the charts, add your logo") ?></li>
+                        <li><?php echo _("Developers: Add powerful HTML5 libraries") ?></li>
+                    </ul>
+                    <p><a href="#motivation" class="fancybox"><?php echo _("Why this approach? See our Motivations") ?></a></p>
+                    <p><?php echo _("Datawrapper is a project by ABZV,a German training institution for newspaper journalists.") ?></p>
                 </div>
 
 
                 <div id="login">
-            
+                    <h2><?php echo _("Login for registered users:") ?></h2>
                     <input class="login" id="email" value="<?php echo _("E-mail") ?>">
                     <input class="login" id="pwd" type="password" value="<?php echo _("Password") ?>">
-                    <div id="password_forgotten"><?php echo _("Password forgotten?") ?></div>
+                    <div id="password_forgotten"><?php echo _("Forgot your password?") ?></div>
                     <button id="login_submit" class="button"><?php echo _("Login") ?></button>
+
+                    <input id="show_signup" type="submit" value="<?php echo _("First time user? Register here.") ?>" />
+
+                    <div id="additional_ressources">
+                        <p><?php echo _("Resources to get started:") ?></p>
+                        <p><a href="#quickstart" class="fancybox"><?php echo _("Quickstart") ?></a> • <a href="#tutorial" class="fancybox"><?php echo _("Tutorial") ?></a> • <a href="#features" class="fancybox"><?php echo _("Features") ?></a> • <a href="#installation" class="fancybox"><?php echo _("Installation guide") ?></a>
+                    </div>
             
                 </div>
 

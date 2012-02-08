@@ -62,6 +62,7 @@ if (isset($_POST['email'])){
 				$m->setSubject($subject);
 				$m->setMessageFromString($message);
 
+				$ses->enableVerifyPeer(false);
 
 				//Sends email
 				if ($ses->sendEmail($m))

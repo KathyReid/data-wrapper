@@ -5,12 +5,12 @@
 /***************/
 /*   General    /
 /***************/
-/* line 59, ../sass/general.scss */
+/* line 66, ../sass/general.scss */
 html {
   height: 100%;
 }
 
-/* line 63, ../sass/general.scss */
+/* line 70, ../sass/general.scss */
 body {
   padding: 0;
   margin: 0;
@@ -19,7 +19,7 @@ body {
   height: 100%;
 }
 
-/* line 71, ../sass/general.scss */
+/* line 78, ../sass/general.scss */
 #black_veil {
   display: none;
   width: 100%;
@@ -33,7 +33,7 @@ body {
   left: 0;
 }
 
-/* line 86, ../sass/general.scss */
+/* line 93, ../sass/general.scss */
 #loader {
   position: fixed;
   z-index: 5;
@@ -42,7 +42,7 @@ body {
   left: 45%;
 }
 
-/* line 94, ../sass/general.scss */
+/* line 101, ../sass/general.scss */
 .clear {
   clear: both;
 }
@@ -50,14 +50,14 @@ body {
 /***************/
 /*   Container  /
 /***************/
-/* line 104, ../sass/general.scss */
+/* line 111, ../sass/general.scss */
 #container {
-  width: 900px;
+  width: 960px;
   margin: 0 auto;
   text-align: left;
   min-height: 100%;
-  overflow: hidden;
-  font-family: Arial, Helvetica, Sans-serif;
+  position: relative;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, Garuda, sans-serif;
   background-color: white;
   color: #555555;
   -moz-box-shadow: #7f7f7f 0px 0px 10px;
@@ -65,44 +65,44 @@ body {
   -o-box-shadow: #7f7f7f 0px 0px 10px;
   box-shadow: #7f7f7f 0px 0px 10px;
 }
-/* line 119, ../sass/general.scss */
+/* line 126, ../sass/general.scss */
 #container a {
-  text-decoration: none;
-  color: #555555;
+  text-decoration: underline;
+  color: black;
 }
-/* line 122, ../sass/general.scss */
+/* line 129, ../sass/general.scss */
 #container a:hover {
   text-decoration: underline;
 }
 
-/* line 126, ../sass/general.scss */
+/* line 133, ../sass/general.scss */
 #screen_container {
   min-height: 330px;
   position: relative;
   top: 0;
   left: 0;
-  padding: 30px 112.5px;
-  overflow: hidden;
+  padding: 0;
+  margin: 0 60px;
 }
 
 /***************/
 /*    Header    /
 /***************/
-/* line 143, ../sass/general.scss */
+/* line 150, ../sass/general.scss */
 #header {
-  width: 900px;
+  width: 960px;
   position: relative;
   top: 0;
   left: 0;
-  height: 120px;
+  height: 90px;
 }
 
-/* line 151, ../sass/general.scss */
+/* line 158, ../sass/general.scss */
 #logo {
   position: absolute;
-  z-index: 2;
-  width: 337.5px;
-  margin-left: 56.25px;
+  z-index: 0;
+  width: 360px;
+  margin-left: 60px;
   margin-top: 0;
   background-image: url("../../images/logo_header.png");
   width: 404px;
@@ -110,50 +110,61 @@ body {
   cursor: pointer;
 }
 
-/* line 163, ../sass/general.scss */
+/* line 170, ../sass/general.scss */
 #navbar {
   width: 900px;
-  background-color: white;
+  margin-right: 60px;
+  background-color: transparent;
   position: absolute;
-  top: 60px;
+  z-index: 3;
+  top: 45px;
   left: 0;
   height: 30px;
-  border-bottom: #e5e5e5 1px solid;
+  text-transform: uppercase;
+  font-size: 0.6em;
 }
-/* line 172, ../sass/general.scss */
+/* line 182, ../sass/general.scss */
+#navbar #promo {
+  width: 264px;
+  float: right;
+  text-align: right;
+  margin-top: 15px;
+}
+/* line 189, ../sass/general.scss */
 #navbar #languages {
-  width: 337.5px;
+  width: 180px;
   float: right;
-  font-size: 0.7em;
+  margin-top: 15px;
+  text-align: right;
 }
-/* line 177, ../sass/general.scss */
+/* line 195, ../sass/general.scss */
 #navbar #languages .language {
-  float: right;
-  margin: 15px 5px 0 0;
+  margin: 0;
+  display: inline;
   color: #606060;
   cursor: pointer;
 }
-/* line 182, ../sass/general.scss */
+/* line 200, ../sass/general.scss */
 #navbar #languages .language:hover {
-  color: black;
+  text-decoration: underline;
 }
-/* line 186, ../sass/general.scss */
+/* line 204, ../sass/general.scss */
 #navbar #loggedin {
   float: left;
-  margin: 0 0 0 56.25px;
-  font-size: 0.7em;
+  margin: -28px 0 0 270px;
+  font-size: 0.9em;
 }
-/* line 192, ../sass/general.scss */
+/* line 210, ../sass/general.scss */
 #navbar #loggedin #my_vis {
   margin: 15px 5px 0 0;
   float: right;
 }
-/* line 197, ../sass/general.scss */
+/* line 215, ../sass/general.scss */
 #navbar #loggedin #my_vis a {
   cursor: pointer;
   color: white;
   text-decoration: none;
-  background-color: #3496ae;
+  background-color: #5e9dcd;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
@@ -162,25 +173,25 @@ body {
   border-radius: 2px;
   padding: 0 3px;
 }
-/* line 204, ../sass/general.scss */
+/* line 222, ../sass/general.scss */
 #navbar #loggedin #my_vis a:hover {
-  color: #3496ae;
+  color: #5e9dcd;
   background-color: white;
 }
-/* line 207, ../sass/general.scss */
+/* line 225, ../sass/general.scss */
 #navbar #loggedin #loggedas {
   float: right;
   margin: 15px 5px 0 0;
   color: #555555;
 }
-/* line 213, ../sass/general.scss */
+/* line 231, ../sass/general.scss */
 #navbar #loggedin #logout {
   margin: 15px 5px 0 0;
   float: right;
   cursor: pointer;
-  color: #3496ae;
+  color: #5e9dcd;
 }
-/* line 218, ../sass/general.scss */
+/* line 236, ../sass/general.scss */
 #navbar #loggedin #logout:hover {
   color: #555555;
 }
@@ -188,7 +199,7 @@ body {
 /***************/
 /*   Buttons   */
 /***************/
-/* line 230, ../sass/general.scss */
+/* line 248, ../sass/general.scss */
 .button {
   cursor: pointer;
   background: white;
@@ -212,53 +223,85 @@ body {
   text-shadow: rgba(255, 255, 255, 0.2) 1px 1px 0, rgba(255, 255, 255, 0.2) 1px 1px 0, rgba(255, 255, 255, 0.2) 1px 1px 0;
 }
 
-/* line 247, ../sass/general.scss */
+/* line 265, ../sass/general.scss */
 .nav {
   font-size: 1.2em;
-  width: 101.25px;
+  width: 108px;
 }
 
-/* line 252, ../sass/general.scss */
-#buttons {
-  position: absolute;
-  top: 390px;
-  width: 900px;
-  z-index: 2;
-}
-
-/* line 259, ../sass/general.scss */
+/* line 271, ../sass/general.scss */
 #button_next, #button_prev {
   cursor: pointer;
-  width: 112.5px;
+  position: absolute;
+  top: 240px;
+  width: 120px;
   text-align: center;
 }
 
-/* line 265, ../sass/general.scss */
+/* line 279, ../sass/general.scss */
 #button_next {
-  float: right;
+  right: -95px;
+}
+/* line 282, ../sass/general.scss */
+#button_next #next, #button_next #new_chart {
+  -moz-border-radius-topright: 25px;
+  -webkit-border-top-right-radius: 25px;
+  -o-border-top-right-radius: 25px;
+  -ms-border-top-right-radius: 25px;
+  -khtml-border-top-right-radius: 25px;
+  border-top-right-radius: 25px;
+  -moz-border-radius-bottomright: 25px;
+  -webkit-border-bottom-right-radius: 25px;
+  -o-border-bottom-right-radius: 25px;
+  -ms-border-bottom-right-radius: 25px;
+  -khtml-border-bottom-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  height: 100px;
+  width: 70px;
+  border-left: none;
 }
 
-/* line 269, ../sass/general.scss */
+/* line 290, ../sass/general.scss */
 #button_prev {
-  float: left;
+  left: -95px;
+}
+/* line 292, ../sass/general.scss */
+#button_prev #prev {
+  -moz-border-radius-topleft: 25px;
+  -webkit-border-top-left-radius: 25px;
+  -o-border-top-left-radius: 25px;
+  -ms-border-top-left-radius: 25px;
+  -khtml-border-top-left-radius: 25px;
+  border-top-left-radius: 25px;
+  -moz-border-radius-bottomleft: 25px;
+  -webkit-border-bottom-left-radius: 25px;
+  -o-border-bottom-left-radius: 25px;
+  -ms-border-bottom-left-radius: 25px;
+  -khtml-border-bottom-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  height: 100px;
+  width: 70px;
+  border-right: none;
 }
 
 /***************/
 /* Breadcrumbs */
 /***************/
-/* line 292, ../sass/general.scss */
+/* line 319, ../sass/general.scss */
 #breadcrumbs {
   height: 30px;
-  width: 900px;
+  width: 960px;
   text-align: center;
+  margin: 0 60px 15px 60px;
+  width: 840px;
 }
-/* line 298, ../sass/general.scss */
+/* line 327, ../sass/general.scss */
 #breadcrumbs .on {
-  background-color: #3496ae;
+  background-color: #5e9dcd;
   color: white;
   float: left;
-  width: 217px;
-  margin: 0 4px;
+  width: 202px;
+  margin: 0 5px;
   padding: 5px 0;
   text-align: center;
   -moz-border-radius: 6px;
@@ -272,13 +315,13 @@ body {
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 304, ../sass/general.scss */
+/* line 333, ../sass/general.scss */
 #breadcrumbs .off {
   background-color: #606060;
   color: #555555;
   float: left;
-  width: 217px;
-  margin: 0 4px;
+  width: 202px;
+  margin: 0 5px;
   padding: 5px 0;
   text-align: center;
   -moz-border-radius: 6px;
@@ -296,7 +339,7 @@ body {
 /***************/
 /* Error box   */
 /***************/
-/* line 314, ../sass/general.scss */
+/* line 343, ../sass/general.scss */
 #error {
   display: none;
   color: #000;
@@ -312,7 +355,7 @@ body {
   font-size: 12px;
   padding: 5px 10px;
   margin: 5px;
-  width: 225px;
+  width: 240px;
   z-index: 5;
   position: absolute;
   top: 10px;
@@ -332,18 +375,18 @@ body {
 /****************/
 /* Input screen */
 /****************/
-/* line 347, ../sass/general.scss */
+/* line 376, ../sass/general.scss */
 #input {
   position: relative;
   z-index: 3;
 }
-/* line 352, ../sass/general.scss */
+/* line 381, ../sass/general.scss */
 #input #explainer {
   font-size: 1.2em;
 }
-/* line 355, ../sass/general.scss */
+/* line 384, ../sass/general.scss */
 #input #input_data {
-  width: 655px;
+  width: 818px;
   color: #555555;
   background-color: #f2f2f2;
   -moz-box-shadow: inset 0 0 10px 5px "#999";
@@ -355,54 +398,68 @@ body {
   padding: 10px;
 }
 
-/* line 364, ../sass/general.scss */
-#sample_data_fill {
-  cursor: pointer;
+/* line 393, ../sass/general.scss */
+#sample_data {
+  font-size: 0.8em;
+  width: 70%;
 }
-/* line 366, ../sass/general.scss */
-#sample_data_fill:hover {
-  color: #606060;
+/* line 398, ../sass/general.scss */
+#sample_data ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 403, ../sass/general.scss */
+#sample_data li {
+  list-style: none;
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 0 1%;
+  text-indent: -1%;
+}
+/* line 409, ../sass/general.scss */
+#sample_data li:hover {
+  text-decoration: none;
 }
 
 /****************/
 /* Check screen */
 /****************/
-/* line 376, ../sass/general.scss */
+/* line 420, ../sass/general.scss */
 #check #explainer {
   font-size: 1.2em;
 }
-/* line 380, ../sass/general.scss */
+/* line 424, ../sass/general.scss */
 #check #explainer #sub_explainer {
   font-size: 0.8em;
 }
-/* line 384, ../sass/general.scss */
+/* line 428, ../sass/general.scss */
 #check #explainer #sub_explainer p {
   margin: 5px 10px;
 }
-/* line 388, ../sass/general.scss */
+/* line 432, ../sass/general.scss */
 #check #explainer #sub_explainer .transpose {
   font-size: 0.8em;
-  width: 225px;
+  width: 240px;
 }
-/* line 395, ../sass/general.scss */
+/* line 439, ../sass/general.scss */
 #check table {
   margin-top: 10px;
-  width: 655px;
+  width: 840px;
   padding: 10px;
   font-size: 0.8em;
 }
-/* line 402, ../sass/general.scss */
+/* line 446, ../sass/general.scss */
 #check td {
   background-color: #f2f2f2;
   text-align: center;
-  width: 112.5px;
+  width: 120px;
 }
-/* line 408, ../sass/general.scss */
+/* line 452, ../sass/general.scss */
 #check .header_cell {
   font-weight: bold;
-  background-color: #3496ae;
+  background-color: #5e9dcd;
 }
-/* line 413, ../sass/general.scss */
+/* line 457, ../sass/general.scss */
 #check .empty_cell {
   background-color: white;
 }
@@ -410,27 +467,27 @@ body {
 /********************/
 /* Visualize screen */
 /********************/
-/* line 426, ../sass/general.scss */
+/* line 470, ../sass/general.scss */
 #visualize #chart {
-  width: 675px;
+  width: 840px;
   height: 300px;
   margin: 30px 0;
   padding: 0;
   overflow: hidden;
 }
-/* line 434, ../sass/general.scss */
+/* line 478, ../sass/general.scss */
 #visualize #explainer {
   font-size: 1.2em;
 }
-/* line 438, ../sass/general.scss */
+/* line 482, ../sass/general.scss */
 #visualize #chart_customization {
-  width: 675px;
+  width: 840px;
   height: 90px;
   padding: 0;
 }
-/* line 444, ../sass/general.scss */
+/* line 488, ../sass/general.scss */
 #visualize #chart_customization input, #visualize #chart_customization select {
-  width: 185px;
+  width: 240px;
   font-size: 1em;
   color: #555555;
   background-color: #f2f2f2;
@@ -441,43 +498,43 @@ body {
   border: 1px solid #7f7f7f;
   height: 25px;
 }
-/* line 450, ../sass/general.scss */
+/* line 494, ../sass/general.scss */
 #visualize #chart_customization input {
   padding: 0 10px;
 }
-/* line 453, ../sass/general.scss */
+/* line 497, ../sass/general.scss */
 #visualize #chart_customization select {
-  width: 205px;
+  width: 260px;
   padding: 4px 0 0 4px;
 }
-/* line 458, ../sass/general.scss */
+/* line 502, ../sass/general.scss */
 #visualize #chart_customization .desc {
-  width: 410px;
+  width: 529px;
 }
-/* line 462, ../sass/general.scss */
+/* line 506, ../sass/general.scss */
 #visualize #chart_customization .inactive {
   background-color: #f2f2f2;
   color: white;
   border: #7f7f7f;
 }
-/* line 469, ../sass/general.scss */
+/* line 513, ../sass/general.scss */
 #visualize #chart_info {
   position: absolute;
-  top: 56px;
-  left: 777.5px;
+  right: -25px;
+  top: 25px;
   width: 25px;
   height: 21px;
   background-image: url("../../images/question_mark.png");
   cursor: pointer;
 }
-/* line 482, ../sass/general.scss */
+/* line 526, ../sass/general.scss */
 #visualize #chart_desc_box {
   position: absolute;
-  top: 87px;
-  left: 562.5px;
+  top: 58px;
+  left: 600px;
   z-index: 2;
   font-size: 0.75em;
-  width: 225px;
+  width: 240px;
   border: #7f7f7f 1px solid;
   background: white;
   -moz-border-radius: 2px;
@@ -493,35 +550,35 @@ body {
   padding: 5px;
   display: none;
 }
-/* line 499, ../sass/general.scss */
+/* line 543, ../sass/general.scss */
 #visualize #chart_desc_box img {
   width: 15px;
   height: 15px;
 }
-/* line 505, ../sass/general.scss */
+/* line 549, ../sass/general.scss */
 #visualize .chart_customizator {
-  width: 225px;
-  height: 30px;
   float: left;
   font-size: 0.9em;
-  margin: 0 0 5px 0;
+  height: 30px;
+  margin: 0 61px 5px 0;
+  width: 228px;
 }
 
 /********************/
 /*  Publish screen  */
 /********************/
-/* line 524, ../sass/general.scss */
+/* line 568, ../sass/general.scss */
 #publish #explainer {
   font-size: 1.2em;
 }
-/* line 528, ../sass/general.scss */
+/* line 572, ../sass/general.scss */
 #publish p {
   margin: 8px 0 2px 0;
 }
-/* line 532, ../sass/general.scss */
+/* line 576, ../sass/general.scss */
 #publish #direct_link_url {
-  width: 450px;
-  margin: 0 112.5px;
+  width: 480px;
+  margin: 5px auto;
   padding: 2px;
   font-size: 1em;
   color: #555555;
@@ -533,13 +590,14 @@ body {
   border: 1px solid #7f7f7f;
   margin-bottom: 5px;
 }
-/* line 541, ../sass/general.scss */
+/* line 585, ../sass/general.scss */
 #publish #iframe_code {
   position: relative;
   z-index: 3;
-  width: 450px;
+  width: 480px;
   height: 60px;
-  margin: 8px 112.5px;
+  margin: 5px auto;
+  display: block;
   font-size: 1em;
   color: #555555;
   background-color: #f2f2f2;
@@ -548,14 +606,13 @@ body {
   -o-box-shadow: inset 0 0 1px 0.5px "#999";
   box-shadow: inset 0 0 1px 0.5px "#999";
   border: 1px solid #7f7f7f;
-  margin-bottom: 5px;
 }
-/* line 552, ../sass/general.scss */
+/* line 596, ../sass/general.scss */
 #publish .embed_customization {
   font-size: 0.9em;
   margin-bottom: 5px;
 }
-/* line 557, ../sass/general.scss */
+/* line 601, ../sass/general.scss */
 #publish .embed_customizator {
   position: relative;
   z-index: 3;
@@ -568,7 +625,7 @@ body {
   box-shadow: inset 0 0 1px 0.5px "#999";
   border: 1px solid #7f7f7f;
 }
-/* line 564, ../sass/general.scss */
+/* line 608, ../sass/general.scss */
 #publish #embed {
   margin: 0 auto;
   background-color: #fff;
@@ -577,24 +634,33 @@ body {
 /************************************/
 /*              Popups              */
 /************************************/
-/* line 576, ../sass/general.scss */
+/* line 620, ../sass/general.scss */
 .popup {
   padding: 20px;
   margin: 0;
   background-color: #f2f2f2;
-  max-height: 540px;
-  width: 675px;
+  max-height: 576px;
+  width: 720px;
   text-align: left;
-  font-family: Arial, Helvetica, Sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, Garuda, sans-serif;
   color: #444444;
   font-size: 0.8em;
 }
-/* line 587, ../sass/general.scss */
+/* line 631, ../sass/general.scss */
 .popup li {
   margin-top: 1.1em;
 }
+/* line 635, ../sass/general.scss */
+.popup a {
+  color: #444444;
+  text-decoration: underline;
+}
+/* line 638, ../sass/general.scss */
+.popup a:hover {
+  text-decoration: none;
+}
 
-/* line 593, ../sass/general.scss */
+/* line 643, ../sass/general.scss */
 #quickstart_noshow {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -605,73 +671,82 @@ body {
   padding: 5px;
   background-color: white;
   border: 1px solid #e5e5e5;
-  font-family: Arial, Helvetica, Sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, Garuda, sans-serif;
   font-size: 0.9em;
 }
 
 /************************************/
 /*              Footer              */
 /************************************/
-/* line 606, ../sass/general.scss */
+/* line 656, ../sass/general.scss */
 #footer {
   padding: 20px;
   height: 50px;
-  margin-top: -50px;
-  margin: 0;
+  margin: 100px 0 0 0;
   text-transform: uppercase;
   color: #444444;
   font-size: 0.7em;
 }
-/* line 615, ../sass/general.scss */
-#footer .separator {
+
+/* line 667, ../sass/general.scss */
+#footer .separator, #promo .separator {
   color: #555555;
+}
+/* line 671, ../sass/general.scss */
+#footer a, #promo a {
+  color: #555555;
+  font-size: 0.9em;
+}
+/* line 674, ../sass/general.scss */
+#footer a:hover, #promo a:hover {
+  text-decoration: none;
 }
 
 /************************************/
 /*              Embed               */
 /************************************/
 /* Also visible on 'publish' screen */
-/* line 626, ../sass/general.scss */
+/* line 683, ../sass/general.scss */
 #embed_extras {
   height: 50px;
   text-align: left;
   width: 100%;
-  font-family: Arial, Helvetica, Sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, Garuda, sans-serif;
   font-size: 0.7em;
   color: #000;
   padding: 0 5px;
 }
-/* line 635, ../sass/general.scss */
+/* line 692, ../sass/general.scss */
 #embed_extras p {
   margin: 0 5px;
 }
-/* line 639, ../sass/general.scss */
+/* line 696, ../sass/general.scss */
 #embed_extras #export_csv {
   font-size: 0.8em;
   float: right;
   margin: 0 10px;
 }
-/* line 645, ../sass/general.scss */
+/* line 702, ../sass/general.scss */
 #embed_extras .desc {
   font-weight: bold;
 }
-/* line 649, ../sass/general.scss */
+/* line 706, ../sass/general.scss */
 #embed_extras #source {
   font-style: italic;
 }
-/* line 653, ../sass/general.scss */
+/* line 710, ../sass/general.scss */
 #embed_extras .source_url {
   color: #000;
 }
-/* line 655, ../sass/general.scss */
+/* line 712, ../sass/general.scss */
 #embed_extras .source_url:hover {
   text-decoration: underline;
 }
 
 /**** Tutorial ****/
-/* line 662, ../sass/general.scss */
+/* line 719, ../sass/general.scss */
 .button_tutorial {
-  margin-left: 337.5px;
+  margin-left: 360px;
   cursor: pointer;
   background: white;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
@@ -694,33 +769,239 @@ body {
   text-shadow: rgba(255, 255, 255, 0.2) 1px 1px 0, rgba(255, 255, 255, 0.2) 1px 1px 0, rgba(255, 255, 255, 0.2) 1px 1px 0;
 }
 
-/* line 679, ../sass/general.scss */
+/* line 736, ../sass/general.scss */
 #tutorial {
   min-height: 450px;
 }
-/* line 683, ../sass/general.scss */
+/* line 740, ../sass/general.scss */
 #tutorial h1 {
   font-size: 1.5em;
 }
-/* line 687, ../sass/general.scss */
+/* line 744, ../sass/general.scss */
 #tutorial a {
-  text-decoration: none;
-  color: #555555;
+  text-decoration: underline;
+  color: black;
 }
-/* line 690, ../sass/general.scss */
+/* line 747, ../sass/general.scss */
 #tutorial a:hover {
   text-decoration: underline;
 }
-/* line 694, ../sass/general.scss */
+/* line 751, ../sass/general.scss */
 #tutorial img {
   -moz-box-shadow: #7f7f7f 0px 0px 10px;
   -webkit-box-shadow: #7f7f7f 0px 0px 10px;
   -o-box-shadow: #7f7f7f 0px 0px 10px;
   box-shadow: #7f7f7f 0px 0px 10px;
-  margin-left: 56.25px;
+  margin-left: 60px;
 }
 
-/* line 700, ../sass/general.scss */
+/* line 757, ../sass/general.scss */
 .tutorial_class {
   display: none;
+}
+
+/**** Login ****/
+/* line 763, ../sass/general.scss */
+#login, #signup, #reminder, #new_pwd {
+  float: left;
+}
+/* line 767, ../sass/general.scss */
+#login .login, #signup .login, #reminder .login, #new_pwd .login {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px #000 solid;
+  float: left;
+  margin: 2px 0;
+  font-size: 1em;
+  height: 1.3em;
+  width: 96%;
+  padding: 2px 7px;
+}
+/* line 782, ../sass/general.scss */
+#login #password_forgotten, #signup #password_forgotten, #reminder #password_forgotten, #new_pwd #password_forgotten {
+  font-size: 0.7em;
+  width: 100%;
+  text-align: right;
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* line 788, ../sass/general.scss */
+#login #password_forgotten:hover, #signup #password_forgotten:hover, #reminder #password_forgotten:hover, #new_pwd #password_forgotten:hover {
+  text-decoration: none;
+}
+
+/* line 793, ../sass/general.scss */
+#login, #about, #signup, #reminder, #new_pwd {
+  width: 390px;
+  height: 331.5px;
+  padding: 10px;
+  float: left;
+  position: relative;
+  background-color: #333;
+  color: #fff;
+}
+
+/* line 803, ../sass/general.scss */
+#login_submit, #signup_submit, #show_signup, #reminder_submit, #pwd_change_submit {
+  font-size: 0.9em;
+  line-height: 1.7em;
+  font-weight: bold;
+  margin: 10px;
+}
+
+/* line 810, ../sass/general.scss */
+#login_submit {
+  margin-top: -5px;
+}
+
+/* line 814, ../sass/general.scss */
+#show_signup {
+  position: absolute;
+  top: 190px;
+  margin: 2px 8px;
+  left: 0px;
+  width: 96%;
+  background-color: #5e9dcd;
+  border: 1px #000 solid;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 7px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* line 829, ../sass/general.scss */
+#additional_ressources {
+  font-size: 0.9em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+}
+
+/* line 837, ../sass/general.scss */
+#login, #signup {
+  background-color: #333;
+  color: #fff;
+}
+/* line 841, ../sass/general.scss */
+#login a, #signup a {
+  color: #fff;
+}
+/* line 843, ../sass/general.scss */
+#login a:hover, #signup a:hover {
+  text-decoration: none;
+}
+/* line 846, ../sass/general.scss */
+#login h2, #signup h2 {
+  text-shadow: black 1px 0px 1px;
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+/* line 853, ../sass/general.scss */
+#about {
+  color: black;
+  margin-right: 20px;
+  background-color: #5e9dcd;
+}
+/* line 858, ../sass/general.scss */
+#about h2 {
+  font-weight: normal;
+  font-size: 1.1em;
+  padding-right: 115px;
+}
+/* line 864, ../sass/general.scss */
+#about .beta_logo {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  text-align: center;
+  font-size: 1.4em;
+  color: #fff;
+  right: 20px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -o-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -khtml-border-radius: 100px;
+  border-radius: 100px;
+  -moz-transform: rotate(6deg);
+  -webkit-transform: rotate(6deg);
+  -o-transform: rotate(6deg);
+  -ms-transform: rotate(6deg);
+  transform: rotate(6deg);
+  text-shadow: #222222 1px 0px 1px;
+  -moz-box-shadow: #222222 0px 0px 4px;
+  -webkit-box-shadow: #222222 0px 0px 4px;
+  -o-box-shadow: #222222 0px 0px 4px;
+  box-shadow: #222222 0px 0px 4px;
+  width: 70px;
+  height: 48px;
+  padding-top: 22px;
+  text-transform: uppercase;
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #a3160d), color-stop(100%, #b94e63));
+  background-image: -webkit-radial-gradient(#a3160d, #b94e63);
+  background-image: -moz-radial-gradient(#a3160d, #b94e63);
+  background-image: -o-radial-gradient(#a3160d, #b94e63);
+  background-image: -ms-radial-gradient(#a3160d, #b94e63);
+  background-image: radial-gradient(#a3160d, #b94e63);
+}
+/* line 883, ../sass/general.scss */
+#about p, #about li {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 0.8em;
+}
+
+/* line 890, ../sass/general.scss */
+.close_signup {
+  font-size: 0.6em;
+  width: 100%;
+  text-align: right;
+  color: #7f7f7f;
+  cursor: pointer;
+}
+/* line 896, ../sass/general.scss */
+.close_signup:hover {
+  text-decoration: underline;
+}
+
+/* line 899, ../sass/general.scss */
+#signup, #reminder {
+  display: none;
+}
+
+/* line 903, ../sass/general.scss */
+#verify, #reset_confirmation, #pwd_change_confirmation {
+  width: 96%;
+  display: none;
+  padding: 15px;
+  margin-right: 20px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #e5e5e5;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  font-size: 0.8em;
+}
+
+/* line 915, ../sass/general.scss */
+h1.login_title {
+  color: black;
+  font-weight: normal;
+  font-size: 1.5em;
 }

@@ -136,8 +136,6 @@
 				<?php echo _("Export data") ?>
 			</button>
 
-			<p><?php echo _("Chart created using") ?> <a href="<?php echo BASE_DIR ?>" target="_blank">DataWrapper</a>, <?php echo _("a project by") ?><a href="http://www.abzv.de/" target="_blank"> ABZV</a>.</p>
-
 		</div>
 
 		<?php

@@ -59,7 +59,7 @@
 			//Checks that the locale is correctly set (won't work on Windows systems)
 
 			if (!(preg_match($pattern, $current_locale))) //if the current locale is not correctly formatted
-				$returned_locale = "en_US.UTF-8";
+				$returned_locale = "de_DE.UTF-8";
 
 			else //correctly formatted
 				$returned_locale = $current_locale;
@@ -90,7 +90,7 @@
                 elseif( isset($_SESSION["lang"]) )
                      setLanguage($_SESSION["lang"]);
 
-                else setLanguage("en_US");
+                else setLanguage("de_DE");
 
             }
         }

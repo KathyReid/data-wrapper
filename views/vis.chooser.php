@@ -59,8 +59,8 @@ foreach($json_vis->visualizations as $visualization){
 
 ?>
 
-<div class="chart_customizator">
-	<select id="chart_type" onchange="update_options()">
+<div class="chart_customizator"  style="margin-right:0">
+	<select id="chart_type" onchange="update_options()" >
 		<option value="none"><?php echo _("Visualization type") ?> </option>
 
 		<?php

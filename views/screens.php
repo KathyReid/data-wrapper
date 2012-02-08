@@ -56,8 +56,6 @@
 	    /* END global vars init */
 
 	     $(document).ready(function() {
-            //Shows loader
-            //loader_show();
 
             //hides all screens on startup
             $('.screen').hide();
@@ -196,7 +194,7 @@
             <!-- End header -->
         	
         	<div id="breadcrumbs">
-        		<div id="crumbs_input" class="off">
+        		<div id="crumbs_input" class="off" style="margin-left:0">
                     <?php echo _("1. Input data") ?>
                 </div>
         		<div id="crumbs_check" class="off">
@@ -205,27 +203,25 @@
         		<div id="crumbs_visualize" class="off">
                     <?php echo _("3. Visualize") ?>
                 </div>
-        		<div id="crumbs_publish" class="off">
+        		<div id="crumbs_publish" class="off" style="margin-right:0; margin-left:7px;">
                     <?php echo _("4. Publish") ?>
                 </div>
         	</div>
 
-            <div id="buttons">
-            	<div id="button_next">
-            		<button id="next" class="button nav">
-            			<?php echo _("Next") ?>&nbsp;&rsaquo;
-            		</button>
+        	<div id="button_next">
+        		<button id="next" class="button nav">
+        			<?php echo _("Next") ?>&nbsp;&rsaquo;
+        		</button>
 
-                    <button id="new_chart" class="button nav" style="display:none">
-                        <?php echo _("New") ?>&nbsp;&rsaquo;
-                    </button>
-            	</div>
-            	<div id="button_prev" style="display:none">
-            		<button id="prev" class="button nav">
-            			&lsaquo;&nbsp;<?php echo _("Prev") ?>
-            		</button>
-            	</div>
-            </div>
+                <button id="new_chart" class="button nav" style="display:none">
+                    <?php echo _("New") ?>&nbsp;&rsaquo;
+                </button>
+        	</div>
+        	<div id="button_prev" style="display:none">
+        		<button id="prev" class="button nav">
+        			&lsaquo;&nbsp;<?php echo _("Prev") ?>
+        		</button>
+        	</div>
 
         	<div id="screen_container">
 

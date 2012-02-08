@@ -9,10 +9,12 @@
 
 $error-color : #ff8;
 
-$color-on : #3496AE;
+$color-on : #5E9DCD;
 $color-off : #606060;
 $color-on_text : #fff;
 $color-off_text : #555;
+$red-1: #A3160D;
+$red-2: #B94E63;
 $black: #000;
 
 $font-size : 1em;
@@ -22,10 +24,15 @@ $shadow-color:#7f7f7f;
 $dark-color:#f2f2f2;
 $border-color:#e5e5e5;
 
-$container-width:900px;
+$box-w:390px;
+
+$margin-left:60px;
+$container-width:960px;
 $grid-cols: 8;
 $row-h: 30px;
 $col-w: $container-width / $grid-cols;
+
+$font-family-container: "Lucida Sans Unicode","Lucida Grande", Arial, Helvetica, Garuda, sans-serif;
 
 @mixin narrow-text{
     letter-spacing:-1px;
@@ -108,17 +115,17 @@ $loader-h: 10%;
     text-align:left;
     min-height: 100%;
 
-    overflow:hidden;
+    position:relative;
 
-    font-family: Arial, Helvetica, Sans-serif;
+    font-family: $font-family-container;
     background-color:$background-color;
     color:$color-off_text;
 
     @include box-shadow($shadow-color 0px 0px 10px);
 
     a{
-        text-decoration:none;
-        color: $color-off_text;
+        text-decoration:underline;
+        color: $black;
         &:hover { text-decoration:underline; }
     }
 }
@@ -128,15 +135,15 @@ $loader-h: 10%;
     position: relative;
     top: 0;
     left: 0;
-    padding:$row-h $col-w;
-    overflow: hidden;
+    padding:0;
+    margin: 0 $margin-left;
 }
 
 /***************/
 /*    Header    /
 /***************/
 
-$header-height : $row-h * 4;
+$header-height : $row-h * 3;
 $logo-w: $row-h * 2;
 $navbar-height: $row-h;
 
@@ -150,9 +157,9 @@ $navbar-height: $row-h;
 
 #logo{
     position:absolute;
-    z-index:2;
+    z-index:0;
     width:$col-w*3;
-    margin-left:$col-w/2;
+    margin-left:$margin-left;
     margin-top:0;
     background-image:url('../../images/logo_header.png');
     width:404px;
@@ -161,33 +168,44 @@ $navbar-height: $row-h;
 }
 
 #navbar{
-    width: $container-width;
-    background-color:$background-color;
+    width: $container-width - $margin-left;
+    margin-right: $margin-left;
+    background-color:transparent;
     position:absolute;
-    top:$navbar-height*2;
+    z-index:3;
+    top:$navbar-height*1.5;
     left:0;
     height: $navbar-height;
-    border-bottom:$border-color 1px solid;
+    text-transform:uppercase;
+    font-size: $font-size * 0.6;
+
+    #promo {
+        width: $col-w * 2.2;
+        float:right;
+        text-align:right;
+        margin-top:$row-h/2;
+    }
 
     #languages{
-        width: $col-w * 3;
+        width: $col-w * 1.5;
         float:right;
-        font-size: $font-size - .3em;
+        margin-top:$row-h/2;
+        text-align:right;
         
         .language{
-            float:right;
-            margin: $row-h/2 5px 0 0;
+            margin: 0;
+            display:inline;
             color: $color-off;
             cursor: pointer;
-            &:hover { color: $black; }
+            &:hover { text-decoration: underline; }
         }
     }
 
     #loggedin{
         
         float:left;
-        margin: 0 0 0 $col-w/2;
-        font-size: $font-size - .3em;
+        margin: -28px 0 0 270px;
+        font-size: $font-size * 0.9;
 
         #my_vis{
             margin: $row-h/2 5px 0 0;
@@ -249,25 +267,34 @@ $button-color-bottom: #ccc;
         width: $col-w - $col-w/10;
     }
 
-#buttons{
-    position:absolute;
-    top: $row-h * 13;
-    width: $container-width;
-    z-index:2;
-}
 
 #button_next, #button_prev{
     cursor:pointer;
+    position:absolute;
+    top: $row-h * 8;
     width: $col-w;
     text-align:center;
 }
 
 #button_next{
-    float:right;
+    right: -95px;
+
+    #next, #new_chart {
+        @include border-right-radius(25px);
+        height:100px;
+        width:70px;
+        border-left:none;
+    }
 }
 
 #button_prev{
-    float:left;
+    left: -95px;
+    #prev {
+        @include border-left-radius(25px);
+        height:100px;
+        width:70px;
+        border-right:none;
+    }
 }
 
 /***************/
@@ -281,8 +308,8 @@ $breadcrumbs-padding: 8px;
 
 @mixin transpose-on-off{
     float:left;
-    width: $col-w * ($grid-cols / $breadcrumbs_steps) - $breadcrumbs-padding;
-    margin: 0 $breadcrumbs-padding/2;
+    width: (($container-width - 2 * $margin-left) / $breadcrumbs_steps) - $breadcrumbs-padding;
+    margin: 0 5px;
     padding: 5px 0;
     text-align:center;
     @include border-radius(6px);
@@ -294,6 +321,8 @@ $breadcrumbs-padding: 8px;
     height: $breadcrumbs-height;
     width : $breadcrumbs-width;
     text-align:center;
+    margin:0 $margin-left 15px $margin-left;
+    width: $container-width - 2 * $margin-left;
 
     .on{
         background-color:$color-on;
@@ -353,7 +382,7 @@ $textarea-padding: 10px;
         @include explainer;
     }
     #input_data{
-        width:$col-w * 6 - $textarea-padding * 2;
+        width:$container-width - $textarea-padding * 2 - $margin-left * 2 - 2px;
         @include inset_input(10px);
         height: $row-h * 5;
         padding:$textarea-padding;
@@ -361,9 +390,24 @@ $textarea-padding: 10px;
 }
 
 //Sample data
-#sample_data_fill{
-    cursor:pointer;
-    &:hover { color:$color-off; }
+#sample_data{
+
+    font-size:$font-size * 0.8;
+    width:70%;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style:none;
+        cursor:pointer;
+        text-decoration:underline;
+        margin:0 1%;
+        text-indent:-1%;
+        &:hover { text-decoration:none; }
+    }
 }
 
 /****************/
@@ -394,7 +438,7 @@ $table-padding: 10px;
 
     table{
         margin-top: 10px;
-        width:$col-w * 6 - $table-padding * 2;
+        width:($container-width - 2 * $margin-left);
         padding:$table-padding;
         font-size: $font-size - .2;
     }
@@ -424,7 +468,7 @@ $customizator-margin-bottom: 5px;
 #visualize{
 
     #chart{
-        width: $col-w *6;
+        width: ($container-width - 2 * $margin-left);
         height: $row-h * 10;
         margin: $row-h 0;
         padding: 0;
@@ -437,12 +481,12 @@ $customizator-margin-bottom: 5px;
 
     #chart_customization{
         
-        width:$col-w * 6 ;
+        width:$container-width - 2 * $margin-left ;
         height:$row-h * 3;
         padding:0;
 
         input, select{
-            width:$col-w * 2 - $table-padding * 4;
+            width:($container-width - 2 * $margin-left) / 3 - $table-padding * 4;
             font-size: $font-size;
             @include inset_input(1px);
             height:$row-h - $customizator-margin-bottom;
@@ -451,12 +495,12 @@ $customizator-margin-bottom: 5px;
             padding: 0 $table-padding;
         }
         select{
-            width:$col-w * 2 - $table-padding * 2;
+            width:($container-width - 2 * $margin-left) / 3 - $table-padding * 2;
             padding:4px 0 0 4px;
         }
 
         .desc{
-            width:$col-w * 4 - $table-padding * 4;
+            width:529px;
         }
 
         .inactive{
@@ -468,8 +512,8 @@ $customizator-margin-bottom: 5px;
 
     #chart_info{
         position:absolute;
-        top:$row-h*2 - 4;
-        left:$col-w*7 - 10;
+        right: -25px;
+        top: 25px;
         
         width:25px;
         height:21px;
@@ -481,7 +525,7 @@ $customizator-margin-bottom: 5px;
 
     #chart_desc_box{
         position:absolute;
-        top:$row-h*3 - 3;
+        top:58px;
         left:$col-w*5;
         z-index:2;
         
@@ -503,11 +547,11 @@ $customizator-margin-bottom: 5px;
     }
 
     .chart_customizator{
-        width: $col-w * 2 ;
-        height: $row-h;
-        float:left;
-        font-size: $font-size - .1;
-        margin: 0 0 $customizator-margin-bottom 0;
+        float: left;
+        font-size: 0.9em;
+        height: 30px;
+        margin: 0 61px 5px 0;
+        width: 228px;
     }
 }
 
@@ -531,7 +575,7 @@ $embed_extras-h: 50px;
 
     #direct_link_url{
         width: $col-w * 4;
-        margin: 0 $col-w;
+        margin: 5px auto;
         padding: 2px;
         font-size: $font-size;
         @include inset_input(1px);
@@ -543,10 +587,10 @@ $embed_extras-h: 50px;
         z-index:3;
         width: $col-w * 4;
         height:$row-h * 2;
-        margin: 8px $col-w;
+        margin: 5px auto;
+        display: block;
         font-size: $font-size;
         @include inset_input(1px);
-        margin-bottom: 5px;
     }
 
     .embed_customization{
@@ -580,12 +624,18 @@ $embed_extras-h: 50px;
     max-height: $col-w*4.8;
     width:$col-w*6;
     text-align: left;
-    font-family: Arial, Helvetica, Sans-serif;
+    font-family: $font-family-container;
     color:scale-lightness($color-off_text, -20);
     font-size: $font-size - .2;
 
     li{
         margin-top:$font-size + .1;
+    }
+
+    a {
+        color:scale-lightness($color-off_text, -20);
+        text-decoration:underline;
+        &:hover {text-decoration:none;}
     }
 
 }
@@ -595,7 +645,7 @@ $embed_extras-h: 50px;
     padding: 5px;
     background-color:$color-on_text;
     border: 1px solid $border-color;
-    font-family: Arial, Helvetica, Sans-serif;
+    font-family: $font-family-container;
     font-size:$font-size - .1;
 }
 
@@ -606,16 +656,23 @@ $embed_extras-h: 50px;
 #footer{
     padding: 20px;
     height:50px;
-    margin-top:-50px; 
-    margin: 0;
+    margin: 100px 0 0 0;
     text-transform:uppercase;
     color:scale-lightness($color-off_text, -20);
     font-size: $font-size - .3;
 
-    .separator{
-        color:$color-off_text;
-    }
+}
 
+#footer, #promo {
+    .separator{
+            color:$color-off_text;
+        }
+
+        a {
+            color:$color-off_text;
+            font-size: $font-size * 0.9;
+            &:hover {text-decoration:none; }
+        }
 }
 
 /************************************/
@@ -627,7 +684,7 @@ $embed_extras-h: 50px;
     height: $embed_extras-h;
     text-align:left;
     width: 100%;
-    font-family: Arial, Helvetica, Sans-serif;
+    font-family: $font-family-container;
     font-size: $font-size - .3;
     color: #000;
     padding: 0 5px;
@@ -685,8 +742,8 @@ $embed_extras-h: 50px;
     }
 
     a{
-        text-decoration:none;
-        color: $color-off_text;
+        text-decoration:underline;
+        color: $black;
         &:hover { text-decoration:underline; }
     
     }
@@ -699,4 +756,164 @@ $embed_extras-h: 50px;
 
 .tutorial_class{
     display:none;
+}
+
+/**** Login ****/
+
+#login, #signup, #reminder, #new_pwd{
+    
+    float:left;
+
+    .login{
+
+        @include border-radius(2px);
+
+        border: 1px #000 solid;
+
+        float:left;
+        margin: 2px 0;
+        font-size: $font-size;
+        height: $font-size + .3;
+        width:96%;
+        padding: 2px 7px;
+
+    }
+
+    #password_forgotten{
+        font-size:$font-size - .3;
+        width:100%;
+        text-align:right;
+        cursor:pointer;
+        text-decoration:underline;
+        &:hover { text-decoration:none; }
+
+    }
+}
+
+#login, #about, #signup, #reminder, #new_pwd {
+    width: $box-w;
+    height: $box-w * 0.85;
+    padding:10px;
+    float:left;
+    position:relative;
+    background-color:#333;
+    color:#fff;
+}
+
+#login_submit, #signup_submit, #show_signup, #reminder_submit, #pwd_change_submit{
+    font-size: $font-size - .1;
+    line-height: $font-size + .7;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#login_submit {
+    margin-top:-5px;
+}
+
+#show_signup{
+    position:absolute;
+    top:190px;
+    margin: 2px 8px;
+    left:0px;
+    width:96%;
+    background-color:$color-on;
+    border:1px #000 solid;
+    @include border-radius(5px);
+    font-size: $font-size;
+    padding:7px;
+    cursor:pointer;
+    text-decoration:underline;
+}
+
+#additional_ressources {
+    font-size:$font-size * 0.9;
+    position:absolute;
+    bottom:0;
+    left:0;
+    margin:10px;
+}
+
+#login, #signup {
+    background-color:#333;
+    color:#fff;
+
+    a {
+        color: #fff;
+        &:hover {text-decoration:none;}
+    }
+
+    h2 {
+        @include text-shadow(#000 1px 0px 1px);
+        font-size:$font-size * 1.1; 
+        font-weight:normal;
+    }
+}
+
+#about{
+    color:$black;
+    margin-right:20px;
+    background-color:$color-on;
+
+    h2{
+       font-weight:normal;
+       font-size:$font-size * 1.1; 
+       padding-right:115px;
+    }
+
+    .beta_logo {
+        position:absolute;
+        z-index:1;
+        top:20px;
+        text-align:center;
+        font-size:$font-size * 1.4;
+        color:#fff;
+        right:20px;
+        @include border-radius(100px);
+        @include rotate(6deg);
+        @include text-shadow(#222 1px 0px 1px);
+        @include box-shadow(#222 0px 0px 4px);
+        width:70px;
+        height:48px;
+        padding-top:22px;
+        text-transform:uppercase;
+        @include background-image(radial-gradient($red-1, $red-2));
+    }
+
+    p, li{
+        margin:0 0 10px 0;
+        padding: 0;
+        font-size: $font-size * 0.8;
+    }
+}
+
+.close_signup{
+    font-size: $font-size - .4;
+    width:100%;
+    text-align:right;
+    color:$shadow-color;
+    cursor:pointer;
+    &:hover { text-decoration:underline; }
+}
+
+#signup, #reminder{
+    display:none;
+}
+
+#verify, #reset_confirmation, #pwd_change_confirmation{
+    width: 96%;
+    display:none;
+    padding:15px;
+    margin-right:20px;
+    background-color:#fff;
+    color:#000;
+    border: 1px solid $border-color;
+    @include border-radius(8px);
+    font-size: $font-size - .2;
+}
+
+h1.login_title {
+    color:$black;
+    font-weight:normal;
+    font-size:$font-size * 1.5; 
 }

@@ -1,8 +1,10 @@
 
 <div id="footer">
+	<a href="http://www.abzv.de/" target="_blank"><?php echo _("ABZV") ?></a>
+	<span class=".separator"> • </span>
 	<a href="#about_datawrapper" class="fancybox"><?php echo _("About Datawrapper") ?></a>
 	<span class=".separator"> • </span>
-	<a href="http://www.abzv.de/" target="_blank"><?php echo _("ABZV") ?></a>
+	<a href="#motivation" class="fancybox"><?php echo _("Motivation") ?></a>
 	<span class=".separator"> • </span>
 	<a href="#terms_of_use" class="fancybox"><?php echo _("Terms of Use") ?></a>
 	<span class=".separator"> • </span>

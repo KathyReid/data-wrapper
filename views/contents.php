@@ -40,6 +40,37 @@
 
 	</div>
 
+	<div id="motivation" class="popup" style="overflow:scroll">
+		<h1><?php echo _("Datawrapper: Goals and Features"); ?></h1>
+
+		<p><?php echo _("Data Journalism opens new perspectives to do deeper and better reporting. If Journalists do really know the numbers and the data - locally, regionally or worldwide - this could lead to higher trustability and relevancy. The readers want clear signals, not some muddled up guessing. Datawrapper is a tool that makes working from data to story easier. Data should be the foundation when starting a new story, not an afterthought. In many newsrooms this is the other way round so far. „Infographics“ are usually started when the story is already done. That leads to actionism, omissions and mistakes. "); ?>
+
+		<h2><?php echo _("Open Source"); ?></h2>
+
+		<p><?php echo _("The most important feature of Datawrapper is its fully open source character. Journalists, bloggers and any media company can download this little helper and install it on a private server. The design of the charts can be adjusted to your outfit's style - you can change the colors, the visual style and the logos. This is increasingly important, because in too many „free“ platforms someone is somehow lurking over the journalists shoulder. Not here. ");?>
+
+		<h2><?php echo _("HTML5 Chart Libraries"); ?></h2>
+
+		<p><?php echo _("Datawrapper uses modern Javascript, HTML5 Libraries like Highcharts oder D3.JS. We want to provide an access to these powerful options. This is a step towards the future as the web prepares for a switch to new visualization options in the near future. So far, especially on news websites, some fancy features where not used in order to not loose any users who still have incompatible (read: very old) browsers. But developers are about to change their mind. The message to users is: Get a decent browser. Downloading and installing a modern, HTML5 capable browser takes a few minutes and opens the door to many, many future options."); ?>
+
+		<h2><?php echo _("Visualize fast, very fast"); ?></h2>
+
+		<p><?php echo _("Using Datawrapper you can create a chart in minutes. Interestingly, doing visualization fast is not the goal of Datawrapper. Preparation, thinking, digging into data and make sense of it is still the main work of data journalists. Datawrapper does the visualization job fast, but merely to not stand in the way to publish something cool. Throwing nonsensical data into this will most probably lead to nonsensical results."); ?>
+
+		<h2><?php echo _("Chart types"); ?></h2>
+
+		<p><?php echo _("The development of this (small) tool was more winded than initially thought. No surprise here. The main challenge was to find a way to reduce the number of steps to a minimum and at the same time offer a lot of features and options."); ?>
+
+		<p><?php echo _("This is why this beta version does only have five basic chart types. But it is a start and shows what is possible. In the future we would like to add more compelling visualizations. To do that we need the support of the data journalism community. If you are a developer who is interested in journalism, please help us."); ?>
+
+		<h2><?php echo _("Motivation"); ?></h2>
+
+		<p><?php printf(_("We are data journalists. We believe, that digging into numbers, structures and influence patterns is extremely important. Doing this with a journalist's mind will build trustability in what is reported. And it opens new perspectives, for example to turn media companies into %s trusted data hubs %s. Who wants to join us?"), "<a href='http://www.niemanlab.org/2011/03/voices-news-organizations-must-become-hubs-of-trusted-data-in-an-market-seeking-and-valuing-trust/' target='_blank'>", "</a>"); ?>
+
+	<p>- Mirko Lorenz, Nicolas Kayser-Bril, 2012</p>
+
+	</div>
+
 	<div id="terms_of_use" class="popup">
 
 		<h1><?php echo _("Terms of use") ?></h1>

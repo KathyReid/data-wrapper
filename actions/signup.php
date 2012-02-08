@@ -62,6 +62,8 @@ if (isset($_POST['email']) && isset($_POST['pwd'])){
 				$m->setSubject($subject);
 				$m->setMessageFromString($message);
 
+				$ses->enableVerifyPeer(false);
+
 				//Sends email
 				if ($ses->sendEmail($m))
 					$return_array["status"] = "200";
