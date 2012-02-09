@@ -39,7 +39,13 @@ $file_vis = '{
     "visualizations":{
         "column":{
             "name": "column",
-            "desc": "'.  _('Bar chart').'",
+            "desc": "'.  _('Vertical bar chart').'",
+            "library": "highcharts",
+            "vis_code": "column.js"
+        },
+        "bar":{
+            "name": "bar",
+            "desc": "'.  _('Horizontal bar chart').'",
             "library": "highcharts",
             "vis_code": "column.js"
         },

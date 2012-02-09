@@ -17,6 +17,8 @@ options.tooltip.formatter = function(){return barTooltip(this); };
 
 var count_rows = 0;
 
+var count_points = 0;
+
 $.each(csv_data, function() {
 	//New row
 
@@ -51,8 +53,18 @@ $.each(csv_data, function() {
 			}
 
 			count_cols++;
+			count_points++;
 		});
 
 	}
+	
 	count_rows++;
+
+	//removes data labels if there are more than 15 points
+	if (count_points >= 15){
+		options.plotOptions = {series: {dataLabels: {enabled: false}}};
+	}else{
+		options.plotOptions = {series: {dataLabels: {enabled: true}}};
+	}
+
 });

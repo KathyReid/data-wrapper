@@ -71,6 +71,17 @@
 
 	</div>
 
+	<div id="installation" class="popup">
+		<p>To install DataWrapper on your server, download all files from GitHub or do a 'git pull'. Create the appropriate tables in your database using the .sql dump. Then create a file with your database passwords to be stored in /actions/passwords.php under the form</p>
+
+		<blockquote>
+			<code>&lt;?php<br /> $hostname = "hostname";<br /> $database = "database_name";<br /> $username = "user_name";<br /> $password = "password";<br /> ?&gt;</code>
+		</blockquote>
+
+		<p>Then modify the production domain name in /config.php ('$prod_domain') if you do not host your application on CloudControl.</p>
+		<p>If you are a for-profit venture, make sure to buy a license for the use of HighCharts.</p>
+	</div>
+
 	<div id="terms_of_use" class="popup">
 
 		<h1><?php echo _("Terms of use") ?></h1>

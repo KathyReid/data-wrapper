@@ -96,6 +96,15 @@ Highcharts.theme = {
 		}	
 	},
 	plotOptions: {	
+		series : {
+			pointPadding: 0.03,
+			groupPadding: 0.05,
+            borderWidth: 0, 
+            shadow: false,
+            dataLabels: {
+				enabled: true
+			}
+		},
 		column : {
 			pointPadding: 0.2,
 			borderWidth: 1,
@@ -114,9 +123,6 @@ Highcharts.theme = {
 		pie : {
 			allowPointSelect: true,
 			cursor: "pointer",
-			dataLabels: {
-				enabled: true
-			},
 			markers: {
 				enabled: true
 			}
