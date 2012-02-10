@@ -168,6 +168,10 @@ function render_chart(opt, theme){
 	        		
 	        		responsive_render(render_div, opt, theme);
 
+	        	}else if (opt.chart.chart_lib == "flotr2"){
+	        		
+	        		basic_pie(render_div, opt, theme);
+
 	        	}else if (opt.chart.chart_lib == "d3"){
 
 	        		if (opt.chart.defaultSeriesType == "stream"){

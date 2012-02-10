@@ -14,6 +14,18 @@ $file_vis = '{
                 "Safari": "4.0+" 
             }
         },
+        "flotr2":
+        {
+            "name": "flotr2",
+            "dependancies": ["flotr2/flotr2.min.js", "flotr2/pie.js"],
+            "compatibility": {
+                "IE": "6.0+",
+                "FF": "2.0+",
+                "Chrome": "1.0+",   
+                "Android": "1.0+",
+                "iOS": "1.0+" 
+            }
+        },
         "responsive":
         {
             "name": "Responsive",
@@ -59,6 +71,15 @@ $file_vis = '{
             "name": "pie",
             "desc": "'. _('Pie chart').'",
             "library": "highcharts",
+            "vis_code": "pie.js",
+            "resources":{
+                "'. _('Understanding Pie Charts').'": "http://eagereyes.org/techniques/pie-charts"
+            }
+        },
+        "simple_pie":{
+            "name": "simple_pie",
+            "desc": "'. _('Simplified pie chart').'",
+            "library": "flotr2",
             "vis_code": "pie.js",
             "resources":{
                 "'. _('Understanding Pie Charts').'": "http://eagereyes.org/techniques/pie-charts"

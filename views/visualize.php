@@ -85,11 +85,12 @@ function js_enterScreen_visualize(){
 	
 	$('#chart_info').click(function() {
 
-		//otherwise, data doesn't show properly if user hasn't changed the default graph type
-		if ($("#chart_desc_box").html()==""){
-			update_options();
-		}
+		//retrieves the html code of the vis chosen
+		var chart_desc = $("#chart_type option[value="+ chart_type +"]").attr("html_code");
 
+		//shoves the code in the div
+		$("#chart_desc_box").html(chart_desc);
+		
    		//displays the div
 		$("#chart_desc_box").show();
 	
@@ -170,12 +171,6 @@ function update_options(){
 	}else{
 		options.desc = desc;	
 	}
-
-	//retrieves the html code of the vis chosen
-	var chart_desc = $("#chart_type option[value="+ chart_type +"]").attr("html_code");
-
-	//shoves the code in the div
-	$("#chart_desc_box").html(chart_desc);
 
 	//Assigns a chart type according to the user's choice in the drop down menu
 	chart_type = $("#chart_type").val();
