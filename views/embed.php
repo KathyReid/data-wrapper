@@ -144,9 +144,7 @@
 		}
 		?>
 
-		<!-- Piwik Image Tracker -->
-		<img src="http://datastory.de/piwik/piwik.php?idsite=1&rec=1" style="border:0" alt="" />
-		<!-- End Piwik -->
+		
 
     </body>
 </html>
