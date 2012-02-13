@@ -237,9 +237,4 @@
         	</div>
 
             <!-- Start Footer -->
-            <?php require_once "views/footer.php"; ?>
-            <!-- End Footer -->
-
-        </div>
-    </body>
-</html>
+            <?php require_once "views/footer.php"; ?>        
