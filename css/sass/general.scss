@@ -34,25 +34,25 @@ $col-w: $container-width / $grid-cols;
 
 $font-family-container: "Lucida Sans Unicode","Lucida Grande", Arial, Helvetica, Garuda, sans-serif;
 
-@mixin narrow-text{
+@mixin narrow-text {
     letter-spacing:-1px;
     font-stretch: 90%;
     text-transform: uppercase;
     font-weight:bold;
 }
 
-@mixin explainer{
+@mixin explainer {
     font-size: $font-size + .2;
 }
 
-@mixin title_font{
+@mixin title_font {
     font-size: $font-size + .2;
     font-family: Georgia, Serif;
     color:$color-off_text;
 
 }
 
-@mixin inset_input($shadow-length){
+@mixin inset_input($shadow-length) {
     color:$color-off_text;
     background-color:$dark-color;
     @include single-box-shadow("#999", 0, 0, $shadow-length, $shadow-length/2, true);
@@ -63,11 +63,11 @@ $font-family-container: "Lucida Sans Unicode","Lucida Grande", Arial, Helvetica,
 /*   General    /
 /***************/
 
-html {
+html  {
     height: 100%;
 }
 
-body{
+body {
     padding: 0;
     margin: 0;
     background-color:$dark-color;
@@ -75,7 +75,7 @@ body{
     height: 100%;
 }
 
-#black_veil{
+#black_veil {
     display:none;
     width: 100%;
     min-height: 100%;
@@ -90,7 +90,7 @@ body{
 $loader-w: 10%;
 $loader-h: 10%;
 
-#loader{
+#loader {
     position:fixed;
     z-index:5;
     display:none;
@@ -98,7 +98,7 @@ $loader-h: 10%;
     left: 50% - $loader-w/2;
 }
 
-.clear{
+.clear {
     clear:both;
 }
 
@@ -108,7 +108,7 @@ $loader-h: 10%;
 /*   Container  /
 /***************/
 
-#container{
+#container {
 
     width: $container-width;
     margin: 0 auto;
@@ -123,14 +123,14 @@ $loader-h: 10%;
 
     @include box-shadow($shadow-color 0px 0px 10px);
 
-    a{
+    a {
         text-decoration:underline;
         color: $black;
-        &:hover { text-decoration:underline; }
+        &:hover  { text-decoration:underline; }
     }
 }
 
-#screen_container{
+#screen_container {
     min-height:$row-h*11;
     position: relative;
     top: 0;
@@ -147,7 +147,7 @@ $header-height : $row-h * 3;
 $logo-w: $row-h * 2;
 $navbar-height: $row-h;
 
-#header{
+#header {
     width: $container-width;
     position:relative;
     top:0;
@@ -155,7 +155,7 @@ $navbar-height: $row-h;
     height: $header-height;
 }
 
-#logo{
+#logo {
     position:absolute;
     z-index:0;
     width:$col-w*3;
@@ -167,7 +167,7 @@ $navbar-height: $row-h;
     cursor: pointer;
 }
 
-#navbar{
+#navbar {
     width: $container-width - $margin-left;
     margin-right: $margin-left;
     background-color:transparent;
@@ -179,61 +179,61 @@ $navbar-height: $row-h;
     text-transform:uppercase;
     font-size: $font-size * 0.6;
 
-    #promo {
+    #promo  {
         width: $col-w * 2.2;
         float:right;
         text-align:right;
         margin-top:$row-h/2;
     }
 
-    #languages{
+    #languages {
         width: $col-w * 1.5;
         float:right;
         margin-top:$row-h/2;
         text-align:right;
         
-        .language{
+        .language {
             margin: 0;
             display:inline;
             color: $color-off;
             cursor: pointer;
-            &:hover { text-decoration: underline; }
+            &:hover  { text-decoration: underline; }
         }
     }
 
-    #loggedin{
+    #loggedin {
         
         float:left;
         margin: -28px 0 0 270px;
         font-size: $font-size * 0.9;
 
-        #my_vis{
+        #my_vis {
             margin: $row-h/2 5px 0 0;
             float:right;
         }
 
-        #my_vis a{
+        #my_vis a {
             cursor: pointer;
             color: $color-on_text;
             text-decoration:none;
             background-color: $color-on;
             @include border-radius(2px);
             padding: 0 3px;
-            &:hover { color: $color-on; background-color: $color-on_text; }
+            &:hover  { color: $color-on; background-color: $color-on_text; }
         }
 
-        #loggedas{
+        #loggedas {
             float:right;
             margin: $row-h/2 5px 0 0;
             color: $color-off_text;
         }
 
-        #logout{
+        #logout {
             margin: $row-h/2 5px 0 0;
             float:right;
             cursor: pointer;
             color: $color-on;
-            &:hover { color: $color-off_text; }
+            &:hover  { color: $color-off_text; }
         }
     }
 }
@@ -245,7 +245,7 @@ $navbar-height: $row-h;
 $button-color-top: #fff;
 $button-color-bottom: #ccc;
 
-.button{
+.button {
     
     cursor:pointer;
         
@@ -262,13 +262,13 @@ $button-color-bottom: #ccc;
     @include text-shadow(rgba(white, 0.2) 1px 1px 0, rgba(white, 0.2) 1px 1px 0, rgba(white, 0.2) 1px 1px 0);
 }
 
-.nav{
+.nav {
         font-size: $font-size + .2;
         width: $col-w - $col-w/10;
     }
 
 
-#button_next, #button_prev{
+#button_next, #button_prev {
     cursor:pointer;
     position:absolute;
     top: $row-h * 8;
@@ -276,10 +276,10 @@ $button-color-bottom: #ccc;
     text-align:center;
 }
 
-#button_next{
+#button_next {
     right: -95px;
 
-    #next, #new_chart {
+    #next, #new_chart  {
         @include border-right-radius(25px);
         height:100px;
         width:70px;
@@ -287,9 +287,9 @@ $button-color-bottom: #ccc;
     }
 }
 
-#button_prev{
+#button_prev {
     left: -95px;
-    #prev {
+    #prev  {
         @include border-left-radius(25px);
         height:100px;
         width:70px;
@@ -306,7 +306,7 @@ $breadcrumbs-width: $container-width;
 $breadcrumbs_steps: 4;
 $breadcrumbs-padding: 8px;
 
-@mixin transpose-on-off{
+@mixin transpose-on-off {
     float:left;
     width: (($container-width - 2 * $margin-left) / $breadcrumbs_steps) - $breadcrumbs-padding;
     margin: 0 5px;
@@ -316,7 +316,7 @@ $breadcrumbs-padding: 8px;
     @include narrow-text;
 }
 
-#breadcrumbs{
+#breadcrumbs {
     
     height: $breadcrumbs-height;
     width : $breadcrumbs-width;
@@ -324,13 +324,13 @@ $breadcrumbs-padding: 8px;
     margin:0 $margin-left 15px $margin-left;
     width: $container-width - 2 * $margin-left;
 
-    .on{
+    .on {
         background-color:$color-on;
         color:$color-on_text;
         @include transpose-on-off;
     }
 
-    .off {
+    .off  {
         background-color:$color-off;
         color:$color-off_text;
         @include transpose-on-off;
@@ -340,7 +340,7 @@ $breadcrumbs-padding: 8px;
 /***************/
 /* Error box   */
 /***************/
-#error{
+#error {
     display:none;
     color:#000;
     font-weight:bold;
@@ -373,15 +373,15 @@ $breadcrumbs-padding: 8px;
 
 $textarea-padding: 10px;
 
-#input{
+#input {
     
     position:relative;
     z-index:3;
 
-    #explainer{
+    #explainer {
         @include explainer;
     }
-    #input_data{
+    #input_data {
         width:$container-width - $textarea-padding * 2 - $margin-left * 2 - 2px;
         @include inset_input(10px);
         height: $row-h * 5;
@@ -390,23 +390,23 @@ $textarea-padding: 10px;
 }
 
 //Sample data
-#sample_data{
+#sample_data {
 
     font-size:$font-size * 0.8;
     width:70%;
 
-    ul {
+    ul  {
         margin: 0;
         padding: 0;
     }
 
-    li {
+    li  {
         list-style:none;
         cursor:pointer;
         text-decoration:underline;
         margin:0 1%;
         text-indent:-1%;
-        &:hover { text-decoration:none; }
+        &:hover  { text-decoration:none; }
     }
 }
 
@@ -416,45 +416,45 @@ $textarea-padding: 10px;
 
 $table-padding: 10px;
 
-#check{
-    #explainer{
+#check {
+    #explainer {
 
         @include explainer;
 
-        #sub_explainer{
+        #sub_explainer {
             
             font-size: $font-size - .2;
 
-            p{
+            p {
                 margin: 5px 10px;
             }
 
-            .transpose{
+            .transpose {
                 font-size: $font-size - .2;
                 width: $col-w * 2;
             }
         }
     }
 
-    table{
+    table {
         margin-top: 10px;
         width:($container-width - 2 * $margin-left);
         padding:$table-padding;
         font-size: $font-size - .2;
     }
 
-    td{
+    td {
         background-color:$dark-color;
         text-align:center;
         width:$col-w;
     }
 
-    .header_cell{
+    .header_cell {
         font-weight: bold;
         background-color:$color-on;
     }
 
-    .empty_cell{
+    .empty_cell {
         background-color:$background-color;
     }
 }
@@ -465,9 +465,9 @@ $table-padding: 10px;
 
 $customizator-margin-bottom: 5px;
 
-#visualize{
+#visualize {
 
-    #chart{
+    #chart {
         width: ($container-width - 2 * $margin-left);
         height: $row-h * 10;
         margin: $row-h 0;
@@ -475,42 +475,42 @@ $customizator-margin-bottom: 5px;
         overflow:hidden;
     }
 
-    #explainer{
+    #explainer {
         @include explainer;
     }
 
-    #chart_customization{
+    #chart_customization {
         
         width:$container-width - 2 * $margin-left ;
         height:$row-h * 3;
         padding:0;
 
-        input, select{
+        input, select {
             width:($container-width - 2 * $margin-left) / 3 - $table-padding * 4;
             font-size: $font-size;
             @include inset_input(1px);
             height:$row-h - $customizator-margin-bottom;
         }
-        input{
+        input {
             padding: 0 $table-padding;
         }
-        select{
+        select {
             width:($container-width - 2 * $margin-left) / 3 - $table-padding * 2;
             padding:4px 0 0 4px;
         }
 
-        .desc{
+        .desc {
             width:529px;
         }
 
-        .inactive{
+        .inactive {
             background-color:$dark-color;
             color:$color-on_text;
             border:$shadow-color;
         }
     }
 
-    #chart_info{
+    #chart_info {
         position:absolute;
         right: -25px;
         top: 25px;
@@ -523,7 +523,7 @@ $customizator-margin-bottom: 5px;
         cursor:pointer;
     }
 
-    #chart_desc_box{
+    #chart_desc_box {
         position:absolute;
         top:58px;
         left:$col-w*5;
@@ -540,13 +540,13 @@ $customizator-margin-bottom: 5px;
 
         display:none;
 
-        img{
+        img {
             width:15px;
             height:15px;
         }
     }
 
-    .chart_customizator{
+    .chart_customizator {
         float: left;
         font-size: 0.9em;
         height: 30px;
@@ -561,19 +561,18 @@ $customizator-margin-bottom: 5px;
 
 $chart-h:300px;
 $chart-w:400px;
-$embed_extras-h: 50px;
 
-#publish{
+#publish {
 
-    #explainer{
+    #explainer {
         @include explainer;
     }
 
-    p{
+    p {
         margin: 8px 0 2px 0;
     }
 
-    #direct_link_url{
+    #direct_link_url {
         width: $col-w * 4;
         margin: 5px auto;
         padding: 2px;
@@ -582,7 +581,7 @@ $embed_extras-h: 50px;
         margin-bottom: 5px;
     }
 
-    #iframe_code{
+    #iframe_code {
         position:relative;
         z-index:3;
         width: $col-w * 4;
@@ -593,19 +592,19 @@ $embed_extras-h: 50px;
         @include inset_input(1px);
     }
 
-    .embed_customization{
+    .embed_customization {
         font-size: $font-size - .1;
         margin-bottom: 5px;
     }
 
-    .embed_customizator{
+    .embed_customizator {
         position:relative;
         z-index:3;
         width: 40px;
         @include inset_input(1px);
     }
 
-    #embed{
+    #embed {
 
         margin: 0 auto;
         background-color: #fff;
@@ -617,7 +616,7 @@ $embed_extras-h: 50px;
 /*              Popups              */
 /************************************/
 
-.popup{
+.popup {
     padding: 20px;
     margin: 0;
     background-color:$dark-color;
@@ -628,19 +627,19 @@ $embed_extras-h: 50px;
     color:scale-lightness($color-off_text, -20);
     font-size: $font-size - .2;
 
-    li{
+    li {
         margin-top:$font-size + .1;
     }
 
-    a {
+    a  {
         color:scale-lightness($color-off_text, -20);
         text-decoration:underline;
-        &:hover {text-decoration:none;}
+        &:hover  {text-decoration:none;}
     }
 
 }
 
-#quickstart_noshow{
+#quickstart_noshow {
     @include border-radius(5px);
     padding: 5px;
     background-color:$color-on_text;
@@ -653,70 +652,32 @@ $embed_extras-h: 50px;
 /*              Footer              */
 /************************************/
 
-#footer{
+#footer {
     padding: 20px;
     height:50px;
     margin: 100px 0 0 0;
     text-transform:uppercase;
     color:scale-lightness($color-off_text, -20);
-    font-size: $font-size - .3;
+    font-size: $font-size * .7;
+    clear:both;
 
 }
 
-#footer, #promo {
-    .separator{
+#footer, #promo  {
+    .separator {
             color:$color-off_text;
         }
 
-        a {
+        a  {
             color:$color-off_text;
             font-size: $font-size * 0.9;
-            &:hover {text-decoration:none; }
+            &:hover  {text-decoration:none; }
         }
 }
-
-/************************************/
-/*              Embed               */
-/************************************/
-/* Also visible on 'publish' screen */
-
-#embed_extras{
-    height: $embed_extras-h;
-    text-align:left;
-    width: 100%;
-    font-family: $font-family-container;
-    font-size: $font-size - .3;
-    color: #000;
-    padding: 0 5px;
-
-    p{
-        margin: 0 5px;
-    }
-
-    #export_csv{
-        font-size: $font-size - .2;
-        float:right;
-        margin: 0 10px;
-    }
-
-    .desc{
-        font-weight:bold;
-    }
-
-    #source{
-        font-style: italic;
-    }
-
-    .source_url{
-        color: #000;
-        &:hover { text-decoration:underline; }
-    }
-}
-
 
 /**** Tutorial ****/
 
-.button_tutorial{
+.button_tutorial {
         margin-left: $col-w * 3;
         cursor:pointer;
         
@@ -733,38 +694,38 @@ $embed_extras-h: 50px;
         @include text-shadow(rgba(white, 0.2) 1px 1px 0, rgba(white, 0.2) 1px 1px 0, rgba(white, 0.2) 1px 1px 0);
     }
 
-#tutorial{
+#tutorial {
 
     min-height:$row-h*15;
 
-    h1{
+    h1 {
         font-size:$font-size + .5;
     }
 
-    a{
+    a {
         text-decoration:underline;
         color: $black;
-        &:hover { text-decoration:underline; }
+        &:hover  { text-decoration:underline; }
     
     }
 
-    img{
+    img {
         @include box-shadow($shadow-color 0px 0px 10px);
         margin-left:$col-w/2;
     }
 }
 
-.tutorial_class{
+.tutorial_class {
     display:none;
 }
 
 /**** Login ****/
 
-#login, #signup, #reminder, #new_pwd{
+#login, #signup, #reminder, #new_pwd {
     
     float:left;
 
-    .login{
+    .login {
 
         @include border-radius(2px);
 
@@ -779,18 +740,18 @@ $embed_extras-h: 50px;
 
     }
 
-    #password_forgotten{
+    #password_forgotten {
         font-size:$font-size - .3;
         width:100%;
         text-align:right;
         cursor:pointer;
         text-decoration:underline;
-        &:hover { text-decoration:none; }
+        &:hover  { text-decoration:none; }
 
     }
 }
 
-#login, #about, #signup, #reminder, #new_pwd {
+#login, #about, #signup, #reminder, #new_pwd  {
     width: $box-w;
     height: $box-w * 0.85;
     padding:10px;
@@ -800,18 +761,18 @@ $embed_extras-h: 50px;
     color:#fff;
 }
 
-#login_submit, #signup_submit, #show_signup, #reminder_submit, #pwd_change_submit{
+#login_submit, #signup_submit, #show_signup, #reminder_submit, #pwd_change_submit {
     font-size: $font-size - .1;
     line-height: $font-size + .7;
     font-weight: bold;
     margin: 10px;
 }
 
-#login_submit {
+#login_submit  {
     margin-top:-5px;
 }
 
-#show_signup{
+#show_signup {
     position:absolute;
     top:190px;
     margin: 2px 8px;
@@ -826,7 +787,7 @@ $embed_extras-h: 50px;
     text-decoration:underline;
 }
 
-#additional_ressources {
+#additional_ressources  {
     font-size:$font-size * 0.9;
     position:absolute;
     bottom:0;
@@ -834,34 +795,34 @@ $embed_extras-h: 50px;
     margin:10px;
 }
 
-#login, #signup {
+#login, #signup  {
     background-color:#333;
     color:#fff;
 
-    a {
+    a  {
         color: #fff;
-        &:hover {text-decoration:none;}
+        &:hover  {text-decoration:none;}
     }
 
-    h2 {
+    h2  {
         @include text-shadow(#000 1px 0px 1px);
         font-size:$font-size * 1.1; 
         font-weight:normal;
     }
 }
 
-#about{
+#about {
     color:$black;
     margin-right:20px;
     background-color:$color-on;
 
-    h2{
+    h2 {
        font-weight:normal;
        font-size:$font-size * 1.1; 
        padding-right:115px;
     }
 
-    .beta_logo {
+    .beta_logo  {
         position:absolute;
         z-index:1;
         top:20px;
@@ -880,27 +841,27 @@ $embed_extras-h: 50px;
         @include background-image(radial-gradient($red-1, $red-2));
     }
 
-    p, li{
+    p, li {
         margin:0 0 10px 0;
         padding: 0;
         font-size: $font-size * 0.8;
     }
 }
 
-.close_signup{
+.close_signup {
     font-size: $font-size - .4;
     width:100%;
     text-align:right;
     color:$shadow-color;
     cursor:pointer;
-    &:hover { text-decoration:underline; }
+    &:hover  { text-decoration:underline; }
 }
 
-#signup, #reminder{
+#signup, #reminder {
     display:none;
 }
 
-#verify, #reset_confirmation, #pwd_change_confirmation{
+#verify, #reset_confirmation, #pwd_change_confirmation {
     width: 96%;
     display:none;
     padding:15px;
@@ -912,7 +873,7 @@ $embed_extras-h: 50px;
     font-size: $font-size - .2;
 }
 
-h1.login_title {
+h1.login_title  {
     color:$black;
     font-weight:normal;
     font-size:$font-size * 1.5; 

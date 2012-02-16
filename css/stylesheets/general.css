@@ -567,15 +567,15 @@ body {
 /********************/
 /*  Publish screen  */
 /********************/
-/* line 568, ../sass/general.scss */
+/* line 567, ../sass/general.scss */
 #publish #explainer {
   font-size: 1.2em;
 }
-/* line 572, ../sass/general.scss */
+/* line 571, ../sass/general.scss */
 #publish p {
   margin: 8px 0 2px 0;
 }
-/* line 576, ../sass/general.scss */
+/* line 575, ../sass/general.scss */
 #publish #direct_link_url {
   width: 480px;
   margin: 5px auto;
@@ -590,7 +590,7 @@ body {
   border: 1px solid #7f7f7f;
   margin-bottom: 5px;
 }
-/* line 585, ../sass/general.scss */
+/* line 584, ../sass/general.scss */
 #publish #iframe_code {
   position: relative;
   z-index: 3;
@@ -607,12 +607,12 @@ body {
   box-shadow: inset 0 0 1px 0.5px "#999";
   border: 1px solid #7f7f7f;
 }
-/* line 596, ../sass/general.scss */
+/* line 595, ../sass/general.scss */
 #publish .embed_customization {
   font-size: 0.9em;
   margin-bottom: 5px;
 }
-/* line 601, ../sass/general.scss */
+/* line 600, ../sass/general.scss */
 #publish .embed_customizator {
   position: relative;
   z-index: 3;
@@ -625,7 +625,7 @@ body {
   box-shadow: inset 0 0 1px 0.5px "#999";
   border: 1px solid #7f7f7f;
 }
-/* line 608, ../sass/general.scss */
+/* line 607, ../sass/general.scss */
 #publish #embed {
   margin: 0 auto;
   background-color: #fff;
@@ -634,7 +634,7 @@ body {
 /************************************/
 /*              Popups              */
 /************************************/
-/* line 620, ../sass/general.scss */
+/* line 619, ../sass/general.scss */
 .popup {
   padding: 20px;
   margin: 0;
@@ -646,21 +646,21 @@ body {
   color: #444444;
   font-size: 0.8em;
 }
-/* line 631, ../sass/general.scss */
+/* line 630, ../sass/general.scss */
 .popup li {
   margin-top: 1.1em;
 }
-/* line 635, ../sass/general.scss */
+/* line 634, ../sass/general.scss */
 .popup a {
   color: #444444;
   text-decoration: underline;
 }
-/* line 638, ../sass/general.scss */
+/* line 637, ../sass/general.scss */
 .popup a:hover {
   text-decoration: none;
 }
 
-/* line 643, ../sass/general.scss */
+/* line 642, ../sass/general.scss */
 #quickstart_noshow {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -678,7 +678,7 @@ body {
 /************************************/
 /*              Footer              */
 /************************************/
-/* line 656, ../sass/general.scss */
+/* line 655, ../sass/general.scss */
 #footer {
   padding: 20px;
   height: 50px;
@@ -686,6 +686,7 @@ body {
   text-transform: uppercase;
   color: #444444;
   font-size: 0.7em;
+  clear: both;
 }
 
 /* line 667, ../sass/general.scss */
@@ -702,49 +703,8 @@ body {
   text-decoration: none;
 }
 
-/************************************/
-/*              Embed               */
-/************************************/
-/* Also visible on 'publish' screen */
-/* line 683, ../sass/general.scss */
-#embed_extras {
-  height: 50px;
-  text-align: left;
-  width: 100%;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, Garuda, sans-serif;
-  font-size: 0.7em;
-  color: #000;
-  padding: 0 5px;
-}
-/* line 692, ../sass/general.scss */
-#embed_extras p {
-  margin: 0 5px;
-}
-/* line 696, ../sass/general.scss */
-#embed_extras #export_csv {
-  font-size: 0.8em;
-  float: right;
-  margin: 0 10px;
-}
-/* line 702, ../sass/general.scss */
-#embed_extras .desc {
-  font-weight: bold;
-}
-/* line 706, ../sass/general.scss */
-#embed_extras #source {
-  font-style: italic;
-}
-/* line 710, ../sass/general.scss */
-#embed_extras .source_url {
-  color: #000;
-}
-/* line 712, ../sass/general.scss */
-#embed_extras .source_url:hover {
-  text-decoration: underline;
-}
-
 /**** Tutorial ****/
-/* line 719, ../sass/general.scss */
+/* line 680, ../sass/general.scss */
 .button_tutorial {
   margin-left: 360px;
   cursor: pointer;
@@ -769,24 +729,24 @@ body {
   text-shadow: rgba(255, 255, 255, 0.2) 1px 1px 0, rgba(255, 255, 255, 0.2) 1px 1px 0, rgba(255, 255, 255, 0.2) 1px 1px 0;
 }
 
-/* line 736, ../sass/general.scss */
+/* line 697, ../sass/general.scss */
 #tutorial {
   min-height: 450px;
 }
-/* line 740, ../sass/general.scss */
+/* line 701, ../sass/general.scss */
 #tutorial h1 {
   font-size: 1.5em;
 }
-/* line 744, ../sass/general.scss */
+/* line 705, ../sass/general.scss */
 #tutorial a {
   text-decoration: underline;
   color: black;
 }
-/* line 747, ../sass/general.scss */
+/* line 708, ../sass/general.scss */
 #tutorial a:hover {
   text-decoration: underline;
 }
-/* line 751, ../sass/general.scss */
+/* line 712, ../sass/general.scss */
 #tutorial img {
   -moz-box-shadow: #7f7f7f 0px 0px 10px;
   -webkit-box-shadow: #7f7f7f 0px 0px 10px;
@@ -795,17 +755,17 @@ body {
   margin-left: 60px;
 }
 
-/* line 757, ../sass/general.scss */
+/* line 718, ../sass/general.scss */
 .tutorial_class {
   display: none;
 }
 
 /**** Login ****/
-/* line 763, ../sass/general.scss */
+/* line 724, ../sass/general.scss */
 #login, #signup, #reminder, #new_pwd {
   float: left;
 }
-/* line 767, ../sass/general.scss */
+/* line 728, ../sass/general.scss */
 #login .login, #signup .login, #reminder .login, #new_pwd .login {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -821,7 +781,7 @@ body {
   width: 96%;
   padding: 2px 7px;
 }
-/* line 782, ../sass/general.scss */
+/* line 743, ../sass/general.scss */
 #login #password_forgotten, #signup #password_forgotten, #reminder #password_forgotten, #new_pwd #password_forgotten {
   font-size: 0.7em;
   width: 100%;
@@ -829,12 +789,12 @@ body {
   cursor: pointer;
   text-decoration: underline;
 }
-/* line 788, ../sass/general.scss */
+/* line 749, ../sass/general.scss */
 #login #password_forgotten:hover, #signup #password_forgotten:hover, #reminder #password_forgotten:hover, #new_pwd #password_forgotten:hover {
   text-decoration: none;
 }
 
-/* line 793, ../sass/general.scss */
+/* line 754, ../sass/general.scss */
 #login, #about, #signup, #reminder, #new_pwd {
   width: 390px;
   height: 331.5px;
@@ -845,7 +805,7 @@ body {
   color: #fff;
 }
 
-/* line 803, ../sass/general.scss */
+/* line 764, ../sass/general.scss */
 #login_submit, #signup_submit, #show_signup, #reminder_submit, #pwd_change_submit {
   font-size: 0.9em;
   line-height: 1.7em;
@@ -853,12 +813,12 @@ body {
   margin: 10px;
 }
 
-/* line 810, ../sass/general.scss */
+/* line 771, ../sass/general.scss */
 #login_submit {
   margin-top: -5px;
 }
 
-/* line 814, ../sass/general.scss */
+/* line 775, ../sass/general.scss */
 #show_signup {
   position: absolute;
   top: 190px;
@@ -879,7 +839,7 @@ body {
   text-decoration: underline;
 }
 
-/* line 829, ../sass/general.scss */
+/* line 790, ../sass/general.scss */
 #additional_ressources {
   font-size: 0.9em;
   position: absolute;
@@ -888,39 +848,39 @@ body {
   margin: 10px;
 }
 
-/* line 837, ../sass/general.scss */
+/* line 798, ../sass/general.scss */
 #login, #signup {
   background-color: #333;
   color: #fff;
 }
-/* line 841, ../sass/general.scss */
+/* line 802, ../sass/general.scss */
 #login a, #signup a {
   color: #fff;
 }
-/* line 843, ../sass/general.scss */
+/* line 804, ../sass/general.scss */
 #login a:hover, #signup a:hover {
   text-decoration: none;
 }
-/* line 846, ../sass/general.scss */
+/* line 807, ../sass/general.scss */
 #login h2, #signup h2 {
   text-shadow: black 1px 0px 1px;
   font-size: 1.1em;
   font-weight: normal;
 }
 
-/* line 853, ../sass/general.scss */
+/* line 814, ../sass/general.scss */
 #about {
   color: black;
   margin-right: 20px;
   background-color: #5e9dcd;
 }
-/* line 858, ../sass/general.scss */
+/* line 819, ../sass/general.scss */
 #about h2 {
   font-weight: normal;
   font-size: 1.1em;
   padding-right: 115px;
 }
-/* line 864, ../sass/general.scss */
+/* line 825, ../sass/general.scss */
 #about .beta_logo {
   position: absolute;
   z-index: 1;
@@ -956,14 +916,14 @@ body {
   background-image: -ms-radial-gradient(#a3160d, #b94e63);
   background-image: radial-gradient(#a3160d, #b94e63);
 }
-/* line 883, ../sass/general.scss */
+/* line 844, ../sass/general.scss */
 #about p, #about li {
   margin: 0 0 10px 0;
   padding: 0;
   font-size: 0.8em;
 }
 
-/* line 890, ../sass/general.scss */
+/* line 851, ../sass/general.scss */
 .close_signup {
   font-size: 0.6em;
   width: 100%;
@@ -971,17 +931,17 @@ body {
   color: #7f7f7f;
   cursor: pointer;
 }
-/* line 896, ../sass/general.scss */
+/* line 857, ../sass/general.scss */
 .close_signup:hover {
   text-decoration: underline;
 }
 
-/* line 899, ../sass/general.scss */
+/* line 860, ../sass/general.scss */
 #signup, #reminder {
   display: none;
 }
 
-/* line 903, ../sass/general.scss */
+/* line 864, ../sass/general.scss */
 #verify, #reset_confirmation, #pwd_change_confirmation {
   width: 96%;
   display: none;
@@ -999,7 +959,7 @@ body {
   font-size: 0.8em;
 }
 
-/* line 915, ../sass/general.scss */
+/* line 876, ../sass/general.scss */
 h1.login_title {
   color: black;
   font-weight: normal;
