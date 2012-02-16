@@ -3,4 +3,4 @@ RewriteBase /
 
 RewriteCond %{HTTP_HOST} !^localhost$
 RewriteCond %{HTTP_HOST} !^datawrapper\.de$ [NC]
-RewriteRule ^(.*)$ http://www.datawrapper.de/$1 [R=301,L]
+RewriteRule ^(.*)$ http://datawrapper.de/$1 [R=301,L]
