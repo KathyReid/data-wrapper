@@ -1,7 +1,7 @@
-DataWrapper
+Datawrapper
 ====================
 
-DataWrapper is a tool that enables to create enticing visualizations in seconds, without any programming skills.
+Datawrapper is a tool that enables to create enticing visualizations in seconds, without any programming skills.
 
 It draws inspiration from ManyEyes and GoogleCharts but remains entirely open-source and independent from a third-party server.
 
@@ -10,7 +10,7 @@ Any developper can add a visualization type, using (or not) a JavaScript library
 Install
 ---------------------
 
-To install DataWrapper on your server, download all files from GitHub or do a 'git pull'. Create the appropriate tables in your database using the .sql dump. Then create a file with your database passwords to be stored in /actions/passwords.php under the form
+To install Datawrapper on your server, download all files from GitHub or do a 'git pull'. Create the appropriate tables in your database using the .sql dump. Then create a file with your database passwords to be stored in /actions/passwords.php under the form
 
 	<?php
 		$hostname = "hostname";
@@ -75,7 +75,7 @@ They use the structure of [Highchart themes](http://www.highcharts.com/ref/#plot
 Visualizations
 ---------------------
 
-DataWrapper makes it easy to add a new type of visualization.
+Datawrapper makes it easy to add a new type of visualization.
 
 Visualizations are listed in the file '/visualizations/config.json.php'
 

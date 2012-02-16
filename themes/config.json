@@ -3,7 +3,7 @@
         "default":
         {
             "name": "default",
-            "desc": "Default theme",
+            "desc": "Standard layout",
             "image": null,
             "restricted": null
         },

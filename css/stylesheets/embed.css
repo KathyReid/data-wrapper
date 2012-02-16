@@ -45,18 +45,18 @@ body {
   margin: 0 10px;
 }
 /* line 49, ../sass/embed.scss */
-#embed_extras #promo {
+#embed_extras #promo_embed {
   font-size: 0.8em;
   float: left;
   margin: 0 10px;
 }
 /* line 54, ../sass/embed.scss */
-#embed_extras #promo a {
+#embed_extras #promo_embed a {
   font-size: 1em;
   text-decoration: underline;
 }
 /* line 57, ../sass/embed.scss */
-#embed_extras #promo a:hover {
+#embed_extras #promo_embed a:hover {
   text-decoration: none;
 }
 /* line 63, ../sass/embed.scss */

@@ -40,21 +40,21 @@ if (isset($_POST['email'])){
 
 				$to      = $email;
 
-				$from_address = "debug@datawrapper.de";
+				$from_address = "debug@Datawrapper.de";
 
-				$subject = '[DataWrapper] '. _("Password change requested");
+				$subject = '[Datawrapper] '. _("Password change requested");
 				
-				$message = _("Dear DataWrapper user,");
+				$message = _("Dear Datawrapper user,");
 				$message .= "\r\n\r\n";
 				$message .=	_("Please click on the link below to change your password: ");
 				$message .= "\r\n\r\n";
 				$message .=	"$confirm_link";
 				$message .= "\r\n\r\n";
-				$message .= _("Do ignore this message if you did not request a password change from DataWrapper.");
+				$message .= _("Do ignore this message if you did not request a password change from Datawrapper.");
 				$message .= "\r\n\r\n";
 				$message .= _("Thanks!");
 				$message .= "\r\n\r\n";
-				$message .= _("The DataWrapper team");
+				$message .= _("The Datawrapper team");
 
 				$m = new SimpleEmailServiceMessage();
 				$m->addTo($to);

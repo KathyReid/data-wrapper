@@ -1,9 +1,9 @@
 <div style="display:none">
 
-	<div id="about_datawrapper" class="popup" style="overflow:scroll">
+	<div id="about_Datawrapper" class="popup" style="overflow:scroll">
 		
 		<h1><?php echo _("About") ?></h1>
-		<h3><?php echo _("What is DataWrapper?") ?></h3>
+		<h3><?php echo _("What is Datawrapper?") ?></h3>
 
 		<p><b><?php echo _("In short: This is a little tool for journalists. It reduces the time to create and embed a simple chart from hours to seconds.") ?></b></p>
 
@@ -15,28 +15,28 @@
 		<p><?php echo _("One is that creating even a simple visual chart and embedding it into a story is still too complex and time consuming. Yes, there are extensive other offerings, like IBM ManyEyes or the growing Google Chart API. They are great. But they have downsides, if used by journalists. For example you often have to store your trials data in public, can't get it out again. Plus, control over the look and feel of your charts is limited or complex to change if you are not a coder.") ?></p>
 
 		<h3><?php echo _("Create simple, embeddable charts in seconds, not hours") ?></h3>
-		<p><?php echo _("This is what DataWrapper does: This little tool reduces the time needed to create a correct chart and embed it into any CMS from hours to seconds.") ?></p>
+		<p><?php echo _("This is what Datawrapper does: This little tool reduces the time needed to create a correct chart and embed it into any CMS from hours to seconds.") ?></p>
 
-		<p><?php echo _("Furthermore, DataWrapper is not a honey-trap. The data you work with or store is yours and yours alone. Trials are not openly published.") ?></p> 
+		<p><?php echo _("Furthermore, Datawrapper is not a honey-trap. The data you work with or store is yours and yours alone. Trials are not openly published.") ?></p> 
 
-		<p><?php echo _("On top of that, we encourage news organizations to fork DataWrapper via Github and install it on one of your own servers.") ?></p>
-		<p><?php echo _("The CSS is accessible, meaning that in one day you can make sure that the charts generated with DataWrapper have your logo, your visual styles and colours.") ?></p> 
+		<p><?php echo _("On top of that, we encourage news organizations to fork Datawrapper via Github and install it on one of your own servers.") ?></p>
+		<p><?php echo _("The CSS is accessible, meaning that in one day you can make sure that the charts generated with Datawrapper have your logo, your visual styles and colours.") ?></p> 
 
-		<p><?php echo _("A short tutorial on how to use DataWrapper is here.") ?></p>
+		<p><?php printf(_("A short tutorial on %show to use Datawrapper is here%s."), '<a href="#tutorial" class="fancybox">', "</a>") ?></p>
 
 		<h3><?php echo _("Background") ?></h3>
 
-		<p><?php echo _("DataWrapper was developed for ABZV, a journalism training organization affiliated to BDVZ (German Association of Newspaper Publishers). It is part of our efforts to develop a comprehensive curriculum for data-driven journalism.") ?></p>
+		<p><?php echo _("Datawrapper was developed for ABZV, a journalism training organization affiliated to BDVZ (German Association of Newspaper Publishers). It is part of our efforts to develop a comprehensive curriculum for data-driven journalism.") ?></p>
 
 		<h3><?php echo _("Features") ?></h3>
 
 		<p><?php echo _("Use of this tool is free.") ?></p>
 
-		<p><?php echo _("DataWrapper 0.1 is a non-commercial, open source software, licensed under the MIT License.") ?></p>
+		<p><?php echo _("Datawrapper 0.1 is a non-commercial, open source software, licensed under the MIT License.") ?></p>
 
-		<p><?php echo _("DataWrapper uses HTML5 Javascript libraries, namely Highcharts and D3.js, with more to come.") ?></p>
+		<p><?php echo _("Datawrapper uses HTML5 Javascript libraries, namely Highcharts and D3.js, with more to come.") ?></p>
 
-		<p><?php echo _("DataWrapper can be forked on GitHub and installed on your own server.") ?></p>
+		<p><?php echo _("Datawrapper can be forked on GitHub and installed on your own server.") ?></p>
 
 	</div>
 
@@ -51,7 +51,7 @@
 
 		<h2><?php echo _("HTML5 Chart Libraries"); ?></h2>
 
-		<p><?php echo _("Datawrapper uses modern Javascript, HTML5 Libraries like Highcharts oder D3.JS. We want to provide an access to these powerful options. This is a step towards the future as the web prepares for a switch to new visualization options in the near future. So far, especially on news websites, some fancy features where not used in order to not loose any users who still have incompatible (read: very old) browsers. But developers are about to change their mind. The message to users is: Get a decent browser. Downloading and installing a modern, HTML5 capable browser takes a few minutes and opens the door to many, many future options."); ?>
+		<p><?php printf(_("Datawrapper uses modern Javascript, HTML5 Libraries like Highcharts oder D3.JS. We want to provide an access to these powerful options. This is a step towards the future as the web prepares for a switch to new visualization options in the near future. So far, especially on news websites, some %sfancy features%s where not used in order to not loose any users who still have incompatible (read: very old) browsers. But developers are about to change their mind. The message to users is: Get a decent browser. Downloading and installing a modern, HTML5 capable browser takes a few minutes and opens the door to many, many future options."), "<a href='http://de.wikipedia.org/wiki/Canvas_(HTML-Element)' target='_blank'>", "</a>"); ?>
 
 		<h2><?php echo _("Visualize fast, very fast"); ?></h2>
 
@@ -72,26 +72,26 @@
 	</div>
 
 	<div id="installation" class="popup">
-		<p>To install DataWrapper on your server, download all files from GitHub or do a 'git pull'. Create the appropriate tables in your database using the .sql dump. Then create a file with your database passwords to be stored in /actions/passwords.php under the form</p>
+		<p><?php echo _("To install Datawrapper on your server, download all files from GitHub or do a 'git pull'. Create the appropriate tables in your database using the .sql dump. Then create a file with your database passwords to be stored in /actions/passwords.php under the form") ?></p>
 
 		<blockquote>
 			<code>&lt;?php<br /> $hostname = "hostname";<br /> $database = "database_name";<br /> $username = "user_name";<br /> $password = "password";<br /> ?&gt;</code>
 		</blockquote>
 
-		<p>Then modify the production domain name in /config.php ('$prod_domain') if you do not host your application on CloudControl.</p>
-		<p>If you are a for-profit venture, make sure to buy a license for the use of HighCharts.</p>
+		<p><?php echo _("Then modify the production domain name in /config.php ('$prod_domain') if you do not host your application on CloudControl.") ?></p>
+		<p><?php printf(_("If you are a for-profit venture, make sure to %sbuy a license for the use of HighCharts%s."), "<a href='http://shop.highsoft.com/highcharts.html' target='_blank'>","</a>" ) ?></p>
 	</div>
 
 	<div id="terms_of_use" class="popup">
 
 		<h1><?php echo _("Terms of use") ?></h1>
 		<h2><?php echo _("Fair usage policy") ?></h2>
-		<p><?php echo _("DataWrapper is licensed to visualize data that comes from public, legal sources or your own research. Should we detect uses that might violate rights of organizations or single persons we reserve the right to block an account, notify the owner and ask them to stop using DataWrapper.") ?></p>
+		<p><?php echo _("Datawrapper is licensed to visualize data that comes from public, legal sources or your own research. Should we detect uses that might violate rights of organizations or single persons we reserve the right to block an account, notify the owner and ask them to stop using Datawrapper.") ?></p>
 		<h2><?php echo _("Limited responsibility") ?></h2>
 		<p><?php echo _("This service is provided as is. DataStory will certainly not be held accountable if your data is damaged by a server failure or any other cause.") ?></p>
 		<h2><?php echo _("Privacy") ?></h2>
-		<p><?php echo _("DataWrapper will not use your private data in any way not necessary for the provision of the Service. However, you have the right to ask for the modification or removal of any personal data in accordance with the laws of Germany.") ?></p>
-
+		<p><?php echo _("Datawrapper will not use your private data in any way not necessary for the provision of the Service. However, you have the right to ask for the modification or removal of any personal data in accordance with the laws of Germany.") ?></p>
+		<p><?php echo _("Note that for installation on your own server a license fee for Highcharts is mandatory.") ?></p>
 	</div>
 	<div id="impressum" class="popup">
 
@@ -129,14 +129,14 @@
 
 		</script>
 
-		<h1><?php echo _("Tutorial: How to get good charts out of DataWrapper") ?></h1>
+		<h1><?php echo _("Tutorial: How to get good charts out of Datawrapper") ?></h1>
 
 		<div id="1" class="tutorial_class" style="display:block">
-			<p><?php echo _("Yes, no one reads the manual, but this one is really short. Here we show you how to get the most out of DataWrapper - what data to look for and how to format it to get a correct, good looking chart. Our tool can help you, but if you feed it the wrong data it will fail.") ?></p>
+			<p><?php echo _("Yes, no one reads the manual, but this one is really short. Here we show you how to get the most out of Datawrapper - what data to look for and how to format it to get a correct, good looking chart. Our tool can help you, but if you feed it the wrong data it will fail.") ?></p>
 			
 			<h2><?php echo _("Why only five types of charts?") ?></h2>
 
-			<p><?php echo _("We had to start somewhere and we had to stop somewhere. In the future we would like to add more chart types, to this end we are looking for developers/designers. There is no pay, but you get a credit. Contact us at ") ?><a href="mailto:info@datastory.de">info@datastory.de</a></p>
+			<p><?php echo _("We had to start somewhere and we had to stop somewhere. In the future we would like to add more chart types, to this end we are looking for developers/designers. Contact us at ") ?><a href="mailto:info@datastory.de">info@datastory.de</a></p>
 			<button class="button_tutorial" onClick="tutorial_next(1)"><?php echo _("On to part 1. Lines") ?> &raquo;</button>
 		</div>
 
@@ -168,7 +168,9 @@
 
 			<h2><?php echo _("Pie chart") ?></h2>
 			
-			<p><?php echo _("Everybody knows it and this is why it's popular. But pie charts can be misused easily and then they distort the message. Some people in data visualization hate them (or the people doing stupid stuff with them). Use a pie chart if you have data that can be compared proportionally - say, to show how after an election 100 per cent of the vote are spread to the various political parties. Do not use a pie chart if there are to many labels. Often a bar chart is better than a pie chart to show the relation and trend.") ?><a href="http://en.wikipedia.org/wiki/Pie_chart"><?php echo _(" Read more about pie charts.") ?></a></p>
+			<p><?php echo _("Careful, pie charts can be misused and then they distort the message. Use a pie chart if you have data that can be compared proportionally - say, to show how after an election 100 per cent of the vote are spread to the various political parties.") ?></p> 
+
+			<p><?php echo _("Do not use a pie chart if there are to many labels. Often a bar chart is better than a pie chart to show the relation and trend.") ?><a href="http://en.wikipedia.org/wiki/Pie_chart"><?php echo _(" Read more about pie charts.") ?></a></p>
 
 			<p><?php echo _("By the way: In a correct pie chart the biggest pie should start at twelve o'clock. And just forget about the shadows and 3D effects of desktop programs. This will get you into a shitstorm.") ?></p>
 
@@ -234,17 +236,17 @@
 
 		<h1><?php echo _("Quickstart") ?></h1>
 
-		<h2><?php echo _("Using DataWrapper is simple") ?></h2>
+		<h2><?php echo _("Using Datawrapper is simple") ?></h2>
 		
 		<ol>
 			<li><!-- 1 -->
-				<?php echo _("Search for a dataset - can be an Excel chart, a Google Table or even a table in any webpage. Make sure that the data has no copyright restrictions for further use. ") ?>
+				<?php echo _("Search for a data set - can be an Excel chart, a Google Table or even a table in any web page. Make sure that the data has no copyright restrictions for further use. ") ?>
 			</li>
 			<li><!-- 2 -->
 				<?php echo _("Copy the table ") ?>
 			</li>
 			<li><!-- 3 -->
-				<?php echo _("Go to DataWrapper and drop the content into the first screen") ?>
+				<?php echo _("Go to Datawrapper and drop the content into the first screen") ?>
 			</li>
 			<li><!-- 4 -->
 				<?php echo _("Click next and check your data.") ?>
@@ -260,7 +262,7 @@
 			</li>
 		</ol>
 		<p>
-			<?php echo _("DataWrapper has some other interesting functions, which you can experience in out tutorial.") ?>
+			<?php printf(_("Datawrapper has some other interesting functions, which you can experience %sin our tutorial%s."),'<a href="#tutorial" class="fancybox">',"</a>") ?>
 		</p>
 		<button class="button_tutorial" onClick="$.fancybox({href:'#tutorial', 'hideOnContentClick': false});"><?php echo _("On to the tutorial ") ?>&raquo;</button>
 

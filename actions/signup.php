@@ -42,11 +42,11 @@ if (isset($_POST['email']) && isset($_POST['pwd'])){
 
 				$to      = $email;
 
-				$from_address = "debug@datawrapper.de";
+				$from_address = "debug@Datawrapper.de";
 
-				$subject = '[DataWrapper] '. _("Please verify your e-mail address");
+				$subject = '[Datawrapper] '. _("Please verify your e-mail address");
 				
-				$message = _("Dear DataWrapper user,");
+				$message = _("Dear Datawrapper user,");
 				$message .= "\r\n\r\n";
 				$message .=	_("Please click on the link below to verify your e-mail address: ");
 				$message .= "\r\n\r\n";
@@ -54,7 +54,7 @@ if (isset($_POST['email']) && isset($_POST['pwd'])){
 				$message .= "\r\n\r\n";
 				$message .= _("Thanks!");
 				$message .= "\r\n\r\n";
-				$message .= _("The DataWrapper team");
+				$message .= _("The Datawrapper team");
 
 				$m = new SimpleEmailServiceMessage();
 				$m->addTo($to);

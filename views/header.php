@@ -87,7 +87,7 @@ function initHeader(){
 			<span class=".separator"> • </span>
 			<a href="#tutorial" class="fancybox"><?php echo _("Tutorial") ?></a>
 			<span class=".separator"> • </span>
-			<a href="https://github.com/n-kb/datawrapper" target="_blank"><?php echo _("Fork me on GitHub!") ?></a>
+			<a href="https://github.com/n-kb/Datawrapper" target="_blank"><?php echo _("Fork me on GitHub!") ?></a>
 		</div>
 
 		<?php 

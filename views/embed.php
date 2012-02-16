@@ -136,7 +136,7 @@
 				<?php echo _("Export data") ?>
 			</button>
 
-			<div id="promo"><?php printf(_("Chart created with %sDataWrapper%s."), "<a href='http://www.datawrapper.de' target='_blank'>", "</a>") ?></div>
+			<div id="promo_embed"><?php printf(_("Chart created with %sDatawrapper%s."), "<a href='http://www.Datawrapper.de' target='_blank'>", "</a>") ?></div>
 
 		</div>
 

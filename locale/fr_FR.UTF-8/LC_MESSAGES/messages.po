@@ -68,15 +68,15 @@ msgstr "Changement de mot de passe demandé"
 
 #: actions/pwd_reminder.php:41
 #: actions/signup.php:42
-msgid "Dear DataWrapper user,"
-msgstr "Cher utilisateur de DataWrapper,"
+msgid "Dear Datawrapper user,"
+msgstr "Cher utilisateur de Datawrapper,"
 
 #: actions/pwd_reminder.php:43
 msgid "Please click on the link below to change your password:"
 msgstr "Merci de cliquer sur le lien ci-dessous pour changer votre mot de passe:"
 
 #: actions/pwd_reminder.php:47
-msgid "Do ignore this message if you did not request a password change from DataWrapper."
+msgid "Do ignore this message if you did not request a password change from Datawrapper."
 msgstr "Merci d'ignorer ce message si vous n'avez pas demandé de changement de mot de passe."
 
 #: actions/pwd_reminder.php:49
@@ -86,8 +86,8 @@ msgstr "Merci!"
 
 #: actions/pwd_reminder.php:51
 #: actions/signup.php:50
-msgid "The DataWrapper team"
-msgstr "L'équipe DataWrapper"
+msgid "The Datawrapper team"
+msgstr "L'équipe Datawrapper"
 
 #: actions/pwd_reminder.php:65
 msgid "Could not send password change e-mail."
@@ -213,8 +213,8 @@ msgid "About"
 msgstr "A propos"
 
 #: views/contents.php:6
-msgid "What is DataWrapper?"
-msgstr "DataWrapper: Qu'est-ce que c'est?"
+msgid "What is Datawrapper?"
+msgstr "Datawrapper: Qu'est-ce que c'est?"
 
 #: views/contents.php:8
 msgid "In short: This is a little tool for journalists. It reduces the time to create and embed a simple chart from hours to seconds."
@@ -241,32 +241,32 @@ msgid "Create simple, embeddable charts in seconds, not hours"
 msgstr ""
 
 #: views/contents.php:18
-msgid "This is what DataWrapper does: This little tool reduces the time needed to create a correct chart and embed it into any CMS from hours to seconds."
+msgid "This is what Datawrapper does: This little tool reduces the time needed to create a correct chart and embed it into any CMS from hours to seconds."
 msgstr ""
 
 #: views/contents.php:20
-msgid "Furthermore, DataWrapper is not a honey-trap. The data you work with or store is yours and yours alone. Trials are not openly published."
+msgid "Furthermore, Datawrapper is not a honey-trap. The data you work with or store is yours and yours alone. Trials are not openly published."
 msgstr ""
 
 #: views/contents.php:22
-msgid "On top of that, we encourage news organizations to fork DataWrapper via Github and install it on one of your own servers."
+msgid "On top of that, we encourage news organizations to fork Datawrapper via Github and install it on one of your own servers."
 msgstr ""
 
 #: views/contents.php:23
-msgid "The CSS is accessible, meaning that in one day you can make sure that the charts generated with DataWrapper have your logo, your visual styles and colours."
-msgstr "Les CSS sont modifiables, si bien que vous pouvez personnaliser DataWrapper avec votre logo, vos styles et vos couleurs."
+msgid "The CSS is accessible, meaning that in one day you can make sure that the charts generated with Datawrapper have your logo, your visual styles and colours."
+msgstr "Les CSS sont modifiables, si bien que vous pouvez personnaliser Datawrapper avec votre logo, vos styles et vos couleurs."
 
 #: views/contents.php:25
-msgid "A short tutorial on how to use DataWrapper is here."
-msgstr "Retrouvez un tutorial sur DataWrapper ici."
+msgid "A short tutorial on how to use Datawrapper is here."
+msgstr "Retrouvez un tutorial sur Datawrapper ici."
 
 #: views/contents.php:27
 msgid "Background"
 msgstr "Présentation"
 
 #: views/contents.php:29
-msgid "DataWrapper was developed for ABZV, a journalism training organization affiliated to BDVZ (German Association of Newspaper Publishers). It is part of our efforts to develop a comprehensive curriculum for data-driven journalism."
-msgstr "DataWrapper a été développé pour ABZV, une organisation de formation des journalistes affiliée à BDVZ (Association des éditeurs de presse allemands). Le projet fait partie de leurs efforts pour bâtir un programme de formation complet pour les journalistes."
+msgid "Datawrapper was developed for ABZV, a journalism training organization affiliated to BDVZ (German Association of Newspaper Publishers). It is part of our efforts to develop a comprehensive curriculum for data-driven journalism."
+msgstr "Datawrapper a été développé pour ABZV, une organisation de formation des journalistes affiliée à BDVZ (Association des éditeurs de presse allemands). Le projet fait partie de leurs efforts pour bâtir un programme de formation complet pour les journalistes."
 
 #: views/contents.php:31
 msgid "Features"
@@ -277,16 +277,16 @@ msgid "Use of this tool is free."
 msgstr "L'utilisation de cet outil est gratuit."
 
 #: views/contents.php:35
-msgid "DataWrapper 0.1 is a non-commercial, open source software, licensed under the MIT License."
-msgstr "DataWrapper beta est un projet non-commercial, open-source et sous licence MIT."
+msgid "Datawrapper 0.1 is a non-commercial, open source software, licensed under the MIT License."
+msgstr "Datawrapper beta est un projet non-commercial, open-source et sous licence MIT."
 
 #: views/contents.php:37
-msgid "DataWrapper uses HTML5 Javascript libraries, namely Highcharts and D3.js, with more to come."
-msgstr "DataWrapper utilise des librairies Javascript et HTML5, comme HighCharts et D3.js, avec d'autres dans les tuyaux!"
+msgid "Datawrapper uses HTML5 Javascript libraries, namely Highcharts and D3.js, with more to come."
+msgstr "Datawrapper utilise des librairies Javascript et HTML5, comme HighCharts et D3.js, avec d'autres dans les tuyaux!"
 
 #: views/contents.php:39
-msgid "DataWrapper can be forked on GitHub and installed on your own server."
-msgstr "DataWrapper peut être forké sur GitHub et installé sur votre propre serveur."
+msgid "Datawrapper can be forked on GitHub and installed on your own server."
+msgstr "Datawrapper peut être forké sur GitHub et installé sur votre propre serveur."
 
 #: views/contents.php:45
 msgid "Terms of use"
@@ -297,7 +297,7 @@ msgid "Fair usage policy"
 msgstr "Utilisation appropriée du service"
 
 #: views/contents.php:47
-msgid "DataWrapper is licensed to visualize data that comes from public, legal sources or your own research. Should we detect uses that might violate rights of organizations or single persons we reserve the right to block an account, notify the owner and ask them to stop using DataWrapper."
+msgid "Datawrapper is licensed to visualize data that comes from public, legal sources or your own research. Should we detect uses that might violate rights of organizations or single persons we reserve the right to block an account, notify the owner and ask them to stop using Datawrapper."
 msgstr ""
 
 #: views/contents.php:48
@@ -313,7 +313,7 @@ msgid "Privacy"
 msgstr ""
 
 #: views/contents.php:51
-msgid "DataWrapper will not use your private data in any way not necessary for the provision of the Service. However, you have the right to ask for the modification or removal of any personal data in accordance with the laws of Germany."
+msgid "Datawrapper will not use your private data in any way not necessary for the provision of the Service. However, you have the right to ask for the modification or removal of any personal data in accordance with the laws of Germany."
 msgstr ""
 
 #: views/contents.php:56
@@ -375,8 +375,8 @@ msgid "Quickstart"
 msgstr "En bref"
 
 #: views/contents.php:110
-msgid "Using DataWrapper is simple"
-msgstr "DataWrapper, c'est simple"
+msgid "Using Datawrapper is simple"
+msgstr "Datawrapper, c'est simple"
 
 #: views/contents.php:113
 msgid "Search for a dataset - can be an Excel chart, a Google Table or even a table in any webpage. Make sure that the data has no copyright restrictions for further use. "
@@ -387,8 +387,8 @@ msgid "Copy the table "
 msgstr "Copiez la table"
 
 #: views/contents.php:116
-msgid "Go to DataWrapper and drop the content into the first screen"
-msgstr "Allez sur DataWrapper et collez le contenu dans le premier écran"
+msgid "Go to Datawrapper and drop the content into the first screen"
+msgstr "Allez sur Datawrapper et collez le contenu dans le premier écran"
 
 #: views/contents.php:118
 msgid "This will normalize the data."
@@ -452,7 +452,7 @@ msgstr "La page n'a pas pu être affichée."
 
 #: views/footer.php:3
 msgid "About Datawrapper"
-msgstr "A propos de DataWrapper"
+msgstr "A propos de Datawrapper"
 
 #: views/footer.php:5
 msgid "ABZV"
@@ -500,8 +500,8 @@ msgid "Paste data here"
 msgstr "Copier les données ici"
 
 #: views/input.php:29
-msgid "Try DataWrapper with some sample data"
-msgstr "Essayer DataWrapper avec des données à titre d'exemple."
+msgid "Try Datawrapper with some sample data"
+msgstr "Essayer Datawrapper avec des données à titre d'exemple."
 
 #: views/input.php:30
 msgid "Sample data: unemployment among the population age 25 and over in 6 European metropolis. Source: Eurostat."
@@ -510,8 +510,8 @@ msgstr "Données: Taux de chômage des plus de 25 ans dans 6 métropoles europé
 #: views/login.php:7
 #: views/screens.php:7
 #: views/vis_list.php:7
-msgid "DataWrapper, a project by DataStory"
-msgstr "DataWrapper, un projet de DataStory"
+msgid "Datawrapper, a project by DataStory"
+msgstr "Datawrapper, un projet de DataStory"
 
 #: views/login.php:108
 msgid "An e-mail has been sent. Please check your mailbox and follow instructions to reset your password."
@@ -533,8 +533,8 @@ msgid "Password"
 msgstr "Mot de passe"
 
 #: views/login.php:153
-msgid "Thanks for signing up! You just need to verify your e-mail address (be sure to check your spam filter). If you receive no confirmatory e-mail, please alert us at contact@datawrapper.de"
-msgstr "Merci de vous être inscrit! Veuillez valider votre adresse e-mail (la confirmation a pu être saisie par le filtre à spam). Si vous ne recevez pas de mail de confirmation, veuillez nous alerter à l'adresse contact@datawrapper.de"
+msgid "Thanks for signing up! You just need to verify your e-mail address (be sure to check your spam filter). If you receive no confirmatory e-mail, please alert us at contact@Datawrapper.de"
+msgstr "Merci de vous être inscrit! Veuillez valider votre adresse e-mail (la confirmation a pu être saisie par le filtre à spam). Si vous ne recevez pas de mail de confirmation, veuillez nous alerter à l'adresse contact@Datawrapper.de"
 
 #: views/login.php:163
 msgid "Please agree to the Terms of Use."
@@ -562,7 +562,7 @@ msgstr "S'inscrire"
 
 #: views/login.php:242
 #, fuzzy
-msgid "DataWrapper helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all."
+msgid "Datawrapper helps journalists build compelling visualizations in just a few clicks. It uses the latest, most powerful JavaScript libraries but requires no coding at all."
 msgstr "DataStory aide les journalistes à construire des visualisations convaincantes en seulement quelques clics. DataStory donne à chacun le pouvoir des toutes dernières bibliothèques JavaScript, sans nécessiter aucune compétence informatique."
 
 #: views/login.php:244

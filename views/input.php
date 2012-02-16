@@ -30,7 +30,7 @@ function js_enterScreen_input(){
 	<textarea id="input_data"></textarea>
 
 	<div id="sample_data">
-		<p><?php echo _("Try DataWrapper with some sample data:") ?></p>
+		<p><?php echo _("Try Datawrapper with some sample data:") ?></p>
 		<ul>
 			<li class="sample_data_fill" type="bars"><strong><?php echo _("Bar chart")?>:</strong> <?php echo ("Gini coefficient in Germany, Sweden and South Africa (2005).") ?></li>
 			<li class="sample_data_fill" type="multiple_bars"><strong><?php echo _("2-dimensional bar chart")?>:</strong> <?php echo ("Evolution of the Gini coefficient in Germany, France and Greece at 5-year intervals, 1995-2010.") ?></li>

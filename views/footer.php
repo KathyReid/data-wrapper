@@ -2,7 +2,7 @@
 			<div id="footer">
 				<a href="http://www.abzv.de/" target="_blank"><?php echo _("ABZV") ?></a>
 				<span class=".separator"> • </span>
-				<a href="#about_datawrapper" class="fancybox"><?php echo _("About Datawrapper") ?></a>
+				<a href="#about_Datawrapper" class="fancybox"><?php echo _("About Datawrapper") ?></a>
 				<span class=".separator"> • </span>
 				<a href="#motivation" class="fancybox"><?php echo _("Motivation") ?></a>
 				<span class=".separator"> • </span>
@@ -16,7 +16,7 @@
 				<span class=".separator"> • </span>
 				<a href="#installation" class="fancybox"><?php echo _("Install") ?></a>
 				<span class=".separator"> • </span>
-				<a href="https://github.com/n-kb/datawrapper" target="_blank"><?php echo _("Fork me on GitHub!") ?></a>
+				<a href="https://github.com/n-kb/Datawrapper" target="_blank"><?php echo _("Fork me on GitHub!") ?></a>
 				<?php
 
 				//Loads the divs that will appear in the fancybox

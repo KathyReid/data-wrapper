@@ -4,7 +4,7 @@
 
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-        <title><?php echo _("DataWrapper, a project by DataStory") ?></title>
+        <title><?php echo _("Datawrapper, a project by DataStory") ?></title>
 
         <!-- General styles -->
         <link rel="stylesheet" type="text/css" href="css/stylesheets/general.css" />
@@ -147,7 +147,7 @@
                                         
                                         //User just signed up, needs to validate the e-mail address
                                         $("#verify").show()
-                                                    .html("<?php echo _("Thanks for signing up! You just need to verify your e-mail address (be sure to check your spam filter). If you receive no confirmatory e-mail, please alert us at contact@datawrapper.de") ?>");
+                                                    .html("<?php echo _("Thanks for signing up! You just need to verify your e-mail address (be sure to check your spam filter). If you receive no confirmatory e-mail, please alert us at contact@Datawrapper.de") ?>");
 
                                     }else{
                                         error(data.error);
@@ -236,7 +236,7 @@
                 <h1 class="login_title"><?php echo _("Open Source Data Visualization") ?></h1>
                 <div id="about">
                     <div class="beta_logo">Beta</div>
-                    <h2><?php echo _("This is an tool to let journalists work with data every day.") ?></h2>
+                    <h2><?php echo _("This is a tool to let journalists work with data every day.") ?></h2>
                     
                     <p><?php echo _("Main features:") ?></p>
                     <ul>
@@ -246,7 +246,7 @@
                         <li><?php echo _("Developers: Add powerful HTML5 libraries") ?></li>
                     </ul>
                     <p><a href="#motivation" class="fancybox"><?php echo _("Why this approach? See our Motivations") ?></a></p>
-                    <p><?php echo _("Datawrapper is a project by ABZV,a German training institution for newspaper journalists.") ?></p>
+                    <p><?php printf(_("Datawrapper is a project by ABZV%sa German training institution for newspaper journalists."), "<br>") ?></p>
                 </div>
 
 
@@ -261,7 +261,7 @@
 
                     <div id="additional_ressources">
                         <p><?php echo _("Resources to get started:") ?></p>
-                        <p><a href="#quickstart" class="fancybox"><?php echo _("Quickstart") ?></a> • <a href="#tutorial" class="fancybox"><?php echo _("Tutorial") ?></a> • <a href="#features" class="fancybox"><?php echo _("Features") ?></a> • <a href="#installation" class="fancybox"><?php echo _("Installation guide") ?></a>
+                        <p><a href="#quickstart" class="fancybox"><?php echo _("Quickstart") ?></a> • <a href="#tutorial" class="fancybox"><?php echo _("Tutorial") ?></a> • <a href="#installation" class="fancybox"><?php echo _("Installation guide") ?></a>
                     </div>
             
                 </div>
