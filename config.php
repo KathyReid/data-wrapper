@@ -13,12 +13,14 @@ require_once "libraries/alpha.id.php";
 require_once "libraries/transpose.php";
 
 //Indicates the name of the prod server
-$prod_domain = "cloudcontrolled.com";
+$prod_domain1 = "cloudcontrolled.com";
+
+$prod_domain2 = "datawrapper.de";
 
 //Fetches passwords
 require_once('actions/passwords.php');
 
-if (strstr($_SERVER['SERVER_NAME'], $prod_domain)){		
+if (strstr($_SERVER['SERVER_NAME'], $prod_domain1) || strstr($_SERVER['SERVER_NAME'], $prod_domain2) ){		
 
 	// PROD ENVIRONMENT //
 
