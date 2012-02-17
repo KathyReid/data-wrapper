@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-17 00:13+0100\n"
-"PO-Revision-Date: 2012-02-17 00:29+0100\n"
+"POT-Creation-Date: 2012-02-17 15:33+0100\n"
+"PO-Revision-Date: 2012-02-17 15:43+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -208,6 +208,14 @@ msgstr "Daten umstellen"
 msgid "Make first row a header row"
 msgstr "Erste Zeile als Kopfzeile setzen"
 
+#: views/comingsoon.php:7
+msgid "Datawrapper, a project by DataStory"
+msgstr "Datawrapper ist ein Projekt der ABZV"
+
+#: views/comingsoon.php:28
+msgid "Datawrapper is coming soon"
+msgstr ""
+
 #: views/contents.php:5
 msgid "About"
 msgstr "Über"
@@ -232,7 +240,7 @@ msgstr "Es gibt viele Spielarten des Datenjournalismus. Der erste Schritt besteh
 
 #: views/contents.php:13
 msgid "But there are bottlenecks."
-msgstr ""
+msgstr "."
 
 #: views/contents.php:15
 msgid "One is that creating even a simple visual chart and embedding it into a story is still too complex and time consuming. Yes, there are extensive other offerings, like IBM ManyEyes or the growing Google Chart API. They are great. But they have downsides, if used by journalists. For example you often have to store your trials data in public, can't get it out again. Plus, control over the look and feel of your charts is limited or complex to change if you are not a coder."
@@ -558,7 +566,6 @@ msgstr ""
 
 #: views/contents.php:237
 #: views/footer.php:13
-#: views/header.php:86
 msgid "Quickstart"
 msgstr "Schnellstart "
 
@@ -645,7 +652,6 @@ msgid "Terms of Use"
 msgstr "Nutzungsbedingungen"
 
 #: views/footer.php:15
-#: views/header.php:88
 msgid "Tutorial"
 msgstr ""
 
@@ -654,7 +660,6 @@ msgid "Install"
 msgstr ""
 
 #: views/footer.php:19
-#: views/header.php:90
 msgid "Fork me on GitHub!"
 msgstr "GitHub"
 
@@ -700,146 +705,157 @@ msgstr "Multiple Säulen"
 msgid "Responsive table"
 msgstr "Tabelle, variabel"
 
-#: views/login.php:7
-#: views/screens.php:7
-#: views/vis_list.php:7
-msgid "Datawrapper, a project by DataStory"
-msgstr "Datawrapper ist ein Projekt der ABZV"
-
 #: views/login.php:105
 msgid "An e-mail has been sent. Please check your mailbox and follow instructions to reset your password."
 msgstr "Eine E-Mail wurde abgeschickt. Bitte überprüfen Sie Ihre Mailbox und folgen Sie den Anweisungen zum Zurücksetzen des Passworts."
 
 #: views/login.php:117
-#: views/login.php:167
+#: views/login.php:174
 msgid "Please enter a valid email address."
 msgstr "Bitten geben Sie eine gültige E-Mail-Addresse ein."
 
-#: views/login.php:139
-#: views/login.php:188
-#: views/login.php:256
-#: views/login.php:279
-#: views/login.php:280
-#: views/login.php:313
-#: views/login.php:314
+#: views/login.php:146
+#: views/login.php:195
+#: views/login.php:265
+#: views/login.php:289
+#: views/login.php:290
+#: views/login.php:328
+#: views/login.php:329
 msgid "Password"
 msgstr "Kennwort"
 
-#: views/login.php:150
+#: views/login.php:157
 msgid "Thanks for signing up! You just need to verify your e-mail address (be sure to check your spam filter). If you receive no confirmatory e-mail, please alert us at contact@Datawrapper.de"
 msgstr "Vielen Dank für Ihre Anmeldung! Sie müssen nur Ihre E-Mail-Adresse überprüfen (achten Sie darauf, Ihren Spam-Filter zu prüfen). Wenn Sie keine Bestätigungs-E-Mail erhalten, bitte informieren Sie uns an contact@datawrapper.de"
 
-#: views/login.php:160
+#: views/login.php:167
 msgid "Please agree to the Terms of Use."
 msgstr "Bitte akzeptieren Sie die Nutzungsbedingungen an."
 
-#: views/login.php:163
-#: views/login.php:208
+#: views/login.php:170
+#: views/login.php:215
 msgid "Passwords do not match."
 msgstr "Kennwörter stimmen nicht überein."
 
-#: views/login.php:197
+#: views/login.php:204
 msgid "Password changed. You can now login."
 msgstr "Kennwort geändert. Sie können sich jetzt anmelden."
 
-#: views/login.php:228
+#: views/login.php:235
 #: views/screens.php:190
 #: views/vis_list.php:96
 msgid "Errors are displayed here"
 msgstr "Fehler werden hier angezeigt."
 
-#: views/login.php:236
+#: views/login.php:244
+#, php-format
+msgid "Datawrapper is a project by %sABZV%s%sa German training institution for newspaper journalists."
+msgstr "Datawrapper ist ein Projekt der %sABZV%s%s- Bildungswerk der Zeitungen - "
+
+#: views/login.php:246
 msgid "Open Source Data Visualization"
 msgstr "Open Source Datenvisualisierung"
 
-#: views/login.php:239
-msgid "This is a tool to let journalists work with data every day."
-msgstr "Open Source: Kann auf eigenem Server installiert werden"
-
-#: views/login.php:241
+#: views/login.php:249
 msgid "Main features:"
 msgstr "Wesentliche Funktionen: "
 
-#: views/login.php:243
-msgid "Create and embed charts in minutes"
-msgstr " Charts erstellen und einbetten"
+#: views/login.php:251
+msgid "Simple: Create and embed charts in minutes"
+msgstr "Einfach: Mit wenigen Klicks zur Visualisierung"
 
-#: views/login.php:244
-msgid "Open Source: Download and install on your server"
-msgstr "Datawrapper soll die Arbeit mit Daten erleichtern"
+#: views/login.php:252
+msgid "Open Source: Download and install"
+msgstr "Opensource: Runterladen und installieren"
 
-#: views/login.php:245
-msgid "CSS: Change the design, the charts, add your logo"
-msgstr "CSS: Design, Farben der Charts, eigenes Logo einfügen"
+#: views/login.php:253
+msgid "CSS: Change the CSS, add your logo"
+msgstr "CSS: Design, und eigenes Logo einfügen"
 
-#: views/login.php:246
-msgid "Developers: Add powerful HTML5 libraries"
+#: views/login.php:254
+msgid "Developers: Add new chart types"
 msgstr "Entwickler: Erweiterung durch HTML5 Charts möglich"
 
-#: views/login.php:248
+#: views/login.php:255
+msgid "Non-proﬁt: This is and will stay free to use"
+msgstr ""
+
+#: views/login.php:257
 msgid "Why this approach? See our Motivations"
 msgstr "Warum? Für wen? Mehr zu Zielen und Funktionen."
 
-#: views/login.php:249
-#, php-format
-msgid "Datawrapper is a project by ABZV%sa German training institution for newspaper journalists."
-msgstr "Datawrapper ist ein Projekt der ABZV%s- Bildungswerk der Zeitungen - "
-
-#: views/login.php:254
+#: views/login.php:263
 msgid "Login for registered users:"
 msgstr "Login für registrierte Nutzer"
 
-#: views/login.php:255
-#: views/login.php:274
-#: views/login.php:296
+#: views/login.php:264
+#: views/login.php:311
 msgid "E-mail"
 msgstr "E-Mail"
 
-#: views/login.php:257
+#: views/login.php:266
 msgid "Forgot your password?"
 msgstr "Passwort vergessen?"
 
-#: views/login.php:258
+#: views/login.php:267
 msgid "Login"
 msgstr "Einloggen"
 
-#: views/login.php:260
+#: views/login.php:269
 msgid "First time user? Register here."
 msgstr "Neuer Nutzer? Bitte zuerst registrieren."
 
-#: views/login.php:263
+#: views/login.php:272
+#: views/login.php:302
 msgid "Resources to get started:"
 msgstr "Anleitungen und technische Informationen:"
 
-#: views/login.php:264
+#: views/login.php:273
+#: views/login.php:303
 msgid "Installation guide"
 msgstr "Installationsleitfaden"
 
-#: views/login.php:278
+#: views/login.php:282
+msgid "Create an account on Datawrapper:"
+msgstr "Kostenlos registrieren:"
+
+#: views/login.php:283
+msgid "Enter your e-mail address"
+msgstr "E-Mail-Addresse"
+
+#: views/login.php:284
+msgid "email@provider.tld"
+msgstr ""
+
+#: views/login.php:288
 msgid "Enter password twice"
 msgstr "Bitte geben Sie Ihr Kennwort zweimal ein."
 
-#: views/login.php:284
+#: views/login.php:294
 msgid "I agree to the Terms of Use"
 msgstr "Ich akzeptiere die Nutzungsbedingungen an."
 
-#: views/login.php:288
+#: views/login.php:298
 msgid "Sign up"
 msgstr "Registrieren"
 
-#: views/login.php:294
+#: views/login.php:298
+msgid "Log in"
+msgstr "Einloggen"
+
+#: views/login.php:309
 msgid "Enter your e-mail address to reset your password."
 msgstr "Geben Sie Ihre E-Mail-Adresse, Ihr Passwort zurückzusetzen."
 
-#: views/login.php:300
+#: views/login.php:315
 msgid "Reset password"
 msgstr "Passwort zurücksetzen"
 
-#: views/login.php:312
+#: views/login.php:327
 msgid "Enter your new password twice"
 msgstr "Bitte geben Sie Ihr neues Kennwort zweimal ein."
 
-#: views/login.php:318
+#: views/login.php:333
 msgid "Change password"
 msgstr "Kennwort ändern"
 
@@ -983,6 +999,9 @@ msgstr "Torte verstehen (Englisch)"
 #: visualizations/config.json.php:81
 msgid "Simplified pie chart"
 msgstr ""
+
+#~ msgid "This is a tool to let journalists work with data every day."
+#~ msgstr "Open Source: Kann auf eigenem Server installiert werden"
 
 #~ msgid "Chart created using"
 #~ msgstr "Chart erstellt mit"

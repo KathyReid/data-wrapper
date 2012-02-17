@@ -280,7 +280,8 @@
                 <div id="signup">
                     
                     <h2><?php echo _("Create an account on Datawrapper:") ?></h2>
-                    <input class="login" id="email_signup" value="<?php echo _("E-mail") ?>">
+                    <small><?php echo _("Enter your e-mail address") ?></small>
+                    <input class="login" id="email_signup" value="<?php echo _("email@provider.tld") ?>">
                     
                     <div class="clear"></div>
                     
