@@ -8,7 +8,7 @@ RewriteRule ^(.*)$ http://datawrapper.de/$1 [R=301, L]
 
 # password protection allowing directory and file access
 #AuthUserFile c:/wamp/www/Data-Story/.htpasswd
-AuthUserFile /data/local/depjrkhynun/.htpasswd
-AuthType Basic
-AuthName "Restricted"
-Require valid-user 
+#AuthUserFile /data/local/depjrkhynun/.htpasswd
+#AuthType Basic
+#AuthName "Restricted"
+#Require valid-user 
