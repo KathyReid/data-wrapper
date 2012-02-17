@@ -57,7 +57,7 @@ body {
   text-align: left;
   min-height: 100%;
   position: relative;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, Garuda, sans-serif;
+  font-family: Arial, Helvetica, Garuda, sans-serif;
   background-color: white;
   color: #555555;
   -moz-box-shadow: #7f7f7f 0px 0px 10px;
@@ -642,7 +642,7 @@ body {
   max-height: 576px;
   width: 720px;
   text-align: left;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, Garuda, sans-serif;
+  font-family: Arial, Helvetica, Garuda, sans-serif;
   color: #444444;
   font-size: 0.8em;
 }
@@ -671,7 +671,7 @@ body {
   padding: 5px;
   background-color: white;
   border: 1px solid #e5e5e5;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, Garuda, sans-serif;
+  font-family: Arial, Helvetica, Garuda, sans-serif;
   font-size: 0.9em;
 }
 
@@ -682,7 +682,7 @@ body {
 #footer {
   padding: 20px 60px;
   height: 50px;
-  margin: 100px 0 0 0;
+  margin: 200px 0 0 0;
   text-transform: uppercase;
   color: #444444;
   font-size: 0.7em;
@@ -840,55 +840,70 @@ body {
 }
 
 /* line 790, ../sass/general.scss */
-#additional_ressources {
-  font-size: 0.9em;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: 10px;
-}
-
-/* line 798, ../sass/general.scss */
 #login, #signup {
   background-color: #333;
   color: #fff;
 }
-/* line 802, ../sass/general.scss */
+/* line 794, ../sass/general.scss */
 #login a, #signup a {
   color: #fff;
 }
-/* line 804, ../sass/general.scss */
+/* line 796, ../sass/general.scss */
 #login a:hover, #signup a:hover {
   text-decoration: none;
 }
-/* line 807, ../sass/general.scss */
+/* line 799, ../sass/general.scss */
 #login h2, #signup h2 {
   text-shadow: black 1px 0px 1px;
   font-size: 1.1em;
   font-weight: normal;
 }
 
-/* line 814, ../sass/general.scss */
+/* line 807, ../sass/general.scss */
+#additional_ressources {
+  font-size: 0.9em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+}
+/* line 817, ../sass/general.scss */
+#additional_ressources a {
+  color: #000;
+}
+
+/* line 823, ../sass/general.scss */
 #about {
   color: black;
   margin-right: 20px;
-  background-color: #5e9dcd;
+  background-color: #fff;
+  font-weight: bold;
 }
-/* line 819, ../sass/general.scss */
+/* line 829, ../sass/general.scss */
 #about h2 {
   font-weight: normal;
   font-size: 1.1em;
   padding-right: 115px;
 }
-/* line 825, ../sass/general.scss */
-#about .beta_logo {
+/* line 835, ../sass/general.scss */
+#about p, #about li {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 0.8em;
+}
+
+/* line 842, ../sass/general.scss */
+.beta_logo {
   position: absolute;
   z-index: 1;
-  top: 20px;
+  left: 300px;
+  top: 0px;
   text-align: center;
   font-size: 1.4em;
   color: #fff;
-  right: 20px;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
   -o-border-radius: 100px;
@@ -916,14 +931,8 @@ body {
   background-image: -ms-radial-gradient(#a3160d, #b94e63);
   background-image: radial-gradient(#a3160d, #b94e63);
 }
-/* line 844, ../sass/general.scss */
-#about p, #about li {
-  margin: 0 0 10px 0;
-  padding: 0;
-  font-size: 0.8em;
-}
 
-/* line 851, ../sass/general.scss */
+/* line 863, ../sass/general.scss */
 .close_signup {
   font-size: 0.6em;
   width: 100%;
@@ -931,17 +940,17 @@ body {
   color: #7f7f7f;
   cursor: pointer;
 }
-/* line 857, ../sass/general.scss */
+/* line 869, ../sass/general.scss */
 .close_signup:hover {
   text-decoration: underline;
 }
 
-/* line 860, ../sass/general.scss */
+/* line 872, ../sass/general.scss */
 #login, #reminder {
   display: none;
 }
 
-/* line 864, ../sass/general.scss */
+/* line 876, ../sass/general.scss */
 #verify, #reset_confirmation, #pwd_change_confirmation {
   width: 92%;
   display: none;
@@ -961,9 +970,44 @@ body {
   font-size: 0.8em;
 }
 
-/* line 878, ../sass/general.scss */
+/* line 890, ../sass/general.scss */
+.login_bigtitle {
+  color: black;
+  font-weight: bolder;
+  font-size: 3em;
+  margin-top: 10px;
+  display: inline;
+}
+
+/* line 898, ../sass/general.scss */
 h1.login_title {
   color: black;
+  margin: -4px 0 40px;
   font-weight: normal;
+  display: block;
+  clear: both;
   font-size: 1.5em;
+}
+
+/* line 907, ../sass/general.scss */
+#login_abzv {
+  color: #333;
+  float: right;
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+/* line 914, ../sass/general.scss */
+#login_abzv a {
+  color: #333;
+}
+/* line 916, ../sass/general.scss */
+#login_abzv a:hover {
+  text-decoration: none;
+}
+
+/* line 920, ../sass/general.scss */
+.divider {
+  width: 100%;
+  height: 20px;
 }

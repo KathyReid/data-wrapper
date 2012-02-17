@@ -32,7 +32,7 @@ $grid-cols: 8;
 $row-h: 30px;
 $col-w: $container-width / $grid-cols;
 
-$font-family-container: "Lucida Sans Unicode","Lucida Grande", Arial, Helvetica, Garuda, sans-serif;
+$font-family-container: Arial, Helvetica, Garuda, sans-serif;
 
 @mixin narrow-text {
     letter-spacing:-1px;
@@ -655,7 +655,7 @@ $chart-w:400px;
 #footer {
     padding: 20px 60px;
     height:50px;
-    margin: 100px 0 0 0;
+    margin: 200px 0 0 0;
     text-transform:uppercase;
     color:scale-lightness($color-off_text, -20);
     font-size: $font-size * .7;
@@ -787,14 +787,6 @@ $chart-w:400px;
     text-decoration:underline;
 }
 
-#additional_ressources  {
-    font-size:$font-size * 0.9;
-    position:absolute;
-    bottom:0;
-    left:0;
-    margin:10px;
-}
-
 #login, #signup  {
     background-color:#333;
     color:#fff;
@@ -811,10 +803,28 @@ $chart-w:400px;
     }
 }
 
+
+#additional_ressources  {
+    font-size:$font-size * 0.9;
+    position:absolute;
+    bottom:0;
+    left:0;
+    margin:0;
+    width:100%;
+    background-color:#fff;
+    color: #000;
+
+    a {
+        color: #000;
+    }
+
+}
+
 #about {
     color:$black;
     margin-right:20px;
-    background-color:$color-on;
+    background-color:#fff;
+    font-weight:bold;
 
     h2 {
        font-weight:normal;
@@ -822,30 +832,32 @@ $chart-w:400px;
        padding-right:115px;
     }
 
-    .beta_logo  {
-        position:absolute;
-        z-index:1;
-        top:20px;
-        text-align:center;
-        font-size:$font-size * 1.4;
-        color:#fff;
-        right:20px;
-        @include border-radius(100px);
-        @include rotate(6deg);
-        @include text-shadow(#222 1px 0px 1px);
-        @include box-shadow(#222 0px 0px 4px);
-        width:70px;
-        height:48px;
-        padding-top:22px;
-        text-transform:uppercase;
-        @include background-image(radial-gradient($red-1, $red-2));
-    }
-
     p, li {
         margin:0 0 10px 0;
         padding: 0;
         font-size: $font-size * 0.8;
     }
+}
+
+.beta_logo  {
+    position:absolute;
+    z-index:1;
+    left:300px;
+    top:0px;
+    
+    text-align:center;
+    font-size:$font-size * 1.4;
+    color:#fff;
+
+    @include border-radius(100px);
+    @include rotate(6deg);
+    @include text-shadow(#222 1px 0px 1px);
+    @include box-shadow(#222 0px 0px 4px);
+    width:70px;
+    height:48px;
+    padding-top:22px;
+    text-transform:uppercase;
+    @include background-image(radial-gradient($red-1, $red-2));
 }
 
 .close_signup {
@@ -875,8 +887,37 @@ $chart-w:400px;
     font-size: $font-size - .2;
 }
 
-h1.login_title  {
+.login_bigtitle {
     color:$black;
+    font-weight:bolder;
+    font-size:$font-size * 3; 
+    margin-top:10px;
+    display:inline;
+}
+
+h1.login_title {
+    color:$black;
+    margin:-4px 0 40px;
     font-weight:normal;
+    display:block;
+    clear:both;
     font-size:$font-size * 1.5; 
+}
+
+#login_abzv {
+    color:#333;
+    float:right;
+    font-weight:bold;
+    font-size:$font-size; 
+    margin-bottom:0;
+
+    a {
+        color:#333;
+        &:hover { text-decoration:none; }
+    }
+}
+
+.divider {
+    width:100%;
+    height:20px;
 }

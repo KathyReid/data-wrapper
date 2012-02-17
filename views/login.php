@@ -239,21 +239,22 @@
             <!-- End header -->
 
         	<div id="screen_container">
-
+                <div class="divider"></div>
+                <div class="login_bigtitle">Datawrapper</div>
+                <p id="login_abzv"><?php printf(_("Datawrapper is a project by %sABZV%s%sa German training institution for newspaper journalists."), "<a href='http://www.abzv.de' target='_blank'>" , "</a>", "<br>") ?></p>
+                <div class="beta_logo">Beta</div>
                 <h1 class="login_title"><?php echo _("Open Source Data Visualization") ?></h1>
+                
                 <div id="about">
-                    <div class="beta_logo">Beta</div>
-                    <h2><?php echo _("This is a tool to let journalists work with data every day.") ?></h2>
-                    
                     <p><?php echo _("Main features:") ?></p>
                     <ul>
-                        <li><?php echo _("Create and embed charts in minutes") ?></li>
-                        <li><?php echo _("Open Source: Download and install on your server") ?></li>
-                        <li><?php echo _("CSS: Change the design, the charts, add your logo") ?></li>
-                        <li><?php echo _("Developers: Add powerful HTML5 libraries") ?></li>
+                        <li><?php echo _("Simple: Create and embed charts in minutes") ?></li>
+                        <li><?php echo _("Open Source: Download and install") ?></li>
+                        <li><?php echo _("CSS: Change the CSS, add your logo") ?></li>
+                        <li><?php echo _("Developers: Add new chart types") ?></li>
+                        <li><?php echo _("Non-proﬁt: This is and will stay free to use") ?></li>
                     </ul>
                     <p><a href="#motivation" class="fancybox"><?php echo _("Why this approach? See our Motivations") ?></a></p>
-                    <p><?php printf(_("Datawrapper is a project by ABZV%sa German training institution for newspaper journalists."), "<br>") ?></p>
                 </div>
 
 
