@@ -761,11 +761,11 @@ $chart-w:400px;
     color:#fff;
 }
 
-#login_submit, #signup_submit, #show_signup, #reminder_submit, #pwd_change_submit {
+#login_submit, #signup_submit, #show_login, #show_signup, #reminder_submit, #pwd_change_submit {
     font-size: $font-size - .1;
     line-height: $font-size + .7;
     font-weight: bold;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 #login_submit  {
@@ -774,11 +774,10 @@ $chart-w:400px;
 }
 
 #show_signup {
-    position:absolute;
-    top:190px;
-    margin: 2px 8px;
-    left:0px;
-    width:96%;
+    position:relative;
+    margin: 2px 0;
+    right:0px;
+    width:100%;
     background-color:$color-on;
     border:1px #000 solid;
     @include border-radius(5px);
@@ -858,13 +857,15 @@ $chart-w:400px;
     &:hover  { text-decoration:underline; }
 }
 
-#signup, #reminder {
+#login, #reminder {
     display:none;
 }
 
 #verify, #reset_confirmation, #pwd_change_confirmation {
-    width: 96%;
+    width: 92%;
     display:none;
+    position:relative;
+    z-index:4;
     padding:15px;
     margin-right:20px;
     background-color:#fff;

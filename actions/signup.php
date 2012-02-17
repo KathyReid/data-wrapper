@@ -42,7 +42,7 @@ if (isset($_POST['email']) && isset($_POST['pwd'])){
 
 				$to      = $email;
 
-				$from_address = "debug@Datawrapper.de";
+				$from_address = "debug@datawrapper.de";
 
 				$subject = '[Datawrapper] '. _("Please verify your e-mail address");
 				

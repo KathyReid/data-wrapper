@@ -76,10 +76,10 @@
 
             //init the back button
             $(".close_signup").click(function(){
-                $("#login").show();
-                $("#show_signup").show();
+                $("#login").hide();
+                $("#show_signup").hide();
                 $("#reminder").hide();
-                $("#signup").hide();
+                $("#signup").show();
 
             });
 
@@ -125,6 +125,13 @@
                 $("#login").hide();
                 $("#show_signup").hide();
                 $("#signup").show();
+            }); 
+
+            //init the show Login
+            $('#show_login').click(function() {
+                $("#login").show();
+                $("#show_signup").show();
+                $("#signup").hide();
             }); 
 
             //init the Sign up
@@ -251,6 +258,7 @@
 
 
                 <div id="login">
+                    <div class="close_signup">[back]</div>
                     <h2><?php echo _("Login for registered users:") ?></h2>
                     <input class="login" id="email" value="<?php echo _("E-mail") ?>">
                     <input class="login" id="pwd" type="password" value="<?php echo _("Password") ?>">
@@ -269,8 +277,8 @@
                 
 
                 <div id="signup">
-                    <div class="close_signup">[back]</div>
-
+                    
+                    <h2><?php echo _("Create an account on Datawrapper:") ?></h2>
                     <input class="login" id="email_signup" value="<?php echo _("E-mail") ?>">
                     
                     <div class="clear"></div>
@@ -285,8 +293,13 @@
                     
                     <div class="clear"></div>
 
-                    <button id="signup_submit" class="button"><?php echo _("Sign up") ?></button>
+                    <button id="signup_submit" class="button"><?php echo _("Sign up") ?></button> or <button id="show_login" class="button"><?php echo _("Log in") ?></button>
                     <div id="verify"></div>
+                    
+                    <div id="additional_ressources">
+                        <p><?php echo _("Resources to get started:") ?></p>
+                        <p><a href="#quickstart" class="fancybox"><?php echo _("Quickstart") ?></a> • <a href="#tutorial" class="fancybox"><?php echo _("Tutorial") ?></a> • <a href="#installation" class="fancybox"><?php echo _("Installation guide") ?></a>
+                    </div>
                 </div>
 
                 <div id="reminder">

@@ -806,11 +806,11 @@ body {
 }
 
 /* line 764, ../sass/general.scss */
-#login_submit, #signup_submit, #show_signup, #reminder_submit, #pwd_change_submit {
+#login_submit, #signup_submit, #show_login, #show_signup, #reminder_submit, #pwd_change_submit {
   font-size: 0.9em;
   line-height: 1.7em;
   font-weight: bold;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 /* line 771, ../sass/general.scss */
@@ -821,11 +821,10 @@ body {
 
 /* line 776, ../sass/general.scss */
 #show_signup {
-  position: absolute;
-  top: 190px;
-  margin: 2px 8px;
-  left: 0px;
-  width: 96%;
+  position: relative;
+  margin: 2px 0;
+  right: 0px;
+  width: 100%;
   background-color: #5e9dcd;
   border: 1px #000 solid;
   -moz-border-radius: 5px;
@@ -840,7 +839,7 @@ body {
   text-decoration: underline;
 }
 
-/* line 791, ../sass/general.scss */
+/* line 790, ../sass/general.scss */
 #additional_ressources {
   font-size: 0.9em;
   position: absolute;
@@ -849,39 +848,39 @@ body {
   margin: 10px;
 }
 
-/* line 799, ../sass/general.scss */
+/* line 798, ../sass/general.scss */
 #login, #signup {
   background-color: #333;
   color: #fff;
 }
-/* line 803, ../sass/general.scss */
+/* line 802, ../sass/general.scss */
 #login a, #signup a {
   color: #fff;
 }
-/* line 805, ../sass/general.scss */
+/* line 804, ../sass/general.scss */
 #login a:hover, #signup a:hover {
   text-decoration: none;
 }
-/* line 808, ../sass/general.scss */
+/* line 807, ../sass/general.scss */
 #login h2, #signup h2 {
   text-shadow: black 1px 0px 1px;
   font-size: 1.1em;
   font-weight: normal;
 }
 
-/* line 815, ../sass/general.scss */
+/* line 814, ../sass/general.scss */
 #about {
   color: black;
   margin-right: 20px;
   background-color: #5e9dcd;
 }
-/* line 820, ../sass/general.scss */
+/* line 819, ../sass/general.scss */
 #about h2 {
   font-weight: normal;
   font-size: 1.1em;
   padding-right: 115px;
 }
-/* line 826, ../sass/general.scss */
+/* line 825, ../sass/general.scss */
 #about .beta_logo {
   position: absolute;
   z-index: 1;
@@ -917,14 +916,14 @@ body {
   background-image: -ms-radial-gradient(#a3160d, #b94e63);
   background-image: radial-gradient(#a3160d, #b94e63);
 }
-/* line 845, ../sass/general.scss */
+/* line 844, ../sass/general.scss */
 #about p, #about li {
   margin: 0 0 10px 0;
   padding: 0;
   font-size: 0.8em;
 }
 
-/* line 852, ../sass/general.scss */
+/* line 851, ../sass/general.scss */
 .close_signup {
   font-size: 0.6em;
   width: 100%;
@@ -932,20 +931,22 @@ body {
   color: #7f7f7f;
   cursor: pointer;
 }
-/* line 858, ../sass/general.scss */
+/* line 857, ../sass/general.scss */
 .close_signup:hover {
   text-decoration: underline;
 }
 
-/* line 861, ../sass/general.scss */
-#signup, #reminder {
+/* line 860, ../sass/general.scss */
+#login, #reminder {
   display: none;
 }
 
-/* line 865, ../sass/general.scss */
+/* line 864, ../sass/general.scss */
 #verify, #reset_confirmation, #pwd_change_confirmation {
-  width: 96%;
+  width: 92%;
   display: none;
+  position: relative;
+  z-index: 4;
   padding: 15px;
   margin-right: 20px;
   background-color: #fff;
@@ -960,7 +961,7 @@ body {
   font-size: 0.8em;
 }
 
-/* line 877, ../sass/general.scss */
+/* line 878, ../sass/general.scss */
 h1.login_title {
   color: black;
   font-weight: normal;
