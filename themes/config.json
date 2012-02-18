@@ -7,6 +7,17 @@
             "image": null,
             "restricted": null
         },
+        "abzv":
+        {
+            "name": "abzv",
+            "desc": "ABZV",
+            "image": {
+                "width": 56,
+                "height": 25,
+                "format": "gif"
+            },
+            "restricted": null
+        },
         "lemonde":
         {
             "name": "lemonde",
