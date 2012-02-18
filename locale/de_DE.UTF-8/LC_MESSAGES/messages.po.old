@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-18 18:29+0100\n"
-"PO-Revision-Date: 2012-02-18 18:29+0100\n"
+"POT-Creation-Date: 2012-02-17 15:33+0100\n"
+"PO-Revision-Date: 2012-02-17 15:43+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,64 +20,64 @@ msgstr ""
 #: actions/export.php:67
 #: actions/publish.php:58
 msgid "Could not fetch the data from the database."
-msgstr "Daten könnten nicht aus Datenbank geladen werden."
+msgstr "Daten könnten nicht von Datenbank abgeholt werden."
 
 #: actions/export.php:75
 msgid "This page cannot be accessed."
-msgstr "Die Seite kann nicht angezeigt werden."
+msgstr "Die Seite könnte nicht angezeigt werden."
 
 #: actions/input.php:128
 msgid "Could not store the data on the database."
-msgstr "Daten konnten nicht in Datenbank gespeichert werden."
+msgstr "Daten könnten nicht in Datenbank eingespeichert werden."
 
 #: actions/lang_change.php:36
 msgid "Unknown language code."
-msgstr "Unbekannter Code (Sprache). "
+msgstr "Sprache wurde nicht erkennt."
 
 #: actions/list_vis.php:21
 msgid "Not logged in, could not fetch the list of visualizations."
-msgstr "Nicht eingeloggt, die Liste der Visualisierungen wurde nicht geladen."
+msgstr "Nicht eingeloggt, die Visualisierung wurden nicht geladen."
 
 #: actions/login.php:24
 #: actions/pwd_change.php:57
 #: actions/pwd_reminder.php:102
 #: actions/signup.php:102
 msgid "Not enough parameters were passed."
-msgstr "Zu wenig Parameter eingegeben."
+msgstr "Zu wenig Parameters wurden gesendet."
 
 #: actions/logout.php:22
 msgid "Could not log out."
-msgstr "Logout war nicht möglich."
+msgstr "Ausloggen wurde nicht erfolgreich."
 
 #: actions/make_header.php:26
 msgid "Could not add a header row."
-msgstr "Kopfzeile konnte nicht hinzugefügt werden."
+msgstr "Die Koftzeile könnte nicht hingefügt werden."
 
 #: actions/pwd_change.php:37
 #: actions/pwd_change.php:50
 msgid "Could not change password in the DB."
-msgstr "Kennwort in der Datenbank wurde nicht geändert. "
+msgstr "Könnte das Kennwort nicht in der Datenbank ändern ."
 
 #: actions/pwd_change.php:45
 msgid "No request for new password from this email address."
-msgstr "Emailadresse nicht in der Datenbank."
+msgstr "Kein Antrag auf neues Passwort aus dieser E-Mail-Adresse."
 
 #: actions/pwd_reminder.php:45
 msgid "Password change requested"
-msgstr "Kennwort-Änderung angefordert"
+msgstr "Eine änderung des Kennworts wurde erwünscht"
 
 #: actions/pwd_reminder.php:47
 #: actions/signup.php:49
 msgid "Dear Datawrapper user,"
-msgstr "Liebe(r) Datawrapper-Nutzer(in),"
+msgstr "Sehr geehrter Datawrapper NutzerIn,"
 
 #: actions/pwd_reminder.php:49
 msgid "Please click on the link below to change your password: "
-msgstr "Bitte klicken Sie auf den unten stehenden Link, um Ihr Kennwort zu ändern:"
+msgstr "Bitte klicken Sie auf den untenstehenden Link, um Ihr Kennwort zu ändern:"
 
 #: actions/pwd_reminder.php:53
 msgid "Do ignore this message if you did not request a password change from Datawrapper."
-msgstr "Bitte ignorieren Sie diese Nachricht, falls Sie keine Änderung ihrer Zugangsdaten bei Datawrapper beantragt haben."
+msgstr "Bitte betrachten Sie nicht diese Nachricht, falls Sie Datawrapper nach einer Änderung Ihres Kennworkts nicht gefragt haben."
 
 #: actions/pwd_reminder.php:55
 #: actions/signup.php:55
@@ -91,12 +91,12 @@ msgstr "Das Datawrapper Team"
 
 #: actions/pwd_reminder.php:74
 msgid "Could not send password change e-mail."
-msgstr "Verand der Mail zur Änderung der Zugangsdaten nicht möglich."
+msgstr "Kennwort wurde nicht geändert."
 
 #: actions/pwd_reminder.php:82
 #: actions/pwd_reminder.php:96
 msgid "Could not send password change email."
-msgstr " E-Mail zur Kennwortänderung wurde nicht abgeschickt."
+msgstr "Das E-Mail zur Kennwort-änderung wurde nicht abgeschickt."
 
 #: actions/pwd_reminder.php:90
 msgid "No user found with this email address."
@@ -104,11 +104,11 @@ msgstr "Kein Benutzer mit dieser E-Mail-Adresse gefunden."
 
 #: actions/quickstart_noshow.php:25
 msgid "Could not disable quickstart in the database."
-msgstr "Schnellstart konnte in der Datenbank nicht deaktiviert werden."
+msgstr "Schnellstart könnte nicht in Datenbank abgeschaltet werden."
 
 #: actions/quickstart_noshow.php:32
 msgid "No action required."
-msgstr "Keine Eingabe notwendig"
+msgstr ""
 
 #: actions/signup.php:47
 msgid "Please verify your e-mail address"
@@ -116,41 +116,41 @@ msgstr "Bitten prüfen Sie Ihre E-Mail-Addresse."
 
 #: actions/signup.php:51
 msgid "Please click on the link below to verify your e-mail address: "
-msgstr "Bitten klicken Sie auf Link um Ihre E-Mail Addresse zu bestätigen:"
+msgstr "Bitten folgen Sie den Link um Ihre E-Mail Addresse zu prüfen:"
 
 #: actions/signup.php:74
 msgid "Could not send verification e-mail."
-msgstr "Die E-Mail könnte nicht versendet werden."
+msgstr "Das E-Mail könnte nicht versandt werden."
 
 #: actions/signup.php:82
 #: actions/signup.php:96
 msgid "Could not add user in the DB."
-msgstr "Benutzer konnte nicht in der Datenbank gespeichert werden."
+msgstr "Benutzer könnte nicht in die Datenbank aufgenommen werden."
 
 #: actions/signup.php:90
 msgid "A user already has this email address."
-msgstr "Diese E-Mail-Addresse wird bereits von einem anderen Benutzer verwendet."
+msgstr "Diese E-Mail-Addresse wurde bereits von einem anderen Benutzer verwendet."
 
 #: actions/transpose.php:42
 msgid "Could not transpose the data in the database."
-msgstr "Daten konnten in der Datenbank nicht umgestellt werden."
+msgstr "Daten könntent nicht in Datenbank umgestellt werden."
 
 #: actions/transpose.php:51
 msgid "You can only transpose a table with two entries."
-msgstr "Nur Tabellen mit zwei Einträgen können transponiert werden."
+msgstr "Nur Tabellen mit 2 Einträge umgestellt werden können."
 
 #: actions/verify.php:28
 #: actions/verify.php:33
 msgid "Could not verify e-mail address."
-msgstr "Die E-Mail-Addresse konnte nicht verifiziert werden."
+msgstr "Die E-Mail-Addresse könnte nicht geprüft werden."
 
 #: class/user.class.php:43
 msgid "Error while trying to retrieve user from database."
-msgstr "Datenbankfehler bei Suche nach diesem Nutzer."
+msgstr "Datenbank Fehler beim Benutzersretrieval."
 
 #: class/user.class.php:67
 msgid "Error while trying to retrieve show_quickstart from DB."
-msgstr "Datenbankfehler bei Suche nach den Schnellstartoptionen. "
+msgstr "Datenbank Fehler beim Retrieval von den Schnellstartsoptionen."
 
 #: class/user.class.php:101
 msgid "Last modified on"
@@ -162,19 +162,19 @@ msgstr "Chart-Typ:"
 
 #: class/user.class.php:105
 msgid "Visualization URL: "
-msgstr "URL der Grafik:"
+msgstr "VisualisierungsURL"
 
 #: class/user.class.php:114
 msgid "No visualization was found"
-msgstr "Keine Visualisierung gefunden"
+msgstr "Keine Visualisierung wurde gefunden"
 
 #: class/user.class.php:120
 msgid "Error while trying to retrieve list from database."
-msgstr "Datenbankfehler bei Suche nach Liste"
+msgstr "Datenbank Fehler beim Listeretrieval."
 
 #: class/user.class.php:124
 msgid "User not logged in."
-msgstr "Benutzer nicht eingeloggt."
+msgstr "Benützer ist nicht eingeloggt."
 
 #: class/user.class.php:154
 msgid "User and password do not match or user not activated."
@@ -182,19 +182,19 @@ msgstr "Benutzer und Kennwort stimmen nicht überein, oder Nutzer ist nicht akti
 
 #: class/user.class.php:160
 msgid "Could not check the user credentials in the DB."
-msgstr "Daten des Nutzers konnten konnten in der Datenbank nicht überprüft werden. "
+msgstr "Daten könnten nicht in Datenbank eingespeichert werden."
 
 #: phpMyAdmin/pmd_relation_new.php:68
 msgid "General relation features"
-msgstr "Allgemeine Funktionsmerkmale"
+msgstr ""
 
 #: phpMyAdmin/pmd_relation_new.php:68
 msgid "Disabled"
-msgstr "Deaktiviert"
+msgstr ""
 
 #: views/check.php:151
 msgid "Check that your data was correctly understood."
-msgstr "Bitte prüfen Sie, ob Ihre Daten richtig verstanden wurden."
+msgstr "Bitte prüfen Sie, dass Ihre Daten richtig verstanden wurden."
 
 #: views/check.php:154
 msgid "Edit the data"
@@ -214,7 +214,7 @@ msgstr "Datawrapper ist ein Projekt der ABZV"
 
 #: views/comingsoon.php:28
 msgid "Datawrapper is coming soon"
-msgstr "Datawrapper wird bald freigeschaltet"
+msgstr ""
 
 #: views/contents.php:5
 msgid "About"
@@ -232,7 +232,7 @@ msgstr "Kurzfassung: Dieses Werkzeug ist für Journalisten bestimmt. Es reduzier
 #: views/contents.php:66
 #: views/footer.php:7
 msgid "Motivation"
-msgstr "Motivation"
+msgstr ""
 
 #: views/contents.php:11
 msgid "There are many uses of data in journalism. The first step though is to use data more and often as a basis for reporting. Doing this has become easier, because of the large amounts of data becoming available, thanks to the OpenData movement and other initiatives."
@@ -240,7 +240,7 @@ msgstr "Es gibt viele Spielarten des Datenjournalismus. Der erste Schritt besteh
 
 #: views/contents.php:13
 msgid "But there are bottlenecks."
-msgstr "Aber es gibt Barrieren."
+msgstr "."
 
 #: views/contents.php:15
 msgid "One is that creating even a simple visual chart and embedding it into a story is still too complex and time consuming. Yes, there are extensive other offerings, like IBM ManyEyes or the growing Google Chart API. They are great. But they have downsides, if used by journalists. For example you often have to store your trials data in public, can't get it out again. Plus, control over the look and feel of your charts is limited or complex to change if you are not a coder."
@@ -317,7 +317,7 @@ msgstr "Journalisten, Blogger, Verlage können die Applikation herunterladen und
 
 #: views/contents.php:52
 msgid "HTML5 Chart Libraries"
-msgstr "HTML Chart Libraries"
+msgstr ""
 
 #: views/contents.php:54
 #, php-format
@@ -351,12 +351,12 @@ msgstr "Wir wollen Datenjournalismus fördern. Wir glauben, dass eine tiefe Kenn
 
 #: views/contents.php:75
 msgid "To install Datawrapper on your server, download all files from GitHub or do a 'git pull'. Create the appropriate tables in your database using the .sql dump. Then create a file with your database passwords to be stored in /actions/passwords.php under the form"
-msgstr "Um Datawrapper auf einem eigenen Server zu installieren, laden sie alle Dateien über GitHub herunter. Alternativ funktioniert ein 'git pull'. Erstellen sie die notwendigen Tabellen in ihrer Datenbank unter Nutzung des .sql dump. Danach erstellen sie eine Datei mit den Datenbanken-Kennwörtern, diese muss im Ordner /actions/passwords.php\" unter dem Formular gespeichert werden. "
+msgstr ""
 
 #: views/contents.php:82
 #, php-format
 msgid "If you are a for-profit venture, make sure to %sbuy a license for the use of HighCharts%s."
-msgstr "Wenn Ihr Unternehmen gewinnorientiert ist, müssen sie zuvor einen entsprechende Lizenz kaufen, um die Visualisierungsbibliothek Highcharts nutzen zu können. Bitte prüfen Sie sehr genau, ob die gewünschte Nutzungsform durch die Lizenz abgedeckt ist. "
+msgstr ""
 
 #: views/contents.php:87
 msgid "Terms of use"
@@ -388,7 +388,7 @@ msgstr "Datawrapper und die ABZV werden in keinem Fall irgendwelche privaten Dat
 
 #: views/contents.php:94
 msgid "Note that for installation on your own server a license fee for Highcharts is mandatory."
-msgstr "Bitte beachten: Datawrapper nutzt die Visualisierungsbibliothek Highcharts. Für eine Installation auf einem eigenen Server müssen Sie eine Lizenz von Highcharts erwerben. "
+msgstr ""
 
 #: views/contents.php:98
 #: views/footer.php:11
@@ -401,7 +401,7 @@ msgstr "Verleger"
 
 #: views/contents.php:101
 msgid "ABZV • Bildungswerk der Zeitungen, 2011"
-msgstr "ABZV • Bildungswerk der Zeitungen "
+msgstr ""
 
 #: views/contents.php:102
 msgid "The Academy of Vocational Education of the German Newspaper Publishers Association (ABZV) is a training center for German newspapers. Founded in 1989, it supports the efforts of its members and organizes its own seminars."
@@ -413,7 +413,7 @@ msgstr " In der Wehrhecke 1, 53125, Bonn."
 
 #: views/contents.php:106
 msgid "Tel : 0228 - 20 77 66 22 Fax: 0228 - 20 77 66 23 E-Mail: info@abzv.de"
-msgstr "Tel : 0228 - 20 77 66 22 Fax: 0228 - 20 77 66 23 E-Mail: info@abzv.de"
+msgstr ""
 
 #: views/contents.php:108
 msgid "Registered in the Vereinsregister in Bonn under:  20 VR 7689"
@@ -429,11 +429,11 @@ msgstr "Host"
 
 #: views/contents.php:112
 msgid "CloudControl • Helmholtz-Str. 2-9, D-10587 Berlin"
-msgstr "Tel : 0228 - 20 77 66 22 Fax: 0228 - 20 77 66 23 E-Mail: info@abzv.de"
+msgstr ""
 
 #: views/contents.php:113
 msgid "Credits"
-msgstr "Credits"
+msgstr ""
 
 #: views/contents.php:114
 msgid "Idea/Concept"
@@ -445,23 +445,23 @@ msgstr "Programmierung"
 
 #: views/contents.php:132
 msgid "Tutorial: How to get good charts out of Datawrapper"
-msgstr "Anleitung: Wie man mit Datawrapper gute Visualisierungen erstellt "
+msgstr ""
 
 #: views/contents.php:135
 msgid "Yes, no one reads the manual, but this one is really short. Here we show you how to get the most out of Datawrapper - what data to look for and how to format it to get a correct, good looking chart. Our tool can help you, but if you feed it the wrong data it will fail."
-msgstr "Richtig, niemand liest die Anleitung - doch diese hier ist sehr kurz. Hier zeigen wir, wie man mit Datawrapper arbeiten kann - welche Daten man suchen muss und wie man die Daten formatiert, um einen korrekten, aussagekräftigen Chart zu erzeugen. Datawrapper kann ihnen bei der Visualisierung helfen, doch wenn Sie die falschen Daten einfügen,  wird es nicht funktionieren. "
+msgstr ""
 
 #: views/contents.php:137
 msgid "Why only five types of charts?"
-msgstr "Warum nur so wenige Visualisierungsvarianten?"
+msgstr ""
 
 #: views/contents.php:139
 msgid "We had to start somewhere and we had to stop somewhere. In the future we would like to add more chart types, to this end we are looking for developers/designers. Contact us at "
-msgstr "Wir mussten irgendwo anfangen und auch irgendwo aufhören. In Zukunft möchten wir weitere Visualisierungsformen anbieten und suchen dafür den Kontakt zu Entwicklen und Designern. Wenn Sie interessiert sind, senden Sie uns eine Email. "
+msgstr ""
 
 #: views/contents.php:140
 msgid "On to part 1. Lines"
-msgstr "Weiter zu Teil 1: Linien"
+msgstr ""
 
 #: views/contents.php:145
 msgid "Line chart"
@@ -469,19 +469,19 @@ msgstr "Linien"
 
 #: views/contents.php:147
 msgid "This is easy. You can visualize one or multiple lines. In order to graph them properly here is the best way to prepare your table or spreadsheet."
-msgstr "Das ist einfach. Man kann eine oder mehrere Linien gleichzeitig visualisieren. Damit die Visualisierung korrekt aussieht, müssen die Daten in einer bestimmten Form in einer Tabelle gespeichert sein. "
+msgstr ""
 
 #: views/contents.php:149
 msgid "Your data for a single line should like this:"
-msgstr "Daten für die Darstellung einer einzelnen Linie sollten so aussehen: "
+msgstr ""
 
 #: views/contents.php:152
 msgid "Sample data for a single line chart."
-msgstr "Beispieldaten für ein Linienchart. "
+msgstr ""
 
 #: views/contents.php:153
 msgid "On to part 2. Bar charts"
-msgstr "Weiter zu Teil 2: Balkendiagramme"
+msgstr ""
 
 #: views/contents.php:157
 msgid "Bar chart"
@@ -489,20 +489,20 @@ msgstr "Säulen"
 
 #: views/contents.php:159
 msgid "If you have data describing a certain value say month by month or if you want to compare the revenue of company A with the revenue from company B, a bar chart is the way to go."
-msgstr "Bei Daten, die zu einem bestimmten Zeitpunkt (Woche, Monat, Jahr) erhoben wurden, eignet sich ein Balkendiagramm. So lässt sich zum Beispiel die Umsatzentwicklung eines Unternehmens darstellen. Mit mehreren Balken lässt sich der Umsatz von Firma A mit dem von Firma B vergleichen. "
+msgstr ""
 
 #: views/contents.php:161
 msgid "Your data for a bar chart should like this:"
-msgstr "Die "
+msgstr ""
 
 #: views/contents.php:164
 #: views/contents.php:180
 msgid "Sample dataset for a bar chart."
-msgstr "Beispieldaten für ein Balkendiagram:"
+msgstr ""
 
 #: views/contents.php:165
 msgid "On to part 3. Pie chart"
-msgstr "Weiter zu Teil 3: Tortendiagramm"
+msgstr ""
 
 #: views/contents.php:169
 msgid "Pie chart"
@@ -510,23 +510,23 @@ msgstr "Torte"
 
 #: views/contents.php:171
 msgid "Careful, pie charts can be misused and then they distort the message. Use a pie chart if you have data that can be compared proportionally - say, to show how after an election 100 per cent of the vote are spread to the various political parties."
-msgstr "Hier bitte Vorsicht. Tortendiagramme können falsch eingesetzt werden und verzerren dann die Aussage. Ein Tortendiagramm wird genutzt, um das Verhältnis der Anteile darzustellen. Ein gutes Beispiel sind Wahlen, hier wird dieser Grafiktyp eingesetzt, um die Stimmverteilung zu zeigen. "
+msgstr ""
 
 #: views/contents.php:173
 msgid "Do not use a pie chart if there are to many labels. Often a bar chart is better than a pie chart to show the relation and trend."
-msgstr "Verzichten Sie auf die Nutzung einer Torten-Grafik, wenn es zu viele Kategorien gibt. In dem Falle ist ein vertikales oder horizontales Balkendiagramm meist besser geeignet, die Relation und den Trend darzustellen. "
+msgstr ""
 
 #: views/contents.php:173
 msgid " Read more about pie charts."
-msgstr "Mehr Hintergrund zu Tortendiagrammen (in Englisch)."
+msgstr ""
 
 #: views/contents.php:175
 msgid "By the way: In a correct pie chart the biggest pie should start at twelve o'clock. And just forget about the shadows and 3D effects of desktop programs. This will get you into a shitstorm."
-msgstr "Anmerkung: Bei einem wirklich korrekten Tortendiagramm sollte die jeweils größte Gruppe bei zwölf Uhr im Uhrzeigersinn starten. Auf Schatten und 3D Effekte sollten Sie generell verzichten, richtig schlechte Charts lösen im Internet Unwillen aus. "
+msgstr ""
 
 #: views/contents.php:177
 msgid "Your data for a pie chart should like this:"
-msgstr "Die Daten für ein Tortendiagramm sollten soe aussehen: "
+msgstr ""
 
 #: views/contents.php:181
 msgid "On to part 4. Streamgraph"
@@ -538,31 +538,31 @@ msgstr "Streamgraph"
 
 #: views/contents.php:187
 msgid "This is our fancy graph. You can use this form to show the pattern of a lot of data over long periods of time. Some people love these, some hate them (because what the chart really says is sometimes a mystery)."
-msgstr "Dies ist unser bisher einzige ungewöhnliches Chart. Man kann damit ein Muster bei großen Datenmengen oder über einen längeren Zeitraum verdeutlichen. Einige Nutzer lieben diese Formen, anderen lehnen sie ab (weil je nach Daten manchmal nicht ganz klar wird, was der Chart nun aussagt). "
+msgstr ""
 
 #: views/contents.php:187
 msgid " Here is a long paper for all of you who want to learn more."
-msgstr "Hier ist ein längeres Hintergrundpapier, für alle die mehr lernen wollen. "
+msgstr ""
 
 #: views/contents.php:189
 msgid "A streamgraph will effectively draw lines and fill the space between these. This is good to display how music preferences have changed over time or how certain topics have been cited more or less often."
-msgstr "Ein \"Streamgraph\" zeichnet Linien und füllt dann den Zwischenraum farblich aus. Das ist gut, um zum Beispiel den Wandel von Musikvorlieben zu visualisieren oder wie lange ein bestimmtes Schlagwort häufig oder weniger häufig benutzt wurde. "
+msgstr ""
 
 #: views/contents.php:191
 msgid "Your data for a streamgraph should like this:"
-msgstr "Die Daten für den \"Streamgraph\" sollten so aussehen: "
+msgstr ""
 
 #: views/contents.php:194
 msgid "Sample dataset for a streamgraph."
-msgstr "Beispieldaten für einen \"Streamgraph\"."
+msgstr ""
 
 #: views/contents.php:195
 msgid "If you have better examples, better datasets or just want to vent off, contact us via"
-msgstr "Wenn Sie bessere Beispiele oder bessere Daten kennen oder aber schlicht Kritik oder Lob loswerden wollen, schreiben Sie uns an "
+msgstr ""
 
 #: views/contents.php:197
 msgid "Let's go!"
-msgstr "Los geht's!"
+msgstr ""
 
 #: views/contents.php:237
 #: views/footer.php:13
@@ -633,7 +633,7 @@ msgstr "Daten runterladen"
 #: views/embed.php:139
 #, php-format
 msgid "Chart created with %sDatawrapper%s."
-msgstr "Grafik erstellt mit %sDatawrapper%s."
+msgstr ""
 
 #: views/embed.php:145
 msgid "Page cannot be displayed."
@@ -653,11 +653,11 @@ msgstr "Nutzungsbedingungen"
 
 #: views/footer.php:15
 msgid "Tutorial"
-msgstr "Anleitung"
+msgstr ""
 
 #: views/footer.php:17
 msgid "Install"
-msgstr "Installation"
+msgstr ""
 
 #: views/footer.php:19
 msgid "Fork me on GitHub!"
@@ -707,7 +707,7 @@ msgstr "Tabelle, variabel"
 
 #: views/login.php:105
 msgid "An e-mail has been sent. Please check your mailbox and follow instructions to reset your password."
-msgstr "Eine E-Mail wurde abgeschickt. Bitte überprüfen Sie Ihre Mailbox und folgen Sie den Anweisungen zum Zurücksetzen des Kennworts."
+msgstr "Eine E-Mail wurde abgeschickt. Bitte überprüfen Sie Ihre Mailbox und folgen Sie den Anweisungen zum Zurücksetzen des Passworts."
 
 #: views/login.php:117
 #: views/login.php:174
@@ -778,7 +778,7 @@ msgstr "Entwickler: Erweiterung durch HTML5 Charts möglich"
 
 #: views/login.php:255
 msgid "Non-proﬁt: This is and will stay free to use"
-msgstr "Non-profit: Dieses Angebot ist und bleibt kostenfrei"
+msgstr ""
 
 #: views/login.php:257
 msgid "Why this approach? See our Motivations"
@@ -795,7 +795,7 @@ msgstr "E-Mail"
 
 #: views/login.php:266
 msgid "Forgot your password?"
-msgstr "Kennwort vergessen?"
+msgstr "Passwort vergessen?"
 
 #: views/login.php:267
 msgid "Login"
@@ -825,7 +825,7 @@ msgstr "E-Mail-Addresse"
 
 #: views/login.php:284
 msgid "email@provider.tld"
-msgstr "email@provider.tld"
+msgstr ""
 
 #: views/login.php:288
 msgid "Enter password twice"
@@ -833,7 +833,7 @@ msgstr "Bitte geben Sie Ihr Kennwort zweimal ein."
 
 #: views/login.php:294
 msgid "I agree to the Terms of Use"
-msgstr "Ich akzeptiere die Nutzungsbedingungen."
+msgstr "Ich akzeptiere die Nutzungsbedingungen an."
 
 #: views/login.php:298
 msgid "Sign up"
@@ -845,11 +845,11 @@ msgstr "Einloggen"
 
 #: views/login.php:309
 msgid "Enter your e-mail address to reset your password."
-msgstr "Geben Sie Ihre E-Mail-Adresse ein, um das Kennwort zurückzusetzen."
+msgstr "Geben Sie Ihre E-Mail-Adresse, Ihr Passwort zurückzusetzen."
 
 #: views/login.php:315
 msgid "Reset password"
-msgstr "Kennwort zurücksetzen"
+msgstr "Passwort zurücksetzen"
 
 #: views/login.php:327
 msgid "Enter your new password twice"
@@ -885,7 +885,7 @@ msgstr "Größenverhältnis erhalten"
 
 #: views/screens.php:198
 msgid "1. Input data"
-msgstr "1. Daten einfügen"
+msgstr "1. Daten hinfügen"
 
 #: views/screens.php:201
 msgid "2. Check data"
@@ -901,7 +901,7 @@ msgstr "4. Veröffentlichen"
 
 #: views/screens.php:213
 msgid "Next"
-msgstr "Vor"
+msgstr "Next"
 
 #: views/screens.php:217
 msgid "New"
@@ -909,7 +909,7 @@ msgstr "Neu"
 
 #: views/screens.php:222
 msgid "Prev"
-msgstr "Zurück"
+msgstr "Prev"
 
 #: views/vis.chooser.php:30
 msgid "Useful resources"
@@ -994,11 +994,11 @@ msgstr "Horizontale Säulen"
 #: visualizations/config.json.php:76
 #: visualizations/config.json.php:85
 msgid "Understanding Pie Charts"
-msgstr "Tortendiagramme erstellen (Englisch)"
+msgstr "Torte verstehen (Englisch)"
 
 #: visualizations/config.json.php:81
 msgid "Simplified pie chart"
-msgstr "Vereinfachte Tortengrafik"
+msgstr ""
 
 #~ msgid "This is a tool to let journalists work with data every day."
 #~ msgstr "Open Source: Kann auf eigenem Server installiert werden"
