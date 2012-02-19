@@ -149,7 +149,7 @@
 			<p><?php echo _("Your data for a single line should like this:") ?></p>
 				<img src="images/tutorial/line.png" />
 
-			<p><a href="https://docs.google.com/spreadsheet/ccc?key=0Ainrk2-JqCiydGpUbkxFM1VObDM4cjZmQ3FjeTQ5OVE&hl=en_US#gid=0"><?php echo _("Sample data for a single line chart.") ?></a></p>
+			<p><a target="_blank" href="https://docs.google.com/spreadsheet/ccc?key=0Ainrk2-JqCiydGpUbkxFM1VObDM4cjZmQ3FjeTQ5OVE&hl=en_US#gid=0"><?php echo _("Sample data for a single line chart.") ?></a></p>
 			<button class="button_tutorial" onClick="tutorial_next(2)"><?php echo _("On to part 2. Bar charts") ?> &raquo;</button>
 		</div>
 		<div id="3" class="tutorial_class">
@@ -161,7 +161,7 @@
 			<p><?php echo _("Your data for a bar chart should like this:") ?></p>
 				<img src="images/tutorial/bar.png" />
 
-			<p><a href="https://docs.google.com/spreadsheet/ccc?key=0Ainrk2-JqCiydEliVjQ1QjhCQWJZVEpEU0EtejE4ZGc&hl=en_US#gid=0"><?php echo _("Sample dataset for a bar chart.") ?></a></p>
+			<p><a target="_blank" href="https://docs.google.com/spreadsheet/ccc?key=0Ainrk2-JqCiydEliVjQ1QjhCQWJZVEpEU0EtejE4ZGc&hl=en_US#gid=0"><?php echo _("Sample dataset for a bar chart.") ?></a></p>
 			<button class="button_tutorial" onClick="tutorial_next(3)"><?php echo _("On to part 3. Pie chart") ?> &raquo;</button>
 		</div>
 		<div id="4" class="tutorial_class">
@@ -170,14 +170,14 @@
 			
 			<p><?php echo _("Careful, pie charts can be misused and then they distort the message. Use a pie chart if you have data that can be compared proportionally - say, to show how after an election 100 per cent of the vote are spread to the various political parties.") ?></p> 
 
-			<p><?php echo _("Do not use a pie chart if there are to many labels. Often a bar chart is better than a pie chart to show the relation and trend.") ?><a href="http://en.wikipedia.org/wiki/Pie_chart"><?php echo _(" Read more about pie charts.") ?></a></p>
+			<p><?php echo _("Do not use a pie chart if there are to many labels. Often a bar chart is better than a pie chart to show the relation and trend.") ?><a target="_blank" href="http://en.wikipedia.org/wiki/Pie_chart"><?php echo _(" Read more about pie charts.") ?></a></p>
 
 			<p><?php echo _("By the way: In a correct pie chart the biggest pie should start at twelve o'clock. And just forget about the shadows and 3D effects of desktop programs. This will get you into a shitstorm.") ?></p>
 
 			<p><?php echo _("Your data for a pie chart should like this:") ?></p>
 				<img src="images/tutorial/pie.png" />
 
-			<p><a href="https://docs.google.com/spreadsheet/ccc?key=0Ainrk2-JqCiydEliVjQ1QjhCQWJZVEpEU0EtejE4ZGc&hl=en_US#gid=0"><?php echo _("Sample dataset for a bar chart.") ?></a></p>
+			<p><a target="_blank" href="https://docs.google.com/spreadsheet/ccc?key=0Ainrk2-JqCiydEliVjQ1QjhCQWJZVEpEU0EtejE4ZGc&hl=en_US#gid=0"><?php echo _("Sample dataset for a bar chart.") ?></a></p>
 			<button class="button_tutorial" onClick="tutorial_next(4)"><?php echo _("On to part 4. Streamgraph") ?> &raquo;</button>
 		</div>
 		<div id="5" class="tutorial_class">
@@ -191,7 +191,7 @@
 			<p><?php echo _("Your data for a streamgraph should like this:") ?></p>
 				<img src="images/tutorial/streamgraph.png" />
 
-			<p><a href="https://docs.google.com/spreadsheet/ccc?key=0Ainrk2-JqCiydEliVjQ1QjhCQWJZVEpEU0EtejE4ZGc&hl=en_US#gid=0"><?php echo _("Sample dataset for a streamgraph.") ?></a></p>
+			<p><a target="_blank" href="https://docs.google.com/spreadsheet/ccc?key=0Aj910EQuus3bdHZVdEhtNVhsMDhFdVNiMDlOVG5BZ3c"><?php echo _("Sample dataset for a streamgraph.") ?></a></p>
 			<p><?php echo _("If you have better examples, better datasets or just want to vent off, contact us via") ?> <a href="mailto:info@datastory.de">info@datastory.de</a></p>
 
 			<button class="button_tutorial" onClick="$.fancybox.close();"><?php echo _("Let's go!") ?></button>
