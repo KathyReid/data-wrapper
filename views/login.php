@@ -267,15 +267,8 @@
                     <button id="login_submit" class="button"><?php echo _("Login") ?></button>
 
                     <input id="show_signup" type="submit" value="<?php echo _("First time user? Register here.") ?>" />
-
-                    <div id="additional_ressources">
-                        <p><?php echo _("Resources to get started:") ?></p>
-                        <p><a href="#quickstart" class="fancybox"><?php echo _("Quickstart") ?></a> • <a href="#tutorial" class="fancybox"><?php echo _("Tutorial") ?></a> • <a href="#installation" class="fancybox"><?php echo _("Installation guide") ?></a>
-                    </div>
             
                 </div>
-
-                
 
                 <div id="signup">
                     
@@ -298,10 +291,11 @@
                     <button id="signup_submit" class="button"><?php echo _("Sign up") ?></button> or <button id="show_login" class="button"><?php echo _("Log in") ?></button>
                     <div id="verify"></div>
                     
-                    <div id="additional_ressources">
+                </div>
+
+                <div id="additional_ressources">
                         <p><?php echo _("Resources to get started:") ?></p>
                         <p><a href="#quickstart" class="fancybox"><?php echo _("Quickstart") ?></a> • <a href="#tutorial" class="fancybox"><?php echo _("Tutorial") ?></a> • <a href="#installation" class="fancybox"><?php echo _("Installation guide") ?></a>
-                    </div>
                 </div>
 
                 <div id="reminder">

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: DS\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-02-18 18:29+0100\n"
-"PO-Revision-Date: 2012-02-18 18:29+0100\n"
+"PO-Revision-Date: 2012-02-22 21:46+0100\n"
 "Last-Translator: nkb <hi@nkb.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -770,7 +770,7 @@ msgstr "Opensource: Runterladen und installieren"
 
 #: views/login.php:253
 msgid "CSS: Change the CSS, add your logo"
-msgstr "CSS: Design, und eigenes Logo einfügen"
+msgstr "CSS: Design beliebig anpassen"
 
 #: views/login.php:254
 msgid "Developers: Add new chart types"
@@ -782,7 +782,7 @@ msgstr "Non-profit: Dieses Angebot ist und bleibt kostenfrei"
 
 #: views/login.php:257
 msgid "Why this approach? See our Motivations"
-msgstr "Warum? Für wen? Mehr zu Zielen und Funktionen."
+msgstr "Mehr zum Hintergrund: Datawrapper Ziele und Funktionen"
 
 #: views/login.php:263
 msgid "Login for registered users:"
@@ -817,7 +817,7 @@ msgstr "Installationsleitfaden"
 
 #: views/login.php:282
 msgid "Create an account on Datawrapper:"
-msgstr "Kostenlos registrieren:"
+msgstr "Kostenlos anmelden:"
 
 #: views/login.php:283
 msgid "Enter your e-mail address"
@@ -901,7 +901,7 @@ msgstr "4. Veröffentlichen"
 
 #: views/screens.php:213
 msgid "Next"
-msgstr "Vor"
+msgstr "Next"
 
 #: views/screens.php:217
 msgid "New"
@@ -909,7 +909,7 @@ msgstr "Neu"
 
 #: views/screens.php:222
 msgid "Prev"
-msgstr "Zurück"
+msgstr "Prev"
 
 #: views/vis.chooser.php:30
 msgid "Useful resources"

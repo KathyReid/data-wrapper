@@ -10,6 +10,7 @@
 $error-color : #ff8;
 
 $color-on : #5E9DCD;
+$color-blue:#335EA9;
 $color-off : #606060;
 $color-on_text : #fff;
 $color-off_text : #555;
@@ -753,11 +754,11 @@ $chart-w:400px;
 
 #login, #about, #signup, #reminder, #new_pwd  {
     width: $box-w;
-    height: $box-w * 0.85;
+    height: $box-w * 0.6;
     padding:10px;
     float:left;
     position:relative;
-    background-color:#333;
+    background-color:$color-blue;
     color:#fff;
 }
 
@@ -778,7 +779,7 @@ $chart-w:400px;
     margin: 2px 0;
     right:0px;
     width:100%;
-    background-color:$color-on;
+    background-color:#fff;
     border:1px #000 solid;
     @include border-radius(5px);
     font-size: $font-size;
@@ -788,7 +789,7 @@ $chart-w:400px;
 }
 
 #login, #signup  {
-    background-color:#333;
+    background-color:$color-blue;
     color:#fff;
 
     a  {
@@ -797,7 +798,6 @@ $chart-w:400px;
     }
 
     h2  {
-        @include text-shadow(#000 1px 0px 1px);
         font-size:$font-size * 1.1; 
         font-weight:normal;
     }
@@ -807,12 +807,14 @@ $chart-w:400px;
 #additional_ressources  {
     font-size:$font-size * 0.9;
     position:absolute;
-    bottom:0;
-    left:0;
+    bottom:-167px;
     margin:0;
-    width:100%;
     background-color:#fff;
     color: #000;
+    width: $box-w;
+    height: $box-w * 0.2;
+    padding:10px;
+    right:0;
 
     a {
         color: #000;
@@ -821,9 +823,9 @@ $chart-w:400px;
 }
 
 #about {
-    color:$black;
+    color:#fff;
     margin-right:20px;
-    background-color:#fff;
+    background-color:$color-blue;
     font-weight:bold;
 
     h2 {
@@ -836,6 +838,10 @@ $chart-w:400px;
         margin:0 0 10px 0;
         padding: 0;
         font-size: $font-size * 0.8;
+    }
+
+    a {
+        color:#fff;
     }
 }
 
@@ -888,7 +894,7 @@ $chart-w:400px;
 }
 
 .login_bigtitle {
-    color:$black;
+    color:$color-blue;
     font-weight:bolder;
     font-size:$font-size * 3; 
     margin-top:10px;
