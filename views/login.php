@@ -57,7 +57,7 @@
             $('#login_submit').click(function() {
                 var email = $('#email').val();
                 var pwd = $('#pwd').val();
-                $.post('actions/login.php', {email: email, pwd: pwd}, function(data){
+                $.post('actions/user.php', {action:"connect", email: email, pwd: pwd}, function(data){
                     if (data != ""){
                         data = jQuery.parseJSON(data);
                         if (data.status == 200){
@@ -147,7 +147,7 @@
 
                         if (tos == "agree"){
 
-                            $.post('actions/signup.php', {email: email, pwd: pwd1}, function(data){
+                            $.post('actions/user.php', {action:"signup", email: email, pwd: pwd1}, function(data){
                                 if (data != ""){
                                     data = jQuery.parseJSON(data);
                                     if (data.status == 200){

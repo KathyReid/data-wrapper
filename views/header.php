@@ -44,7 +44,7 @@ function initHeader(){
 
 	$("#logout").click(function(){
 
-		$.post("actions/logout.php", { }, function(data){
+		$.post("actions/user.php", {action:"logout"}, function(data){
 			
 			if (data != ""){
 

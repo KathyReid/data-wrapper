@@ -13,17 +13,32 @@ class User {
 	public $id;
 	public $email;
 	protected $db;
+	protected $aws_access_key;
+	protected $aws_secret;
+
 
 	function __construct(& $db) {  
 	      
         // links to the db
         $this->db = & $db;
-                
+
+        global $aws_access_key;
+        global $aws_secret;
+
+        $this->aws_access_key = $aws_access_key;
+        $this->aws_secret = $aws_secret;
+    }
+
+    function setID($id){
+    	$this->id = $id;
     }
 
 	function getID(){
 
-		if (isset($_SESSION["user_email"])){
+		if (isset($this->id))
+			return $this->id;
+
+		elseif (isset($_SESSION["user_email"])){
 
 			$email = $_SESSION["user_email"];
 
@@ -35,6 +50,8 @@ class User {
 
 					$id = $row->user_id;
 				}
+
+				$this->setID($id);
 
 				return $id;
 				
@@ -126,42 +143,195 @@ class User {
 
 	}
 
-	function connect($email, $pwd){
+	function signup(){
 
-		//Checks that the e-mail and password match
-		$q = "SELECT * FROM users WHERE email = '$email' AND pwd = '". md5($pwd) ."' AND activated=1 LIMIT 1";		
+		if (isset($_POST['email']) && isset($_POST['pwd'])){
 
-		if ($stmt = $this->db->prepare($q)) {
+			//declares AWS SES object
+			$ses = new SimpleEmailService($this->aws_access_key, $this->aws_secret);
 
-			$stmt->execute();
+			//Gets data that was sent over POST
+			$email = $_POST['email'];
+			$pwd = $_POST['pwd'];
 
-			$stmt->store_result();
+			//Checks that the e-mail is not in the DB
+			$q = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
 
-			$num_rows = $stmt->num_rows;
+			if ($result = $this->db->query($q)) {
 
-			if ($num_rows == 1){
+				$num_rows = $result->num_rows;
 
-				//Sets the user_email and returns success
-				if ($_SESSION["user_email"] = $email){
+				if ($num_rows == 0){
 
-					$return_array["status"] = "200";
+					//generates a new token
+					$token = genRandomString();
 
+					//Creates a new user
+					$q_adduser = "INSERT INTO users (email, pwd, date_created, token) VALUES ('$email', '". md5($pwd) ."', '". date('Y-m-d H:i:s') ."', '$token')";
+
+					if ($result = $this->db->query($q_adduser)) {
+
+						//Prepares verify email
+						$confirm_link = BASE_DIR."/?verify=$token&email=$email";
+
+						$to      = $email;
+
+						$from_address = "Datawrapper <debug@datawrapper.de>";
+
+						$subject = '[Datawrapper] '. _("Please verify your e-mail address");
+						
+						$message = _("Dear Datawrapper user,");
+						$message .= "\r\n\r\n";
+						$message .=	_("Please click on the link below to verify your e-mail address: ");
+						$message .= "\r\n\r\n";
+						$message .=	"$confirm_link";
+						$message .= "\r\n\r\n";
+						$message .= _("Thanks!");
+						$message .= "\r\n\r\n";
+						$message .= _("The Datawrapper team");
+
+						$m = new SimpleEmailServiceMessage();
+						$m->addTo($to);
+						$m->setFrom($from_address);
+						$m->setSubject($subject);
+						$m->setMessageFromString($message);
+
+						$ses->enableVerifyPeer(false);
+
+						//Sends email
+						if ($ses->sendEmail($m))
+							$return_array["status"] = "200";
+
+						else{
+
+							$return_array["status"] = "600";
+							$return_array["error"] = _("Could not send verification e-mail.");
+
+						}
+							
+					
+					}else{
+
+						$return_array["status"] = "600";
+						$return_array["error"] = _("Could not add user in the DB.");
+						$return_array["error_details"] = $mysqli->error;
+
+					}
+
+				}else{
+
+					$return_array["status"] = "605";
+					$return_array["error"] = _("A user already has this email address.");
 				}
 
 			}else{
 
-				$return_array["status"] = "604";
-				$return_array["error"] = _("User and password do not match or user not activated.");
+				$return_array["status"] = "600";
+				$return_array["error"] = _("Could not add user in the DB.");
+				$return_array["error_details"] = $mysqli->error;
 			}
-
 		}else{
 
-				$return_array["status"] = "600";
-				$return_array["error"] = _("Could not check the user credentials in the DB.");
-				$return_array["error_details"] = $mysqli->error;
+			$return_array["status"] = "603";
+			$return_array["error"] = _("Not enough parameters were passed.");
+
 		}
 
 		return $return_array;
+
+	}
+
+	function connect(){
+		
+		if (isset($_POST['email']) && isset($_POST['pwd'])){
+
+			//Gets data that was sent over POST
+			$email = $_POST['email'];
+			$pwd = $_POST['pwd'];
+			
+			//Checks that the e-mail and password match
+			$q = "SELECT user_id FROM users WHERE email = '$email' AND pwd = '". md5($pwd) ."' AND activated=1 LIMIT 1";		
+
+			if ($result = $this->db->query($q)) {
+
+				if ($result->num_rows){
+
+					while ($row = $result->fetch_object()) {
+
+						$id = $row->user_id;
+					}
+
+					//Sets the user_email and returns success
+					if ($_SESSION["user_email"] = $email){
+						
+						$this->setID($id);
+
+						$return_array["status"] = "200";
+
+					}
+
+				}else{
+
+					$return_array["status"] = "604";
+					$return_array["error"] = _("User and password do not match or user not activated.");
+				}
+
+			}else{
+
+					$return_array["status"] = "600";
+					$return_array["error"] = _("Could not check the user credentials in the DB.");
+					$return_array["error_details"] = $mysqli->error;
+			}
+		}else{
+
+				$return_array["status"] = "603";
+				$return_array["error"] = _("Not enough parameters were passed.");
+
+		}
+
+		return $return_array;
+	}
+
+	function logout(){
+
+		unset($_SESSION["user_id"]);
+		unset($_SESSION["user_email"]);
+
+		if ( !isset($_SESSION["user_id"]) && !isset($_SESSION["user_email"])){
+
+			$return_array["status"] = "200";
+
+		}else{
+
+			$return_array["status"] = "605";
+			$return_array["error"] = _("Could not log out.");
+
+		}
+
+		return $return_array;
+	}
+
+	function verify(){
+
+		$token=$_GET["verify"];
+		$email=$_GET["email"];
+
+		//updates the DB
+		$q = "UPDATE users SET activated=1 WHERE email='$email'";
+
+		if ($this->db->query($q)){
+			
+			//Sets the user email in the session var
+			$_SESSION["user_email"] = $email;
+
+			//reloads page
+			header("location:". BASE_DIR);
+
+		}else{
+
+			echo _("Could not verify e-mail address.");
+		
+		}
 	}
 }
 
