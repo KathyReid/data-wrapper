@@ -61,6 +61,17 @@
                 "format": "png"
             },
             "restricted": ["guardian.co.uk", "nkb.fr"]
+        },
+        "ruhrnachrichten":
+        {
+            "name": "ruhrnachrichten",
+            "desc": "Ruhr Nachrichten",
+            "image": {
+                "width": 100,
+                "height": 12,
+                "format": "png"
+            },
+            "restricted": ["ruhrnachrichten.de", "nkb.fr"]
         }
     }
 }
