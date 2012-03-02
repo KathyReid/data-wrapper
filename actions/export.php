@@ -28,7 +28,7 @@ if (isset($_GET['c'])){
 
 		//Formats file name using chart title and removing special chars
 		if ($chart_title == "")
-			$chart_title = "ExportfromDataStory";
+			$chart_title = "ExportfromDatawrapper";
 		else
 			$chart_title = str_replace(array("?", "[", "]", "/", "\\", "=", "+", "<", ">", ":", ";", "\"", ",", "*", " ", "'"), "", $chart_title);
 
