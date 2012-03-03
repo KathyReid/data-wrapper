@@ -28,6 +28,18 @@ if (isset($_POST['action'])){
 			$return_array = $user->logout();
 			break;
 
+		case "quickstart_noshow":
+			$return_array = $user->quickstart_noshow();
+			break;
+
+		case "pwd_change":
+			$return_array = $user->pwd_change();
+			break;
+
+		case "pwd_reminder":
+			$return_array = $user->pwd_reminder();
+			break;
+
 	}
 
 }elseif (isset($_GET["verify"])){
