@@ -62,6 +62,11 @@ class User {
 		}
 	}
 
+
+	/*   
+	 *	@desc: Disable the quickstart panel
+	 */
+
 	function show_quickstart(){
 
 		if (isset($_SESSION["user_id"])){
@@ -85,6 +90,10 @@ class User {
 			}
 		}
 	}
+
+	/*   
+	 *	@desc: Lists all visualizations from the user
+	 */
 
 	function list_vis(){
 
@@ -142,6 +151,208 @@ class User {
 		}
 
 	}
+
+	/*   
+	 *	@desc: Prevents the quickstart div to appear
+	 */
+
+	function quickstart_noshow(){
+
+		if (isset($_SESSION["user_id"])){
+
+			$id = $_SESSION["user_id"];
+
+			if (isset($_POST['checked'])) {
+
+				$q = "UPDATE users SET quickstart_show=0 WHERE user_id=$id ";
+
+				if ($this->db->query($q)){
+
+					$return_array["status"] = "200";
+				
+				}else{
+					
+					$return_array["status"] = "600";
+					$return_array["error"] = _("Could not disable quickstart in the database.");
+					
+				}
+
+			}else{
+
+				$return_array["status"] = "600";
+				$return_array["error"] = _("No action required.");
+
+			} 
+		}
+
+		return $return_array;
+	}
+
+
+	/*   
+	 *	@desc: Sends an email to change password
+	 */
+
+	function pwd_reminder(){
+
+		if (isset($_POST['email'])){
+
+			//declares AWS SES object
+			$ses = new SimpleEmailService($this->aws_access_key, $this->aws_secret);
+
+			//Gets data that was sent over POST
+			$email = $_POST['email'];
+
+			//Checks that the e-mail is in the DB
+			$q = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
+
+			if ($result = $this->db->query($q)) {
+
+				$num_rows = $result->num_rows;
+
+				if ($num_rows == 1){
+
+					//generates a new token
+					$token = genRandomString();
+
+					//Deletes the previous password hash and inserts new token
+					$q_rm_pwd = "UPDATE users SET token='$token' WHERE email='$email'";
+
+					if ($result = $this->db->query($q_rm_pwd)) {
+
+						//Prepares verify email
+						$confirm_link = BASE_DIR."?new_pwd=$token&email=$email";
+
+						$to      = $email;
+
+						$from_address = "Datawrapper <debug@datawrapper.de>";
+
+						$subject = '[Datawrapper] '. _("Password change requested");
+						
+						$message = _("Dear Datawrapper user,");
+						$message .= "\r\n\r\n";
+						$message .=	_("Please click on the link below to change your password: ");
+						$message .= "\r\n\r\n";
+						$message .=	"$confirm_link";
+						$message .= "\r\n\r\n";
+						$message .= _("Do ignore this message if you did not request a password change from Datawrapper.");
+						$message .= "\r\n\r\n";
+						$message .= _("Thanks!");
+						$message .= "\r\n\r\n";
+						$message .= _("The Datawrapper team");
+
+						$m = new SimpleEmailServiceMessage();
+						$m->addTo($to);
+						$m->setFrom($from_address);
+						$m->setSubject($subject);
+						$m->setMessageFromString($message);
+
+						$ses->enableVerifyPeer(false);
+
+						//Sends email
+						if ($ses->sendEmail($m))
+							$return_array["status"] = "200";
+
+						else{
+
+							$return_array["status"] = "600";
+							$return_array["error"] = _("Could not send password change e-mail.");
+
+						}
+							
+					}else{
+
+						$return_array["status"] = "600";
+						$return_array["error"] = _("Could not send password change email.");
+						$return_array["error_details"] = $mysqli->error;
+
+					}
+
+				}else{
+
+					$return_array["status"] = "605";
+					$return_array["error"] = _("No user found with this email address.");
+				}
+
+			}else{
+
+				$return_array["status"] = "600";
+				$return_array["error"] = _("Could not send password change email.");
+				$return_array["error_details"] = $mysqli->error;
+			}
+		}else{
+
+			$return_array["status"] = "603";
+			$return_array["error"] = _("Not enough parameters were passed.");
+
+		}
+
+		return $return_array;
+	}
+
+	/*   
+	 *	@desc: Changes the password
+	 */
+
+	function pwd_change(){
+
+		if (isset($_POST["token"])){
+	
+			$token=$_POST["token"];
+			$email=$_POST["email"];
+			$pwd=$_POST["pwd"];
+
+			//Checks that the token is valid
+			$q = "SELECT * FROM users WHERE email = '$email' AND token='$token' LIMIT 1";
+
+			if ($result = $this->db->query($q)) {
+
+				$num_rows = $result->num_rows;
+
+				if ($num_rows == 1){
+					
+					//query to change password
+					$q_change_pwd = "UPDATE users SET pwd='". md5($pwd) ."' WHERE email='$email'";
+
+					if ($result = $this->db->query($q_change_pwd)) {
+						//success
+						$return_array["status"] = "200";
+
+					}else{
+						//failed to update user table
+						$return_array["status"] = "600";
+						$return_array["error"] = _("Could not change password in the DB.");
+						$return_array["error_details"] = $mysqli->error;
+
+					}
+				//token is not valid
+				}else{
+
+					$return_array["status"] = "605";
+					$return_array["error"] = _("No request for new password from this email address.");
+				}
+			//unable to complete query
+			}else{
+				$return_array["status"] = "600";
+				$return_array["error"] = _("Could not change password in the DB.");
+				$return_array["error_details"] = $mysqli->error;
+			}
+
+		}else{
+
+			$return_array["status"] = "603";
+			$return_array["error"] = _("Not enough parameters were passed.");
+
+		}
+
+		return $return_array;
+
+	}
+
+
+	/*   
+	 *	@desc: Creates new user
+	 */
 
 	function signup(){
 
@@ -241,6 +452,10 @@ class User {
 
 	}
 
+	/*   
+	 *	@desc: Checks the credentials of the user
+	 */
+
 	function connect(){
 		
 		if (isset($_POST['email']) && isset($_POST['pwd'])){
@@ -292,6 +507,11 @@ class User {
 		return $return_array;
 	}
 
+
+	/*   
+	 *	@desc: Logs out
+	 */
+
 	function logout(){
 
 		unset($_SESSION["user_id"]);
@@ -310,6 +530,10 @@ class User {
 
 		return $return_array;
 	}
+
+	/*   
+	 *	@desc: Verifies the e-mail address
+	 */
 
 	function verify(){
 

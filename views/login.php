@@ -95,7 +95,7 @@
                 var email = $('#email_reminder').val();
 
                 if(test_email(email)) {
-                    $.post('actions/pwd_reminder.php', {email: email}, function(data){
+                    $.post('actions/user.php', {action:"pwd_reminder", email: email}, function(data){
                         if (data != ""){
                             data = jQuery.parseJSON(data);
                             if (data.status == 200){
@@ -180,8 +180,8 @@
 
             <?php if (isset($_GET["new_pwd"])):?>
             
-            //hides the normal login box
-            $("#login").hide();
+            //hides the normal signup box
+            $("#signup").hide();
 
             //init the change pwd button that'll call the action
             $("#pwd_change_submit").click(function(){
@@ -194,7 +194,7 @@
                 
                 if (reset_pwd1 == reset_pwd2 && reset_pwd1 != "<?php echo _("Password") ?>"){
 
-                    $.post('actions/pwd_change.php', {email: email, token: token, pwd:reset_pwd1}, function(data){
+                    $.post('actions/user.php', {action: "pwd_change", email: email, token: token, pwd:reset_pwd1}, function(data){
                         if (data != ""){
                             data = jQuery.parseJSON(data);
                             if (data.status == 200){

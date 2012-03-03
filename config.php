@@ -51,4 +51,7 @@ $mysqli = new mysqli($hostname,$username,$password,$database);
 
 //Loads the user class
 require_once "class/user.class.php";
+
+//Loads the chart class
+require_once "class/chart.class.php";
 ?>

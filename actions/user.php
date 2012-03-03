@@ -3,7 +3,6 @@
 /****
 /*
 /*   @desc: Manages the user
-/*   @author: NKB <hi@nkb.fr>
 /*
 /****/
 

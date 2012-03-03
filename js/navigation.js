@@ -66,31 +66,61 @@ function dispatchNext(){
 
     loader_show();
 
-	$.post("actions/"+currentSlide+".php", { data: data, chart_id: chart_id, action: "next" },
-   		function(data) {
-     		
-     		if (data != ""){
+    switch (currentSlide){
+        case "input":
+            $.post("actions/charts.php", { data: data, action: "setData" },
+            function(data) {
+                
+                if (data != ""){
 
-     			data = jQuery.parseJSON(data);
+                    data = jQuery.parseJSON(data);
 
-     			if (data.status == 200){
+                    if (data.status == 200){
 
-     				//Updates the current working chart
-     				chart_id = data.chart_id;
-     				
-     				//Goes to the next slide
-     				showNext();
-     				
-     			}else{
-     				error(data.error);
-     			}
+                        //Updates the current working chart
+                        chart_id = data.chart_id;
+                        
+                        //Goes to the next slide
+                        showNext();
+                        
+                    }else{
+                        error(data.error);
+                    }
 
-     		}else{
-     			error();
-     		}
+                }else{
+                    error();
+                }
 
-     		
-    });
+            });
+        break;
+
+        default:
+            $.post("actions/"+currentSlide+".php", { data: data, chart_id: chart_id, action: "next" },
+            function(data) {
+                
+                if (data != ""){
+
+                    data = jQuery.parseJSON(data);
+
+                    if (data.status == 200){
+
+                        //Updates the current working chart
+                        chart_id = data.chart_id;
+                        
+                        //Goes to the next slide
+                        showNext();
+                        
+                    }else{
+                        error(data.error);
+                    }
+
+                }else{
+                    error();
+                }
+
+                
+        });
+    }
 }
 
 function showNext(){

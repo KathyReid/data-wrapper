@@ -1,4 +1,4 @@
-<!-- This file holds all HTML/JS contents for the screen "5.VISUALIZE" -->
+<!-- This file holds all HTML/JS contents for the screen "3.VISUALIZE" -->
 
 <?php
   
