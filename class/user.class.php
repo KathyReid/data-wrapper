@@ -1,4 +1,4 @@
- <?php
+<?php
 
 /**
  * @desc: Manages users
