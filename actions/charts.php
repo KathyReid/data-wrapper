@@ -29,6 +29,14 @@ if (isset($_POST['action'])){
 			$return_array = $chart->getData();
 			break;
 
+		case "transpose":
+			$return_array = $chart->transpose();
+			break;
+
+		case "toggle_header":
+			$return_array = $chart->toggle_header();
+			break;
+
 	}
 
 }else{

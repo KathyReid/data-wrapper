@@ -13,6 +13,7 @@ class Chart {
 	public $id;
 	public $raw_data;
 	public $formatted_data;
+	public $csv_data;
 	public $has_vertical_header;
 	public $has_horizontal_header;
 	protected $db;
@@ -200,9 +201,9 @@ class Chart {
 			//fetches the result
 			while ($row = $result->fetch_object()) {
 
-				$csv_data = unserialize($row->chart_csv_data);
-				$horizontal_headers = $row->horizontal_headers;
-				$vertical_headers = $row->vertical_headers;
+				$this->csv_data = unserialize($row->chart_csv_data);
+				$this->has_horizontal_headers = $row->horizontal_headers;
+				$this->has_vertical_headers = $row->vertical_headers;
 				
 			}
 
@@ -210,11 +211,11 @@ class Chart {
 			$return_array["status"] = "200";
 			
 			//returns the chart data
-			$return_array["csv_data"] = $csv_data;
+			$return_array["csv_data"] = $this->csv_data;
 
 			//returns the headers details
-			$return_array["vertical_headers"] = $vertical_headers;
-			$return_array["horizontal_headers"] = $horizontal_headers;
+			$return_array["vertical_headers"] = $this->has_vertical_headers;
+			$return_array["horizontal_headers"] = $this->has_horizontal_headers;
 
 			//returns the id of the chart
 			$return_array["chart_id"] = $this->id;
@@ -222,11 +223,86 @@ class Chart {
 
 			$return_array["status"] = "600";
 			$return_array["error"] = _("Could not fetch the data from the database.");
-			$return_array["error_details"] = $mysqli->error;
+			$return_array["error_details"] = $this->db->error;
 
 		} 
 
 		return $return_array;
     }
+    
+    /*   
+	 *	@desc: 		Transposes the data
+	 *	@return: 	status
+	 */
 
+    function transpose(){
+
+    	$this->getData();
+
+    	if ($this->has_horizontal_headers && $this->has_vertical_headers){
+
+			//Transposes the data
+			$this->csv_data = transpose($this->csv_data);
+
+			$q = "UPDATE charts SET chart_csv_data = '" . serialize($this->csv_data) . "' WHERE chart_id = '". $this->id ."'";
+			
+			if ($result = $this->db->query($q)) {
+
+				//success
+				$return_array["status"] = "200";
+
+				//returns the id of the chart
+				$return_array["chart_id"] = $this->id;
+
+			}else{
+					$return_array["status"] = "600";
+					$return_array["error"] = _("Could not transpose the data in the database.");
+					$return_array["error_details"] = $this->db->error;
+			}
+
+		}else{
+			
+			//Error message when trying to transpose a table with only one header
+
+			$return_array["status"] = "601";
+			$return_array["error"] = _("You can only transpose a table with two entries.");
+		}
+
+		return $return_array;
+    }
+
+    /*   
+	 *	@desc: 		Toggles the has_horizontal_header
+	 *	@return: 	status
+	 */
+
+    function toggle_header(){
+
+    	$this->getData();
+
+    	$return_array["has_horizontal_header"] = $this->has_horizontal_header;
+
+    	if ($this->has_horizontal_headers == 1)
+    		$this->has_horizontal_headers = 0;
+    	else
+    		$this->has_horizontal_headers = 1;
+
+    	$q = "UPDATE charts SET horizontal_headers = '". $this->has_horizontal_headers ."' WHERE chart_id='". $this->id ."' LIMIT 1";
+
+		if ($result = $this->db->query($q)) {
+
+			//success
+			$return_array["status"] = "200";
+
+			//returns the id of the chart
+			$return_array["chart_id"] = $this->id;
+
+		}else{
+				$return_array["status"] = "600";
+				$return_array["error"] = _("Could not modify header row.");
+				$return_array["error_details"] = $mysqli->error;
+		}
+
+		return $return_array;
+    }
 }
