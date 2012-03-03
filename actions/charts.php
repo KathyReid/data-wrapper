@@ -12,11 +12,21 @@ if (isset($_POST['action'])){
 
 	$chart = new Chart($mysqli);
 
+	if  (isset($_POST['chart_id'])){
+
+		$chart->setID($chart_id);
+	
+	}
+
 	switch($_POST['action']){
 		
 		case "setData":
 			$data = $_POST['data'];
 			$return_array = $chart->loadData($data);
+			break;
+
+		case "getData":
+			$return_array = $chart->getData();
 			break;
 
 	}

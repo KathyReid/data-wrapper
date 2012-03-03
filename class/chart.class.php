@@ -25,9 +25,11 @@ class Chart {
 
     }
 
-    /*   
-	 *	@desc: Sets the data
-	 */
+    function setID($id){
+
+    	$this->id = $id;
+    
+    }
 
     function setData($raw_data){
     	
@@ -36,8 +38,8 @@ class Chart {
     }
 
     /*   
-	 *	@desc: Loads the data in the app
-	 *  @return: chart_id to the front
+	 *	@desc: 		Loads the data in the app
+	 *  @return: 	chart_id to the front
 	 */
 
     function loadData($raw_data){
@@ -182,6 +184,49 @@ class Chart {
     	
     	return $return_array;
 
+    }
+
+    /*   
+	 *	@desc: 		Gets the data
+	 *	@return: 	CSV data
+	 */
+
+    function getData(){
+
+    	$q = "SELECT chart_csv_data, horizontal_headers, vertical_headers FROM charts WHERE chart_id='" . $this->id . "' LIMIT 1";
+
+		if ($result = $this->db->query($q)) {
+			
+			//fetches the result
+			while ($row = $result->fetch_object()) {
+
+				$csv_data = unserialize($row->chart_csv_data);
+				$horizontal_headers = $row->horizontal_headers;
+				$vertical_headers = $row->vertical_headers;
+				
+			}
+
+			//success
+			$return_array["status"] = "200";
+			
+			//returns the chart data
+			$return_array["csv_data"] = $csv_data;
+
+			//returns the headers details
+			$return_array["vertical_headers"] = $vertical_headers;
+			$return_array["horizontal_headers"] = $horizontal_headers;
+
+			//returns the id of the chart
+			$return_array["chart_id"] = $this->id;
+		}else{
+
+			$return_array["status"] = "600";
+			$return_array["error"] = _("Could not fetch the data from the database.");
+			$return_array["error_details"] = $mysqli->error;
+
+		} 
+
+		return $return_array;
     }
 
 }

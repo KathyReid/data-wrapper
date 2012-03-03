@@ -66,61 +66,47 @@ function dispatchNext(){
 
     loader_show();
 
+    var post_page, 
+        post_opts;
+
     switch (currentSlide){
         case "input":
-            $.post("actions/charts.php", { data: data, action: "setData" },
-            function(data) {
-                
-                if (data != ""){
+            post_page = "charts";
+            post_opts = { data: data, action: "setData" };
+        break;
 
-                    data = jQuery.parseJSON(data);
-
-                    if (data.status == 200){
-
-                        //Updates the current working chart
-                        chart_id = data.chart_id;
-                        
-                        //Goes to the next slide
-                        showNext();
-                        
-                    }else{
-                        error(data.error);
-                    }
-
-                }else{
-                    error();
-                }
-
-            });
+        case "check":
         break;
 
         default:
-            $.post("actions/"+currentSlide+".php", { data: data, chart_id: chart_id, action: "next" },
-            function(data) {
-                
-                if (data != ""){
-
-                    data = jQuery.parseJSON(data);
-
-                    if (data.status == 200){
-
-                        //Updates the current working chart
-                        chart_id = data.chart_id;
-                        
-                        //Goes to the next slide
-                        showNext();
-                        
-                    }else{
-                        error(data.error);
-                    }
-
-                }else{
-                    error();
-                }
-
-                
-        });
+            post_page = currentSlide;
+            post_opts = { data: data, chart_id: chart_id, action: "next" };
     }
+
+    $.post("actions/"+post_page+".php", post_opts,
+    function(data) {
+        
+        if (data != ""){
+
+            data = jQuery.parseJSON(data);
+
+            if (data.status == 200){
+
+                //Updates the current working chart
+                chart_id = data.chart_id;
+                
+                //Goes to the next slide
+                showNext();
+                
+            }else{
+                error(data.error);
+            }
+
+        }else{
+            error();
+        }
+
+    });
 }
 
 function showNext(){
