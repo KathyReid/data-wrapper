@@ -22,12 +22,26 @@ class Chart {
 	//the JSON needed for the vis
 	public $opts;
 
-	//Header rows/cols
-	public $has_vertical_header;
-	public $has_horizontal_header;
-
 	//Status message to communicate with the front
 	public $status;
+	public $error;
+	public $error_details;
+
+	//Data in and around the chart
+	public $title;
+	public $id_text;
+	public $user_id;
+	public $desc;
+	public $js_code;
+	public $date_create;
+	public $library;
+	public $theme;
+	public $type;
+	public $source;
+	public $source_url;
+	public $lang;
+	public $has_horizontal_headers;
+	public $has_vertical_headers;
 
 	//link to DB
 	protected $db;
@@ -39,7 +53,7 @@ class Chart {
         $this->db = & $db;
 
         //init the response status
-        $this->status["status"] = 0;
+        $this->status = 200;
 
     }
 
@@ -47,6 +61,45 @@ class Chart {
 
     	$this->id = $id;
     
+    }
+
+    function refreshData(){
+    	//fetches the data in the DB about the chart
+    	$q = "SELECT * FROM charts WHERE chart_id='" . $this->id . "' LIMIT 1";
+
+		if ($result = $this->db->query($q)) {
+
+			//fetches the result
+			while ($row = $result->fetch_object()) {
+
+				$this->id_text = alphaID($this->id);
+				$this->user_id = $row->user_id;
+				$this->desc = $row->additional_text;
+				$this->js_code = $row->chart_js_code;
+				$this->date_create = $row->date_create;
+				$this->library = $row->chart_library;
+				$this->theme = $row->chart_theme;
+				$this->type = $row->chart_type;
+				$this->title = $row->chart_title;
+				$this->source = $row->source;
+				$this->source_url = $row->source_url;
+				$this->lang = $row->chart_lang;
+				$this->csv_data = unserialize($row->chart_csv_data);
+				$this->has_horizontal_headers = $row->horizontal_headers;
+				$this->has_vertical_headers = $row->vertical_headers;
+
+
+			}
+
+			$this->status = "200";
+
+		}else{
+
+			$this->status = "600";
+			$this->error = _("Could not fetch the data in the database.");
+			$this->error_details = $this->db->error;
+		}
+
     }
 
     function setData($raw_data){
@@ -75,7 +128,9 @@ class Chart {
 
     	$this->storeData();
 
+
     }
+
 
     /*   
 	 *	@desc: Converts TSV data in an array
@@ -195,14 +250,14 @@ class Chart {
 			
 			$this->id = $this->db->insert_id;
 
-			$this->status["status"] = "200";
+			$this->status = "200";
 
 
 		}else{
 
-			$this->status["status"] = "600";
-			$this->status["error"] = _("Could not store the data on the database.");
-			$this->status["error_details"] = $this->db->error;
+			$this->status = "600";
+			$this->error = _("Could not store the data on the database.");
+			$this->error_details = $this->db->error;
 		} 
 
     }
@@ -251,55 +306,15 @@ class Chart {
 		if ($result = $this->db->query($q)) {
 			
 			//success
-			$this->status["status"] = "200";
+			$this->status = "200";
 				
 		}else{
-			$this->status["status"] = "600";
-			$this->status["error"] = _("Could not fetch the data from the database.");
-			$this->status["error_details"] = $this->db->error;
+			$this->status = "600";
+			$this->error = _("Could not fetch the data from the database.");
+			$this->error_details = $this->db->error;
 		}
     }
 
-    /*   
-	 *	@desc: 		Gets the data
-	 *	@return: 	CSV data
-	 */
-
-    function getData(){
-
-    	$q = "SELECT chart_csv_data, horizontal_headers, vertical_headers FROM charts WHERE chart_id='" . $this->id . "' LIMIT 1";
-
-		if ($result = $this->db->query($q)) {
-
-			//fetches the result
-			while ($row = $result->fetch_object()) {
-
-				$this->csv_data = unserialize($row->chart_csv_data);
-				$this->has_horizontal_headers = $row->horizontal_headers;
-				$this->has_vertical_headers = $row->vertical_headers;
-				
-			}
-
-			//success
-			$this->status["status"] = "200";
-			
-			//returns the chart data
-			$this->status["csv_data"] = $this->csv_data;
-
-			//returns the headers details
-			$this->status["vertical_headers"] = $this->has_vertical_headers;
-			$this->status["horizontal_headers"] = $this->has_horizontal_headers;
-
-			//returns the id of the chart
-			$this->status["chart_id"] = $this->id;
-		}else{
-
-			$this->status["status"] = "600";
-			$this->status["error"] = _("Could not fetch the data from the database.");
-			$this->status["error_details"] = $this->db->error;
-
-		} 
-    }
     
     /*   
 	 *	@desc: 		Transposes the data
@@ -307,8 +322,6 @@ class Chart {
 	 */
 
     function transpose(){
-
-    	$this->getData();
 
     	if ($this->has_horizontal_headers && $this->has_vertical_headers){
 
@@ -320,23 +333,20 @@ class Chart {
 			if ($result = $this->db->query($q)) {
 
 				//success
-				$this->status["status"] = "200";
-
-				//returns the id of the chart
-				$this->status["chart_id"] = $this->id;
+				$this->status = "200";
 
 			}else{
-					$this->status["status"] = "600";
-					$this->status["error"] = _("Could not transpose the data in the database.");
-					$this->status["error_details"] = $this->db->error;
+					$this->status = "600";
+					$this->error = _("Could not transpose the data in the database.");
+					$this->error_details = $this->db->error;
 			}
 
 		}else{
 			
 			//Error message when trying to transpose a table with only one header
 
-			$this->status["status"] = "600";
-			$this->status["error"] = _("You can only transpose a table with two entries.");
+			$this->status = "600";
+			$this->error = _("You can only transpose a table with two entries.");
 		}
     }
 
@@ -361,17 +371,13 @@ class Chart {
 		if ($result = $this->db->query($q)) {
 
 			//success
-			$this->status["status"] = "200";
-
-			//returns the id of the chart
-			$this->status["chart_id"] = $this->id;
+			$this->status = "200";
 
 		}else{
-				$this->status["status"] = "600";
-				$this->status["error"] = _("Could not modify header row.");
-				$this->status["error_details"] = $this->db->error;
+				$this->status = "600";
+				$this->error = _("Could not modify header row.");
+				$this->error_details = $this->db->error;
 		}
-
 
     }
     
@@ -400,7 +406,7 @@ class Chart {
 			}
 
 			//success
-			$this->status["status"] = "200";
+			$this->status = "200";
 
 			//returns the chart JS code in an array
 			$this->status["chart_js_code"] = json_decode($chart_js_code, true);
@@ -421,25 +427,11 @@ class Chart {
 
 		}else{
 
-			$this->status["status"] = "600";
-			$this->status["error"] = _("Could not fetch the data from the database.");
-			$this->status["error_details"] = $this->db->error;
+			$this->status = "600";
+			$this->error = _("Could not fetch the data from the database.");
+			$this->error_details = $this->db->error;
 		} 
 
     }
 
-    /*   
-	 *	@desc: 		Sends back the status to the front
-	 *	@return: 	status as an array
-	 */
-
-    function return_status(){
-
-    	$this->status["chart_id"] = $this->id;
-
-    	if ($this->status["status"]!=600)
-    		$this->status["status"] = 200;
-    	
-    	return $this->status;
-    }
 }

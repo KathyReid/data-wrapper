@@ -26,7 +26,23 @@ if (isset($_POST['action'])){
 			break;
 
 		case "getData":
-			$chart->getData();
+			$chart->refreshData();
+
+			$return_array["vertical_headers"] = $chart->has_vertical_headers;
+			$return_array["horizontal_headers"] = $chart->has_horizontal_headers;
+			$return_array["csv_data"] = $chart->csv_data;
+			$return_array["chart_text_id"] = $chart->id_text;
+			$return_array["user_id"] = $chart->user_id;
+			$return_array["chart_additional_text"] = $chart->desc;
+			$return_array["chart_js_code"] = $chart->js_code;
+			$return_array["date_create"] = $chart->date_create;
+			$return_array["chart_library"] = $chart->library;
+			$return_array["chart_theme"] = $chart->theme;
+			$return_array["chart_type"] = $chart->type;
+			$return_array["chart_title"] = $chart->title;
+			$return_array["source"] = $chart->source;
+			$return_array["source_url"] = $chart->source_url;
+			$return_array["chart_lang"] = $chart->lang;
 			break;
 
 		case "getVis":
@@ -52,7 +68,10 @@ if (isset($_POST['action'])){
 
 	}
 
-	$return_array = $chart->return_status();
+	$return_array["chart_id"] = $chart->id;
+	$return_array["status"] = $chart->status;
+	$return_array["error"] = $chart->error;
+	$return_array["error_details"] = $chart->error_details;
 
 }else{
 
