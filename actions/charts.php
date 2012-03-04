@@ -45,10 +45,6 @@ if (isset($_POST['action'])){
 			$return_array["chart_lang"] = $chart->lang;
 			break;
 
-		case "getVis":
-			$chart->getVis();
-			break;
-
 		case "transpose":
 			$chart->transpose();
 			break;

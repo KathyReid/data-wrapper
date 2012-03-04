@@ -87,7 +87,7 @@ function dispatchNext(){
 
         case "publish":
             post_page = "charts";
-            post_opts = { chart_id: chart_id, action: "getVis" };
+            post_opts = { chart_id: chart_id, action: "getData" };
             break;
 
         default:
