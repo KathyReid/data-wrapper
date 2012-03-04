@@ -29,6 +29,10 @@ if (isset($_POST['action'])){
 			$chart->getData();
 			break;
 
+		case "getVis":
+			$chart->getVis();
+			break;
+
 		case "transpose":
 			$chart->transpose();
 			break;

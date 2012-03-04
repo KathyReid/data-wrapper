@@ -376,6 +376,59 @@ class Chart {
     }
     
     /*   
+	 *	@desc: 		Return all the details needed for the vis
+	 *	@return: 	nothing
+	 */
+
+    function getVis(){
+
+    	$q = "SELECT chart_js_code, chart_type, chart_library, chart_theme, additional_text, source, source_url FROM charts WHERE chart_id='". $this->id ."' LIMIT 1";
+
+		if ($result = $this->db->query($q)) {
+			
+			//fetches the result
+			while ($row = $result->fetch_object()) {
+
+				$chart_js_code = $row->chart_js_code;
+				$chart_library = $row->chart_library;
+				$chart_type = $row->chart_type;
+				$chart_theme = $row->chart_theme;
+				$chart_desc = $row->additional_text;
+				$chart_source = $row->source;
+				$chart_source_url = $row->source_url;
+				
+			}
+
+			//success
+			$this->status["status"] = "200";
+
+			//returns the chart JS code in an array
+			$this->status["chart_js_code"] = json_decode($chart_js_code, true);
+
+			//returns the chart type & lib & theme & additional info
+			$this->status["chart_type"] = $chart_type;
+			$this->status["chart_library"] = $chart_library;
+			$this->status["chart_theme"] = $chart_theme;
+			$this->status["chart_desc"] = $chart_desc;
+			$this->status["chart_source"] = $chart_source;
+			$this->status["chart_source_url"] = $chart_source_url;
+
+			//returns the id of the chart
+			$this->status["chart_id"] = $chart_id;
+
+			//returns the text id
+			$this->status["chart_text_id"] = alphaID($chart_id);
+
+		}else{
+
+			$this->status["status"] = "600";
+			$this->status["error"] = _("Could not fetch the data from the database.");
+			$this->status["error_details"] = $this->db->error;
+		} 
+
+    }
+
+    /*   
 	 *	@desc: 		Sends back the status to the front
 	 *	@return: 	status as an array
 	 */

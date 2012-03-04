@@ -85,6 +85,11 @@ function dispatchNext(){
             post_opts = { chart_id: chart_id, opts: JSON.stringify(options), action: "storeVis" };
             break;
 
+        case "publish":
+            post_page = "charts";
+            post_opts = { chart_id: chart_id, action: "getVis" };
+            break;
+
         default:
             post_page = currentSlide;
             post_opts = { data: data, chart_id: chart_id, action: "next" };
