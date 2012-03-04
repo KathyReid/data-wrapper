@@ -73,10 +73,17 @@ function dispatchNext(){
         case "input":
             post_page = "charts";
             post_opts = { data: data, action: "setData" };
-        break;
+            break;
 
         case "check":
-        break;
+            post_page = "charts";
+            post_opts = { chart_id: chart_id, action: "none" };
+            break;
+
+        case "visualize":
+            post_page = "charts";
+            post_opts = { chart_id: chart_id, opts: JSON.stringify(options), action: "storeVis" };
+            break;
 
         default:
             post_page = currentSlide;

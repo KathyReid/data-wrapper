@@ -22,22 +22,33 @@ if (isset($_POST['action'])){
 		
 		case "setData":
 			$data = $_POST['data'];
-			$return_array = $chart->loadData($data);
+			$chart->loadData($data);
 			break;
 
 		case "getData":
-			$return_array = $chart->getData();
+			$chart->getData();
 			break;
 
 		case "transpose":
-			$return_array = $chart->transpose();
+			$chart->transpose();
+			break;
+
+		case "storeVis":
+			$opts = $_POST['opts'];
+			$chart->setOpts($opts);
+			$chart->storeOpts();
 			break;
 
 		case "toggle_header":
-			$return_array = $chart->toggle_header();
+			$chart->toggle_header();
 			break;
 
+		default:
+
+
 	}
+
+	$return_array = $chart->return_status();
 
 }else{
 

@@ -54,7 +54,7 @@ options = {
 
 function js_enterScreen_visualize(){
 
-	$.post("actions/check.php", { chart_id: chart_id, action: "current" },
+	$.post("actions/charts.php", { chart_id: chart_id, action: "getData" },
    		function(data) {
 
    			loader_hide();
