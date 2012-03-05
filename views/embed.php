@@ -30,6 +30,7 @@
 
 		//Retreives the chart id
 		$chart_text_id = $_GET["c"];
+
 		$chart_id = alphaID($chart_text_id, true);
 
 		$chart = new Chart($mysqli);
@@ -72,7 +73,7 @@
 					window.location.href = 'actions/export.php?c=<?php echo $chart_id ?>';
 				});
 
-				var opt = <?php  echo $chart->js_code ?>;
+				var opt = <?php echo $chart->js_code ?>;
 
 				//Arranges for the Label and Tooltip functions
 				<?php if ($chart->type == "column" || $chart->type == "line"): ?>

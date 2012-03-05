@@ -133,6 +133,10 @@ function render_chart(opt, theme){
 				image_h = data.themes[theme].image.height;
 				image_ext = data.themes[theme].image.format;
 
+				//Computes logo position (chart width minus image width minus margin)
+				logo_x = chart_w-image_w-(chart_w * .05);
+				logo_y = chart_h-image_h-(chart_h * .05);
+
 			}
 		}
 	
@@ -149,21 +153,8 @@ function render_chart(opt, theme){
 				//Once the theme is loaded, renders chart
 				if (opt.chart.chart_lib == "highcharts"){
 
-					chart = new Highcharts.Chart(opt, function (chart){
+					chart = new Highcharts.Chart(opt);
 
-						if (image_w != 0){
-							//Add logo to the chart
-
-							//Computes logo position (chart width minus image width minus margin)
-							logo_x = chart_w-image_w-(chart_w * .05);
-							logo_y = chart_h-image_h-(chart_h * .05);
-
-							//Renders the logo
-							chart.renderer.image('themes/images/'+theme+'.'+image_ext, logo_x, logo_y, image_w, image_h)
-		        			.add(); 
-		        			
-		        		}
-		        	});
 	        	}else if (opt.chart.chart_lib == "responsive"){
 	        		
 	        		responsive_render(render_div, opt, theme);
@@ -179,8 +170,23 @@ function render_chart(opt, theme){
 	        				stream_render(render_div, opt, theme);
 	        			});
 	        		}
-
 	        	}
+
+
+	        	//adds the theme's logo
+	        	if (data.themes[theme].image != null){
+	        		var linkTo = "";
+	        		var linkTo_close = "";
+	        		//prepares the link
+	        		if (data.themes[theme].link != null){
+	        			linkTo = "<a href='"+ data.themes[theme].link +"' target='_blank'>";
+	        			linkTo_close = "</a>";
+	        		}
+
+	        		$("#"+render_div)
+	        			.append(linkTo + "<img src='themes/images/"+ theme +"."+ image_ext +"'style='position:absolute; z-index:12; width:"+ image_w +"px; height:"+ image_h +"px; top:"+ logo_y +"px; right:"+ logo_x +"px;'/>"+ linkTo_close);
+	        	}
+
 			});
 
 		}else{

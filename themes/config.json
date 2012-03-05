@@ -11,6 +11,7 @@
         {
             "name": "abzv",
             "desc": "ABZV",
+            "link": "http://www.abzv.de/",
             "image": {
                 "width": 56,
                 "height": 25,
@@ -66,6 +67,7 @@
         {
             "name": "ruhrnachrichten",
             "desc": "Ruhr Nachrichten",
+            "link": "http://www.ruhrnachrichten.de/",
             "image": {
                 "width": 100,
                 "height": 12,

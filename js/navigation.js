@@ -66,36 +66,27 @@ function dispatchNext(){
 
     loader_show();
 
-    var post_page, 
-        post_opts;
+    var post_opts;
 
     switch (currentSlide){
         case "input":
-            post_page = "charts";
             post_opts = { data: data, action: "setData" };
             break;
 
         case "check":
-            post_page = "charts";
             post_opts = { chart_id: chart_id, action: "none" };
             break;
 
         case "visualize":
-            post_page = "charts";
             post_opts = { chart_id: chart_id, opts: JSON.stringify(options), action: "storeVis" };
             break;
 
         case "publish":
-            post_page = "charts";
             post_opts = { chart_id: chart_id, action: "getData" };
             break;
-
-        default:
-            post_page = currentSlide;
-            post_opts = { data: data, chart_id: chart_id, action: "next" };
     }
 
-    $.post("actions/"+post_page+".php", post_opts,
+    $.post("actions/charts.php", post_opts,
     function(data) {
         
         if (data != ""){
