@@ -62,7 +62,7 @@ class Chart {
 
     function setID($id){
 
-    	$this->id = $id;
+    	echo $this->id = $id;
 
     	$this->refreshData();
     
@@ -70,7 +70,7 @@ class Chart {
 
     function refreshData(){
     	//fetches the data in the DB about the chart
-    	echo $q = "SELECT * FROM charts WHERE chart_id='" . $this->id . "' LIMIT 1";
+    	$q = "SELECT * FROM charts WHERE chart_id='" . $this->id . "' LIMIT 1";
 
 		if ($result = $this->db->query($q)) {
 
