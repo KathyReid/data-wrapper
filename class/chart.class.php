@@ -62,7 +62,7 @@ class Chart {
 
     function setID($id){
 
-    	echo $this->id = $id;
+    	$this->id = $id;
 
     	$this->refreshData();
     

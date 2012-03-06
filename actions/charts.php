@@ -13,6 +13,8 @@ if (isset($_POST['action'])){
 	$chart = new Chart($mysqli);
 
 	if  (isset($_POST['chart_id'])){
+		
+		$chart_id = $_POST['chart_id'];
 
 		$chart->setID($chart_id);
 	
@@ -26,7 +28,7 @@ if (isset($_POST['action'])){
 			break;
 
 		case "getData":
-		
+
 			$chart->refreshData();
 
 			$return_array["vertical_headers"] = $chart->has_vertical_headers;
