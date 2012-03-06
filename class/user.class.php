@@ -103,7 +103,7 @@ class User {
 
 			$list_vis = array();
 
-			$q = "SELECT chart_id, chart_title, chart_type, date_modified, chart_js_code, chart_csv_data FROM charts WHERE user_id = '$user_id' AND chart_title != '' ORDER BY date_modified DESC";
+			$q = "SELECT chart_id, chart_title, chart_type, date_modified FROM charts WHERE user_id = '$user_id' AND chart_title != '' ORDER BY date_modified DESC";
 
 			if ($result =  $this->db->query($q)) {
 				
@@ -114,16 +114,8 @@ class User {
 
 					 $chart_url = BASE_DIR . "?c=" . alphaID($row->chart_id);
 
-					 //makes TSV
-					 $tsv_data = "";
-					 foreach(unserialize($row->chart_csv_data) as $row_data){
-					 	foreach ($row_data as $col_data){
-					 		$tsv_data .= "$col_data@@TAB@@";
-					 	}
-					 	$tsv_data .= "@@BREAK@@";
-					 }
 
-					 $chart_html = "<h2><a href='javascript:formSubmit(\"". addslashes($row->chart_js_code) ."\", " . $row->chart_id . ", \"". addslashes($row->chart_csv_data) ."\", \"" . $tsv_data . "\");'>" . $row->chart_title ."</a></h2>";
+					 $chart_html = "<h2><a href='index.php?m=" . $row->chart_id . "'>" . $row->chart_title ."</a></h2>";
 					 $chart_html .= "<p>"._("Last modified on"). " ";
 					 $chart_html .= date("F j, Y, g:i a", strtotime($row->date_modified)) ."<br/>";
 					 $chart_html .= _("Chart type: ");
@@ -150,6 +142,26 @@ class User {
 			return array("status" => 600, "message" => _("User not logged in.") );
 		}
 
+	}
+
+	/*   
+	 *	@desc 	Checks if the user owns a chart
+	 * 	@return True if she does, false otherwise
+	 */
+
+	function own_vis($chart_id){
+
+		$q = "SELECT chart_id, user_id FROM charts WHERE user_id = '". $this->id . "' AND chart_id = '". $chart_id ."'";
+
+			if ($result =  $this->db->query($q)) {
+				if ($result->num_rows == 1)
+					return true;
+				else
+					return false;
+			}else{
+				//Error with DB
+				return array("status" => 600, "message" => _("Error while trying to retrieve list from database.") );
+			}
 	}
 
 	/*   

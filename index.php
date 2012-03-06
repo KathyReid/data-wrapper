@@ -28,8 +28,20 @@ if (isset($_GET["c"])){
 	
 	}else{
 
-		//new vis
-		require_once "views/screens.php";
+		//if user is modifying a vis
+		if (isset($_GET["m"])){
+
+			//verifies that the vis belongs to user
+			if ($user->own_vis($_GET["m"]) === true)
+				require_once "views/screens.php";
+			else
+				require_once "views/error.php";
+
+		}else{
+
+			//new vis
+			require_once "views/screens.php";
+		}
 	}
 
 }else{

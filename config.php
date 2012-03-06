@@ -6,8 +6,8 @@ session_start();
 require_once "libraries/functions.lang.php";
 initLanguage();
 
-//Fetches the converter from nums to text
-require_once "libraries/alpha.id.php";
+//Fetches the functions that DW needs to run
+require_once "libraries/helpers.php";
 
 //Function to transpose arrays
 require_once "libraries/transpose.php";

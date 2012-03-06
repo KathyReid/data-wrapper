@@ -60,14 +60,25 @@
             //hides all screens on startup
             $('.screen').hide();
 
-            <?php if (isset($_POST["options"])):?>
+            <?php if (isset($_GET["m"])):
+
                 //This section appears only if user comes from the vis_list page
+
+                $chart_id = $_GET["m"];
+
+                //finds the chart
+                $chart = new Chart($mysqli); 
+
+                //gets the vars
+                $chart->setID($chart_id);
+
+                ?>
                 
                 //sets the globals options, data and chart_id according to what has been transmitted
-                options = <?php echo stripslashes($_POST["options"]) ?>;
-                chart_id = <?php echo $_POST["chart_id"] ?>;
-                csv_data = <?php echo json_encode(unserialize(stripslashes($_POST["csv_data"]))) ?>;
-                tsv_data = "<?php echo str_replace(array('@@TAB@@', '@@BREAK@@'), array('\t', '\n'), $_POST["tsv_data"]); ?>";
+                options = <?php echo  $chart->js_code ?>;
+                chart_id = <?php echo $chart_id ?>;
+                csv_data = <?php echo json_encode($chart->csv_data) ?>;
+                tsv_data = "<?php echo $chart->tsv_data ?>";
 
                 //Populates the first field (1. INPUT)
                 $("#input_data").val(tsv_data);

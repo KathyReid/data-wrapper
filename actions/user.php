@@ -39,6 +39,9 @@ if (isset($_POST['action'])){
 			$return_array = $user->pwd_reminder();
 			break;
 
+		case "list_vis":
+			$return_array = $user->list_vis();
+
 	}
 
 }elseif (isset($_GET["verify"])){

@@ -134,3 +134,53 @@ function genRandomString() {
     }
     return $string;
 }
+
+/*   
+ *  @desc     Formats an array of arrays into a TSV table in a string
+ *  @return   String
+ */
+function arrayToTSV($array) {
+
+  $str = "";
+
+  //parses the array and turns it into a string
+  foreach ($array as $row) {
+    foreach ($row as $col => $field) {
+      $str .= $field;
+
+      //if it's not the last cell
+      if ($col < count($row)-1)
+        $str .= '\t';
+    }
+
+    $str .= '\n';
+  }
+
+  if (trim($str) != "")
+      return $str;
+    else              //in case there's no data to return
+      return _("No data.");
+}
+
+/*
+*  @desc      Transposes an associative array
+*  @param     An array of arrays
+*  @return    An array of arrays where rows became cols
+*/
+
+
+function transpose($array) {
+    if (!is_array($array)) return false;
+    
+    $out = array();
+    
+    foreach ($array as $key => $subarr) {
+
+        foreach ($subarr as $subkey => $subvalue) {
+
+                $out[$subkey][$key] = $subvalue;
+        }
+    }
+    
+    return $out;
+}

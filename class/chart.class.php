@@ -60,6 +60,8 @@ class Chart {
     function setID($id){
 
     	$this->id = $id;
+
+    	$this->refreshData();
     
     }
 
@@ -85,6 +87,7 @@ class Chart {
 				$this->source_url = $row->source_url;
 				$this->lang = $row->chart_lang;
 				$this->csv_data = unserialize($row->chart_csv_data);
+				$this->tsv_data = arrayToTSV($this->csv_data);
 				$this->has_horizontal_headers = $row->horizontal_headers;
 				$this->has_vertical_headers = $row->vertical_headers;
 
