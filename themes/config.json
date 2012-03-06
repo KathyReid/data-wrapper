@@ -74,6 +74,30 @@
                 "format": "png"
             },
             "restricted": ["ruhrnachrichten.de", "nkb.fr"]
+        },
+        "echo-online":
+        {
+            "name": "echo-online",
+            "desc": "Echo Online",
+            "link": "http://www.echo-online.de/",
+            "image": {
+                "width": 80,
+                "height": 20,
+                "format": "png"
+            },
+            "restricted": ["echo-online.de", "nkb.fr"]
+        },
+        "berlin-maniacs":
+        {
+            "name": "berlin-maniacs",
+            "desc": "Berlin Maniacs",
+            "link": "http://www.berlinmaniacs.org/",
+            "image": {
+                "width": 70,
+                "height": 20,
+                "format": "png"
+            },
+            "restricted": ["nkb.fr"]
         }
     }
 }

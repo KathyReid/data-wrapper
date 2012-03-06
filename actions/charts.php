@@ -59,9 +59,6 @@ if (isset($_POST['action'])){
 			$chart->toggle_header();
 			break;
 
-		default:
-
-
 	}
 
 	$return_array["chart_id"] = $chart->id;

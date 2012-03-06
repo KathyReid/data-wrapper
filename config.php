@@ -9,9 +9,6 @@ initLanguage();
 //Fetches the functions that DW needs to run
 require_once "libraries/helpers.php";
 
-//Function to transpose arrays
-require_once "libraries/transpose.php";
-
 //Indicates the name of the prod server
 $prod_domain1 = "cloudcontrolled.com";
 

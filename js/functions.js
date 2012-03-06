@@ -2,7 +2,7 @@
 
 /*
  * @desc: Triggers error messages
- * @param1: The message to be displayed
+ * @param: The message to be displayed
  * @returns: Nothing
  *
  */
@@ -31,7 +31,7 @@ function error(msg){
 
 /*
  * @desc: Checks if the param is a numeric value
- * @param1: A variable of any type
+ * @param: A variable of any type
  * @returns: true if n is a number, false otherwise
  *
  */
@@ -42,8 +42,8 @@ function error(msg){
 
 /*
  * @desc: Rounds number with precision
- * @param1: The number to be rounded
- * @param2: The precision (decimals)
+ * @param: The number to be rounded
+ * @param: The precision (decimals)
  * @returns: The rounded number
  *
  */
@@ -54,9 +54,12 @@ function error(msg){
 }
 
 
-/****************************************************************/
-/* These functions have to do with Highchart (tooltip & labels) */
-/****************************************************************/
+/*
+ * @desc: formats the labels for Highcharts
+ * @param: A value
+ * @returns: the string to display on the chart
+ *
+ */
 
 function pieLabels(value) {return '<b>'+ value.point.name +'</b>: '+ roundNumber(value.percentage, 2) +' %';}
 
@@ -64,9 +67,11 @@ function pieTooltip(value) { return '' + value.point.name + ': ' + value.y ; }
 
 function barTooltip(value) { return '' + value.x +': '+ value.y ; }
 
-/****************************************************************/
-/* These functions show/hide the loading animations             */
-/****************************************************************/
+
+/*
+ * @desc: Loads the loading anim
+ *
+ */
 
 function loader_show(){
 	$("#black_veil").fadeIn("fast", function(){
@@ -75,26 +80,41 @@ function loader_show(){
 	$("#loader").show();
 }
 
+/*
+ * @desc: Removes the loading anim
+ *
+ */
+
 function loader_hide(){
 
 	$("#loader").hide();
 	$("#black_veil").fadeOut("fast");
 }
 
-/***************************************************************************************/
-/* Initializes the input fields so they behave properly onfocus and onblur             */
-/***************************************************************************************/
+/*
+ * @desc: Initialize the input fields so they behave on focus and on blur
+ *
+ */
 
 function initInputs(){
+	
 	$(document).find("input").each(function(){
+		
 		var default_content = jQuery(this).val();
+		
 		jQuery(this).focus(function(){
+			
 			if (jQuery(this).val() == default_content){
+			
 				jQuery(this).val("");
+			
 			}
 		});
+
 		jQuery(this).blur(function(){
+			
 			if (jQuery(this).val() == ""){
+
 				jQuery(this).val(default_content);
 
 				//Updates the graph
@@ -106,11 +126,14 @@ function initInputs(){
 }
 
 
-/*********************************/
-/* Renders the chart             */
-/*********************************/
+/*
+ * @desc 	Renders the chart
+ * @param	opt 	options object
+ * @param 	theme 	the chart's theme
+ *
+ */
 
-function render_chart(opt, theme){
+function render_chart(opt, theme, showLogo){
 
 	//gets chart width & height
 	var render_div = opt.chart.renderTo;
@@ -174,7 +197,7 @@ function render_chart(opt, theme){
 
 
 	        	//adds the theme's logo
-	        	if (data.themes[theme].image != null){
+	        	if (data.themes[theme].image != null && showLogo !== false){
 	        		var linkTo = "";
 	        		var linkTo_close = "";
 	        		//prepares the link
@@ -228,8 +251,10 @@ function stripslashes (str) {
 }
 
 /*
-* Checks if a string is a valide email address
-*/
+ * @desc: Checks the email address format
+ * @return: true if it looks like an email address
+ *
+ */
 
 function test_email(email){
 	var emailReg = new RegExp(/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/);

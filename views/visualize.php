@@ -191,12 +191,8 @@ function update_options(){
 
 	//loads the appropriate JS
 	$.getScript('visualizations/types/'+vis_code, function(){
-	   
-		//updates the chart
-		render_chart(options, theme);
-
-		//stores the var options
-		$("#visualize_data").val(JSON.stringify(options));
+		//updates the chart without the logo
+		render_chart(options, theme, false);
 
 	});
 

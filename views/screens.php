@@ -79,6 +79,7 @@
                 chart_id = <?php echo $chart_id ?>;
                 csv_data = <?php echo json_encode($chart->csv_data) ?>;
                 tsv_data = "<?php echo $chart->tsv_data ?>";
+                horizontal_headers = <?php echo  $chart->has_horizontal_headers ?>;
 
                 //Populates the first field (1. INPUT)
                 $("#input_data").val(tsv_data);
@@ -113,7 +114,7 @@
                 $("#chart_theme").val(options.chart.chart_theme);
 
                 //renders chart
-                render_chart(options, "default");
+                update_options();
 
                 //sends the user directly to the 3. Visualize screen
                 showSlide("visualize", "empty");
@@ -234,8 +235,13 @@
         		</button>
         	</div>
 
-        	<div id="screen_container">
+            <?php if (isset($_GET["m"])): ?>
+                <div id="warning_edit">
+                    <?php echo _("The chart you're editing is already published online. Use caution.") ?>
+                </div>
+            <?php endif; ?>
 
+        	<div id="screen_container">
         		<!-- Loads the different screens -->
 
                 <!-- We need an empty screen for smooth transitions when user is landing -->

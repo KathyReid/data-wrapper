@@ -54,15 +54,6 @@ function showSlide(next, current){
 }
 
 function dispatchNext(){
-	
-	var data = "";
-
-	data = $("#"+ currentSlide +"_data").val();
-
-    if (data == ""){
-        error("No data was input.");
-        return false;
-    }
 
     loader_show();
 
@@ -70,7 +61,19 @@ function dispatchNext(){
 
     switch (currentSlide){
         case "input":
-            post_opts = { data: data, action: "setData" };
+            
+            //checks that some data is present
+
+            var data = "";
+
+            data = $("#"+ currentSlide +"_data").val();
+
+            if (data == ""){
+                error("No data was input.");
+                return false;
+            }
+
+            post_opts = { chart_id: chart_id, data: data, action: "setData" };
             break;
 
         case "check":

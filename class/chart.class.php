@@ -55,6 +55,9 @@ class Chart {
         //init the response status
         $this->status = 200;
 
+        //init id
+        $this->id = null;
+
     }
 
     function setID($id){
@@ -113,7 +116,7 @@ class Chart {
 
     function setOpts($opts){
 
-    	//Fetches the JSON data sent by the client and stores it in the DB
+    	//Fetches the JSON data sent by the client
 		$this->opts = json_decode(stripslashes($opts));
 
     }
@@ -246,12 +249,16 @@ class Chart {
 
     	$serialized_data = addslashes(serialize($this->formatted_data));
 
-		//Stores the data in the DB
-		$q = "INSERT INTO charts (user_id, chart_csv_data, date_create, horizontal_headers, vertical_headers) VALUES ('$user_id', '$serialized_data', '" . date('Y-m-d H:i:s') . "', " . $this->has_horizontal_header . ", " . $this->has_vertical_header . ")";
-
+    	//Stores the data in the DB
+    	if ($this->id == null)
+			$q = "INSERT INTO charts (user_id, chart_csv_data, date_create, horizontal_headers, vertical_headers) VALUES ('$user_id', '$serialized_data', '" . date('Y-m-d H:i:s') . "', " . $this->has_horizontal_header . ", " . $this->has_vertical_header . ")";
+		else
+			$q = "UPDATE charts SET chart_csv_data = '$serialized_data', horizontal_headers = ". $this->has_horizontal_header .", vertical_headers = " . $this->has_vertical_header . " WHERE chart_id = ". $this->id;
+		
 		if ($result =$this->db->query($q)) {
 			
-			$this->id = $this->db->insert_id;
+			if ($this->id == null)
+				$this->id = $this->db->insert_id;
 
 			$this->status = "200";
 
@@ -360,9 +367,9 @@ class Chart {
 
     function toggle_header(){
 
-    	$this->getData();
+    	$this->refreshData();
 
-    	$this->status["has_horizontal_header"] = $this->has_horizontal_header;
+    	$this->status["has_horizontal_header"] = $this->has_horizontal_headers;
 
     	if ($this->has_horizontal_headers == 1)
     		$this->has_horizontal_headers = 0;
