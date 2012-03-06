@@ -25,7 +25,7 @@ if (strstr($_SERVER['SERVER_NAME'], $prod_domain1) || strstr($_SERVER['SERVER_NA
 	error_reporting(0);
 
 	//Global const
-	define("BASE_DIR", "http://Datawrapper.cloudcontrolled.com");
+	define("BASE_DIR", "http://datawrapper.de");
 	
 
 }else{
