@@ -26,14 +26,14 @@ if (isset($_POST['action'])){
 			break;
 
 		case "getData":
-
+		
 			$chart->refreshData();
 
 			$return_array["vertical_headers"] = $chart->has_vertical_headers;
 			$return_array["horizontal_headers"] = $chart->has_horizontal_headers;
 			$return_array["csv_data"] = $chart->csv_data;
 			$return_array["chart_text_id"] = $chart->id_text;
-			$return_array["user_id"] = "$chart->user_id";
+			$return_array["user_id"] = $chart->user_id;
 			$return_array["chart_additional_text"] = $chart->desc;
 			$return_array["chart_js_code"] = $chart->js_code;
 			$return_array["date_create"] = $chart->date_create;

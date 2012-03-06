@@ -70,7 +70,7 @@ class Chart {
 
     function refreshData(){
     	//fetches the data in the DB about the chart
-    	$q = "SELECT * FROM charts WHERE chart_id='" . $this->id . "' LIMIT 1";
+    	echo $q = "SELECT * FROM charts WHERE chart_id='" . $this->id . "' LIMIT 1";
 
 		if ($result = $this->db->query($q)) {
 
