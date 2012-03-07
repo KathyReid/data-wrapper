@@ -233,9 +233,6 @@ class User {
 
 		if (isset($_POST['email'])){
 
-			//declares AWS SES object
-			$ses = new SimpleEmailService(AWS_ACCESS_KEY, AWS_SECRET);
-
 			//Gets data that was sent over POST
 			$email = $_POST['email'];
 
@@ -277,16 +274,7 @@ class User {
 						$message .= "\r\n\r\n";
 						$message .= _("The Datawrapper team");
 
-						$m = new SimpleEmailServiceMessage();
-						$m->addTo($to);
-						$m->setFrom($from_address);
-						$m->setSubject($subject);
-						$m->setMessageFromString($message);
-
-						$ses->enableVerifyPeer(false);
-
-						//Sends email
-						if ($ses->sendEmail($m))
+						if ($this->sendEmail($message, $to, $from_address, $subject))
 							$this->status = "200";
 
 						else{
@@ -378,9 +366,6 @@ class User {
 
 		if (isset($_POST['email']) && isset($_POST['pwd'])){
 
-			//declares AWS SES object
-			$ses = new SimpleEmailService(AWS_ACCESS_KEY, AWS_SECRET);
-
 			//Gets data that was sent over POST
 			$email = $_POST['email'];
 			$pwd = $_POST['pwd'];
@@ -421,16 +406,8 @@ class User {
 						$message .= "\r\n\r\n";
 						$message .= _("The Datawrapper team");
 
-						$m = new SimpleEmailServiceMessage();
-						$m->addTo($to);
-						$m->setFrom($from_address);
-						$m->setSubject($subject);
-						$m->setMessageFromString($message);
-
-						$ses->enableVerifyPeer(false);
-
 						//Sends email
-						if ($ses->sendEmail($m))
+						if ($this->sendEmail($message, $to, $from_address, $subject))
 							$this->status = "200";
 
 						else{
@@ -591,6 +568,38 @@ class User {
 		$this->error = $error_msg;
 		$this->error_details = $error_details;
 	}
+
+	function sendEmail($message, $to, $from, $subject){
+
+		if (defined('AWS_ACCESS_KEY')){
+			//uses Amazon's SES
+
+			//declares AWS SES object
+			$ses = new SimpleEmailService(AWS_ACCESS_KEY, AWS_SECRET);
+
+			$m = new SimpleEmailServiceMessage();
+			$m->addTo($to);
+			$m->setFrom($from);
+			$m->setSubject($subject);
+			$m->setMessageFromString($message);
+
+			$ses->enableVerifyPeer(false);
+
+			//Sends email
+			if ($ses->sendEmail($m))
+				return true;
+			else
+				return false;
+		}else{
+			//uses mail()
+
+			if (mail($to, $subject, $message))
+				return true;
+			else
+				return false;
+		}
+	}
+
 }
 
 ?>

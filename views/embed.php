@@ -127,10 +127,11 @@
 		}
 		?>
 
-		
-		<!-- Piwik Image Tracker -->
-		<img src="http://www.datastory.de/piwik/piwik.php?idsite=1&rec=1" style="border:0" alt="" />
-		<!-- End Piwik -->
+		<?php if (defined('PIWIK_PATH')): ?>
+			<!-- Piwik Image Tracker -->
+			<img src="http://<?php echo PIWIK_PATH ?>piwik.php?idsite=1&rec=1" style="border:0" alt="" />
+			<!-- End Piwik -->
+		<?php endif; ?>
 		
     </body>
 </html>

@@ -36,11 +36,15 @@ v. 0.8.1 Release notes
 * Debugged access to previously made charts
 * Corrected bug re: streamgraph legends
 * Improvements to translations
+* Security flaw fixed
+* Various bug fixes
 
 To-Do
 ---------------------
 
 * Remove the hardcoded elements to visualization building
+* Clean the JS in the app
+* Improve tutorials
 * Improve the responsive table option (auto-resize the iframe)
 * Simplifiy the process of adding a JS lib
 * Add a fallback solution for less compatible JS libs

@@ -29,7 +29,7 @@
 
 		</div>
 
-		<?php if (defined(PIWIK_PATH)): ?>
+		<?php if (defined('PIWIK_PATH')): ?>
 			<!-- Piwik --> 
 			<script type="text/javascript">
 			var pkBaseURL = (("https:" == document.location.protocol) ? "https://<?php echo PIWIK_PATH ?>" : "http://<?php echo PIWIK_PATH ?>");
