@@ -13,20 +13,11 @@ class User {
 	public $id;
 	public $email;
 	protected $db;
-	protected $aws_access_key;
-	protected $aws_secret;
-
 
 	function __construct(& $db) {  
 	      
         // links to the db
         $this->db = & $db;
-
-        global $aws_access_key;
-        global $aws_secret;
-
-        $this->aws_access_key = $aws_access_key;
-        $this->aws_secret = $aws_secret;
     }
 
     function setID($id){
@@ -210,7 +201,7 @@ class User {
 		if (isset($_POST['email'])){
 
 			//declares AWS SES object
-			$ses = new SimpleEmailService($this->aws_access_key, $this->aws_secret);
+			$ses = new SimpleEmailService(AWS_ACCESS_KEY, AWS_SECRET);
 
 			//Gets data that was sent over POST
 			$email = $_POST['email'];
@@ -371,7 +362,7 @@ class User {
 		if (isset($_POST['email']) && isset($_POST['pwd'])){
 
 			//declares AWS SES object
-			$ses = new SimpleEmailService($this->aws_access_key, $this->aws_secret);
+			$ses = new SimpleEmailService(AWS_ACCESS_KEY, AWS_SECRET);
 
 			//Gets data that was sent over POST
 			$email = $_POST['email'];
