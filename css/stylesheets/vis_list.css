@@ -2,7 +2,7 @@
 /*        vis_list.scss          */
 /* Vis_list styles for DataStory */
 /*********************************/
-/* line 56, ../sass/vis_list.scss */
+/* line 57, ../sass/vis_list.scss */
 #vis_list {
   width: 675px;
   float: left;
@@ -21,7 +21,7 @@
   -khtml-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 66, ../sass/vis_list.scss */
+/* line 67, ../sass/vis_list.scss */
 #vis_list h1 {
   padding-left: 56.25px;
   font-size: 1.2em;
@@ -29,18 +29,62 @@
   font-family: Georgia, Serif;
   color: #555555;
 }
-/* line 71, ../sass/vis_list.scss */
+/* line 72, ../sass/vis_list.scss */
 #vis_list h2 {
   font-family: Arial, Helvetica, Sans-serif;
   font-size: 0.7em;
   font-weight: bold;
   padding-left: 56.25px;
   margin: 15px 0 0 0;
+  display: inline;
 }
-/* line 79, ../sass/vis_list.scss */
+/* line 81, ../sass/vis_list.scss */
+#vis_list img {
+  margin: 0 5px;
+}
+/* line 85, ../sass/vis_list.scss */
 #vis_list p {
   font-family: Arial, Helvetica, Sans-serif;
   font-size: 0.5em;
   margin: 0 0 0 0;
   padding: 2px 56.25px;
+}
+/* line 92, ../sass/vis_list.scss */
+#vis_list .vis_item {
+  margin-top: 15px;
+}
+
+/* line 97, ../sass/vis_list.scss */
+#delete_chart {
+  position: fixed;
+  top: 0;
+  margin: 100px 180px;
+  width: 500px;
+  z-index: 10;
+  padding: 10px 50px;
+  background: #ab2b2e;
+  text-align: center;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ab2b2e), color-stop(100%, #892225));
+  background-image: -webkit-linear-gradient(#ab2b2e, #892225);
+  background-image: -moz-linear-gradient(#ab2b2e, #892225);
+  background-image: -o-linear-gradient(#ab2b2e, #892225);
+  background-image: -ms-linear-gradient(#ab2b2e, #892225);
+  background-image: linear-gradient(#ab2b2e, #892225);
+  color: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0px 0px 5px "#999";
+  -webkit-box-shadow: 0px 0px 5px "#999";
+  -o-box-shadow: 0px 0px 5px "#999";
+  box-shadow: 0px 0px 5px "#999";
+  display: none;
+}
+/* line 116, ../sass/vis_list.scss */
+#delete_chart .chart_title {
+  font-weight: bold;
+  display: block;
 }

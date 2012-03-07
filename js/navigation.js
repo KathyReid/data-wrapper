@@ -69,7 +69,8 @@ function dispatchNext(){
             data = $("#"+ currentSlide +"_data").val();
 
             if (data == ""){
-                error("No data was input.");
+                error(texts.no_data);
+                loader_hide();
                 return false;
             }
 

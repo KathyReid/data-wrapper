@@ -27,6 +27,10 @@ if (isset($_POST['action'])){
 			$chart->loadData($data);
 			break;
 
+		case "deleteChart":
+			$chart->delete();
+			break;
+
 		case "getData":
 
 			$chart->refreshData();

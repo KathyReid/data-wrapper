@@ -265,3 +265,80 @@ function test_email(email){
     	return false;
     }
 }
+
+/*
+ * @desc: Initializes all tooltips
+ * @return: nothing
+ *
+ */
+
+function initTooltips(){
+
+	$(".tooltip").each(function(){
+		$(this).qtip({
+			content: $(this).attr('tooltip'),
+			style: { 
+	      		name: 'light',
+	      		tip: true
+	   		},
+			position: {
+		      corner: {
+		         target: 'topRight',
+		         tooltip: 'bottomLeft'
+		      }
+		   }
+		});
+	});
+}
+
+function initDeleteChart(){
+	$('.delete_chart').each(function(){
+		$(this).click(function(){
+
+			window.delete_chart_id = $(this).attr("chart_id");
+			window.delete_chart_title = $(this).attr("chart_title");
+
+			$('#delete_chart').show();
+			$("#black_veil").fadeIn("fast");
+
+			$("#delete_chart .chart_title").text(window.delete_chart_title);
+
+		});
+	});
+
+	$("#delete_NO").click(function(){
+		$('#delete_chart').hide();
+		$("#black_veil").fadeOut("fast");
+	});
+
+	$("#delete_OK").click(function(){
+		$.post("actions/charts.php", { chart_id: window.delete_chart_id, action: "deleteChart" },
+    	function(data) {
+    		if (data != ""){
+
+	            data = jQuery.parseJSON(data);
+
+	            if (data.status == 200){
+
+	            	//alert success
+	            	error(texts.chart_deleted);
+
+	            	//removes the warning box
+	                $('#delete_chart').hide();
+	                $("#black_veil").fadeOut("fast");
+
+	                //removes the chart from the list
+	                $('#chart-'+window.delete_chart_id).fadeOut(500, function(){
+	                	$(this).remove();
+	                });
+	                
+	            }else{
+	                error(data.error);
+	            }
+
+	        }else{
+	            error();
+	        }
+    	});
+	});
+}

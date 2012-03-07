@@ -44,5 +44,25 @@
 			<!-- End Piwik Tracking Code -->
 		<?php endif; ?>
 
+
+		<!-- Javascript code that require the DOM to be fully loaded -->
+
+
+		<!-- qTip lib -->
+        <script src="js/jquery.qtip-1.0.0-rc3.min.js" type="text/javascript"></script>       
+        
+        <!-- Fancybox assets -->
+        <script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
+        <!-- The JS function that help navigate the app -->
+        <script src="js/navigation.js" type="text/javascript"></script> 
+        
+        <!-- More general functions for the app -->
+        <script src="js/functions.js" type="text/javascript"></script>
+
+        <!-- The JS texts, translated -->
+        <script src="js/texts.js.php" type="text/javascript"></script> 
+        
     </body>
 </html>

@@ -391,4 +391,25 @@ class Chart {
 
     }
 
+    /*   
+	 *	@desc: 		Sets the chart status as deleted
+	 */
+
+    function delete(){
+
+    	$q = "UPDATE charts SET date_deleted = '". date('Y-m-d H:i:s') ."' WHERE chart_id='". $this->id ."' LIMIT 1";
+
+		if ($result = $this->db->query($q)) {
+
+			//success
+			$this->status = "200";
+
+		}else{
+				$this->status = "600";
+				$this->error = _("Could not delete chart.");
+				$this->error_details = $this->db->error;
+		}
+
+    }
+
 }

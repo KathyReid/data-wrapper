@@ -25,6 +25,9 @@
         <!-- More general functions for the app -->
         <script src="js/functions.js" type="text/javascript"></script> 
 
+        <!-- The JS texts, translated -->
+        <script src="js/texts.js.php" type="text/javascript"></script> 
+
         <!-- Loads Favicon -->
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 

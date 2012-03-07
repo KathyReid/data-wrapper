@@ -131,7 +131,7 @@ class User {
 
 			$list_vis = array();
 
-			$q = "SELECT chart_id, chart_title, chart_type, date_modified FROM charts WHERE user_id = '$user_id' AND chart_title != '' ORDER BY date_modified DESC";
+			$q = "SELECT chart_id, chart_title, chart_type, date_modified FROM charts WHERE user_id = '$user_id' AND chart_title != '' AND date_deleted = '0000-00-00 00:00:00' ORDER BY date_modified DESC";
 
 			if ($result =  $this->db->query($q)) {
 				
@@ -142,8 +142,20 @@ class User {
 
 					 $chart_url = BASE_DIR . "?c=" . alphaID($row->chart_id);
 
+					 $link = "index.php?m=" . $row->chart_id;
 
-					 $chart_html = "<h2><a href='index.php?m=" . $row->chart_id . "'>" . $row->chart_title ."</a></h2>";
+					 $chart_html = "<div class='vis_item' id='chart-". $row->chart_id ."'>";
+
+					 //title of chart
+					 $chart_html .= "<h2><a href='". $link ."'>" . $row->chart_title ."</a></h2>";
+
+					 //link to edit chart
+					 $chart_html .= "<a href='". $link ."'><img class='tooltip' tooltip='". _("Edit chart") ."' src='images/edit.png'></a>";
+
+					 //link to delete chart
+					 $chart_html .= "<a href='#'><img class='tooltip delete_chart' tooltip='". _("Delete chart") ."' src='images/delete.png' chart_title = '" . $row->chart_title ."' chart_id='". $row->chart_id ."'></a>";
+					 
+					 //chart details
 					 $chart_html .= "<p>"._("Last modified on"). " ";
 					 $chart_html .= date("F j, Y, g:i a", strtotime($row->date_modified)) ."<br/>";
 					 $chart_html .= _("Chart type: ");
@@ -153,11 +165,15 @@ class User {
 					 $chart_html .= $chart_url;
 					 $chart_html .= "</a>";
 					 $chart_html .= "</p>";
+					 $chart_html .= "</div>";
 					 $return_array["vis"][] = $chart_html;
 				}
 
 				if (count($return_array["vis"]) == 0)
 					$return_array["vis"][] = _("No visualization was found");
+				
+				//Success
+				$this->status = "200";
 
 				return $return_array;
 				

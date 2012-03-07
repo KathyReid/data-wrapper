@@ -8,6 +8,7 @@
 @import "compass/utilities";
 
 $error-color : #ff8;
+$warning-color: #AB2B2E;
 
 $color-on : #3496AE;
 $color-off : #606060;
@@ -74,6 +75,11 @@ $col-w: $container-width / $grid-cols;
         font-weight:bold;
         padding-left: $col-w / 2;
         margin:15px 0 0 0;
+        display:inline;
+    }
+
+    img {
+        margin: 0 5px;
     }
 
     p{
@@ -81,5 +87,34 @@ $col-w: $container-width / $grid-cols;
         font-size:$font-size - .5;
         margin:0 0 0 0;
         padding: 2px $col-w / 2;
+    }
+
+    .vis_item{
+        margin-top:15px;
+    }
+}
+
+#delete_chart {
+
+    position:fixed;
+    top:0;
+    margin:100px 180px;
+    width:500px;
+    z-index:10;
+    padding:10px 50px;
+    background: $warning-color;
+    text-align:center;
+    @include background-image(linear-gradient($warning-color, scale-lightness($warning-color, -20))); 
+
+    color:#fff;
+    
+    @include border-radius();
+    @include single-box-shadow("#999");
+
+    display:none;
+
+    .chart_title {
+        font-weight:bold;
+        display:block;
     }
 }
