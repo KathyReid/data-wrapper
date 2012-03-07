@@ -9,22 +9,22 @@ initLanguage();
 //Fetches the functions that DW needs to run
 require_once "libraries/helpers.php";
 
-//Indicates the name of the prod server
-$prod_domain1 = "cloudcontrolled.com";
 
-$prod_domain2 = "datawrapper.de";
+if (strstr($_SERVER['SERVER_NAME'], "localhost") ){		
 
+	// DEV ENVIRONMENT //
+	require_once('actions/passwords.dev.php');
 
+	//removes error reporting
+	error_reporting(E_ALL);
 
-if (strstr($_SERVER['SERVER_NAME'], $prod_domain1) || strstr($_SERVER['SERVER_NAME'], $prod_domain2) ){		
+}else{
 
 	// PROD ENVIRONMENT //
 	require_once('actions/passwords.prod.php');
 
-}else{
-
-	// DEV ENVIRONMENT //
-	require_once('actions/passwords.dev.php');
+	//removes error reporting
+	error_reporting(0);
 }
 
 global $mysqli;

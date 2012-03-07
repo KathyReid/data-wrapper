@@ -44,6 +44,10 @@ if (isset($_POST['action'])){
 
 	}
 
+	$return_array["status"] = $user->status;
+	$return_array["error"] = $user->error;
+	$return_array["error_details"] = $user->error_details;
+
 }elseif (isset($_GET["verify"])){
 	
 	$user = new User($mysqli);

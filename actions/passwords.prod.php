@@ -13,9 +13,6 @@
 	//gets the base URL to use in the app
 	define("BASE_DIR", "http://datawrapper.de");
 
-	//removes error reporting
-	error_reporting(0);
-
 	//Piwik analytics
 	define("PIWIK_PATH", "www.datastory.de/piwik/");
 ?>

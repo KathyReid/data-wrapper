@@ -105,7 +105,7 @@ function initHeader(){
 			</div>
 
 			<div id="loggedas">
-				<?php echo sprintf(_("Welcome, %s!"), $user_email);  ?>
+				<?php echo sprintf(_("Welcome, %s!"), $user->getEmail());  ?>
 			</div>
 		</div>
 	

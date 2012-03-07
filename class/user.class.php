@@ -14,6 +14,11 @@ class User {
 	public $email;
 	protected $db;
 
+	//Status message to communicate with the front
+	public $status;
+	public $error;
+	public $error_details;
+
 	function __construct(& $db) {  
 	      
         // links to the db
@@ -37,18 +42,50 @@ class User {
 
 			if ($result =  $this->db->query($q)) {
 				
-				while ($row = $result->fetch_object()) {
+				if ($result->num_rows > 0){
 
-					$id = $row->user_id;
+					while ($row = $result->fetch_object()) {
+
+						$id = $row->user_id;
+					}
+
+					$this->setID($id);
+
+					return $id;
+				}else{
+					$this->error(_("No user found."));
 				}
-
-				$this->setID($id);
-
-				return $id;
 				
 			}else{
 				//Error with DB
-				 return json_encode( Array("status" => 600, "message" => _("Error while trying to retrieve user from database.") ) );
+				$this->error(_("Could not fetch the data in the database."), $this->db->error);
+			}
+		}
+	}
+
+	function getEmail(){
+
+		if ($this->email != null)
+			return $this->email;
+
+		elseif ($this->id != null){
+
+			$q = "SELECT email FROM users WHERE user_id = '". $this->id ."' LIMIT 1";
+
+			if ($result =  $this->db->query($q)) {
+				
+				while ($row = $result->fetch_object()) {
+
+					$email = $row->email;
+				}
+
+				$this->email = $email;
+
+				return $this->email;
+				
+			}else{
+				//Error with DB
+				$this->error(_("Could not fetch the data in the database."), $this->db->error);
 			}
 		}
 	}
@@ -77,7 +114,7 @@ class User {
 				
 			}else{
 				//Error with DB
-				 return json_encode( Array("status" => 600, "message" => _("Error while trying to retrieve show_quickstart from DB.") ) );
+				$this->error(_("Could not fetch the data in the database."), $this->db->error);
 			}
 		}
 	}
@@ -126,11 +163,11 @@ class User {
 				
 			}else{
 				//Error with DB
-				 return array("status" => 600, "message" => _("Error while trying to retrieve list from database.") );
+				$this->error(_("Could not fetch the data in the database."), $this->db->error);
 			}
 		}else{
 			//User not logged in
-			return array("status" => 600, "message" => _("User not logged in.") );
+			$this->error(_("User not logged in."));
 		}
 
 	}
@@ -150,8 +187,7 @@ class User {
 				else
 					return false;
 			}else{
-				//Error with DB
-				return array("status" => 600, "message" => _("Error while trying to retrieve list from database.") );
+				$this->error(_("Could not fetch the data in the database."), $this->db->error);
 			}
 	}
 
@@ -171,24 +207,21 @@ class User {
 
 				if ($this->db->query($q)){
 
-					$return_array["status"] = "200";
+					$this->status = "200";
 				
 				}else{
 					
-					$return_array["status"] = "600";
-					$return_array["error"] = _("Could not disable quickstart in the database.");
+					$this->error(_("Could not fetch the data in the database."), $this->db->error);
 					
 				}
 
 			}else{
 
-				$return_array["status"] = "600";
-				$return_array["error"] = _("No action required.");
+				$this->error(_("No action required."));
 
 			} 
 		}
 
-		return $return_array;
 	}
 
 
@@ -254,43 +287,35 @@ class User {
 
 						//Sends email
 						if ($ses->sendEmail($m))
-							$return_array["status"] = "200";
+							$this->status = "200";
 
 						else{
 
-							$return_array["status"] = "600";
-							$return_array["error"] = _("Could not send password change e-mail.");
+							$this->error(_("Could not send email."));
 
 						}
 							
 					}else{
 
-						$return_array["status"] = "600";
-						$return_array["error"] = _("Could not send password change email.");
-						$return_array["error_details"] = $mysqli->error;
+						$this->error(_("Could not fetch the data in the database."), $this->db->error);
 
 					}
 
 				}else{
 
-					$return_array["status"] = "605";
-					$return_array["error"] = _("No user found with this email address.");
+					$this->error(_("No user found with this email address."));
 				}
 
 			}else{
 
-				$return_array["status"] = "600";
-				$return_array["error"] = _("Could not send password change email.");
-				$return_array["error_details"] = $mysqli->error;
+				$this->error(_("Could not fetch the data in the database."), $this->db->error);
 			}
 		}else{
 
-			$return_array["status"] = "603";
-			$return_array["error"] = _("Not enough parameters were passed.");
+			$this->error(_("Not enough parameters were passed."));
 
 		}
 
-		return $return_array;
 	}
 
 	/*   
@@ -319,36 +344,28 @@ class User {
 
 					if ($result = $this->db->query($q_change_pwd)) {
 						//success
-						$return_array["status"] = "200";
+						$this->status = "200";
 
 					}else{
 						//failed to update user table
-						$return_array["status"] = "600";
-						$return_array["error"] = _("Could not change password in the DB.");
-						$return_array["error_details"] = $mysqli->error;
+						$this->error(_("Could not fetch the data in the database."), $this->db->error);
 
 					}
 				//token is not valid
 				}else{
 
-					$return_array["status"] = "605";
-					$return_array["error"] = _("No request for new password from this email address.");
+					$this->error(_("No request for new password from this email address."));
 				}
 			//unable to complete query
 			}else{
-				$return_array["status"] = "600";
-				$return_array["error"] = _("Could not change password in the DB.");
-				$return_array["error_details"] = $mysqli->error;
+				$this->error(_("Could not fetch the data in the database."), $this->db->error);
 			}
 
 		}else{
 
-			$return_array["status"] = "603";
-			$return_array["error"] = _("Not enough parameters were passed.");
+			$this->error(_("No password change request from this email address."));
 
 		}
-
-		return $return_array;
 
 	}
 
@@ -386,7 +403,7 @@ class User {
 					if ($result = $this->db->query($q_adduser)) {
 
 						//Prepares verify email
-						$confirm_link = BASE_DIR."/?verify=$token&email=$email";
+						$confirm_link = BASE_DIR."?verify=$token&email=$email";
 
 						$to      = $email;
 
@@ -414,45 +431,35 @@ class User {
 
 						//Sends email
 						if ($ses->sendEmail($m))
-							$return_array["status"] = "200";
+							$this->status = "200";
 
 						else{
 
-							$return_array["status"] = "600";
-							$return_array["error"] = _("Could not send verification e-mail.");
+							$this->error(_("Could not send verification email."));
 
 						}
 							
 					
 					}else{
 
-						$return_array["status"] = "600";
-						$return_array["error"] = _("Could not add user in the DB.");
-						$return_array["error_details"] = $mysqli->error;
+						$this->error(_("Could not fetch the data in the database."), $this->db->error);
 
 					}
 
 				}else{
 
-					$return_array["status"] = "605";
-					$return_array["error"] = _("A user already has this email address.");
+					$this->error(_("A user already has this email address."));
 				}
 
 			}else{
 
-				$return_array["status"] = "600";
-				$return_array["error"] = _("Could not add user in the DB.");
-				$return_array["error_details"] = $mysqli->error;
+				$this->error(_("Could not add user in the DB."), $this->db->error);
 			}
 		}else{
 
-			$return_array["status"] = "603";
-			$return_array["error"] = _("Not enough parameters were passed.");
+			$this->error(_("Not enough parameters were passed."));
 
 		}
-
-		return $return_array;
-
 	}
 
 	/*   
@@ -484,30 +491,25 @@ class User {
 						
 						$this->setID($id);
 
-						$return_array["status"] = "200";
+						$this->status = "200";
 
 					}
 
 				}else{
 
-					$return_array["status"] = "604";
-					$return_array["error"] = _("User and password do not match or user not activated.");
+					$this->error(_("User and password do not match or user not activated."));
 				}
 
 			}else{
 
-					$return_array["status"] = "600";
-					$return_array["error"] = _("Could not check the user credentials in the DB.");
-					$return_array["error_details"] = $mysqli->error;
+					$this->error(_("Could not fetch the data in the database."), $this->db->error);
 			}
 		}else{
 
-				$return_array["status"] = "603";
-				$return_array["error"] = _("Not enough parameters were passed.");
+				$this->error(_("Not enough parameters were passed."));
 
 		}
 
-		return $return_array;
 	}
 
 
@@ -522,16 +524,14 @@ class User {
 
 		if ( !isset($_SESSION["user_id"]) && !isset($_SESSION["user_email"])){
 
-			$return_array["status"] = "200";
+			$this->status = "200";
 
 		}else{
 
-			$return_array["status"] = "605";
-			$return_array["error"] = _("Could not log out.");
+			$this->error(_("Could not log out."));
 
 		}
 
-		return $return_array;
 	}
 
 	/*   
@@ -543,22 +543,53 @@ class User {
 		$token=$_GET["verify"];
 		$email=$_GET["email"];
 
-		//updates the DB
-		$q = "UPDATE users SET activated=1 WHERE email='$email'";
+		//checks that the user exists
+		$q = "SELECT user_id FROM users WHERE email='$email' && token='$token'";
 
-		if ($this->db->query($q)){
+		if ($result = $this->db->query($q)){
+
+			if ($result->num_rows > 0){
+
+				//updates the DB
+				$q_update = "UPDATE users SET activated=1 WHERE email='$email' && token='$token'";
+
+				if ($this->db->query($q_update)){
 			
-			//Sets the user email in the session var
-			$_SESSION["user_email"] = $email;
+					//Sets the user email in the session var
+					$_SESSION["user_email"] = $email;
 
-			//reloads page
-			header("location:". BASE_DIR);
+					//reloads page
+					header("location:". BASE_DIR);
+			
 
+				}else{
+
+					//DB problem
+					require_once "views/error.php";
+	
+				}
+
+			}else{
+				//no address exists
+				require_once "views/error.php";
+			}
 		}else{
 
-			echo _("Could not verify e-mail address.");
-		
+		//DB problem
+		require_once "views/error.php";
+
 		}
+	}
+
+
+	/*   
+	 *	@desc: Takes care of errors within the class
+	 */
+
+	function error($error_msg, $error_details = null){
+		$this->status = "600";
+		$this->error = $error_msg;
+		$this->error_details = $error_details;
 	}
 }
 

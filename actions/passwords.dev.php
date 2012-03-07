@@ -10,7 +10,7 @@
 	define("AWS_SECRET", "a45aj1jGNJIwkrmI6nLy4mcvCIDNMlpnFSqPwg7W");
 	define("AWS_ACCESS_KEY", "1JFWSJFZN75V3AY4MAR2");
 
-	error_reporting(E_ALL);
+	
 
 	define("BASE_DIR", "http://localhost/Data-Story/");
 
