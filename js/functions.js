@@ -291,6 +291,21 @@ function initTooltips(){
 	});
 }
 
+function showChartDesc(title, desc){
+	$.notification ( 
+	    {
+	        title:      title,
+	        content:    desc,
+	        border:     true,
+	        icon:       '`',
+	        color:      '#333'
+	    }
+	);
+
+	$("#show_desc").fadeOut('fast');
+
+}
+
 function initDeleteChart(){
 	$('.delete_chart').each(function(){
 		$(this).click(function(){

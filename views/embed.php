@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
-        <title><?php echo _("Chart created with Datawrapper") ?></title>
-
-        <!-- General styles -->
-        <link rel="stylesheet" type="text/css" href="css/stylesheets/general.css" />
-
-        <!-- Specific embed styles -->
-        <link rel="stylesheet" type="text/css" href="css/stylesheets/embed.css" />
-
-        <!-- JQuery library -->
-        <script src="js/jquery-1.6.4.js" type="text/javascript"></script>
-
-        <!-- JQueryUI library -->
-        <script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>       
-
-    </head>
-
-
-    <body>
-	<?php
+<?php
 
 	require_once("config.php");
 
@@ -42,36 +18,87 @@
 		//Sets the appropriate language
 		setLanguage($chart->lang);
 
-		 /* Adds the JS files for the vis libs */
-
-		//Fetches the JSON that holds the data about the visualisations
-		require_once('visualizations/config.json.php');
-
-		//Convert file into JSON
-		$json_vis=json_decode($file_vis);
-
-		
-		//Loop through the libs  in the JSON
-		foreach($json_vis->librairies as $librairy){
-
-			//Loop throught the dependancies array
-			foreach($librairy->dependancies as $dependancy){
-
-				//Adds the lib
-				echo '<script src="visualizations/'. $dependancy .'" type="text/javascript"></script>';
-
-			}
-		}
-
 		?>
-		<script src="js/functions.js" type="text/javascript"></script>
-		<script type="text/javascript">
+
+
+	<!DOCTYPE html>
+	<html>
+	    <head>
+
+	        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	        <title><?php echo _("Chart created with Datawrapper") ?></title>
+
+	        <!-- General styles -->
+	        <link rel="stylesheet" type="text/css" href="css/stylesheets/general.css" />
+
+	        <!-- Specific embed styles -->
+	        <link rel="stylesheet" type="text/css" href="css/stylesheets/embed.css" />
+
+	        <!-- JQuery library -->
+	        <script src="js/jquery-1.6.4.js" type="text/javascript"></script>
+
+	        <!-- JQueryUI library -->
+	        <script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>     
+
+	        <!-- Notifications library -->
+	        <script src="js/notifications/js/notification.js" type="text/javascript"></script>  
+
+	        <!-- Notifications CSS -->
+	        <link href="js/notifications/main.css" rel="stylesheet" type="text/css" media="screen">
+
+	        <?php
+	         /* Adds the JS files for the vis libs */
+
+			//Fetches the JSON that holds the data about the visualisations
+			require_once('visualizations/config.json.php');
+
+			//Convert file into JSON
+			$json_vis=json_decode($file_vis);
+
+			
+			//Loop through the libs  in the JSON
+			foreach($json_vis->librairies as $librairy){
+
+				//Loop throught the dependancies array
+				foreach($librairy->dependancies as $dependancy){
+
+					//Adds the lib
+					echo '<script src="visualizations/'. $dependancy .'" type="text/javascript"></script>';
+
+				}
+			}
+
+			?>
+			<script src="js/functions.js" type="text/javascript"></script>
+
+	    </head>
+
+
+    	<body>
+			<script type="text/javascript">
 			$(document).ready(function(){
 
 				//init the download CSV button
 				$("#export_csv").click(function(){
 					window.location.href = 'actions/export.php?c=<?php echo $chart_id ?>';
 				});
+
+				<?php if ($chart->desc != ""): ?>
+					//Shows the chart description
+					var desc = "<?php echo $chart->desc ?>",
+						title = "<?php echo $chart->title ?>";
+					
+					<?php if ($chart->show_desc == true): ?>
+						showChartDesc(title, desc);
+					<?php endif; ?>
+
+					//init the show desc button
+					$("#show_desc").click(function(){
+						showChartDesc(title, desc);
+					});
+
+				<?php endif; ?>
 
 				var opt = <?php echo $chart->js_code ?>;
 
@@ -93,14 +120,15 @@
 
 			});
 		</script>
-			
+
+		<?php if ($chart->desc != ""): ?>
+			<div id="show_desc">`</div>
+		<?php endif; ?>
+
 		<div id="chart">
+
 		</div>
 		<div id="embed_extras">
-			
-			<?php if ($chart->desc != ""): ?>
-				<p class="desc"><?php echo $chart->desc ?></p>
-			<?php endif; ?>
 
 			<?php if ($chart->source != ""): ?>
 				<p class="source">

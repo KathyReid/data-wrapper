@@ -60,18 +60,28 @@ body {
   text-decoration: none;
 }
 /* line 63, ../sass/embed.scss */
-#embed_extras .desc {
-  font-weight: bold;
-}
-/* line 67, ../sass/embed.scss */
 #embed_extras #source {
   font-style: italic;
 }
-/* line 71, ../sass/embed.scss */
+/* line 67, ../sass/embed.scss */
 #embed_extras .source_url {
   color: #000;
 }
-/* line 73, ../sass/embed.scss */
+/* line 69, ../sass/embed.scss */
 #embed_extras .source_url:hover {
   text-decoration: underline;
+}
+
+/* line 73, ../sass/embed.scss */
+#show_desc {
+  text-shadow: #999999 0px 0px 1px;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  top: 0px;
+  right: 20px;
+  height: 40px;
+  text-align: center;
+  line-height: 50px;
+  font: normal 40px/28px "EntypoRegular";
 }

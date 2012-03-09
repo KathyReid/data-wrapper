@@ -48,7 +48,6 @@ To-Do
 * Improve the responsive table option (auto-resize the iframe)
 * Simplifiy the process of adding a JS lib
 * Add a fallback solution for less compatible JS libs
-* Use gettext in JS
 
 Themes
 ---------------------

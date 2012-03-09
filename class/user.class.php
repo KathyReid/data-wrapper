@@ -142,7 +142,7 @@ class User {
 
 					 $chart_url = BASE_DIR . "?c=" . alphaID($row->chart_id);
 
-					 $link = "index.php?m=" . $row->chart_id;
+					 $link = "?m=" . $row->chart_id;
 
 					 $chart_html = "<div class='vis_item' id='chart-". $row->chart_id ."'>";
 

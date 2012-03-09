@@ -53,6 +53,11 @@
                 $(this).hide();
             });		
 
+            //init the forms
+            $('input[type=submit]').click(function(){
+                return false;
+            })
+
             //init the Sign in button
             $('#login_submit').click(function() {
                 var email = $('#email').val();
@@ -132,6 +137,7 @@
                 $("#login").show();
                 $("#show_signup").show();
                 $("#signup").hide();
+                return false;
             }); 
 
             //init the Sign up
@@ -261,10 +267,13 @@
                 <div id="login">
                     <div class="close_signup">[back]</div>
                     <h2><?php echo _("Login for registered users:") ?></h2>
-                    <input class="login" id="email" value="<?php echo _("E-mail") ?>">
-                    <input class="login" id="pwd" type="password" value="<?php echo _("Password") ?>">
-                    <div id="password_forgotten"><?php echo _("Forgot your password?") ?></div>
-                    <button id="login_submit" class="button"><?php echo _("Login") ?></button>
+
+                    <form>
+                        <input class="login" id="email" value="<?php echo _("E-mail") ?>">
+                        <input class="login" id="pwd" type="password" value="<?php echo _("Password") ?>">
+                        <div id="password_forgotten"><?php echo _("Forgot your password?") ?></div>
+                        <input type="submit" id="login_submit" class="button" value="<?php echo _("Login") ?>">
+                    </form>
 
                     <input id="show_signup" type="submit" value="<?php echo _("First time user? Register here.") ?>" />
             
@@ -274,21 +283,24 @@
                     
                     <h2><?php echo _("Create an account on Datawrapper:") ?></h2>
                     <small><?php echo _("Enter your e-mail address") ?></small>
-                    <input class="login" id="email_signup" value="<?php echo _("email@provider.tld") ?>">
-                    
-                    <div class="clear"></div>
-                    
-                    <small><?php echo _("Enter password twice") ?></small>
-                    <input class="login" id="pwd1" type="password" value="<?php echo _("Password") ?>">
-                    <input class="login" id="pwd2" type="password" value="<?php echo _("Password") ?>">
-                    
-                    <div class="clear"></div>
-                    
-                    <small><a href="#terms_of_use" class="fancybox"><?php echo _("I agree to the Terms of Use") ?></a></small><input type="checkbox" id="tos" value="agree">
-                    
-                    <div class="clear"></div>
+                    <form>
+                        <input class="login" id="email_signup" value="<?php echo _("email@provider.tld") ?>">
+                        
+                        <div class="clear"></div>
+                        
+                        <small><?php echo _("Enter password twice") ?></small>
+                        <input class="login" id="pwd1" type="password" value="<?php echo _("Password") ?>">
+                        <input class="login" id="pwd2" type="password" value="<?php echo _("Password") ?>">
 
-                    <button id="signup_submit" class="button"><?php echo _("Sign up") ?></button> or <button id="show_login" class="button"><?php echo _("Log in") ?></button>
+                        
+                        <div class="clear"></div>
+                        
+                        <small><a href="#terms_of_use" class="fancybox"><?php echo _("I agree to the Terms of Use") ?></a></small><input type="checkbox" id="tos" value="agree">
+                        
+                        <div class="clear"></div>
+
+                        <input type="submit" id="signup_submit" class="button" value='<?php echo _("Sign up") ?>'> or <button id="show_login" class="button"><?php echo _("Log in") ?></button>
+                    </form>
                     <div id="verify"></div>
                     
                 </div>
@@ -302,11 +314,13 @@
                     <div class="close_signup">[back]</div>
                     <p><?php echo _("Enter your e-mail address to reset your password.") ?></p>
                     <div class="clear"></div>
-                    <input class="login" id="email_reminder" value="<?php echo _("E-mail") ?>">
-                    
-                    <div class="clear"></div>
+                    <form>
+                        <input class="login" id="email_reminder" value="<?php echo _("E-mail") ?>">
+                        
+                        <div class="clear"></div>
 
-                    <button id="reminder_submit" class="button"><?php echo _("Reset password") ?></button>
+                        <input type="submit" id="reminder_submit" class="button" value='<?php echo _("Reset password") ?>'/>
+                    </form>
                     <div id="reset_confirmation"></div>
                 </div>
 
@@ -319,12 +333,14 @@
                     <div class="clear"></div>
                     
                     <small><?php echo _("Enter your new password twice") ?></small>
-                    <input class="login" id="reset_pwd1" type="password" value="<?php echo _("Password") ?>">
-                    <input class="login" id="reset_pwd2" type="password" value="<?php echo _("Password") ?>">
-                    
-                    <div class="clear"></div>
+                    <form>
+                        <input class="login" id="reset_pwd1" type="password" value="<?php echo _("Password") ?>">
+                        <input class="login" id="reset_pwd2" type="password" value="<?php echo _("Password") ?>">
+                        
+                        <div class="clear"></div>
 
-                    <button id="pwd_change_submit" class="button"><?php echo _("Change password") ?></button>
+                         <input type="submit" id="pwd_change_submit" class="button" value='<?php echo _("Change password") ?>' />
+                    </form>
                     <div id="pwd_change_confirmation"></div>
 
                 </div>

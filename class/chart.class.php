@@ -40,6 +40,7 @@ class Chart {
 	public $source;
 	public $source_url;
 	public $lang;
+	public $show_desc;
 	public $has_horizontal_headers;
 	public $has_vertical_headers;
 
@@ -79,16 +80,17 @@ class Chart {
 
 				$this->id_text = alphaID($this->id);
 				$this->user_id = $row->user_id;
-				$this->desc = $row->additional_text;
+				$this->desc = trim($row->additional_text);
 				$this->js_code = $row->chart_js_code;
 				$this->date_create = $row->date_create;
 				$this->library = $row->chart_library;
 				$this->theme = $row->chart_theme;
 				$this->type = $row->chart_type;
-				$this->title = $row->chart_title;
-				$this->source = $row->source;
-				$this->source_url = $row->source_url;
+				$this->title = trim($row->chart_title);
+				$this->source = trim($row->source);
+				$this->source_url = trim($row->source_url);
 				$this->lang = $row->chart_lang;
+				$this->show_desc = $row->show_desc;
 				$this->csv_data = unserialize($row->chart_csv_data);
 				$this->tsv_data = arrayToTSV($this->csv_data);
 				$this->has_horizontal_headers = $row->horizontal_headers;
@@ -288,6 +290,12 @@ class Chart {
 
 		//Gets the chart theme
 		$chart_theme = $this->opts->chart->chart_theme;
+
+		//Gets the bool regarding showing the description on load
+		if (isset($this->opts->show_desc))
+			$show_desc = $this->opts->show_desc;
+		else
+			$show_desc = 0;
 		
 		//this string will store the additional info about the chart, if any, that need to be stored
 		$q_details = "";
@@ -311,7 +319,7 @@ class Chart {
 		$chart_lang = getLocale(false);
 
 		//Builds query
-		$q = "UPDATE charts SET chart_js_code = '$chart_js_code', chart_type='$chart_type', chart_theme='$chart_theme', chart_library='$chart_library', chart_title='".addslashes($chart_title)."', chart_lang='$chart_lang' $q_details WHERE chart_id='". $this->id ."'";
+		$q = "UPDATE charts SET chart_js_code = '$chart_js_code', chart_type='$chart_type', show_desc='$show_desc', chart_theme='$chart_theme', chart_library='$chart_library', chart_title='".addslashes($chart_title)."', chart_lang='$chart_lang' $q_details WHERE chart_id='". $this->id ."'";
 
 		if ($result = $this->db->query($q)) {
 			

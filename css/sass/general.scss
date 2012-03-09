@@ -250,6 +250,8 @@ $button-color-bottom: #ccc;
 .button {
     
     cursor:pointer;
+
+    height:30px;
         
     background: $button-color-top;
     @include background-image(linear-gradient($button-color-top, $button-color-bottom)); 

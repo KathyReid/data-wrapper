@@ -172,6 +172,10 @@ function update_options(){
 		options.desc = desc;	
 	}
 
+	//Description show
+	var show_desc = $("input[@id=show_desc]:checked").length - 1;
+	options.show_desc = show_desc;
+
 	//Assigns a chart type according to the user's choice in the drop down menu
 	chart_type = $("#chart_type").val();
 
@@ -241,8 +245,9 @@ function update_options(){
 			<input type="text" id="chart_source_url" class="chart_builder source_url" value="<?php echo _("Source URL") ?>" onfinishinput="update_options()"/>
 		</div>
 
-		<div class="chart_customizator" style="margin-right:0">
+		<div class="chart_customizator" style="margin-right:0; height:auto;">
 			<input type="text" id="chart_desc" class="chart_builder desc" value="<?php echo _("Chart description") ?>" onfinishinput="update_options()" />
+			<input id="show_desc" type="checkbox" value="1" style ="width:10px; height:auto;" onchange="update_options()"/><label for="show_desc"  style ="margin:0 1px; padding:0"><?php echo _("Display description on chart load") ?></label>
 		</div>
 
 		

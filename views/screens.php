@@ -97,9 +97,15 @@
 
                 //subtitle
                 if (options.subtitle.text){ $("#chart_subtitle").val(options.subtitle.text); }
-                
+
                 //yAxis
-                if (options.yAxis.title.text){ $("#chart_yAxis").val(options.yAxis.title.text); }
+                if (!(options.yAxis)){ 
+                    options.yAxis = {};
+                    options.yAxis.title = {};
+                    options.yAxis.title.text = '<?php echo _("Vertical axis title (required)") ?>'; 
+                }
+
+                $("#chart_yAxis").val(options.yAxis.title.text);
 
                 //source URL
                 if (options.source_url){ $("#chart_source_url").val(options.source_url); }

@@ -2,7 +2,7 @@
 /*       embed.scss          */
 /* Styles for embeds         */
 /*****************************/
-
+@import "compass/css3";
 
 $font-size : 1em;
 $font-family-container: "Lucida Sans Unicode","Lucida Grande", Arial, Helvetica, Garuda, sans-serif;
@@ -60,10 +60,6 @@ body {
         }
     }
 
-    .desc {
-        font-weight:bold;
-    }
-
     #source {
         font-style: italic;
     }
@@ -72,4 +68,19 @@ body {
         color: #000;
         &:hover  { text-decoration:underline; }
     }
+}
+
+#show_desc {
+    $default-text-shadow-color: #999;
+    @include single-text-shadow;
+    $default-text-shadow-blur: 1px;
+    $default-text-shadow-v-offset: 1px;
+    position: absolute;
+    z-index:1;
+    cursor:pointer;
+    top: 0px;
+    right: 20px;
+    text-align: center;
+    line-height: 50px;
+    font: normal 40px/28px 'EntypoRegular';
 }
