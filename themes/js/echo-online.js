@@ -4,7 +4,7 @@
  */
 
 Highcharts.theme = {
-	colors: ['#51707e', '#100000', '#1d4456', '#e5e9ea', '#2f4f5e', '#5a7987', '#d6d6d6', '#000000', '#748d99', '#50707d'],
+	colors: ['#cc071e', '#2f4f5e', '#51707e', '#748d99', '#cc071e', '#2f4f5e', '#51707e', '#748d99'],
 	chart: {
 		backgroundColor: '#fff',
 		plotBackgroundColor: 'rgba(255, 255, 255, .9)',
@@ -13,7 +13,7 @@ Highcharts.theme = {
 	},
 	title: {
 		style: { 
-			color: '#FF0000',
+			color: '#20272B',
 			font: 'bold 14px Georgia, serif'
 		}
 	},
@@ -29,8 +29,8 @@ Highcharts.theme = {
 	xAxis: {
 		gridLineWidth: 0,
 		minorTickInterval: null,
-		lineColor: '#FF0000',
-		tickColor: '#FF0000',
+		lineColor: '#20272B',
+		tickColor: '#20272B',
 		labels: {
 			style: {
 				color: '#000',
@@ -49,11 +49,11 @@ Highcharts.theme = {
 	},
 	yAxis: {
 		minorTickInterval: null,
-		lineColor: '#FF0000',
+		lineColor: '#20272B',
 		lineWidth: 1,
 		tickWidth: 1,
 		gridLineWidth: 0,
-		tickColor: '#FF0000',
+		tickColor: '#20272B',
 		labels: {
 			style: {
 				color: '#000',

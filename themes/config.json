@@ -81,11 +81,11 @@
             "desc": "Echo Online",
             "link": "http://www.echo-online.de/",
             "image": {
-                "width": 80,
-                "height": 20,
+                "width": 40,
+                "height": 19,
                 "format": "png"
             },
-            "restricted": ["echo-online.de", "nkb.fr"]
+            "restricted": ["echo-online.de", "darmstaedter-echo.de", "nkb.fr"]
         },
         "berlin-maniacs":
         {
