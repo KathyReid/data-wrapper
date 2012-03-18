@@ -13,7 +13,7 @@ Highcharts.theme = {
 	},
 	title: {
 		style: { 
-			color: '#333',
+			color: '#ddd',
 			font: 'bold 14px Verdana, Arial, Helvetica, sans-serif'
 		}
 	},
@@ -62,7 +62,7 @@ Highcharts.theme = {
 		},
 		title: {
 			style: {
-				color: '#333',
+				color: '#ddd',
 				fontWeight: 'bold',
 				fontSize: '12px',
 				fontFamily: 'Verdana, Arial, Helvetica, sans-serif'
