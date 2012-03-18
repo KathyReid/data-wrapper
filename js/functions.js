@@ -207,7 +207,7 @@ function render_chart(opt, theme, showLogo){
 	        		}
 
 	        		$("#"+render_div)
-	        			.append(linkTo + "<img src='themes/images/"+ theme +"."+ image_ext +"'style='position:absolute; z-index:12; width:"+ image_w +"px; height:"+ image_h +"px; top:"+ logo_y +"px; right:"+ logo_x +"px;'/>"+ linkTo_close);
+	        			.append(linkTo + "<img src='themes/images/"+ theme +"."+ image_ext +"'style='position:absolute; z-index:12; width:"+ image_w +"px; height:"+ image_h +"px; bottom:50px; left:15px;'/>"+ linkTo_close);
 	        	}
 
 			});

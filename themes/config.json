@@ -98,6 +98,18 @@
                 "format": "png"
             },
             "restricted": ["nkb.fr"]
+        },
+        "jplusplus":
+        {
+            "name": "jplusplus",
+            "desc": "Journalism++",
+            "link": "http://www.jplusplus.org/",
+            "image": {
+                "width": 71,
+                "height": 20,
+                "format": "png"
+            },
+            "restricted": ["nkb.fr"]
         }
     }
 }
