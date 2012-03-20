@@ -49,13 +49,15 @@ body {
     #promo_embed{
         font-size: $font-size * .8;
         float:left;
-        margin: 0 10px;
+        margin: 0 5px;
 
         a {
             font-size: $font-size;
             text-decoration:underline;
+            color:#000;
             &:hover {
                 text-decoration:none;
+                color:#000;
             }
         }
     }

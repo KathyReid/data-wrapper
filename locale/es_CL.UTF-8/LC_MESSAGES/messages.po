@@ -1,0 +1,1022 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Datawrapper\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-20 08:37+0100\n"
+"PO-Revision-Date: 2012-03-20 08:38+0100\n"
+"Last-Translator: nkb <hi@nkb.fr>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: es_CL\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: c://wamp/www/Data-Story\n"
+
+#: c://wamp/www/Data-Story/actions/charts.php:79
+#: c://wamp/www/Data-Story/actions/user.php:60
+msgid "No action defined."
+msgstr ""
+
+#: c://wamp/www/Data-Story/actions/export.php:63
+#: c://wamp/www/Data-Story/class/chart.class.php:331
+msgid "Could not fetch the data from the database."
+msgstr ""
+
+#: c://wamp/www/Data-Story/actions/export.php:69
+msgid "This page cannot be accessed."
+msgstr ""
+
+#: c://wamp/www/Data-Story/actions/lang_change.php:36
+msgid "Unknown language code."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/chart.class.php:107
+#: c://wamp/www/Data-Story/class/user.class.php:61
+#: c://wamp/www/Data-Story/class/user.class.php:88
+#: c://wamp/www/Data-Story/class/user.class.php:117
+#: c://wamp/www/Data-Story/class/user.class.php:182
+#: c://wamp/www/Data-Story/class/user.class.php:206
+#: c://wamp/www/Data-Story/class/user.class.php:230
+#: c://wamp/www/Data-Story/class/user.class.php:304
+#: c://wamp/www/Data-Story/class/user.class.php:315
+#: c://wamp/www/Data-Story/class/user.class.php:355
+#: c://wamp/www/Data-Story/class/user.class.php:365
+#: c://wamp/www/Data-Story/class/user.class.php:438
+#: c://wamp/www/Data-Story/class/user.class.php:498
+msgid "Could not fetch the data in the database."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/chart.class.php:271
+msgid "Could not store the data on the database."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/chart.class.php:358
+msgid "Could not transpose the data in the database."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/chart.class.php:367
+msgid "You can only transpose a table with two entries."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/chart.class.php:396
+msgid "Could not modify header row."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/chart.class.php:417
+msgid "Could not delete chart."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:56
+msgid "No user found."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:153
+msgid "Edit chart"
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:156
+msgid "Delete chart"
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:159
+msgid "Last modified on"
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:161
+msgid "Chart type: "
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:163
+msgid "Visualization URL: "
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:173
+msgid "No visualization was found"
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:186
+msgid "User not logged in."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:236
+msgid "No action required."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:279
+msgid "Password change requested"
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:281
+#: c://wamp/www/Data-Story/class/user.class.php:415
+msgid "Dear Datawrapper user,"
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:283
+msgid "Please click on the link below to change your password: "
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:287
+msgid "Do ignore this message if you did not request a password change from Datawrapper."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:289
+#: c://wamp/www/Data-Story/class/user.class.php:421
+msgid "Thanks!"
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:291
+#: c://wamp/www/Data-Story/class/user.class.php:423
+msgid "The Datawrapper team"
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:298
+msgid "Could not send email."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:310
+msgid "No user found with this email address."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:319
+#: c://wamp/www/Data-Story/class/user.class.php:453
+#: c://wamp/www/Data-Story/class/user.class.php:502
+msgid "Not enough parameters were passed."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:361
+msgid "No request for new password from this email address."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:370
+msgid "No password change request from this email address."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:413
+msgid "Please verify your e-mail address"
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:417
+msgid "Please click on the link below to verify your e-mail address: "
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:431
+msgid "Could not send verification email."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:444
+msgid "A user already has this email address."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:449
+msgid "Could not add user in the DB."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:493
+msgid "User and password do not match or user not activated."
+msgstr ""
+
+#: c://wamp/www/Data-Story/class/user.class.php:524
+msgid "Could not log out."
+msgstr ""
+
+#: c://wamp/www/Data-Story/js/texts.js.php:5
+msgid "No data was input."
+msgstr ""
+
+#: c://wamp/www/Data-Story/js/texts.js.php:6
+msgid "Chart deleted."
+msgstr ""
+
+#: c://wamp/www/Data-Story/libraries/helpers.php:117
+msgid "No data."
+msgstr ""
+
+#: c://wamp/www/Data-Story/phpMyAdmin/pmd_relation_new.php:68
+msgid "General relation features"
+msgstr ""
+
+#: c://wamp/www/Data-Story/phpMyAdmin/pmd_relation_new.php:68
+msgid "Disabled"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/check.php:150
+msgid "Check that your data was correctly understood."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/check.php:153
+msgid "Edit the data"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/check.php:157
+msgid "Transpose data"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/check.php:161
+msgid "Make first row a header row"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:5
+msgid "About"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:6
+msgid "What is Datawrapper?"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:8
+msgid "In short: This is a little tool for journalists. It reduces the time to create and embed a simple chart from hours to seconds."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:10
+#: c://wamp/www/Data-Story/views/contents.php:66
+#: c://wamp/www/Data-Story/views/footer.php:7
+msgid "Motivation"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:11
+msgid "There are many uses of data in journalism. The first step though is to use data more and often as a basis for reporting. Doing this has become easier, because of the large amounts of data becoming available, thanks to the OpenData movement and other initiatives."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:13
+msgid "But there are bottlenecks."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:15
+msgid "One is that creating even a simple visual chart and embedding it into a story is still too complex and time consuming. Yes, there are extensive other offerings, like IBM ManyEyes or the growing Google Chart API. They are great. But they have downsides, if used by journalists. For example you often have to store your trials data in public, can't get it out again. Plus, control over the look and feel of your charts is limited or complex to change if you are not a coder."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:17
+msgid "Create simple, embeddable charts in seconds, not hours"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:18
+msgid "This is what Datawrapper does: This little tool reduces the time needed to create a correct chart and embed it into any CMS from hours to seconds."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:20
+msgid "Furthermore, Datawrapper is not a honey-trap. The data you work with or store is yours and yours alone. Trials are not openly published."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:22
+msgid "On top of that, we encourage news organizations to fork Datawrapper via Github and install it on one of your own servers."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:23
+msgid "The CSS is accessible, meaning that in one day you can make sure that the charts generated with Datawrapper have your logo, your visual styles and colours."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:25
+#, php-format
+msgid "A short tutorial on %show to use Datawrapper is here%s."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:27
+msgid "Background"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:29
+msgid "Datawrapper was developed for ABZV, a journalism training organization affiliated to BDVZ (German Association of Newspaper Publishers). It is part of our efforts to develop a comprehensive curriculum for data-driven journalism."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:31
+msgid "Features"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:33
+msgid "Use of this tool is free."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:35
+msgid "Datawrapper 0.1 is a non-commercial, open source software, licensed under the MIT License."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:37
+msgid "Datawrapper uses HTML5 Javascript libraries, namely Highcharts and D3.js, with more to come."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:39
+msgid "Datawrapper can be forked on GitHub and installed on your own server."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:44
+msgid "Datawrapper: Goals and Features"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:46
+msgid "Data Journalism opens new perspectives to do deeper and better reporting. If Journalists do really know the numbers and the data - locally, regionally or worldwide - this could lead to higher trustability and relevancy. The readers want clear signals, not some muddled up guessing. Datawrapper is a tool that makes working from data to story easier. Data should be the foundation when starting a new story, not an afterthought. In many newsrooms this is the other way round so far. „Infographics“ are usually started when the story is already done. That leads to actionism, omissions and mistakes. "
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:48
+msgid "Open Source"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:50
+msgid "The most important feature of Datawrapper is its fully open source character. Journalists, bloggers and any media company can download this little helper and install it on a private server. The design of the charts can be adjusted to your outfit's style - you can change the colors, the visual style and the logos. This is increasingly important, because in too many „free“ platforms someone is somehow lurking over the journalists shoulder. Not here. "
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:52
+msgid "HTML5 Chart Libraries"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:54
+#, php-format
+msgid "Datawrapper uses modern Javascript, HTML5 Libraries like Highcharts oder D3.JS. We want to provide an access to these powerful options. This is a step towards the future as the web prepares for a switch to new visualization options in the near future. So far, especially on news websites, some %sfancy features%s where not used in order to not loose any users who still have incompatible (read: very old) browsers. But developers are about to change their mind. The message to users is: Get a decent browser. Downloading and installing a modern, HTML5 capable browser takes a few minutes and opens the door to many, many future options."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:56
+msgid "Visualize fast, very fast"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:58
+msgid "Using Datawrapper you can create a chart in minutes. Interestingly, doing visualization fast is not the goal of Datawrapper. Preparation, thinking, digging into data and make sense of it is still the main work of data journalists. Datawrapper does the visualization job fast, but merely to not stand in the way to publish something cool. Throwing nonsensical data into this will most probably lead to nonsensical results."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:60
+msgid "Chart types"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:62
+msgid "The development of this (small) tool was more winded than initially thought. No surprise here. The main challenge was to find a way to reduce the number of steps to a minimum and at the same time offer a lot of features and options."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:64
+msgid "This is why this beta version does only have five basic chart types. But it is a start and shows what is possible. In the future we would like to add more compelling visualizations. To do that we need the support of the data journalism community. If you are a developer who is interested in journalism, please help us."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:68
+#, php-format
+msgid "We are data journalists. We believe, that digging into numbers, structures and influence patterns is extremely important. Doing this with a journalist's mind will build trustability in what is reported. And it opens new perspectives, for example to turn media companies into %s trusted data hubs %s. Who wants to join us?"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:75
+msgid "To install Datawrapper on your server, download all files from GitHub or do a 'git pull'. Create the appropriate tables in your database using the .sql dump. Then create a file with your database passwords to be stored in /actions/passwords.php under the form"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:82
+#, php-format
+msgid "If you are a for-profit venture, make sure to %sbuy a license for the use of HighCharts%s."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:87
+msgid "Terms of use"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:88
+msgid "Fair usage policy"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:89
+msgid "Datawrapper is licensed to visualize data that comes from public, legal sources or your own research. Should we detect uses that might violate rights of organizations or single persons we reserve the right to block an account, notify the owner and ask them to stop using Datawrapper."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:90
+msgid "Limited responsibility"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:91
+msgid "This service is provided as is. DataStory will certainly not be held accountable if your data is damaged by a server failure or any other cause."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:92
+msgid "Privacy"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:93
+msgid "Datawrapper will not use your private data in any way not necessary for the provision of the Service. However, you have the right to ask for the modification or removal of any personal data in accordance with the laws of Germany."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:94
+msgid "Note that for installation on your own server a license fee for Highcharts is mandatory."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:98
+#: c://wamp/www/Data-Story/views/footer.php:11
+msgid "Legal imprint"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:100
+msgid "Publisher"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:101
+msgid "ABZV • Bildungswerk der Zeitungen, 2011"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:102
+msgid "The Academy of Vocational Education of the German Newspaper Publishers Association (ABZV) is a training center for German newspapers. Founded in 1989, it supports the efforts of its members and organizes its own seminars."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:104
+msgid "Address: In der Wehrhecke 1, 53125, Bonn Germany"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:106
+msgid "Tel : 0228 - 20 77 66 22 Fax: 0228 - 20 77 66 23 E-Mail: info@abzv.de"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:108
+msgid "Registered in the Vereinsregister in Bonn under:  20 VR 7689"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:110
+msgid "In charge of content: Beate Füth (same address)."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:111
+msgid "Host"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:112
+msgid "CloudControl • Helmholtz-Str. 2-9, D-10587 Berlin"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:113
+msgid "Credits"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:114
+msgid "Idea/Concept"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:114
+msgid "Development"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:132
+msgid "Tutorial: How to get good charts out of Datawrapper"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:135
+msgid "Yes, no one reads the manual, but this one is really short. Here we show you how to get the most out of Datawrapper - what data to look for and how to format it to get a correct, good looking chart. Our tool can help you, but if you feed it the wrong data it will fail."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:137
+msgid "Why only five types of charts?"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:139
+msgid "We had to start somewhere and we had to stop somewhere. In the future we would like to add more chart types, to this end we are looking for developers/designers. Contact us at "
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:140
+msgid "On to part 1. Lines"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:145
+#: c://wamp/www/Data-Story/views/input.php:37
+msgid "Line chart"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:147
+msgid "This is easy. You can visualize one or multiple lines. In order to graph them properly here is the best way to prepare your table or spreadsheet."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:149
+msgid "Your data for a single line should like this:"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:152
+msgid "Sample data for a single line chart."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:153
+msgid "On to part 2. Bar charts"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:157
+#: c://wamp/www/Data-Story/views/input.php:35
+msgid "Bar chart"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:159
+msgid "If you have data describing a certain value say month by month or if you want to compare the revenue of company A with the revenue from company B, a bar chart is the way to go."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:161
+msgid "Your data for a bar chart should like this:"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:164
+#: c://wamp/www/Data-Story/views/contents.php:180
+msgid "Sample dataset for a bar chart."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:165
+msgid "On to part 3. Pie chart"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:169
+#: c://wamp/www/Data-Story/views/input.php:38
+msgid "Pie chart"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:171
+msgid "Careful, pie charts can be misused and then they distort the message. Use a pie chart if you have data that can be compared proportionally - say, to show how after an election 100 per cent of the vote are spread to the various political parties."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:173
+msgid "Do not use a pie chart if there are to many labels. Often a bar chart is better than a pie chart to show the relation and trend."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:173
+msgid " Read more about pie charts."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:175
+msgid "By the way: In a correct pie chart the biggest pie should start at twelve o'clock. And just forget about the shadows and 3D effects of desktop programs. This will get you into a shitstorm."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:177
+msgid "Your data for a pie chart should like this:"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:181
+msgid "On to part 4. Streamgraph"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:185
+#: c://wamp/www/Data-Story/views/input.php:40
+msgid "Streamgraph"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:187
+msgid "This is our fancy graph. You can use this form to show the pattern of a lot of data over long periods of time. Some people love these, some hate them (because what the chart really says is sometimes a mystery)."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:187
+msgid " Here is a long paper for all of you who want to learn more."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:189
+msgid "A streamgraph will effectively draw lines and fill the space between these. This is good to display how music preferences have changed over time or how certain topics have been cited more or less often."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:191
+msgid "Your data for a streamgraph should like this:"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:194
+msgid "Sample dataset for a streamgraph."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:195
+msgid "If you have better examples, better datasets or just want to vent off, contact us via"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:197
+msgid "Let's go!"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:237
+#: c://wamp/www/Data-Story/views/footer.php:13
+#: c://wamp/www/Data-Story/views/header.php:86
+#: c://wamp/www/Data-Story/views/login.php:310
+msgid "Quickstart"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:239
+msgid "Using Datawrapper is simple"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:243
+msgid "Search for a data set - can be an Excel chart, a Google Table or even a table in any web page. Make sure that the data has no copyright restrictions for further use. "
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:246
+msgid "Copy the table "
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:249
+msgid "Go to Datawrapper and drop the content into the first screen"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:252
+msgid "Click next and check your data."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:255
+msgid "Click next and you see the options for visualization"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:258
+msgid "Still on this screen you have options to add a description, a link to the source, etc."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:261
+msgid "Click next, check the visualization, copy the embed code and off you go.  "
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:265
+#, php-format
+msgid "Datawrapper has some other interesting functions, which you can experience %sin our tutorial%s."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:267
+msgid "On to the tutorial "
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:275
+msgid "Do not show again on start-up."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/contents.php:276
+msgid "This quick tutorial will not be shown again."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/embed.php:30
+msgid "Chart created with Datawrapper"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/embed.php:138
+msgid "Link"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/embed.php:145
+msgid "Export data"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/embed.php:148
+#, php-format
+msgid "Chart created with %sDatawrapper%s."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/embed.php:154
+msgid "Page cannot be displayed."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/footer.php:3
+msgid "ABZV"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/footer.php:5
+msgid "About Datawrapper"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/footer.php:9
+msgid "Terms of Use"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/footer.php:15
+#: c://wamp/www/Data-Story/views/header.php:88
+#: c://wamp/www/Data-Story/views/login.php:310
+msgid "Tutorial"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/footer.php:17
+msgid "Install"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/footer.php:19
+#: c://wamp/www/Data-Story/views/header.php:90
+msgid "Fork me on GitHub!"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/header.php:17
+msgid "Language set to "
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/header.php:25
+msgid "Language is the same as current language."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/header.php:32
+msgid "Could not change language."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/header.php:100
+msgid "my data"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/header.php:104
+msgid "Log out"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/header.php:108
+#, php-format
+msgid "Welcome, %s!"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/input.php:28
+msgid "Paste data here"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/input.php:33
+msgid "Try Datawrapper with some sample data:"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/input.php:36
+msgid "2-dimensional bar chart"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/input.php:39
+msgid "Responsive table"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:7
+#: c://wamp/www/Data-Story/views/screens.php:7
+#: c://wamp/www/Data-Story/views/vis_list.php:7
+msgid "Datawrapper, a project by ABZV"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:110
+msgid "An e-mail has been sent. Please check your mailbox and follow instructions to reset your password."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:122
+#: c://wamp/www/Data-Story/views/login.php:180
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:152
+#: c://wamp/www/Data-Story/views/login.php:201
+#: c://wamp/www/Data-Story/views/login.php:273
+#: c://wamp/www/Data-Story/views/login.php:292
+#: c://wamp/www/Data-Story/views/login.php:293
+#: c://wamp/www/Data-Story/views/login.php:337
+#: c://wamp/www/Data-Story/views/login.php:338
+msgid "Password"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:163
+msgid "Thanks for signing up! You just need to verify your e-mail address (be sure to check your spam filter). If you receive no confirmatory e-mail, please alert us at contact@Datawrapper.de"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:173
+msgid "Please agree to the Terms of Use."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:176
+#: c://wamp/www/Data-Story/views/login.php:221
+msgid "Passwords do not match."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:210
+msgid "Password changed. You can now login."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:241
+#: c://wamp/www/Data-Story/views/screens.php:211
+#: c://wamp/www/Data-Story/views/vis_list.php:82
+msgid "Errors are displayed here"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:250
+#, php-format
+msgid "Datawrapper is a project by %sABZV%s%sa German training institution for newspaper journalists."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:252
+msgid "Open Source Data Visualization"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:255
+msgid "Main features:"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:257
+msgid "Simple: Create and embed charts in minutes"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:258
+msgid "Open Source: Download and install"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:259
+msgid "CSS: Change the CSS, add your logo"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:260
+msgid "Developers: Add new chart types"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:261
+msgid "Non-proﬁt: This is and will stay free to use"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:263
+msgid "Why this approach? See our Motivations"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:269
+msgid "Login for registered users:"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:272
+#: c://wamp/www/Data-Story/views/login.php:318
+msgid "E-mail"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:274
+msgid "Forgot your password?"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:275
+msgid "Login"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:278
+msgid "First time user? Register here."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:284
+msgid "Create an account on Datawrapper:"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:285
+msgid "Enter your e-mail address"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:287
+msgid "email@provider.tld"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:291
+msgid "Enter password twice"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:298
+msgid "I agree to the Terms of Use"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:302
+msgid "Sign up"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:302
+msgid "Log in"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:309
+msgid "Resources to get started:"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:310
+msgid "Installation guide"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:315
+msgid "Enter your e-mail address to reset your password."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:322
+msgid "Reset password"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:335
+msgid "Enter your new password twice"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/login.php:342
+msgid "Change password"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/publish.php:132
+msgid "Publish and embed!"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/publish.php:134
+msgid "Direct access URL"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/publish.php:137
+msgid "Embed code"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/publish.php:140
+msgid "Embed width"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/publish.php:142
+msgid "Embed height"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/publish.php:144
+msgid "Keep proportions"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/screens.php:105
+#: c://wamp/www/Data-Story/views/visualize.php:237
+msgid "Vertical axis title (required)"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/screens.php:219
+msgid "1. Input data"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/screens.php:222
+msgid "2. Check data"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/screens.php:225
+msgid "3. Visualize"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/screens.php:228
+msgid "4. Publish"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/screens.php:234
+msgid "Next"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/screens.php:238
+msgid "New"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/screens.php:243
+msgid "Prev"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/screens.php:249
+msgid "The chart you're editing is already published online. Use caution."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/vis.chooser.php:30
+msgid "Useful resources"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/vis.chooser.php:41
+msgid "Browser support"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/vis.chooser.php:64
+msgid "Visualization type"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/visualize.php:37
+msgid "Title"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/visualize.php:40
+#: c://wamp/www/Data-Story/views/visualize.php:139
+#: c://wamp/www/Data-Story/views/visualize.php:221
+msgid "Subtitle"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/visualize.php:150
+#: c://wamp/www/Data-Story/views/visualize.php:245
+msgid "Source URL"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/visualize.php:154
+msgid "Source URL must begin with 'http://'"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/visualize.php:161
+#: c://wamp/www/Data-Story/views/visualize.php:241
+msgid "Source"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/visualize.php:169
+#: c://wamp/www/Data-Story/views/visualize.php:249
+msgid "Chart description"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/visualize.php:211
+msgid "Build your visualization."
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/visualize.php:218
+msgid "Title (required)"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/visualize.php:250
+msgid "Display description on chart load"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/vis_list.php:93
+msgid "Do you really want to delete this chart?"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/vis_list.php:95
+msgid "Yes"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/vis_list.php:96
+msgid "No"
+msgstr ""
+
+#: c://wamp/www/Data-Story/views/vis_list.php:102
+msgid "Your visualizations"
+msgstr ""
+
+#: c://wamp/www/Data-Story/visualizations/config.json.php:54
+msgid "Vertical bar chart"
+msgstr ""
+
+#: c://wamp/www/Data-Story/visualizations/config.json.php:60
+msgid "Horizontal bar chart"
+msgstr ""
+
+#: c://wamp/www/Data-Story/visualizations/config.json.php:76
+#: c://wamp/www/Data-Story/visualizations/config.json.php:85
+msgid "Understanding Pie Charts"
+msgstr ""
+
+#: c://wamp/www/Data-Story/visualizations/config.json.php:81
+msgid "Simplified pie chart"
+msgstr ""
+

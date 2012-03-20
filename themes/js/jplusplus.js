@@ -108,6 +108,16 @@ Highcharts.theme = {
 				enabled: true
 			}
 		},
+		bar : {
+			pointPadding: 0,
+			groupPadding: 0.1,
+			shadow:false,
+			borderWidth: 0,
+			borderColor: '#0C0C0C',
+			marker: {
+				enabled: true
+			}
+		},
 		line : {
 			pointPadding: 0.2,
 			borderWidth: 0,
