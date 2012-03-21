@@ -104,7 +104,7 @@ function update_dimensions(changed_dimension){
 	$("#embed").width(iframe_w);
 
 	//Generates iframe code
-	var iframe_code = '<iframe src="<?php echo BASE_DIR ?>?c=' + chart_text_id + '" frameborder="0" scrolling="no" allowtransparency="true" width="' + iframe_w + '" height="' + iframe_h + '" id="iframe"></iframe>';
+	var iframe_code = '<iframe src="<?php echo BASE_DIR ?>?c=' + chart_text_id + '" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen width="' + iframe_w + '" height="' + iframe_h + '" id="iframe"></iframe>';
 
 	//appends the iframe
 	$("#embed").html(iframe_code);

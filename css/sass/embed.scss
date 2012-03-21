@@ -42,18 +42,26 @@ body {
         top:0;
         left:0;
         margin: 0 5px;
+
+        img {
+            border:none;
+        }
     }
 
     p {
         margin: 0 5px;
     }
 
-    #export_csv {
+    #export_csv, #fullscreen {
         font-size: $font-size * .8;
         position:absolute;
         top:0;
         right:0;
         margin: 0 10px;
+    }
+
+    #fullscreen {
+        right:90px;
     }
 
     #promo_embed{

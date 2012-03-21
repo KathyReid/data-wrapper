@@ -77,12 +77,44 @@
 
     	<body>
 			<script type="text/javascript">
-			$(document).ready(function(){
 
-				//init the download CSV button
-				$("#export_csv").click(function(){
-					window.location.href = 'actions/export.php?c=<?php echo $chart_id ?>';
-				});
+			function fullscreen(){
+
+				//stores init chart h & w values
+				window.chart_init_h = $("#chart").height();
+				window.chart_init_w = $("#chart").width();
+				window.chart_init_color = $("#chart").css("background-color");
+
+				var fullscreen_el = document.getElementById('chart');
+
+			    if(fullscreen_el.webkitRequestFullScreen) {
+			        fullscreen_el.webkitRequestFullScreen();
+			    }
+			    else {
+			        fullscreen_el.mozRequestFullScreen();
+			    }
+			}
+
+			function resize() {
+			    $("#chart").width("100%");
+			    $("#chart").height("100%");
+			}
+
+			function on_fullscreen_change() {
+			    if(document.mozFullScreen || document.webkitIsFullScreen) {
+			        resize();
+			        $("#chart").css("background-color", "#fff");
+			    }
+			    else {
+			        $("#chart").width(window.chart_init_w);
+			        $("#chart").height(window.chart_init_h);
+			        $("#chart").css("background-color", window.chart_init_color);
+			    }
+
+			    makechart();
+			}
+
+			function makechart(){
 
 				<?php if ($chart->desc != ""): ?>
 					//Shows the chart description
@@ -109,14 +141,47 @@
 					opt.tooltip.formatter = function(){return pieTooltip(this); };
 				<?php endif; ?>
 
-				//Sets the chart's height
-				var chart_h = $("html").height() - $("#embed_extras").height();
+				//Sets the chart's height with a 5px buffer
+				var chart_h = $("html").height() - $("#embed_extras").height() - 5;
 				$("#chart").height(chart_h);
 
 				//gets the theme
 				var theme = "<?php echo $chart->theme ?>";
  				
  				render_chart(opt, theme);
+			}
+
+			$(document).ready(function(){
+
+				//init the download CSV button
+				$("#export_csv").click(function(){
+					window.location.href = 'actions/export.php?c=<?php echo $chart_id ?>';
+				});
+
+				//add exception for IE
+				if (! ($.browser.msie) ) {
+					//init the fullscreen button and behaviors
+					document.addEventListener('mozfullscreenchange', on_fullscreen_change);
+					document.addEventListener('webkitfullscreenchange', on_fullscreen_change);
+				}
+
+				$("#fullscreen").click(function(){
+
+					if (! ($.browser.msie) ) {
+						fullscreen();
+					}else{
+
+						//For IE, we just throuw in a normal pop-up
+						var url = window.location;
+	                    var windowName = "popUp";
+	                    var windowSize = "width=800,height=500";
+	 
+	                    window.open(url, windowName, windowSize);
+					}
+					
+				});
+
+				makechart();
 
 			});
 		</script>
@@ -129,7 +194,8 @@
 
 		</div>
 		<div id="embed_extras">
-
+			<div class="logo">
+			</div>
 			<?php if ($chart->source != ""): ?>
 				<p class="source">
 					<span id="source"><?php echo $chart->source ?></span>
@@ -140,6 +206,10 @@
 				
 				</p>
 			<?php endif; ?>
+
+			<button id="fullscreen" class="button">
+				<?php echo _("Fullscreen") ?>
+			</button>
 
 			<button id="export_csv" class="button">
 				<?php echo _("Export data") ?>

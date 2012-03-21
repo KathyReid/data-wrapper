@@ -206,8 +206,8 @@ function render_chart(opt, theme, showLogo){
 	        			linkTo_close = "</a>";
 	        		}
 
-	        		$("#embed_extras")
-	        			.prepend(linkTo + "<img src='themes/images/"+ theme +"."+ image_ext +"' width="+ image_w +" height="+ image_h +"/>"+ linkTo_close);
+	        		$("#embed_extras .logo")
+	        			.html(linkTo + "<img src='themes/images/"+ theme +"."+ image_ext +"' width="+ image_w +" height="+ image_h +"/>"+ linkTo_close);
 	        	}
 
 			});

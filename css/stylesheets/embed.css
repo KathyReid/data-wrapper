@@ -42,49 +42,57 @@ body {
   left: 0;
   margin: 0 5px;
 }
-/* line 47, ../sass/embed.scss */
+/* line 46, ../sass/embed.scss */
+#embed_extras .logo img {
+  border: none;
+}
+/* line 51, ../sass/embed.scss */
 #embed_extras p {
   margin: 0 5px;
 }
-/* line 51, ../sass/embed.scss */
-#embed_extras #export_csv {
+/* line 55, ../sass/embed.scss */
+#embed_extras #export_csv, #embed_extras #fullscreen {
   font-size: 0.8em;
   position: absolute;
   top: 0;
   right: 0;
   margin: 0 10px;
 }
-/* line 59, ../sass/embed.scss */
+/* line 63, ../sass/embed.scss */
+#embed_extras #fullscreen {
+  right: 90px;
+}
+/* line 67, ../sass/embed.scss */
 #embed_extras #promo_embed {
   font-size: 0.8em;
   float: left;
   margin: 0 5px;
 }
-/* line 64, ../sass/embed.scss */
+/* line 72, ../sass/embed.scss */
 #embed_extras #promo_embed a {
   font-size: 1em;
   text-decoration: underline;
   color: #000;
 }
-/* line 68, ../sass/embed.scss */
+/* line 76, ../sass/embed.scss */
 #embed_extras #promo_embed a:hover {
   text-decoration: none;
   color: #000;
 }
-/* line 75, ../sass/embed.scss */
+/* line 83, ../sass/embed.scss */
 #embed_extras #source {
   font-style: italic;
 }
-/* line 79, ../sass/embed.scss */
+/* line 87, ../sass/embed.scss */
 #embed_extras .source_url {
   color: #000;
 }
-/* line 81, ../sass/embed.scss */
+/* line 89, ../sass/embed.scss */
 #embed_extras .source_url:hover {
   text-decoration: underline;
 }
 
-/* line 85, ../sass/embed.scss */
+/* line 93, ../sass/embed.scss */
 #show_desc {
   text-shadow: #999999 0px 0px 1px;
   position: absolute;
