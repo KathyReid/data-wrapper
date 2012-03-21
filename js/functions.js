@@ -202,12 +202,12 @@ function render_chart(opt, theme, showLogo){
 	        		var linkTo_close = "";
 	        		//prepares the link
 	        		if (data.themes[theme].link != null){
-	        			linkTo = "<a href='"+ data.themes[theme].link +"' target='_blank'>";
+	        			linkTo = "<a class='logo' href='"+ data.themes[theme].link +"' target='_blank'>";
 	        			linkTo_close = "</a>";
 	        		}
 
-	        		$("#"+render_div)
-	        			.append(linkTo + "<img src='themes/images/"+ theme +"."+ image_ext +"'style='position:absolute; z-index:12; width:"+ image_w +"px; height:"+ image_h +"px; bottom:50px; left:15px;'/>"+ linkTo_close);
+	        		$("#embed_extras")
+	        			.prepend(linkTo + "<img src='themes/images/"+ theme +"."+ image_ext +"' width="+ image_w +" height="+ image_h +"/>"+ linkTo_close);
 	        	}
 
 			});
