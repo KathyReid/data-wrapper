@@ -63,9 +63,9 @@ function error(msg){
 
 function pieLabels(value) {return '<b>'+ value.point.name +'</b>: '+ roundNumber(value.percentage, 2) +' %';}
 
-function pieTooltip(value) { return '' + value.point.name + ': ' + value.y ; }
+function pieTooltip(value) { return '' + value.point.name + ': ' + roundNumber(value.y, 2) ; }
 
-function barTooltip(value) { return '' + value.x +': '+ value.y ; }
+function barTooltip(value) { return '' + value.x +': '+ roundNumber(value.y, 2) ; }
 
 
 /*
@@ -176,7 +176,7 @@ function render_chart(opt, theme, showLogo){
 				//Once the theme is loaded, renders chart
 				if (opt.chart.chart_lib == "highcharts"){
 
-					chart = new Highcharts.Chart(opt);
+					var chart = new Highcharts.Chart(opt);
 
 	        	}else if (opt.chart.chart_lib == "responsive"){
 	        		
@@ -212,9 +212,6 @@ function render_chart(opt, theme, showLogo){
 
 			});
 
-		}else{
-			//If no theme is specified
-			chart = new Highcharts.Chart(opt);
 		}
 
 	});
