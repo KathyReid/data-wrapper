@@ -78,6 +78,12 @@
     	<body>
 			<script type="text/javascript">
 
+			function test_fullscreen(){
+				 if(window.frameElement == null){
+				 	$("#fullscreen").hide();
+				 }
+			}
+
 			function fullscreen(){
 
 				//stores init chart h & w values
@@ -180,6 +186,8 @@
 					}
 					
 				});
+
+				test_fullscreen();
 
 				makechart();
 

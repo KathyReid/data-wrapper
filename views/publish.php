@@ -113,8 +113,6 @@ function update_dimensions(changed_dimension){
 	$("#publish_chart").height(iframe_h - extra_h);
 	$("#publish_chart").width(iframe_w);
 
-	var iframe_code = "<iframe src='" + direct_link_url + "' height='"+ iframe_h +"' width='"+ iframe_w +"' frameborder='0' scrolling='no'></iframe>";
-
 	//Displays the iframe embed code
 	$("#iframe_code").val(iframe_code);
 
