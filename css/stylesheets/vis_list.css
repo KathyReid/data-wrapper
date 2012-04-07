@@ -2,7 +2,6 @@
 /*        vis_list.scss          */
 /* Vis_list styles for DataStory */
 /*********************************/
-/* line 57, ../sass/vis_list.scss */
 #vis_list {
   width: 675px;
   float: left;
@@ -21,7 +20,7 @@
   -khtml-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 67, ../sass/vis_list.scss */
+
 #vis_list h1 {
   padding-left: 56.25px;
   font-size: 1.2em;
@@ -29,7 +28,7 @@
   font-family: Georgia, Serif;
   color: #555555;
 }
-/* line 72, ../sass/vis_list.scss */
+
 #vis_list h2 {
   font-family: Arial, Helvetica, Sans-serif;
   font-size: 0.7em;

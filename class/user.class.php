@@ -156,6 +156,7 @@ class User {
 					 $chart_html .= "<a href='#'><img class='tooltip delete_chart' tooltip='". _("Delete chart") ."' src='images/delete.png' chart_title = '" . $row->chart_title ."' chart_id='". $row->chart_id ."'></a>";
 					 
 					 //chart details
+
 					 $chart_html .= "<p>"._("Last modified on"). " ";
 					 $chart_html .= date("F j, Y, g:i a", strtotime($row->date_modified)) ."<br/>";
 					 $chart_html .= _("Chart type: ");
@@ -166,6 +167,7 @@ class User {
 					 $chart_html .= "</a>";
 					 $chart_html .= "</p>";
 					 $chart_html .= "</div>";
+
 					 $return_array["vis"][] = $chart_html;
 				}
 
@@ -174,6 +176,7 @@ class User {
 				
 				//Success
 				$this->status = "200";
+
 
 				return $return_array;
 				

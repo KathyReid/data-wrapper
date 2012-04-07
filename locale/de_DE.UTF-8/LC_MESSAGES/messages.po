@@ -651,6 +651,7 @@ msgid "Export data"
 msgstr "Daten runterladen"
 
 #: views/embed.php:218
+
 #, php-format
 msgid "Chart created with %sDatawrapper%s."
 msgstr "Grafik erstellt mit %sDatawrapper%s."
@@ -988,6 +989,7 @@ msgid "Chart description"
 msgstr "Beschreibung des Charts"
 
 #: views/visualize.php:211
+
 msgid "Build your visualization."
 msgstr "Visualisierung fertig stellen"
 

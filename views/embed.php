@@ -137,7 +137,6 @@
 					});
 
 				<?php endif; ?>
-
 				var opt = <?php echo $chart->js_code ?>;
 
 				//Arranges for the Label and Tooltip functions
