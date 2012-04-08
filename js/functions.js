@@ -177,6 +177,9 @@ function render_chart(opt, theme, showLogo){
 				//Once the theme is loaded, renders chart
 				if (opt.chart.chart_lib == "highcharts"){
 
+					//Specifies the width of the title
+					Highcharts.theme.title.style.width = Math.round(chart_w * .8) + 'px';
+
 					var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
 
 					var chart = new Highcharts.Chart(opt);
