@@ -18,12 +18,7 @@ Highcharts.theme = {
 		}
 	},
 	credits: {
-		enabled: true,
-		position: {
-            align: 'left',
-            x:10
-        },
-		href: 'http://shop.highsoft.com/highcharts.html'
+		enabled: false
 	},
 	subtitle: {
 		style: { 
@@ -134,7 +129,4 @@ Highcharts.theme = {
 		}
 	}
 };
-
-// Apply the theme
-var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
 	

@@ -128,8 +128,9 @@ function initInputs(){
 
 /*
  * @desc 	Renders the chart
- * @param	opt 	options object
- * @param 	theme 	the chart's theme
+ * @param	opt 		obj 	options object
+ * @param 	theme 		str 	the chart's theme
+ * @param 	showLogo 	bool 	displays the logo
  *
  */
 
@@ -175,6 +176,8 @@ function render_chart(opt, theme, showLogo){
 
 				//Once the theme is loaded, renders chart
 				if (opt.chart.chart_lib == "highcharts"){
+
+					var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
 
 					var chart = new Highcharts.Chart(opt);
 
