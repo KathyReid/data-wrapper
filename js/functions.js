@@ -179,6 +179,7 @@ function render_chart(opt, theme, showLogo){
 
 					//Specifies the width of the title
 					Highcharts.theme.title.style.width = Math.round(chart_w * .8) + 'px';
+					Highcharts.theme.subtitle.style.width = Math.round(chart_w * .8) + 'px';
 
 					var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
 
