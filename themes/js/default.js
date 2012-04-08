@@ -83,6 +83,7 @@ Highcharts.theme = {
 		}
 	},
 	labels: {
+		align: 'right',
 		style: {
 			color: '#99b'
 		}
