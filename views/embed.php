@@ -79,12 +79,21 @@
 			<script type="text/javascript">
 
 			function test_fullscreen(){
-				 if(window.frameElement == null){
-				 	$("#fullscreen").hide();
-				 }
+				var inFrame = false;
+		        try {
+		            inFrame = window.frameElement;
+		        } catch(ex) {
+		            //we aren't in a frame
+		            inFrame = null;
+
+		        }
+
+		        if (inFrame == null) {
+		        	$("#fullscreen").hide();
+		        }
 			}
 
-			function fullscreen(){
+			function fullscreen() {
 
 				//stores init chart h & w values
 				window.chart_init_h = $("#chart").height();
