@@ -110,6 +110,18 @@
                 "format": "png"
             },
             "restricted": ["nkb.fr"]
+        },
+        "lavenir":
+        {
+            "name": "lavenir",
+            "desc": "L'avenir",
+            "link": "http://www.lavenir.net/",
+            "image": {
+                "width": 100,
+                "height": 24,
+                "format": "png"
+            },
+            "restricted": ["lavenir.net", "nkb.fr"]
         }
     }
 }
