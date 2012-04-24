@@ -129,6 +129,17 @@
 			    makechart();
 			}
 
+			function resize_notifications(){
+				//Sets the notification's width
+				if ($("#chart").width() < 400) {
+
+					$("#notifications").css("width", .8 * $("#chart").width() +"px");
+					$("#notifications").css("margin-left", -200 + .15 * $("#chart").width() +"px");
+					$("#notifications .right").css("width", .6 * $("#chart").width() +"px");
+					
+				}
+			}
+
 			function makechart(){
 
 				<?php if ($chart->desc != ""): ?>
@@ -143,6 +154,7 @@
 					//init the show desc button
 					$("#show_desc").click(function(){
 						showChartDesc(title, desc);
+						resize_notifications();
 					});
 
 				<?php endif; ?>
@@ -162,6 +174,8 @@
 				//gets the theme
 				var theme = "<?php echo $chart->theme ?>";
  				
+				resize_notifications();
+
  				render_chart(opt, theme);
 			}
 
